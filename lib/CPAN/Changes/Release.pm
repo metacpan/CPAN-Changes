@@ -210,6 +210,8 @@ file.
 
 =item * L<CPAN::Changes>
 
+=item * L<Test::CPAN::Changes>
+
 =back
 
 =head1 AUTHOR
