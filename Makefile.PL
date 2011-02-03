@@ -14,4 +14,6 @@ requires 'Text::Wrap';
 test_requires 'Test::More';
 extra_tests;
 
+repository 'http://github.com/bricas/cpan-changes';
+
 WriteAll;
