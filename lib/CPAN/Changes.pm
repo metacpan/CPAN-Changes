@@ -19,11 +19,11 @@ sub new {
 }
 
 sub load {
-    my ( $class, $file ) = @_;
+    my ( $class, $file, @args ) = @_;
 
     open( my $fh, '<', $file ) or die $!;
     my $changes = $class->load_string(
-        do { local $/; <$fh>; }
+        do { local $/; <$fh>; }, @args
     );
     close( $fh );
 
@@ -31,25 +31,26 @@ sub load {
 }
 
 sub load_string {
-    my ( $class, $string ) = @_;
+    my ( $class, $string, @args ) = @_;
 
-    my $changes  = $class->new;
+    my $changes  = $class->new( @args );
     my $preamble = '';
     my ( @releases, $ingroup, $indent );
 
     $string =~ s/(?:\015{1,2}\012|\015|\012)/\n/gs;
     my @lines = split( "\n", $string );
 
-    $preamble .= shift @lines while @lines && $lines[ 0 ] !~ m{^[v0-9]};
+    my $version_line_re = $changes->{next_token} 
+                        ? qr/^(?:[v0-9]|$changes->{next_token})/
+                        : qr/^[v0-9]/;
 
-    while ( @lines ) {
-        my $l = shift @lines;
+    $preamble .= shift @lines while @lines && $lines[ 0 ] !~ $version_line_re;
 
+    for my $l ( @lines ) {
         # Version & Date
-        if ( $l =~ m{^[v0-9]} ) {
-
+        if ( $l =~ $version_line_re ) {
             # currently ignores data after the date; could be useful later
-            my ( $v, $d ) = split( m{ +}, $l );
+            my ( $v, $d ) = split ' ', $l ;
             push @releases,
                 CPAN::Changes::Release->new(
                 version => $v,
@@ -121,10 +122,21 @@ sub releases {
         $self->add_release( @_ );
     }
 
-    return sort {
-        ( $a->date || '' ) cmp( $b->date || '' )
-            || $a->version cmp $b->version
-    } values %{ $self->{ releases } };
+    my $sort_function = sub { 
+           ( $a->date || '' ) cmp ( $b->date || '' )
+        or $a->version cmp $b->version
+    };
+
+    my $next_token = $self->{next_token};
+
+    my $token_sort_function = sub {
+            $a->version =~ $next_token - $b->version =~ $next_token
+        or  $sort_function->()
+    };  
+
+    my $sort = $next_token ? $token_sort_function : $sort_function;
+
+    return sort $sort values %{ $self->{ releases } };
 }
 
 sub add_release {
@@ -205,13 +217,28 @@ conform to the specification.
 
 Creates a new object using C<%args> as the initial data.
 
-=head2 load( $filename )
+=over
 
-Parses C<$filename> as per L<CPAN::Changes::Spec>.
+=item C<next_token>
 
-=head2 load_string( $string )
+Used to passes a regular expression for a "next version" placeholder token.
+See L</"DEALING WITH "NEXT VERSION" PLACEHOLDERS"> for an example of its usage.
+
+=back
+
+=head2 load( $filename, %args )
+
+Parses C<$filename> as per L<CPAN::Changes::Spec>. 
+If present, 
+the optional C<%args> are passed to the underlaying call to
+C<new()>.
+
+=head2 load_string( $string, %args )
 
 Parses C<$string> as per L<CPAN::Changes::Spec>.
+If present, 
+the optional C<%args> are passed to the underlaying call to
+C<new()>.
 
 =head2 preamble( [ $preamble ] )
 
@@ -251,6 +278,45 @@ matching release object, undef is returned.
 
 Returns all of the data as a string, suitable for saving as a Changes 
 file.
+
+=head1 DEALING WITH "NEXT VERSION" PLACEHOLDERS
+
+In the working copy of a distribution, it's not uncommon 
+to have a "next release" placeholder section as the first entry
+of the C<Changes> file. 
+
+For example, the C<Changes> file of a distribution using
+L<Dist::Zilla> and L<Dist::Zilla::Plugin::NextRelease> 
+would look like:
+
+
+    Revision history for Foo-Bar
+
+    {{$NEXT}}
+        - Add the 'frobuscate' method.
+
+    1.0.0     2010-11-30
+        - Convert all comments to Esperanto.
+
+    0.0.1     2010-09-29
+        - Original version unleashed on an unsuspecting world
+
+
+To have C<CPAN::Changes> recognizes the C<{{$NEXT}}> token as a valid
+version, you can use the C<next_token> argument with any of the class' 
+constructors. Note that the resulting release object will also
+be considered the latest release, regardless of its timestamp. 
+
+To continue with our example:
+
+                                # recognizes {{$NEXT}} as a version
+    my $changes = CPAN::Changes->load( 
+        'Changes',
+        next_token => qr/{{\$NEXT}}/,
+    );
+
+    my @releases = $changes->releases;
+    print $releases[-1]->version;       # prints '{{$NEXT}}'
 
 =head1 SEE ALSO
 
