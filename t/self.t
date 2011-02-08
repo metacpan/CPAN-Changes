@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use Test::More;
+use Test::More tests => 5;
 
 use_ok( 'CPAN::Changes' );
 
@@ -11,5 +11,3 @@ my @releases = $changes->releases;
 isa_ok( $changes, 'CPAN::Changes' );
 ok( scalar @releases, 'has releases' );
 isa_ok( $_, 'CPAN::Changes::Release' ) for @releases;
-
-done_testing;

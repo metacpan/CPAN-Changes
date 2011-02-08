@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use Test::More;
+use Test::More tests => 16;
 
 use_ok( 'CPAN::Changes' );
 
@@ -43,5 +43,3 @@ is_deeply(
     [ 'New version' ],
     'one change line'
 );
-
-done_testing;
