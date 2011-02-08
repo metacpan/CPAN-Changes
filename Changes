@@ -1,6 +1,6 @@
 Revision history for perl module CPAN::Changes
 
-0.02 TO BE RELEASED
+0.02 2011-02-08
 
  - Make tests compatible with Test::More that ships with perl 5.10.0
    (Fixes RT #65543)
