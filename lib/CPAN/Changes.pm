@@ -7,7 +7,7 @@ use CPAN::Changes::Release;
 use Text::Wrap   ();
 use Scalar::Util ();
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 sub new {
     my $class = shift;
