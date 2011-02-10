@@ -1,5 +1,10 @@
 Revision history for perl module CPAN::Changes
 
+NEXT
+
+  - Allow more than one space between the version and the date. The spec
+    allowed for this, but the parser did not. (Dave Rolsky)
+
 0.02 2011-02-08
 
  - Make tests compatible with Test::More that ships with perl 5.10.0
