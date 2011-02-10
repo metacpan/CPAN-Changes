@@ -71,9 +71,11 @@ sub load_string {
 
         next if $l =~ m{^\s*$};
 
-        if ( !$indent ) {
-            $l =~ m{^(\s+)};
-            $indent = '\s' x length $1;
+        if ( !defined $indent ) {
+            $indent
+                = $l =~ m{^(\s+)}
+                ? '\s' x length $1
+                : '';
         }
 
         $l =~ s{^$indent}{};
