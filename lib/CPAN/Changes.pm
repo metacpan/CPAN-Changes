@@ -49,7 +49,7 @@ sub load_string {
         if ( $l =~ m{^[v0-9]} ) {
 
             # currently ignores data after the date; could be useful later
-            my ( $v, $d ) = split( m{ }, $l );
+            my ( $v, $d ) = split( m{ +}, $l );
             push @releases,
                 CPAN::Changes::Release->new(
                 version => $v,
