@@ -7,7 +7,7 @@ use CPAN::Changes::Release;
 use Text::Wrap   ();
 use Scalar::Util ();
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 sub new {
     my $class = shift;
@@ -121,7 +121,10 @@ sub releases {
         $self->add_release( @_ );
     }
 
-    return sort { $a->date cmp $b->date } values %{ $self->{ releases } };
+    return sort {
+        ( $a->date || '' ) cmp( $b->date || '' )
+            || $a->version cmp $b->version
+    } values %{ $self->{ releases } };
 }
 
 sub add_release {
