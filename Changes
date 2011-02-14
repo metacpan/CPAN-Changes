@@ -7,6 +7,9 @@ Revision history for perl module CPAN::Changes
 
   - Add support for a "next version" token (Yanick Champoux)
 
+  - Proper definition of whitespace between version and date
+    (Fixes RT #65678)
+
 0.04 2011-02-10
 
   - Remove done_testing() from a test.

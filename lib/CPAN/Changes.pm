@@ -50,7 +50,7 @@ sub load_string {
         # Version & Date
         if ( $l =~ $version_line_re ) {
             # currently ignores data after the date; could be useful later
-            my ( $v, $d ) = split ' ', $l ;
+            my ( $v, $d ) = split m{\s+}, $l ;
             push @releases,
                 CPAN::Changes::Release->new(
                 version => $v,
