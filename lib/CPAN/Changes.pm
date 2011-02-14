@@ -6,8 +6,9 @@ use warnings;
 use CPAN::Changes::Release;
 use Text::Wrap   ();
 use Scalar::Util ();
+use version      ();
 
-our $VERSION = '0.05';
+our $VERSION = '0.06';
 
 sub new {
     my $class = shift;
@@ -124,7 +125,7 @@ sub releases {
 
     my $sort_function = sub { 
            ( $a->date || '' ) cmp ( $b->date || '' )
-        or $a->version cmp $b->version
+        or version->parse( $a->version ) <=> version->parse( $b->version )
     };
 
     my $next_token = $self->{next_token};
