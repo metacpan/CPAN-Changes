@@ -1,6 +1,6 @@
 Revision history for perl module CPAN::Changes
 
-0.05 TO BE RELEASED
+0.05 2011-02-13
 
   - Attempt to squash warnings for undefined dates and add rudimentary
     version sorting when dates are equal
