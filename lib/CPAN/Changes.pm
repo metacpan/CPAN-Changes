@@ -309,7 +309,7 @@ be considered the latest release, regardless of its timestamp.
 
 To continue with our example:
 
-                                # recognizes {{$NEXT}} as a version
+    # recognizes {{$NEXT}} as a version
     my $changes = CPAN::Changes->load( 
         'Changes',
         next_token => qr/{{\$NEXT}}/,
