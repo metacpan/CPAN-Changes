@@ -7,8 +7,8 @@ use CPAN::Changes;
 use Test::Builder;
 
 my $Test       = Test::Builder->new;
-my $date_re    = '^\d{4}-\d{2}-\d{2}'; # "Looks like" a W3CDTF
-my $version_re = '^[._\-[:alnum:]]+$'; # "Looks like" a version
+my $date_re    = '^\d{4}-\d{2}-\d{2}';    # "Looks like" a W3CDTF
+my $version_re = '^[._\-[:alnum:]]+$';    # "Looks like" a version
 
 sub import {
     my $self = shift;
@@ -43,20 +43,20 @@ sub changes_file_ok {
 
     my @releases = $changes->releases;
 
-    if( !@releases ) {
+    if ( !@releases ) {
         $Test->ok( 0, "$file does not contain any releases" );
         return;
     }
 
     $Test->ok( 1, "$file contains at least one release" );
 
-    for( @releases ) {
-        if( $_->date !~ m{$date_re} ) {
+    for ( @releases ) {
+        if ( $_->date !~ m{$date_re} ) {
             $Test->ok( 0, "$file contains an invalid release date" );
             $Test->diag( '  ERR: ' . $_->date );
             return;
         }
-        if( $_->version !~ m{$version_re} ) {
+        if ( $_->version !~ m{$version_re} ) {
             $Test->ok( 0, "$file contains an invalid version number" );
             $Test->diag( '  ERR: ' . $_->version );
             return;

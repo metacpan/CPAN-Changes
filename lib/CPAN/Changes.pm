@@ -23,9 +23,7 @@ sub load {
     my ( $class, $file, @args ) = @_;
 
     open( my $fh, '<', $file ) or die $!;
-    my $changes = $class->load_string(
-        do { local $/; <$fh>; }, @args
-    );
+    my $changes = $class->load_string( do { local $/; <$fh>; }, @args );
     close( $fh );
 
     return $changes;
@@ -41,17 +39,20 @@ sub load_string {
     $string =~ s/(?:\015{1,2}\012|\015|\012)/\n/gs;
     my @lines = split( "\n", $string );
 
-    my $version_line_re = $changes->{next_token} 
-                        ? qr/^(?:[v0-9]|$changes->{next_token})/
-                        : qr/^[v0-9]/;
+    my $version_line_re
+        = $changes->{ next_token }
+        ? qr/^(?:[v0-9]|$changes->{next_token})/
+        : qr/^[v0-9]/;
 
     $preamble .= shift @lines while @lines && $lines[ 0 ] !~ $version_line_re;
 
     for my $l ( @lines ) {
+
         # Version & Date
         if ( $l =~ $version_line_re ) {
+
             # currently ignores data after the date; could be useful later
-            my ( $v, $d ) = split m{\s+}, $l ;
+            my ( $v, $d ) = split m{\s+}, $l;
             push @releases,
                 CPAN::Changes::Release->new(
                 version => $v,
@@ -123,17 +124,18 @@ sub releases {
         $self->add_release( @_ );
     }
 
-    my $sort_function = sub { 
-           ( $a->date || '' ) cmp ( $b->date || '' )
-        or ( eval { version->parse( $a->version ) } || 0 ) <=> ( eval { version->parse( $b->version ) }  || 0 )
+    my $sort_function = sub {
+        ( $a->date || '' ) cmp( $b->date || '' )
+            or ( eval { version->parse( $a->version ) } || 0 )
+            <=> ( eval { version->parse( $b->version ) } || 0 );
     };
 
-    my $next_token = $self->{next_token};
+    my $next_token = $self->{ next_token };
 
     my $token_sort_function = sub {
-            $a->version =~ $next_token - $b->version =~ $next_token
-        or  $sort_function->()
-    };  
+        $a->version =~ $next_token - $b->version =~ $next_token
+            or $sort_function->();
+    };
 
     my $sort = $next_token ? $token_sort_function : $sort_function;
 
