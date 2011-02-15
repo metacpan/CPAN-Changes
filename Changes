@@ -4,6 +4,8 @@ Revision history for perl module CPAN::Changes
 
   - Add proper version sorting via version.pm
 
+  - Update dist manifest to include tests missing from previous releases
+
 0.05 2011-02-13
 
   - Attempt to squash warnings for undefined dates and add rudimentary
