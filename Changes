@@ -1,6 +1,6 @@
 Revision history for perl module CPAN::Changes
 
-0.06 TO BE RELEASED
+0.06 2011-02-15
 
   - Add proper version sorting via version.pm
 
