@@ -1,5 +1,9 @@
 Revision history for perl module CPAN::Changes
 
+0.07 TO BE RELEASED
+
+  - Wrap version parsing in eval()
+
 0.06 2011-02-15
 
   - Add proper version sorting via version.pm

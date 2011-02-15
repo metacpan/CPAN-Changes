@@ -8,7 +8,7 @@ use Text::Wrap   ();
 use Scalar::Util ();
 use version      ();
 
-our $VERSION = '0.06';
+our $VERSION = '0.07';
 
 sub new {
     my $class = shift;
@@ -125,7 +125,7 @@ sub releases {
 
     my $sort_function = sub { 
            ( $a->date || '' ) cmp ( $b->date || '' )
-        or version->parse( $a->version ) <=> version->parse( $b->version )
+        or ( eval { version->parse( $a->version ) } || 0 ) <=> ( eval { version->parse( $b->version ) }  || 0 )
     };
 
     my $next_token = $self->{next_token};
