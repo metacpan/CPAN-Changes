@@ -1,5 +1,11 @@
 Revision history for perl module CPAN::Changes
 
+0.08 2011-03-14
+
+  - Handle inconsistent indentation between releases
+
+  - Be more strict about parsing rules for grouping lines
+
 0.07 2011-03-03
 
   - Wrap version parsing in eval()

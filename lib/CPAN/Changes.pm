@@ -8,7 +8,7 @@ use Text::Wrap   ();
 use Scalar::Util ();
 use version      ();
 
-our $VERSION = '0.07';
+our $VERSION = '0.08';
 
 sub new {
     my $class = shift;
@@ -64,7 +64,7 @@ sub load_string {
         }
 
         # Grouping
-        if ( $l =~ m{^\s+\[\s*(.+)\s*\]} ) {
+        if ( $l =~ m{^\s+\[\s*(.+)\s*\]\s*$} ) {
             $ingroup = $1;
             $releases[ -1 ]->add_group( $1 );
             next;
@@ -82,6 +82,13 @@ sub load_string {
         }
 
         $l =~ s{^$indent}{};
+
+        # Inconsistent indentation between releases
+        if( $l =~ m{^\s} && !@{ $releases[ -1 ]->changes( $ingroup ) } ) {
+            $l =~ m{^(\s+)};
+            $indent = $1;
+            $l =~ s{^\s+}{};
+        }
 
         # Change line cont'd
         if ( $l =~ m{^\s} ) {
