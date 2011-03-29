@@ -2,8 +2,9 @@ Revision history for perl module CPAN::Changes
 
 0.09 2011-03-29
 
-  - Be more lenient when parsing dates. Timestamps (e.g.
-    Tue Mar 29 08:32:16 2011) are now parsed and converted to W3CDTF.
+  - Be more lenient when parsing dates. Timestamps (e.g. 
+    Tue Mar 29 08:32:16 2011) are now parsed and converted to W3CDTF. (Fixes 
+    RT #66862)
 
 0.08 2011-03-14
 
