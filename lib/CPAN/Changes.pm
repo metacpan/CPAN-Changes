@@ -8,13 +8,17 @@ use Text::Wrap   ();
 use Scalar::Util ();
 use version      ();
 
-our $VERSION = '0.08';
+our $VERSION = '0.09';
+
+my @m = qw( Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec );
+my %months = map { $m[ $_ ] => $_ + 1 } 0..11;
 
 sub new {
     my $class = shift;
     return bless {
         preamble => '',
         releases => {},
+        months   => \%months,
         @_,
     }, $class;
 }
@@ -50,9 +54,19 @@ sub load_string {
 
         # Version & Date
         if ( $l =~ $version_line_re ) {
+            my ( $v, $d ) = split m{\s+}, $l, 2;
 
-            # currently ignores data after the date; could be useful later
-            my ( $v, $d ) = split m{\s+}, $l;
+            # handle localtime-like timestamps
+            if( $d && $d =~ m{\D{3}\s+(\D{3})\s+(\d{1,2})\s+([\d:]+)?\D*(\d{4})} ) {
+                if( $3 ) {
+                    # unfortunately ignores TZ data
+                    $d = sprintf( '%d-%02d-%02dT%sZ', $4, $changes->{ months }->{ $1 }, $2, $3 );
+                }
+                else {
+                    $d = sprintf( '%d-%02d-%02d', $4, $changes->{ months }->{ $1 }, $2 );
+                }
+            }
+
             push @releases,
                 CPAN::Changes::Release->new(
                 version => $v,
@@ -132,7 +146,7 @@ sub releases {
     }
 
     my $sort_function = sub {
-        ( $a->date || '' ) cmp( $b->date || '' )
+        ( $a->date || '' ) cmp ( $b->date || '' )
             or ( eval { version->parse( $a->version ) } || 0 )
             <=> ( eval { version->parse( $b->version ) } || 0 );
     };
