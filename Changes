@@ -1,5 +1,9 @@
 Revision history for perl module CPAN::Changes
 
+0.10 2011-03-29
+
+  - Be more strict about date validation in Test::CPAN::Changes
+
 0.09 2011-03-29
 
   - Be more lenient when parsing dates. Timestamps (e.g. 
