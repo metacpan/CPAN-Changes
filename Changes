@@ -1,5 +1,10 @@
 Revision history for perl module CPAN::Changes
 
+0.11 2011-03-31
+
+  - Parse the default Dist-Zilla date format (e.g. 2010-12-28 00:15:12 
+    Europe/London)
+
 0.10 2011-03-29
 
   - Be more strict about date validation in Test::CPAN::Changes

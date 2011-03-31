@@ -8,7 +8,7 @@ use Text::Wrap   ();
 use Scalar::Util ();
 use version      ();
 
-our $VERSION = '0.10';
+our $VERSION = '0.11';
 
 my @m = qw( Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec );
 my %months = map { $m[ $_ ] => $_ + 1 } 0..11;
@@ -56,14 +56,21 @@ sub load_string {
         if ( $l =~ $version_line_re ) {
             my ( $v, $d ) = split m{\s+}, $l, 2;
 
-            # handle localtime-like timestamps
-            if( $d && $d =~ m{\D{3}\s+(\D{3})\s+(\d{1,2})\s+([\d:]+)?\D*(\d{4})} ) {
-                if( $3 ) {
-                    # unfortunately ignores TZ data
-                    $d = sprintf( '%d-%02d-%02dT%sZ', $4, $changes->{ months }->{ $1 }, $2, $3 );
+            # munge date formats
+            if( $d ) {
+                # handle localtime-like timestamps
+                if( $d =~ m{\D{3}\s+(\D{3})\s+(\d{1,2})\s+([\d:]+)?\D*(\d{4})} ) {
+                    if( $3 ) {
+                        # unfortunately ignores TZ data
+                        $d = sprintf( '%d-%02d-%02dT%sZ', $4, $changes->{ months }->{ $1 }, $2, $3 );
+                    }
+                    else {
+                        $d = sprintf( '%d-%02d-%02d', $4, $changes->{ months }->{ $1 }, $2 );
+                    }
                 }
-                else {
-                    $d = sprintf( '%d-%02d-%02d', $4, $changes->{ months }->{ $1 }, $2 );
+                # handle dist-zilla style, again ingoring TZ data
+                elsif( $d =~ m{(\d{4}-\d\d-\d\d) (\d\d:\d\d:\d\d) \D+}) {
+                    $d = sprintf( '%sT%sZ', $1, $2 );
                 }
             }
 
