@@ -8,7 +8,7 @@ use Text::Wrap   ();
 use Scalar::Util ();
 use version      ();
 
-our $VERSION = '0.12';
+our $VERSION = '0.13';
 
 my @m = qw( Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec );
 my %months = map { $m[ $_ ] => $_ + 1 } 0 .. 11;
@@ -45,8 +45,8 @@ sub load_string {
 
     my $version_line_re
         = $changes->{ next_token }
-        ? qr/^(?:[v0-9]|$changes->{next_token})/
-        : qr/^[v0-9]/;
+        ? qr/^(?:$version::LAX|$changes->{next_token})/
+        : qr/^$version::LAX/;
 
     $preamble .= shift @lines while @lines && $lines[ 0 ] !~ $version_line_re;
 

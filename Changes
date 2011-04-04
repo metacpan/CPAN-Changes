@@ -1,5 +1,9 @@
 Revision history for perl module CPAN::Changes
 
+0.13 2011-04-04
+
+  - Use version.pm's LAX regex for finding versions.
+
 0.12 2011-04-04
 
   - Sort releases() by version first for greater consistency
