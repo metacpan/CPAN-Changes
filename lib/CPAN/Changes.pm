@@ -8,10 +8,10 @@ use Text::Wrap   ();
 use Scalar::Util ();
 use version      ();
 
-our $VERSION = '0.11';
+our $VERSION = '0.12';
 
 my @m = qw( Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec );
-my %months = map { $m[ $_ ] => $_ + 1 } 0..11;
+my %months = map { $m[ $_ ] => $_ + 1 } 0 .. 11;
 
 sub new {
     my $class = shift;
@@ -57,19 +57,29 @@ sub load_string {
             my ( $v, $d ) = split m{\s+}, $l, 2;
 
             # munge date formats
-            if( $d ) {
+            if ( $d ) {
+
                 # handle localtime-like timestamps
-                if( $d =~ m{\D{3}\s+(\D{3})\s+(\d{1,2})\s+([\d:]+)?\D*(\d{4})} ) {
-                    if( $3 ) {
+                if ( $d
+                    =~ m{\D{3}\s+(\D{3})\s+(\d{1,2})\s+([\d:]+)?\D*(\d{4})} )
+                {
+                    if ( $3 ) {
+
                         # unfortunately ignores TZ data
-                        $d = sprintf( '%d-%02d-%02dT%sZ', $4, $changes->{ months }->{ $1 }, $2, $3 );
+                        $d = sprintf(
+                            '%d-%02d-%02dT%sZ',
+                            $4, $changes->{ months }->{ $1 },
+                            $2, $3
+                        );
                     }
                     else {
-                        $d = sprintf( '%d-%02d-%02d', $4, $changes->{ months }->{ $1 }, $2 );
+                        $d = sprintf( '%d-%02d-%02d',
+                            $4, $changes->{ months }->{ $1 }, $2 );
                     }
                 }
+
                 # handle dist-zilla style, again ingoring TZ data
-                elsif( $d =~ m{(\d{4}-\d\d-\d\d) (\d\d:\d\d:\d\d) \D+}) {
+                elsif ( $d =~ m{(\d{4}-\d\d-\d\d) (\d\d:\d\d:\d\d) \D+} ) {
                     $d = sprintf( '%sT%sZ', $1, $2 );
                 }
             }
@@ -105,7 +115,7 @@ sub load_string {
         $l =~ s{^$indent}{};
 
         # Inconsistent indentation between releases
-        if( $l =~ m{^\s} && !@{ $releases[ -1 ]->changes( $ingroup ) } ) {
+        if ( $l =~ m{^\s} && !@{ $releases[ -1 ]->changes( $ingroup ) } ) {
             $l =~ m{^(\s+)};
             $indent = $1;
             $l =~ s{^\s+}{};
@@ -153,9 +163,9 @@ sub releases {
     }
 
     my $sort_function = sub {
-        ( $a->date || '' ) cmp ( $b->date || '' )
-            or ( eval { version->parse( $a->version ) } || 0 )
-            <=> ( eval { version->parse( $b->version ) } || 0 );
+        ( eval { version->parse( $a->version ) } || 0 )
+            <=> ( eval { version->parse( $b->version ) } || 0 )
+            or ( $a->date || '' ) cmp( $b->date || '' );
     };
 
     my $next_token = $self->{ next_token };

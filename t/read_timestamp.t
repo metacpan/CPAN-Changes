@@ -12,8 +12,7 @@ isa_ok( $changes, 'CPAN::Changes' );
 my @releases = $changes->releases;
 is( scalar @releases, 3, 'has 3 releases' );
 
-# sorting by ASCENDING date
-my @expected = qw( 2011-03-25 2011-03-25T12:16:25Z 2011-03-25T12:18:36Z );
+my @expected = qw( 2011-03-25T12:16:25Z 2011-03-25T12:18:36Z 2011-03-25 );
 for ( 0..2 ) {
     isa_ok( $releases[ $_ ], 'CPAN::Changes::Release' );
     is( $releases[ $_ ]->date,  $expected[ $_ ], 'date' );
