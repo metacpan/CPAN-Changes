@@ -93,6 +93,14 @@ sub delete_group {
     delete $self->{ changes }->{ $_ } for @groups;
 }
 
+sub delete_empty_groups {
+    my $self = shift;
+
+    $self->delete_group(
+        grep { ! @{ $self->changes($_) } } $self->groups
+    );
+}
+
 sub serialize {
     my $self = shift;
 
@@ -196,6 +204,10 @@ Creates an empty group under the names provided.
 =head2 delete_group( @groups )
 
 Deletes the groups of changes specified.
+
+=head2 delete_empty_groups( )
+
+Deletes all groups that don't contain any changes.
 
 =head2 serialize( )
 

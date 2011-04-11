@@ -203,6 +203,12 @@ sub release {
     return $self->{ releases }->{ $version };
 }
 
+sub delete_empty_groups {
+    my $self = shift;
+
+    $_->delete_empty_groups for $self->releases;
+}
+
 sub serialize {
     my $self = shift;
 
@@ -319,6 +325,10 @@ matching release object, undef is returned.
 
 Returns all of the data as a string, suitable for saving as a Changes 
 file.
+
+=head2 delete_empty_groups( )
+
+Deletes change groups without changes in all releases.
 
 =head1 DEALING WITH "NEXT VERSION" PLACEHOLDERS
 
