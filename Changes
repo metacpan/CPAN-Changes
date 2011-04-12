@@ -1,5 +1,9 @@
 Revision history for perl module CPAN::Changes
 
+0.14 2011-04-11
+
+  - Add delete_empty_groups() to Changes.pm and Release.pm (Yanick Champoux) 
+
 0.13 2011-04-04
 
   - Use version.pm's LAX regex for finding versions.
