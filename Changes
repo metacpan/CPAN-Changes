@@ -1,5 +1,13 @@
 Revision history for perl module CPAN::Changes
 
+0.16 TO BE RELEASED
+
+  - Expose W3CDTF regex variable
+
+  - Allow whitespace in some dates
+
+  - Extract out valid W3CDTF portions from dates
+
 0.15 2011-04-11
 
   - Handle more date/time formats during parsing

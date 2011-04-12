@@ -8,7 +8,23 @@ use Text::Wrap   ();
 use Scalar::Util ();
 use version      ();
 
-our $VERSION = '0.15';
+our $VERSION = '0.16';
+
+# From DateTime::Format::W3CDTF
+our $W3CDTF_REGEX = qr{(\d\d\d\d) # Year
+                 (?:-(\d\d) # -Month
+                 (?:-(\d\d) # -Day
+                 (?:T
+                   (\d\d):(\d\d) # Hour:Minute
+                   (?:
+                     :(\d\d)     # :Second
+                     (\.\d+)?    # .Fractional_Second
+                   )?
+                   ( Z          # UTC
+                   | [+-]\d\d:\d\d    # Hour:Minute TZ offset
+                     (?::\d\d)?       # :Second TZ offset
+                 )?)?)?)?}x;
+
 
 my @m = qw( Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec );
 my %months = map { $m[ $_ ] => $_ + 1 } 0 .. 11;
@@ -56,7 +72,7 @@ sub load_string {
         if ( $l =~ $version_line_re ) {
             my ( $v, $d ) = split m{\s+}, $l, 2;
 
-            # munge date formats
+            # munge date formats, ignore junk
             if ( $d ) {
 
                 # handle localtime-like timestamps
@@ -92,9 +108,14 @@ sub load_string {
 
                 # handle dist-zilla style, again ingoring TZ data
                 elsif (
-                    $d =~ m{(\d{4}-\d\d-\d\d) (\d\d:\d\d(?::\d\d)?)( \D+)?} )
+                    $d =~ m{(\d{4}-\d\d-\d\d)\s+(\d\d:\d\d(?::\d\d)?)(\s+\D+)?} )
                 {
                     $d = sprintf( '%sT%sZ', $1, $2 );
+                }
+
+                # start with W3CDTF, ignore rest
+                elsif ( $d =~ m{^($W3CDTF_REGEX)(?: \D+)$}) {
+                    $d = ${^MATCH};
                 }
             }
 

@@ -7,20 +7,6 @@ use CPAN::Changes;
 use Test::Builder;
 
 my $Test       = Test::Builder->new;
-# From DateTime::Format::W3CDTF
-my $date_re    = qr{(\d\d\d\d) # Year
-                 (?:-(\d\d) # -Month
-                 (?:-(\d\d) # -Day
-                 (?:T
-                   (\d\d):(\d\d) # Hour:Minute
-                   (?:
-                     :(\d\d)     # :Second
-                     (\.\d+)?    # .Fractional_Second
-                   )?
-                   ( Z          # UTC
-                   | [+-]\d\d:\d\d    # Hour:Minute TZ offset
-                     (?::\d\d)?       # :Second TZ offset
-                 )?)?)?)?}x;
 my $version_re = '^[._\-[:alnum:]]+$';    # "Looks like" a version
 
 sub import {
@@ -64,7 +50,7 @@ sub changes_file_ok {
     $Test->ok( 1, "$file contains at least one release" );
 
     for ( @releases ) {
-        if ( $_->date !~ m{^$date_re\s*$} ) {
+        if ( $_->date !~ m{^${CPAN::Changes::W3CDTF_REGEX}\s*$} ) {
             $Test->ok( 0, "$file contains an invalid release date" );
             $Test->diag( '  ERR: ' . $_->date );
             return;
