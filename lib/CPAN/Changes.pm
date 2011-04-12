@@ -114,7 +114,7 @@ sub load_string {
                 }
 
                 # start with W3CDTF, ignore rest
-                elsif ( $d =~ m{^($W3CDTF_REGEX)(?: \D+)$}) {
+                elsif ( $d =~ m{^($W3CDTF_REGEX)}p ) {
                     $d = ${^MATCH};
                 }
             }
