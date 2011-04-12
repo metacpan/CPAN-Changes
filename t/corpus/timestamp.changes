@@ -1,3 +1,12 @@
+0.06 Mon, 11 Apr 2011 21:40:45 -0300
+ - RFC 2822
+
+0.05 2011-04-11 15:14
+ - Similar to 0.04, without seconds
+
+0.04 2011-04-11 12:11:10
+ - Datetime w/o T or Z
+
 0.03 Fri Mar 25 2011
  - Yet another release
 

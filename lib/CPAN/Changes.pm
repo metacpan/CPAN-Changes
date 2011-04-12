@@ -78,8 +78,22 @@ sub load_string {
                     }
                 }
 
+                # RFC 2822
+                elsif ( $d
+                    =~ m{\D{3}, (\d{1,2}) (\D{3}) (\d{4}) (\d\d:\d\d:\d\d) ([+-])(\d{2})(\d{2})}
+                    )
+                {
+                    $d = sprintf(
+                        '%d-%02d-%02dT%s%s%02d:%02d',
+                        $3, $changes->{ months }->{ $2 },
+                        $1, $4, $5, $6, $7
+                    );
+                }
+
                 # handle dist-zilla style, again ingoring TZ data
-                elsif ( $d =~ m{(\d{4}-\d\d-\d\d) (\d\d:\d\d:\d\d) \D+} ) {
+                elsif (
+                    $d =~ m{(\d{4}-\d\d-\d\d) (\d\d:\d\d(?::\d\d)?)( \D+)?} )
+                {
                     $d = sprintf( '%sT%sZ', $1, $2 );
                 }
             }
