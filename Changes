@@ -1,5 +1,9 @@
 Revision history for perl module CPAN::Changes
 
+0.15 2011-04-11
+
+  - Handle more date/time formats during parsing
+
 0.14 2011-04-11
 
   - Add delete_empty_groups() to Changes.pm and Release.pm (Yanick Champoux) 
