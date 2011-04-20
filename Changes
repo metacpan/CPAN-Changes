@@ -6,6 +6,8 @@ Revision history for perl module CPAN::Changes
 
   - Require version.pm 0.79, which introduced the $LAX regexp (RT #67613)
 
+  - Add the option to sort groups (Yanick Champoux)
+
 0.16 2011-04-12
 
   - Expose W3CDTF regex variable

@@ -19,11 +19,11 @@ my $changes = CPAN::Changes->load_string(<<'END_CHANGES');
 END_CHANGES
 
 like $changes->serialize => expected_order(qw/ A B C D/ );
-like $changes->serialize( groups_sort => \&reverse_order ) => expected_order(qw/ B A D C/ );
+like $changes->serialize( group_sort => \&reverse_order ) => expected_order(qw/ B A D C/ );
 
 my ($release) = reverse $changes->releases;
 like $release->serialize => expected_order(qw/ A B / );
-like $release->serialize( groups_sort => \&reverse_order ) => expected_order(qw/ B A / );
+like $release->serialize( group_sort => \&reverse_order ) => expected_order(qw/ B A / );
 
 is_deeply [ $release->groups ], [qw/ A B /]; 
 is_deeply [ $release->groups( sort => \&reverse_order ) ], [qw/ B A /]; 

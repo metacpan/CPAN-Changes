@@ -78,9 +78,9 @@ sub groups {
     my $self = shift;
     my %args = @_;
 
-    $args{sort} ||= sub { sort @_ };
+    $args{ sort } ||= sub { sort @_ };
 
-    return $args{sort}->(keys %{ $self->{ changes } });
+    return $args{ sort }->( keys %{ $self->{ changes } } );
 }
 
 sub add_group {
@@ -100,20 +100,19 @@ sub delete_group {
 sub delete_empty_groups {
     my $self = shift;
 
-    $self->delete_group(
-        grep { ! @{ $self->changes($_) } } $self->groups
-    );
+    $self->delete_group( grep { !@{ $self->changes( $_ ) } } $self->groups );
 }
 
 sub serialize {
     my $self = shift;
     my %args = @_;
 
-    my $output = join( ' ', grep { defined } ( $self->version, $self->date ) ) . "\n";
+    my $output = join( ' ', grep { defined } ( $self->version, $self->date ) )
+        . "\n";
 
-    $output
-        .= join "\n", map { $self->_serialize_group( $_ ) } 
-                      $self->groups( sort => $args{groups_sort} );
+    $output .= join "\n",
+        map { $self->_serialize_group( $_ ) }
+        $self->groups( sort => $args{ group_sort } );
     $output .= "\n";
 
     return $output;
@@ -219,12 +218,12 @@ Deletes the groups of changes specified.
 
 Deletes all groups that don't contain any changes.
 
-=head2 serialize( groups_sort => \&sorting_function )
+=head2 serialize( group_sort => \&sorting_function )
 
 Returns the release data as a string, suitable for inclusion in a Changes 
 file.
 
-If I<groups_sort> is provided, change groups are
+If I<group_sort> is provided, change groups are
 sorted according to the given function. If not,
 groups are sorted alphabetically.
 
