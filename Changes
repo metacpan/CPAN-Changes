@@ -4,6 +4,8 @@ Revision history for perl module CPAN::Changes
 
   - Eliminate extra whitespace when release data is not defined (RT #67441)
 
+  - Require version.pm 0.79, which introduced the $LAX regexp (RT #67613)
+
 0.16 2011-04-12
 
   - Expose W3CDTF regex variable

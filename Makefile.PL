@@ -10,7 +10,7 @@ name 'CPAN-Changes';
 all_from 'lib/CPAN/Changes.pm';
 
 requires 'Text::Wrap';
-requires 'version';
+requires 'version' => '0.79';
 
 test_requires 'Test::More';
 extra_tests;
