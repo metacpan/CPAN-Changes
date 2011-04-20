@@ -104,7 +104,7 @@ sub delete_empty_groups {
 sub serialize {
     my $self = shift;
 
-    my $output = sprintf "%s %s\n", $self->version, $self->date;
+    my $output = join( ' ', grep { defined } ( $self->version, $self->date ) ) . "\n";
 
     $output
         .= join( "\n", map { $self->_serialize_group( $_ ) } $self->groups );

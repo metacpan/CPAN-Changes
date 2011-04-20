@@ -1,5 +1,9 @@
 Revision history for perl module CPAN::Changes
 
+0.17 TO BE RELEASED
+
+  - Eliminate extra whitespace when release data is not defined (RT #67441)
+
 0.16 2011-04-12
 
   - Expose W3CDTF regex variable
