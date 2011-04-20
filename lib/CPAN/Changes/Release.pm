@@ -76,7 +76,11 @@ sub clear_changes {
 
 sub groups {
     my $self = shift;
-    return sort keys %{ $self->{ changes } };
+    my %args = @_;
+
+    $args{sort} ||= sub { sort @_ };
+
+    return $args{sort}->(keys %{ $self->{ changes } });
 }
 
 sub add_group {
@@ -103,11 +107,13 @@ sub delete_empty_groups {
 
 sub serialize {
     my $self = shift;
+    my %args = @_;
 
     my $output = join( ' ', grep { defined } ( $self->version, $self->date ) ) . "\n";
 
     $output
-        .= join( "\n", map { $self->_serialize_group( $_ ) } $self->groups );
+        .= join "\n", map { $self->_serialize_group( $_ ) } 
+                      $self->groups( sort => $args{groups_sort} );
     $output .= "\n";
 
     return $output;
@@ -193,9 +199,13 @@ a C<group> option will only replace change items in that group.
 
 Clears all changes from the release.
 
-=head2 groups( )
+=head2 groups( sort => \&sorting_function )
 
 Returns a list of current groups in this release.
+
+If I<sort> is provided, groups are
+sorted according to the given function. If not,
+they are sorted alphabetically.
 
 =head2 add_group( @groups )
 
@@ -209,10 +219,14 @@ Deletes the groups of changes specified.
 
 Deletes all groups that don't contain any changes.
 
-=head2 serialize( )
+=head2 serialize( groups_sort => \&sorting_function )
 
 Returns the release data as a string, suitable for inclusion in a Changes 
 file.
+
+If I<groups_sort> is provided, change groups are
+sorted according to the given function. If not,
+groups are sorted alphabetically.
 
 =head1 SEE ALSO
 
