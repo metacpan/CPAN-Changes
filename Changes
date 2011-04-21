@@ -1,6 +1,6 @@
 Revision history for perl module CPAN::Changes
 
-0.17 TO BE RELEASED
+0.17 2011-04-21
 
   - Eliminate extra whitespace when release data is not defined (RT #67441)
 
