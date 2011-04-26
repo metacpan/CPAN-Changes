@@ -2,7 +2,7 @@ Revision history for perl module CPAN::Changes
 
 0.17 2011-04-21
 
-  - Eliminate extra whitespace when release data is not defined (RT #67441)
+  - Eliminate extra whitespace when release date is not defined (RT #67441)
 
   - Require version.pm 0.79, which introduced the $LAX regexp (RT #67613)
 
