@@ -56,7 +56,7 @@ sub changes_file_ok {
             $Test->diag( '  ERR: ' . $_->date );
             return;
         }
-        if ( $_->version !~ m{$version_re} ) {
+        if ( $_->version !~ m{^$version::LAX$} ) {
             $Test->ok( 0, "$file contains an invalid version number" );
             $Test->diag( '  ERR: ' . $_->version );
             return;
@@ -119,7 +119,7 @@ uses the default filename of C<Changes>.
 =head2 changes_file_ok( $filename, \%arg )
 
 Checks the contents of the changes file against the specification. No plan 
-is declared and if ithe filename is undefined, C<Changes> is used.
+is declared and if the filename is undefined, C<Changes> is used.
 
 C<%arg> may include a I<version> entry, in which case the entry for that
 version must exist and have content.  This is useful to ensure that the version
