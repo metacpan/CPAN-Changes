@@ -50,7 +50,7 @@ sub changes_file_ok {
     $Test->ok( 1, "$file contains at least one release" );
 
     for ( @releases ) {
-        if ( $_->date !~ m{^${CPAN::Changes::W3CDTF_REGEX}\s*$} ) {
+        if ( $_->date !~ m[^${CPAN::Changes::W3CDTF_REGEX}\s*$] ) {
             $Test->ok( 0, "$file contains an invalid release date" );
             $Test->diag( '  ERR: ' . $_->date );
             return;
