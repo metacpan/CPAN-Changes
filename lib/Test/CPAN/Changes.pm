@@ -27,8 +27,9 @@ sub changes_ok {
 }
 
 sub changes_file_ok {
-    my ( $file ) = @_;
+    my ( $file, $arg ) = @_;
     $file ||= 'Changes';
+    $arg ||= {};
 
     my $changes = eval { CPAN::Changes->load( $file ) };
 
@@ -65,6 +66,26 @@ sub changes_file_ok {
     $Test->ok( 1, "$file contains valid release dates" );
     $Test->ok( 1, "$file contains valid version numbers" );
 
+    if ( defined $arg->{version} ) {
+        my $v = $arg->{version};
+
+        if ( my $release = $changes->release( $v ) ) {
+            $Test->ok( 1, "$file has an entry for the current version, $v" );
+            my $changes = $release->changes;
+
+            if ( $changes and grep { @$_ > 0 } values %$changes ) {
+              $Test->ok( 1, "entry for the current version, $v, has content" );
+            } else {
+              $Test->ok( 0, "entry for the current version, $v, no content" );
+            }
+        } else {
+            # Twice so that we have a fixed number of tests to plan.
+            # -- rjbs, 2011-05-02
+            $Test->ok( 0, "$file has no entry for the current version, $v" );
+            $Test->ok( 0, "$file has no entry for the current version, $v" );
+        }
+    }
+
     return $changes;
 }
 
@@ -95,10 +116,14 @@ changelogs match the specification.
 Simple wrapper around C<changes_file_ok>. Declares a four test plan, and 
 uses the default filename of C<Changes>.
 
-=head2 changes_file_ok( [ $file ] )
+=head2 changes_file_ok( $filename, \%arg )
 
 Checks the contents of the changes file against the specification. No plan 
-is declared and if no filename is specified, C<Changes> is used.
+is declared and if ithe filename is undefined, C<Changes> is used.
+
+C<%arg> may include a I<version> entry, in which case the entry for that
+version must exist and have content.  This is useful to ensure that the version
+currently being released has documented changes.
 
 =head1 SEE ALSO
 
