@@ -5,9 +5,9 @@ use warnings;
 
 use CPAN::Changes;
 use Test::Builder;
+use version ();
 
 my $Test       = Test::Builder->new;
-my $version_re = '^[._\-[:alnum:]]+$';    # "Looks like" a version
 
 sub import {
     my $self = shift;
