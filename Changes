@@ -1,5 +1,8 @@
 Revision history for perl module CPAN::Changes
 
+  - Add $VERSION to Test::CPAN::Changes so it plays nice with the toolchain
+    e.g Module::Install::AuthorRequres (Dan Brook)
+
 0.17 2011-04-21
 
   - Eliminate extra whitespace when release date is not defined (RT #67441)
