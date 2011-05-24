@@ -7,6 +7,8 @@ use CPAN::Changes;
 use Test::Builder;
 use version ();
 
+our $VERSION = '0.17';
+
 my $Test       = Test::Builder->new;
 
 sub import {
