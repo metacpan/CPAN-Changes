@@ -1,5 +1,10 @@
 Revision history for perl module CPAN::Changes
 
+0.18 2011-10-18
+
+  - Expand changes_file_ok() to accept arguments so that a specific version
+    may be checked (Ricardo Signes)
+
   - Add $VERSION to Test::CPAN::Changes so it plays nice with the toolchain
     e.g Module::Install::AuthorRequres (Dan Brook)
 
