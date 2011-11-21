@@ -129,7 +129,7 @@ sub load_string {
         }
 
         # Grouping
-        if ( $l =~ m{^\s+\[\s*(.+)\s*\]\s*$} ) {
+        if ( $l =~ m{^\s+\[\s*(.+?)\s*\]\s*$} ) {
             $ingroup = $1;
             $releases[ -1 ]->add_group( $1 );
             next;
