@@ -58,7 +58,10 @@ sub changes_file_ok {
             $Test->diag( '  ERR: ' . $_->date );
             return;
         }
-        if ( not version::is_lax($_->version) ) {
+
+        # strip off -TRIAL before testing
+        (my $version = $_->version) =~ s/-TRIAL$//;
+        if ( not version::is_lax($version) ) {
             $Test->ok( 0, "$file contains an invalid version number" );
             $Test->diag( '  ERR: ' . $_->version );
             return;
