@@ -34,7 +34,7 @@ reliably read and write Changes files.
 
 =head2 Version
 
-Versions should be formatted as described in L<CPAN::Meta::Spec/Version_Formats>.
+Versions should be formatted as described in L<CPAN::Meta::Spec/Version-Formats>.
 
 =head2 Date
 
