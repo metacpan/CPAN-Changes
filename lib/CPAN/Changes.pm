@@ -197,9 +197,18 @@ sub releases {
     }
 
     my $sort_function = sub {
-        ( eval { version->parse( $a->version ) } || 0 )
-            <=> ( eval { version->parse( $b->version ) } || 0 )
-            or ( $a->date || '' ) cmp( $b->date || '' );
+        (   eval {
+                ( my $v = $a->version ) =~ s/-TRIAL$//;
+                version->parse( $v );
+            }
+                || 0
+            ) <=> (
+            eval {
+                ( my $v = $b->version ) =~ s/-TRIAL$//;
+                version->parse( $v );
+            }
+                || 0
+            ) or ( $a->date || '' ) cmp( $b->date || '' );
     };
 
     my $next_token = $self->{ next_token };

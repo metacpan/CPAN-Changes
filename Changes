@@ -1,9 +1,11 @@
 Revision history for perl module CPAN::Changes
 
-0.19 TO BE RELEASED
+0.19 2012-04-30
 
-  - Test::CPAN::Changes now accepts version entries ending in '-TRIAL'
-    (RT #76882, Karen Etheridge)
+  - Test::CPAN::Changes now accepts version entries ending in '-TRIAL' (RT
+    #76882, Karen Etheridge)
+
+  - releases() in CPAN::Changes also accepts entries ending in '-TRIAL'
 
 0.18 2011-10-18
 
