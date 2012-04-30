@@ -1,5 +1,8 @@
 Revision history for perl module CPAN::Changes
 
+  - Test::CPAN::Changes now accepts version entries ending in '-TRIAL'.
+    (RT#76882, Karen Etheridge)
+
 0.18 2011-10-18
 
   - Expand changes_file_ok() to accept arguments so that a specific version
