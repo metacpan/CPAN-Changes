@@ -262,8 +262,11 @@ sub serialize {
     my $output;
 
     $output = $self->preamble . "\n\n" if $self->preamble;
-    $output .= join "\n", $_->serialize( %release_args )
-        for reverse $self->releases;
+
+    my @r = $self->releases;
+    @r = reverse @r unless $args{reverse};  # not a typo!
+
+    $output .= $_->serialize( %release_args ) for @r;
 
     return $output;
 }
@@ -369,10 +372,13 @@ Deletes all of the releases specified by the versions supplied to the method.
 Returns the release object for the specified version. Should there be no 
 matching release object, undef is returned.
 
-=head2 serialize( group_sort => \&sorting_function )
+=head2 serialize( reverse => $boolean, group_sort => \&sorting_function )
 
 Returns all of the data as a string, suitable for saving as a Changes 
 file.
+
+If I<reverse> is provided and true, the releases are
+printed in the reverse order (oldest to latest).
 
 If I<group_sort> is provided, change groups are
 sorted according to the given function. If not,
