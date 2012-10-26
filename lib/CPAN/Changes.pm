@@ -354,7 +354,7 @@ may be either a regular hashref, or a L<CPAN::Changes::Release> object.
     
     # Release object argument
     my $rel = CPAN::Changes::Release->new(
-        version => '0.01', date => '2009-07-06
+        version => '0.01', date => '2009-07-06'
     );
     $changes->releases( $rel );
 
