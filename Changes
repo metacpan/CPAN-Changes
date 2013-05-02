@@ -1,8 +1,13 @@
 Revision history for perl module CPAN::Changes
 
-{{$NEXT}}
-  - 'delete_empty_groups' don't erronously delete default group. 
+0.20 2013-05-01
 
+  - 'delete_empty_groups' shouldn't erronously delete default group 
+    (Yanick Champoux)
+
+  - Add tidy_changelog utility script (Yanick Champoux)
+
+  - Minor pod fix
 
 0.19 2012-04-30
 

@@ -15,6 +15,8 @@ requires 'version' => '0.79';
 test_requires 'Test::More';
 extra_tests;
 
+install_script 'tidy_changelog';
+
 repository 'http://github.com/bricas/cpan-changes';
 
 WriteAll;

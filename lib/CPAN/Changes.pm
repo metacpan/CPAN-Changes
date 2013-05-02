@@ -8,7 +8,7 @@ use Text::Wrap   ();
 use Scalar::Util ();
 use version      ();
 
-our $VERSION = '0.19';
+our $VERSION = '0.20';
 
 # From DateTime::Format::W3CDTF
 our $W3CDTF_REGEX = qr{(\d\d\d\d) # Year
@@ -443,7 +443,7 @@ Brian Cassidy E<lt>bricas@cpan.orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2011-2012 by Brian Cassidy
+Copyright 2011-2013 by Brian Cassidy
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself. 
