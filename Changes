@@ -1,5 +1,9 @@
 Revision history for perl module CPAN::Changes
 
+{{$NEXT}}
+  - 'delete_empty_groups' don't erronously delete default group. 
+
+
 0.19 2012-04-30
 
   - Test::CPAN::Changes now accepts version entries ending in '-TRIAL' (RT
