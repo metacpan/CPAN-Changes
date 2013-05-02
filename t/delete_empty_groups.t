@@ -5,7 +5,10 @@ use Test::More tests => 2;
 
 use CPAN::Changes;
 
-my $changes = CPAN::Changes->load_string(<<'END_CHANGES');
+subtest basic => sub {
+    plan tests => 2;
+
+    my $changes = CPAN::Changes->load_string(<<'END_CHANGES');
 0.2 2012-02-01
     [D]
     [E]
@@ -19,9 +22,31 @@ my $changes = CPAN::Changes->load_string(<<'END_CHANGES');
     - Blah
 END_CHANGES
 
-$changes->delete_empty_groups;
+    $changes->delete_empty_groups;
 
-is_deeply( [ sort( ($changes->releases)[0]->groups ) ], [ qw/ A C / ] );
-is_deeply( [ sort( ($changes->releases)[1]->groups ) ], [ 'E' ] );
+    is_deeply( [ sort( ($changes->releases)[0]->groups ) ], [ qw/ A C / ] );
+    is_deeply( [ sort( ($changes->releases)[1]->groups ) ], [ 'E' ] );
+};
 
+subtest mixed => sub {
+    plan tests => 1;
 
+    my $changes = CPAN::Changes->load_string(<<'END_CHANGES');
+Revision history for {{$dist->name}}
+
+0.2.0
+    [BUGS FIXES]
+    - A
+    - B
+
+0.1.0     2012-03-19
+    - C
+END_CHANGES
+
+    $changes->delete_empty_groups;
+
+    is_deeply( [ sort( ($changes->releases)[0]->changes ) ], [ { 
+        '' => [ 'C' ],
+    } ] );
+
+};
