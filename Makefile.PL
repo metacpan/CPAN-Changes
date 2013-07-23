@@ -12,7 +12,7 @@ all_from 'lib/CPAN/Changes.pm';
 requires 'Text::Wrap';
 requires 'version' => '0.79';
 
-test_requires 'Test::More';
+test_requires 'Test::More' => '0.96';
 extra_tests;
 
 install_script 'tidy_changelog';

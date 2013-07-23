@@ -1,5 +1,9 @@
 Revision history for perl module CPAN::Changes
 
+NEXT
+
+  - Require Test::More 0.96 (RT #84994)
+
 0.20 2013-05-01
 
   - 'delete_empty_groups' shouldn't erronously delete default group 
