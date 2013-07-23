@@ -2,14 +2,18 @@
 
 use CPAN::Changes;
 
-use Getopt::Long;
+use Getopt::Long qw(GetOptions);
+use Pod::Usage   qw(pod2usage);
 
-GetOptions( \my %opt, 
+GetOptions( \my %opt,
    'next!',
    'token:s',
    'headers!',
    'reverse',
-);
+   'check',
+   'help',
+) or pod2usage( -verbose => 2 );
+pod2usage( -verbose => 2 ) if $opt{help};
 
 $opt{token} ||= qr/\{\{\$NEXT\}\}/;
 
@@ -24,6 +28,14 @@ unless ( $changelog ) {
 
     $changelog = shift @files;
     warn "changelog not provided, guessing '$changelog'\n\n";
+}
+
+if ($opt{check}) {
+    require Test::CPAN::Changes;
+    require Test::More;
+    Test::More::plan(tests => 1);
+    Test::CPAN::Changes::changes_file_ok();
+    exit;
 }
 
 my $changes = CPAN::Changes->load(
@@ -80,4 +92,13 @@ changes.
 Prints the releases in reverse order (from the oldest to latest).
 
 
+=head2 --check
+
+Only check if the changelog is formatted properly using the changes_file_ok
+function of L<Test::CPAN::Changes>.
+
+
+=head2 --help
+
+This help
 
