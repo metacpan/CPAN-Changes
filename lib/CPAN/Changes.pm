@@ -30,7 +30,7 @@ my %months = map { $m[ $_ ] => $_ + 1 } 0 .. 11;
 
 our $UNKNOWN_VALS = join( '|', (
     'Unknown Release Date', 'Unknown', 'Not Released', 'Development Release', 
-    'Development',
+    'Development', 'Developer Release', 
 ) );
 
 sub new {
