@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 6;
+use Test::More tests => 8;
 
 use_ok( 'CPAN::Changes' );
 
@@ -100,4 +100,52 @@ Revision history for perl module Foo::Bar
 EOCHANGES
 
     is( $changes->serialize, $expected, 'serialize with line-wrap' );
+}
+
+{
+    $changes->releases(
+        {   version => '0.01',
+            date    => '2010-06-16',
+            note    => 'Note',
+            changes => {
+                '' => [
+                    'Test'
+                ]
+            },
+        }
+    );
+
+    my $expected = <<EOCHANGES;
+Revision history for perl module Foo::Bar
+
+0.01 2010-06-16 Note
+ - Test
+
+EOCHANGES
+
+    is( $changes->serialize, $expected, 'serialize with note' );
+}
+
+{
+    $changes->releases(
+        {   version => '0.01',
+            date    => 'Unknown',
+            note    => '(Oops)',
+            changes => {
+                '' => [
+                    'Test'
+                ]
+            },
+        }
+    );
+
+    my $expected = <<EOCHANGES;
+Revision history for perl module Foo::Bar
+
+0.01 Unknown (Oops)
+ - Test
+
+EOCHANGES
+
+    is( $changes->serialize, $expected, 'serialize with unknown date and note' );
 }

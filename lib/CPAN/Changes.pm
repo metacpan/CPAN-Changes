@@ -28,6 +28,11 @@ our $W3CDTF_REGEX = qr{(\d\d\d\d) # Year
 my @m = qw( Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec );
 my %months = map { $m[ $_ ] => $_ + 1 } 0 .. 11;
 
+our $UNKNOWN_VALS = join( '|', (
+    'Unknown Release Date', 'Unknown', 'Not Released', 'Development Release', 
+    'Development',
+) );
+
 sub new {
     my $class = shift;
     return bless {
@@ -69,59 +74,74 @@ sub load_string {
 
         # Version & Date
         if ( $l =~ $version_line_re ) {
-            my ( $v, $d ) = split m{\s+}, $l, 2;
+            my ( $v, $n ) = split m{\s+}, $l, 2;
+            my $d;
 
-            # munge date formats, ignore junk
-            if ( $d ) {
+            # munge date formats, save the remainder as note
+            if ( $n ) {
+                my $match = '';
 
+                # unknown dates
+                if ( $n =~ m{^($UNKNOWN_VALS)}i ) {
+                    $d     = $1;
+                    $match = $d;
+                }
                 # handle localtime-like timestamps
-                if ( $d
-                    =~ m{\D{3}\s+(\D{3})\s+(\d{1,2})\s+([\d:]+)?\D*(\d{4})} )
+                elsif ( $n
+                    =~ m{^(\D{3}\s+(\D{3})\s+(\d{1,2})\s+([\d:]+)?\D*(\d{4}))} )
                 {
-                    if ( $3 ) {
+                    $match = $1;
+                    if ( $4 ) {
 
                         # unfortunately ignores TZ data
                         $d = sprintf(
                             '%d-%02d-%02dT%sZ',
-                            $4, $changes->{ months }->{ $1 },
-                            $2, $3
+                            $5, $changes->{ months }->{ $2 },
+                            $3, $4
                         );
                     }
                     else {
                         $d = sprintf( '%d-%02d-%02d',
-                            $4, $changes->{ months }->{ $1 }, $2 );
+                            $5, $changes->{ months }->{ $2 }, $3 );
                     }
                 }
 
                 # RFC 2822
-                elsif ( $d
-                    =~ m{\D{3}, (\d{1,2}) (\D{3}) (\d{4}) (\d\d:\d\d:\d\d) ([+-])(\d{2})(\d{2})}
+                elsif ( $n
+                    =~ m{^(\D{3}, (\d{1,2}) (\D{3}) (\d{4}) (\d\d:\d\d:\d\d) ([+-])(\d{2})(\d{2}))}
                     )
                 {
+                    $match = $1;
                     $d = sprintf(
                         '%d-%02d-%02dT%s%s%02d:%02d',
-                        $3, $changes->{ months }->{ $2 },
-                        $1, $4, $5, $6, $7
+                        $4, $changes->{ months }->{ $3 },
+                        $2, $5, $6, $7, $8
                     );
                 }
 
                 # handle dist-zilla style, again ingoring TZ data
-                elsif ( $d
-                    =~ m{(\d{4}-\d\d-\d\d)\s+(\d\d:\d\d(?::\d\d)?)(\s+\D+)?} )
+                elsif ( $n
+                    =~ m{^((\d{4}-\d\d-\d\d)\s+(\d\d:\d\d(?::\d\d)?)(\s+\D+)?)} )
                 {
-                    $d = sprintf( '%sT%sZ', $1, $2 );
+                    $match = $1;
+                    $d = sprintf( '%sT%sZ', $2, $3 );
                 }
 
                 # start with W3CDTF, ignore rest
-                elsif ( $d =~ m{^($W3CDTF_REGEX)}p ) {
-                    $d = ${^MATCH};
+                elsif ( $n =~ m{^($W3CDTF_REGEX)}p ) {
+                    $d     = ${^MATCH};
+                    $match = $d;
                 }
+
+                # clean date from note
+                $n =~ s{^$match\s*}{};
             }
 
             push @releases,
                 CPAN::Changes::Release->new(
                 version => $v,
                 date    => $d,
+                note    => $n,
                 );
             $ingroup = undef;
             $indent  = undef;

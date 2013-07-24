@@ -6,12 +6,12 @@ use Test::More tests => 6;
 use CPAN::Changes;
 
 my $changes = CPAN::Changes->load_string(<<'END_CHANGES');
-2011-04-17 1.05
+1.05 2011-04-17
     [A]
     - stuff
     [B]
     - mo' stuff
-2011-04-16 1.04
+1.04 2011-04-16
     [C]
     - stuff
     [D]
