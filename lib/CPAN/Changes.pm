@@ -63,7 +63,7 @@ sub load_string {
         ? qr/^(?:$version::LAX|$changes->{next_token})/
         : qr/^$version::LAX/;
 
-    $preamble .= shift @lines while @lines && $lines[ 0 ] !~ $version_line_re;
+    $preamble .= shift( @lines ) . "\n" while @lines && $lines[ 0 ] !~ $version_line_re;
 
     for my $l ( @lines ) {
 
