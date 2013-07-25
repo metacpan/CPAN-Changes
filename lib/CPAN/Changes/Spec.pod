@@ -61,6 +61,9 @@ for multi-line changes. Example
     - This is a very very very long
       change line
 
+Although there is no limit on line length, authors generally wrap each line 
+at 78 columns.
+
 =head2 Preamble
 
 Any amount of text before the first C<Version> line will be considered part 
@@ -68,6 +71,10 @@ of the preamble. Most existing distributions include something along the
 lines of:
 
     Revision history for perl module My::Module
+
+Or
+
+    Revision history for perl distribution My-Distribution
 
 =head2 Groups
 
