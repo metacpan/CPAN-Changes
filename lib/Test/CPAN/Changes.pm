@@ -24,7 +24,7 @@ sub import {
 }
 
 sub changes_ok {
-    $Test->plan( tests => 4 );
+    $Test->plan( tests => 3 );
     return changes_file_ok( undef, @_ );
 }
 
@@ -53,12 +53,6 @@ sub changes_file_ok {
     $Test->ok( 1, "$file contains at least one release" );
 
     for ( @releases ) {
-        if ( $_->date !~ m[^${CPAN::Changes::W3CDTF_REGEX}\s*$] ) {
-            $Test->ok( 0, "$file contains an invalid release date" );
-            $Test->diag( '  ERR: ' . $_->date );
-            return;
-        }
-
         # strip off -TRIAL before testing
         (my $version = $_->version) =~ s/-TRIAL$//;
         if ( not version::is_lax($version) ) {
@@ -66,9 +60,13 @@ sub changes_file_ok {
             $Test->diag( '  ERR: ' . $_->version );
             return;
         }
+
+        if ( !defined $_->date || $_->date eq ''  ) {
+            $Test->carp( "$file is missing a release date for version " . $_->version );
+        }
+
     }
 
-    $Test->ok( 1, "$file contains valid release dates" );
     $Test->ok( 1, "$file contains valid version numbers" );
 
     if ( defined $arg->{version} ) {
@@ -118,7 +116,7 @@ changelogs match the specification.
 
 =head2 changes_ok( )
 
-Simple wrapper around C<changes_file_ok>. Declares a four test plan, and 
+Simple wrapper around C<changes_file_ok>. Declares a three test plan, and 
 uses the default filename of C<Changes>.
 
 =head2 changes_file_ok( $filename, \%arg )
