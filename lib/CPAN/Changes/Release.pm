@@ -31,6 +31,16 @@ sub date {
     return $self->{ date };
 }
 
+sub note {
+    my $self = shift;
+
+    if ( @_ ) {
+        $self->{ note } = shift;
+    }
+
+    return $self->{ note };
+}
+
 sub changes {
     my $self = shift;
 
@@ -108,7 +118,7 @@ sub serialize {
     my $self = shift;
     my %args = @_;
 
-    my $output = join( ' ', grep { defined } ( $self->version, $self->date ) )
+    my $output = join( ' ', grep { defined } ( $self->version, $self->date, $self->note ) )
         . "\n";
 
     $output .= join "\n",
@@ -171,6 +181,10 @@ Gets/sets the version number for this release.
 =head2 date( [ $date ] )
 
 Gets/sets the date for this release.
+
+=head2 note( [ $note ] )
+
+Gets/sets the note for this release.
 
 =head2 changes( [ $group ] )
 

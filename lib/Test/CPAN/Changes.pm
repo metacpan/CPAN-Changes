@@ -53,10 +53,16 @@ sub changes_file_ok {
     $Test->ok( 1, "$file contains at least one release" );
 
     for ( @releases ) {
-        if ( $_->date !~ m[^${CPAN::Changes::W3CDTF_REGEX}\s*$] ) {
+        if ( !defined $_->date || $_->date eq ''  ) {
             $Test->ok( 0, "$file contains an invalid release date" );
-            $Test->diag( '  ERR: ' . $_->date );
+            $Test->diag( '  ERR: No date at version ' . $_->version );
             return;
+        }
+
+        my $d = $_->{ _parsed_date };
+        if ( $d !~ m[^${CPAN::Changes::W3CDTF_REGEX}$]
+                && $d !~ m[^(${CPAN::Changes::UNKNOWN_VALS})$] ) {
+            $Test->carp( 'Date "' . $d . '" is not in the recommend format' );
         }
 
         # strip off -TRIAL before testing
