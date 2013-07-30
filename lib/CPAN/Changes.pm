@@ -75,12 +75,11 @@ sub load_string {
         # Version & Date
         if ( $l =~ $version_line_re ) {
             my ( $v, $n ) = split m{\s+}, $l, 2;
+            my $match = '';
             my $d;
 
             # munge date formats, save the remainder as note
             if ( $n ) {
-                my $match = '';
-
                 # unknown dates
                 if ( $n =~ m{^($UNKNOWN_VALS)}i ) {
                     $d     = $1;
@@ -139,9 +138,10 @@ sub load_string {
 
             push @releases,
                 CPAN::Changes::Release->new(
-                version => $v,
-                date    => $d,
-                note    => $n,
+                version      => $v,
+                date         => $d,
+                _parsed_date => $match,
+                note         => $n,
                 );
             $ingroup = undef;
             $indent  = undef;
