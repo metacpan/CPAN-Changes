@@ -1,8 +1,30 @@
 Revision history for perl module CPAN::Changes
 
-NEXT
+0.21 2013-07-30
+
+  [ Spec Changes ]
+
+  - Bump version to 0.02
+
+  - Added "unknown/dev" release date options (RT #67705)
+
+  - Added optional release note (RT #69321)
+
+  - Added another preamble example
+
+  - Added a note about line length
+
+  [ Code Changes ]
 
   - Require Test::More 0.96 (RT #84994)
+
+  - Added --check and --help flags to tidy_changelog script (Gabor Szabo)
+
+  - Properly parse multi-line preamble
+
+  - Test::CPAN::Changes now warns about parsed dates not in spec-compliant form
+
+  - Handle unknown/dev release dates and release note from new spec
 
 0.20 2013-05-01
 
