@@ -1,5 +1,9 @@
 Revision history for perl module CPAN::Changes
 
+0.22 2013-07-30
+
+  - Sync module versions (RT #87455)
+
 0.21 2013-07-30
 
   [ Spec Changes ]
