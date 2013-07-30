@@ -33,7 +33,6 @@ unless ( $changelog ) {
 if ($opt{check}) {
     require Test::CPAN::Changes;
     require Test::More;
-    Test::More::plan(tests => 1);
     Test::CPAN::Changes::changes_file_ok();
     exit;
 }
