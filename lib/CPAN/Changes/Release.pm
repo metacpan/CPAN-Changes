@@ -118,7 +118,7 @@ sub serialize {
     my $self = shift;
     my %args = @_;
 
-    my $output = join( ' ', grep { defined } ( $self->version, $self->date, $self->note ) )
+    my $output = join( ' ', grep { defined && length } ( $self->version, $self->date, $self->note ) )
         . "\n";
 
     $output .= join "\n",

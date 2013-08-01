@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 8;
+use Test::More tests => 9;
 
 use_ok( 'CPAN::Changes' );
 
@@ -148,4 +148,22 @@ Revision history for perl module Foo::Bar
 EOCHANGES
 
     is( $changes->serialize, $expected, 'serialize with unknown date and note' );
+}
+
+{
+    my $changes = CPAN::Changes->new;
+    $changes->add_release(
+        {   date    => '',
+            version => '0.01',
+            note    => '',
+            changes => { '' => [ 'Initial release' ] },
+        }
+    );
+    my $expected = <<EOCHANGES;
+0.01
+ - Initial release
+
+EOCHANGES
+
+    is( $changes->serialize, $expected, 'serialize w/ defined but empty date and note' );
 }

@@ -1,5 +1,9 @@
 Revision history for perl module CPAN::Changes
 
+0.23 TBR
+
+  - Fix extra whitespace for empty values after version (RT #87524)
+
 0.22 2013-07-30
 
   - Sync module versions (RT #87455)
