@@ -8,13 +8,13 @@ use Text::Wrap   ();
 use Scalar::Util ();
 use version      ();
 
-our $VERSION = '0.22';
+our $VERSION = '0.23';
 
 # From DateTime::Format::W3CDTF
 our $W3CDTF_REGEX = qr{(\d\d\d\d) # Year
                  (?:-(\d\d) # -Month
                  (?:-(\d\d) # -Day
-                 (?:T
+                 (?:[T\s]
                    (\d\d):(\d\d) # Hour:Minute
                    (?:
                      :(\d\d)     # :Second
@@ -120,7 +120,7 @@ sub load_string {
 
                 # handle dist-zilla style, again ingoring TZ data
                 elsif ( $n
-                    =~ m{^((\d{4}-\d\d-\d\d)\s+(\d\d:\d\d(?::\d\d)?)(\s+\D+)?)} )
+                    =~ m{^((\d{4}-\d\d-\d\d)\s+(\d\d:\d\d(?::\d\d)?)(?:\s+[A-Za-z]+/[A-Za-z_-]+))} )
                 {
                     $match = $1;
                     $d = sprintf( '%sT%sZ', $2, $3 );
@@ -128,8 +128,11 @@ sub load_string {
 
                 # start with W3CDTF, ignore rest
                 elsif ( $n =~ m{^($W3CDTF_REGEX)}p ) {
-                    $d     = ${^MATCH};
-                    $match = $d;
+                    $match = ${^MATCH};
+                    $d = $match;
+                    $d =~ s{ }{T};
+                    # Add UTC TZ if date ends at H:M, H:M:S or H:M:S.FS
+                    $d .= 'Z' if length( $d ) == 16 || length( $d ) == 19 || $d =~ m{\.\d+$};
                 }
 
                 # clean date from note

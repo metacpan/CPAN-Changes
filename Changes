@@ -2,6 +2,19 @@ Revision history for perl module CPAN::Changes
 
 0.23 TBR
 
+  [ Spec Changes ]
+
+  - Bump version to 0.03
+
+  - Allow the "T" marker in W3CDTF to be omitted
+
+  [ Code Changes ]
+
+  - Be more strict about what we consider to be a Dist::Zilla-style date
+    to avoid false positive matches
+
+  - Update W3CDTF parsing to make the "T" marker optional (RT #87499)
+
   - Fix extra whitespace for empty values after version (RT #87524)
 
 0.22 2013-07-30

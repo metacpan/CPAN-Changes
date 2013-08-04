@@ -7,7 +7,7 @@ CPAN::Changes::Spec - Specification for CPAN Changes files
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 SYNOPSIS
 
@@ -39,7 +39,9 @@ Versions should be formatted as described in L<CPAN::Meta::Spec/Version-Formats>
 =head2 Date
 
 A date/time in the format specified by L<http://www.w3.org/TR/NOTE-datetime> 
-aka W3CDTF. In order to satisfy release events not made to the public, or dates 
+aka W3CDTF. B<Note:> The "T" marker before the time portion is optional.
+
+In order to satisfy release events not made to the public, or dates 
 that are historically unknown, the following strings are also available:
 
 =over 4
