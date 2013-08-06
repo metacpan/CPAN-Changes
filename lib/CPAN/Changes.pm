@@ -151,7 +151,8 @@ sub load_string {
         }
 
         # Grouping
-        if ( $l =~ m{^\s+\[\s*(.+?)\s*\]\s*$} ) {
+        if ( $l =~ m{^\s+\[\s*(.+?)\s*\]\s*$}
+                or $l =~ m{^\s+\*\s*(.+?)\s*$}) {
             $ingroup = $1;
             $releases[ -1 ]->add_group( $1 );
             next;
@@ -180,8 +181,15 @@ sub load_string {
         # Change line cont'd
         if ( $l =~ m{^\s} ) {
             $l =~ s{^\s+}{};
-            my $changeset = $releases[ -1 ]->changes( $ingroup );
-            $changeset->[ -1 ] .= " $l";
+            # Change line is a nested change (DBIx-Class et al)
+            if ( $l =~ m{^[-*+]\s} ) {
+                # just add it as a new change, but keep the marker there?
+                $releases[ -1 ]->add_changes( { group => $ingroup }, $l );
+            } else {
+                # This is continuation of last change?
+                my $changeset = $releases[ -1 ]->changes( $ingroup );
+                $changeset->[ -1 ] .= " $l";
+            }
         }
 
         # Start of Change line
