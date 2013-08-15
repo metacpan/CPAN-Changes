@@ -23,7 +23,7 @@ version 0.03
 
 =head1 DESCRIPTION
 
-This document describes version 0.02 of the specification for Changes files
+This document describes version 0.03 of the specification for Changes files
 included in a CPAN distribution.
 
 It is intended as a guide for module authors to encourage them to write 
