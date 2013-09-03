@@ -3,6 +3,8 @@ package CPAN::Changes::Release;
 use strict;
 use warnings;
 
+use Text::Wrap   ();
+
 sub new {
     my $class = shift;
     return bless {
