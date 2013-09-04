@@ -4,7 +4,6 @@ use strict;
 use warnings;
 
 use CPAN::Changes::Release;
-use Text::Wrap   ();
 use Scalar::Util ();
 use version      ();
 
