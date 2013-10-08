@@ -8,7 +8,7 @@ use Text::Wrap   ();
 use Scalar::Util ();
 use version      ();
 
-our $VERSION = '0.23';
+our $VERSION = '0.24';
 
 # From DateTime::Format::W3CDTF
 our $W3CDTF_REGEX = qr{(\d\d\d\d) # Year
