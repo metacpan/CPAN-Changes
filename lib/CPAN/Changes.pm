@@ -117,9 +117,9 @@ sub load_string {
                     );
                 }
 
-                # handle dist-zilla style, again ingoring TZ data
+                # handle dist-zilla style, puts TZ data in note
                 elsif ( $n
-                    =~ m{^((\d{4}-\d\d-\d\d)\s+(\d\d:\d\d(?::\d\d)?)(?:\s+[A-Za-z]+/[A-Za-z_-]+))} )
+                    =~ m{^((\d{4}-\d\d-\d\d)\s+(\d\d:\d\d(?::\d\d)?))(?:\s+[A-Za-z]+/[A-Za-z_-]+)} )
                 {
                     $match = $1;
                     $d = sprintf( '%sT%sZ', $2, $3 );
