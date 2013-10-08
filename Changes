@@ -1,13 +1,15 @@
 Revision history for perl module CPAN::Changes
 
-0.24 2013-10-07
-
-  - Fix Dist::Zilla date parsing. Now puts timezone data in 
-    note section (Github #17)
+0.25 2013-10-08
 
   - Move Text::Wrap usage to proper module (Michal Spacek)
 
   - Typo fix (Karen Etheridge)
+
+0.24 2013-10-07
+
+  - Fix Dist::Zilla date parsing. Now puts timezone data in 
+    note section (Github #17)
 
 0.23 2013-08-14
 
