@@ -1,5 +1,9 @@
 Revision history for perl module CPAN::Changes
 
+0.26 2013-11-21
+
+  - Fix reference issues when adding a release (RT #90605)
+
 0.25 2013-10-08
 
   - Move Text::Wrap usage to proper module (Michal Spacek)
