@@ -249,9 +249,9 @@ sub add_release {
     my $self = shift;
 
     for my $release ( @_ ) {
-        $release = CPAN::Changes::Release->new( %$release )
-            if !Scalar::Util::blessed $release;
-        $self->{ releases }->{ $release->version } = $release;
+        my $new = Scalar::Util::blessed $release ? $release
+            : CPAN::Changes::Release->new( %$release );
+        $self->{ releases }->{ $new->version } = $new;
     }
 }
 
