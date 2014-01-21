@@ -126,8 +126,8 @@ sub load_string {
                 }
 
                 # start with W3CDTF, ignore rest
-                elsif ( $n =~ m{^($W3CDTF_REGEX)}p ) {
-                    $match = ${^MATCH};
+                elsif ( $n =~ m{^($W3CDTF_REGEX)} ) {
+                    $match = $1;
                     $d = $match;
                     $d =~ s{ }{T};
                     # Add UTC TZ if date ends at H:M, H:M:S or H:M:S.FS
