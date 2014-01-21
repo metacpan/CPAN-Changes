@@ -4,7 +4,7 @@ if ( -e 'MANIFEST.SKIP' ) {
     system( 'pod2text lib/CPAN/Changes.pm > README' );
 }
 
-perl_version '5.010';
+perl_version '5.008';
 
 name 'CPAN-Changes';
 all_from 'lib/CPAN/Changes.pm';
