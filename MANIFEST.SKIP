@@ -30,3 +30,6 @@
 
 # No tarballs!
 \.gz$
+
+# Travis Github integration file
+\.travis\.yml
