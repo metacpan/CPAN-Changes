@@ -139,15 +139,8 @@ sub load_string {
                 $n =~ s{^$match\s*}{};
 
                 # setting hint from leftovers from above substitution
-                # after cleaning up, we just ignore comments
-                #
-                # review: it would be possible to check whether a  possible
-                # hint acutally is a timezone using DateTime::TimeZone::is_valid_name
-                #
-                # if ($n !~ m/^#/ and not DateTime::TimeZone->is_valid_name($n)) {
-                if ($n !~ m/^#/ ) {
-                    $h = $n;
-                }
+                # after cleaning up, the hint is optional
+                ($h) = $n =~ m{- (update recommended|update not required)};
             }
 
             push @releases,
