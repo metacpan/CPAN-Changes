@@ -1,4 +1,7 @@
 language: perl
+before_install:
+  # bootstrap modules needed to manipulate dist
+  - "cpanm Module::Install::ExtraTests"
 perl:
   - "5.18"
   - "5.16"
