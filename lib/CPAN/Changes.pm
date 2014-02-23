@@ -75,10 +75,11 @@ sub load_string {
         if ( $l =~ $version_line_re ) {
             my ( $v, $n ) = split m{\s[\W\s]*}, $l, 2;
             my $match = '';
-            my $d;
+            my ($d, $h);
 
             # munge date formats, save the remainder as note
             if ( $n ) {
+
                 # unknown dates
                 if ( $n =~ m{^($UNKNOWN_VALS)}i ) {
                     $d     = $1;
@@ -136,6 +137,17 @@ sub load_string {
 
                 # clean date from note
                 $n =~ s{^$match\s*}{};
+
+                # setting hint from leftovers from above substitution
+                # after cleaning up, we just ignore comments
+                #
+                # review: it would be possible to check whether a  possible
+                # hint acutally is a timezone using DateTime::TimeZone::is_valid_name
+                #
+                # if ($n !~ m/^#/ and not DateTime::TimeZone->is_valid_name($n)) {
+                if ($n !~ m/^#/ ) {
+                    $h = $n;
+                }
             }
 
             push @releases,
@@ -144,6 +156,7 @@ sub load_string {
                 date         => $d,
                 _parsed_date => $match,
                 note         => $n,
+                hint         => $h,
                 );
             $ingroup = undef;
             $indent  = undef;
