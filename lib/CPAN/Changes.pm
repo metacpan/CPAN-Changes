@@ -140,7 +140,7 @@ sub load_string {
 
                 # setting hint from leftovers from above substitution
                 # after cleaning up, the hint is optional
-                ($h) = $n =~ m{- (update recommended|update not required)};
+                ($h) = $n =~ m{-\s+(update recommended|update not required)};
             }
 
             push @releases,
