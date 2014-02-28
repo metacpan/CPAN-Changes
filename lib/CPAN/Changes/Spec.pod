@@ -21,6 +21,22 @@ version 0.04
 
      - Initial release
 
+    Revision history for perl module Foo::Bar with optional hints
+
+    0.03 2010-08-01 - update recommended
+
+     - Fixed serious bug in bar method
+
+
+    0.02 2009-07-17 - update not required
+
+     - Added more foo() tests
+
+    0.01 2009-07-16
+
+     - Initial release
+
+
 =head1 DESCRIPTION
 
 This document describes version 0.03 of the specification for Changes files
@@ -60,6 +76,23 @@ that are historically unknown, the following strings are also available:
 
 =back
 
+=head2 Hint
+
+A hint is a simple optional text hinting at whether an update is necessary, it 
+can be one of following two values:
+
+=over
+
+=item * Update recommended
+
+For releases, which address serious issues/bugs like security fixes, memory leaks etc.
+
+=item * Update not required
+
+For releases which are housekeeping releases, updates to tests, documentation, build scripts etc.
+
+=back
+
 =head1 STRUCTURE
 
 =head2 Required Elements
@@ -90,6 +123,12 @@ Although there is no limit on line length, authors generally wrap each line
 at 78 columns.
 
 =head2 Optional Elements
+
+The update hint in the release heading line is optional and it is a basic 
+textual extension to the required format (see above):
+
+    <Version>(whitespace/non-"word" characters)<Date> -  <Hint>
+    (whitespace)<Change>
 
 =head3 Release Note
 
