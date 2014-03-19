@@ -135,6 +135,7 @@ sub load_string {
                 }
 
                 # clean date from note
+                $match =~ s/\+/\\+/gms;
                 $n =~ s{^$match\s*}{};
             }
 
