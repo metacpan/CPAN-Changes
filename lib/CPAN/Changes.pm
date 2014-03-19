@@ -7,7 +7,7 @@ use CPAN::Changes::Release;
 use Scalar::Util ();
 use version      ();
 
-our $VERSION = '0.23';
+our $VERSION = '0.27';
 
 # From DateTime::Format::W3CDTF
 our $W3CDTF_REGEX = qr{(\d\d\d\d) # Year
@@ -73,7 +73,7 @@ sub load_string {
 
         # Version & Date
         if ( $l =~ $version_line_re ) {
-            my ( $v, $n ) = split m{\s+}, $l, 2;
+            my ( $v, $n ) = split m{\s[\W\s]*}, $l, 2;
             my $match = '';
             my $d;
 
@@ -117,17 +117,17 @@ sub load_string {
                     );
                 }
 
-                # handle dist-zilla style, again ingoring TZ data
+                # handle dist-zilla style, puts TZ data in note
                 elsif ( $n
-                    =~ m{^((\d{4}-\d\d-\d\d)\s+(\d\d:\d\d(?::\d\d)?)(?:\s+[A-Za-z]+/[A-Za-z_-]+))} )
+                    =~ m{^((\d{4}-\d\d-\d\d)\s+(\d\d:\d\d(?::\d\d)?))(?:\s+[A-Za-z]+/[A-Za-z_-]+)} )
                 {
                     $match = $1;
                     $d = sprintf( '%sT%sZ', $2, $3 );
                 }
 
                 # start with W3CDTF, ignore rest
-                elsif ( $n =~ m{^($W3CDTF_REGEX)}p ) {
-                    $match = ${^MATCH};
+                elsif ( $n =~ m{^($W3CDTF_REGEX)} ) {
+                    $match = $1;
                     $d = $match;
                     $d =~ s{ }{T};
                     # Add UTC TZ if date ends at H:M, H:M:S or H:M:S.FS
@@ -249,9 +249,9 @@ sub add_release {
     my $self = shift;
 
     for my $release ( @_ ) {
-        $release = CPAN::Changes::Release->new( %$release )
-            if !Scalar::Util::blessed $release;
-        $self->{ releases }->{ $release->version } = $release;
+        my $new = Scalar::Util::blessed $release ? $release
+            : CPAN::Changes::Release->new( %$release );
+        $self->{ releases }->{ $new->version } = $new;
     }
 }
 

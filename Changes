@@ -1,5 +1,28 @@
 Revision history for perl module CPAN::Changes
 
+0.27 2013-12-13
+
+  [ Spec Changes ]
+
+  - Bump version to 0.04
+
+  - Allow non-"word" characters between a Version and a Date
+
+0.26 2013-11-21
+
+  - Fix reference issues when adding a release (RT #90605)
+
+0.25 2013-10-08
+
+  - Move Text::Wrap usage to proper module (Michal Spacek)
+
+  - Typo fix (Karen Etheridge)
+
+0.24 2013-10-07
+
+  - Fix Dist::Zilla date parsing. Now puts timezone data in 
+    note section (Github #17)
+
 0.23 2013-08-14
 
   [ Spec Changes ]

@@ -7,7 +7,7 @@ CPAN::Changes::Spec - Specification for CPAN Changes files
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 SYNOPSIS
 
@@ -69,8 +69,14 @@ the noted changes. Blank lines between the C<Version> line and the first
 C<Change> line are optional. Blank lines between C<Change> lines are also
 optional.
 
-    <Version>(whitespace)<Date>
+    <Version>(whitespace/non-"word" characters)<Date>
     (whitespace)<Change>
+
+B<NOTE:> The characters between a C<Version> and a C<Date> must start with 
+whitespace, but may subsquently contain any combination of whitespace and 
+non-"word" characters. Example:
+
+    0.01 - 2013-12-11 
 
 C<Change> lines have no specific format. Commonly, authors will use a dash
 C<-> followed by a space to start a new change, and indent subsequent lines
