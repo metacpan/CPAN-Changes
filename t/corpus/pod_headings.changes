@@ -1,0 +1,17 @@
+=head1 NAME
+
+Foo::Bar::Changes - Revision history for perl module Foo::Bar
+
+=head1 DESCRIPTION
+
+Yep.
+
+=head1 0.02 2010-06-17
+
+ - Later release
+
+=head1 0.01 2010-06-16
+
+ - Initial release
+
+=cut
