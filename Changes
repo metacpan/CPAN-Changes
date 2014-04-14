@@ -1,5 +1,9 @@
 Revision history for perl module CPAN::Changes
 
+TBD
+
+  - Add "SEE ALSO" links to similar modules (RT #94636)
+
 0.27 2013-12-13
 
   [ Spec Changes ]

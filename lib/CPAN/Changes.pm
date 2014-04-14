@@ -459,6 +459,16 @@ To continue with our example:
 
 =back
 
+=head2 SIMILAR MODULES
+
+=over 4
+
+=item * L<Module::Metadata::Changes>
+
+=item * L<Module::Changes>
+
+=back
+
 =head1 AUTHOR
 
 Brian Cassidy E<lt>bricas@cpan.orgE<gt>
