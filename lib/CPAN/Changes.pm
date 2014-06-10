@@ -7,7 +7,7 @@ use CPAN::Changes::Release;
 use Scalar::Util ();
 use version      ();
 
-our $VERSION = '0.27';
+our $VERSION = '0.28';
 
 # From DateTime::Format::W3CDTF
 our $W3CDTF_REGEX = qr{(\d\d\d\d) # Year

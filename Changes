@@ -1,8 +1,10 @@
 Revision history for perl module CPAN::Changes
 
-TBD
+0.28 2014-06-10
 
   - Add "SEE ALSO" links to similar modules (RT #94636)
+
+  - Use perl 5.8-compatible regex
 
 0.27 2013-12-13
 
