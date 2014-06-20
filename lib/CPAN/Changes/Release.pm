@@ -33,6 +33,16 @@ sub date {
     return $self->{ date };
 }
 
+sub hint {
+    my $self = shift;
+
+    if ( @_ ) {
+        $self->{ hint } = shift;
+    }
+
+    return $self->{ hint };
+}
+
 sub note {
     my $self = shift;
 

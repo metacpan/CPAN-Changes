@@ -75,10 +75,11 @@ sub load_string {
         if ( $l =~ $version_line_re ) {
             my ( $v, $n ) = split m{\s[\W\s]*}, $l, 2;
             my $match = '';
-            my $d;
+            my ($d, $h);
 
             # munge date formats, save the remainder as note
             if ( $n ) {
+
                 # unknown dates
                 if ( $n =~ m{^($UNKNOWN_VALS)}i ) {
                     $d     = $1;
@@ -136,6 +137,10 @@ sub load_string {
 
                 # clean date from note
                 $n =~ s{^$match\s*}{};
+
+                # setting hint from leftovers from above substitution
+                # after cleaning up, the hint is optional
+                ($h) = $n =~ m{-\s+(update recommended|update not required)};
             }
 
             push @releases,
@@ -144,6 +149,7 @@ sub load_string {
                 date         => $d,
                 _parsed_date => $match,
                 note         => $n,
+                hint         => $h,
                 );
             $ingroup = undef;
             $indent  = undef;
