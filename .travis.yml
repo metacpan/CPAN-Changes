@@ -7,10 +7,14 @@ perl:
    - "5.10"
    - "5.8"
 
+before_install:
+  - git clone git://github.com/haarg/perl-travis-helper
+  - source perl-travis-helper/init
+  - build-perl
+  - perl -V
+  - build-dist
+  - cd $BUILD_DIR
 install:
-   - export RELEASE_TESTING=1 AUTOMATED_TESTING=1 AUTHOR_TESTING=1 HARNESS_OPTIONS=c HARNESS_TIMER=1
-   - cpanm --quiet --notest Module::Install
-   - cpanm --quiet --notest --installdeps . 
-
+  - cpan-install --deps
 script:
-   - prove -lrsv t
+  - prove -l -j$((SYSTEM_CORES + 1)) $(test-dirs)
