@@ -4,6 +4,8 @@ use strict;
 use warnings;
 
 use Text::Wrap   ();
+use CPAN::Changes::Group;
+use Scalar::Util qw(blessed);
 
 sub new {
     my $class = shift;
@@ -49,10 +51,10 @@ sub changes {
     if ( @_ ) {
         my $group = shift;
         return unless exists $self->{ changes }->{ $group };
-        return $self->{ changes }->{ $group };
+        return $self->{ changes }->{ $group }->changes;
     }
 
-    return $self->{ changes };
+    return { map { $_ => $self->{ changes }->{$_}->changes } keys %{ $self->{ changes } } };
 }
 
 sub add_changes {
@@ -63,11 +65,7 @@ sub add_changes {
         $group = shift->{ group };
     }
 
-    if ( !exists $self->{ changes }->{ $group } ) {
-        $self->{ changes }->{ $group } = [];
-    }
-
-    push @{ $self->{ changes }->{ $group } }, @_;
+    $self->get_group( $group )->add_changes( @_ );
 }
 
 sub set_changes {
@@ -78,7 +76,7 @@ sub set_changes {
         $group = shift->{ group };
     }
 
-    $self->{ changes }->{ $group } = \@_;
+    $self->get_group( $group )->set_changes(@_);
 }
 
 sub clear_changes {
@@ -95,9 +93,43 @@ sub groups {
     return $args{ sort }->( keys %{ $self->{ changes } } );
 }
 
+sub get_group {
+    my $self = shift;
+    my $group = '';
+
+    if ( $_[ 0 ] ) {
+        $group = shift;
+    }
+    if ( !exists $self->{ changes }->{ $group } ) {
+        $self->{ changes }->{ $group } = CPAN::Changes::Group->new( name => $group );
+    }
+    if ( not blessed $self->{changes}->{$group} ) {
+       $self->{ changes }->{ $group } = CPAN::Changes::Group->new( name => $group , changes => $self->{changes}->{$group} );
+    }
+
+    return $self->{ changes }->{ $group };
+}
+
+sub attach_group {
+    my $self = shift;
+    my $group = shift;
+
+    die "Not a group" unless blessed $group;
+
+    my $name = $group->name;
+
+    $self->{changes}->{$name} = $group;
+
+}
+
+sub group_values {
+    my $self = shift;
+    return map { $self->get_group( $_ ) } $self->groups( @_ );
+}
+
 sub add_group {
     my $self = shift;
-    $self->{ changes }->{ $_ } = [] for @_;
+    $self->{ changes }->{ $_ } = CPAN::Changes::Group->new( name =>  $_ ) for @_;
 }
 
 sub delete_group {
@@ -112,8 +144,8 @@ sub delete_group {
 sub delete_empty_groups {
     my $self = shift;
 
-    $self->delete_group($_) 
-        for grep { !@{ $self->changes( $_ ) } } $self->groups;
+    $self->delete_group($_->name)
+        for grep { $_->is_empty } $self->group_values;
 }
 
 sub serialize {
@@ -124,21 +156,8 @@ sub serialize {
         . "\n";
 
     $output .= join "\n",
-        map { $self->_serialize_group( $_ ) }
-        $self->groups( sort => $args{ group_sort } );
+        map { $_->serialize } $self->group_values( sort => $args{ group_sort } );
     $output .= "\n";
-
-    return $output;
-}
-
-sub _serialize_group {
-    my ( $self, $group ) = @_;
-
-    my $output = '';
-
-    $output .= sprintf " [%s]\n", $group if length $group;
-    $output .= Text::Wrap::wrap( ' - ', '   ', $_ ) . "\n"
-        for @{ $self->changes( $group ) };
 
     return $output;
 }
@@ -243,6 +262,25 @@ file.
 If I<group_sort> is provided, change groups are
 sorted according to the given function. If not,
 groups are sorted alphabetically.
+
+=head2 get_group( [ $name ] )
+
+Returns the internal L<CPAN::Changes::Group> object for the group C<$name>.
+
+If C<$name> is not specified, the C<default> group C<('')> will be returned.
+
+If C<$name> does not exist, a L<CPAN::Changes::Group> object will be created, and returned.
+
+=head2 attach_group( $group_object )
+
+Attach a L<CPAN::Changes::Group> object to the C<::Release>. Note that the name is B<not> specified,
+as it is instead determined from C<< $group_object->name >>
+
+=head2 group_values( sort => \&sorting_function )
+
+Works like L</groups> but instead returns C<CPAN::Changes::Group> compatible objects.
+
+
 
 =head1 SEE ALSO
 
