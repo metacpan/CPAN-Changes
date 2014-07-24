@@ -7,7 +7,7 @@ use CPAN::Changes;
 use Test::Builder;
 use version ();
 
-our $VERSION = '0.28';
+our $VERSION = '0.29';
 
 my $Test     = Test::Builder->new;
 

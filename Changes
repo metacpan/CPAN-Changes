@@ -1,5 +1,10 @@
 Revision history for perl module CPAN::Changes
 
+0.29 2014-07-23
+
+  - Groups are now objects (CPAN::Changes::Group). Backwards
+    compatibility from hashes should be preserved (GH #22)
+
 0.28 2014-06-10
 
   - Add "SEE ALSO" links to similar modules (RT #94636)

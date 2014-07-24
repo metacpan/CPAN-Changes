@@ -5,6 +5,7 @@
 \B\.svn\b
 \B\.git\b
 .gitignore
+.travis.yml
 
 # Avoid Makemaker generated and utility files.
 \bMakefile$
