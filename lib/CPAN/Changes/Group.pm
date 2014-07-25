@@ -8,7 +8,6 @@ use Text::Wrap   ();
 sub new {
     my $class = shift;
     return bless {
-        name => q{},
         changes    => [],
         @_,
     }, $class;
@@ -18,6 +17,9 @@ sub new {
 # to prevent hash key and name being out of sync.
 sub name {
     my $self = shift;
+    if ( not exists $self->{ name } ) {
+      $self->{ name } = q[];
+    }
     return $self->{ name };
 }
 
