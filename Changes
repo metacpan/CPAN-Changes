@@ -1,5 +1,9 @@
 Revision history for perl module CPAN::Changes
 
+0.30 2014-07-26
+
+  - Fix for subclassing CPAN::Changes::Group (GH #23)
+
 0.29 2014-07-23
 
   - Groups are now objects (CPAN::Changes::Group). Backwards
