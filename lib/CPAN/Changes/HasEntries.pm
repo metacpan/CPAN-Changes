@@ -16,6 +16,8 @@ around _serialize => sub {
   $styles = [ @{$styles}[1 .. $#$styles], '-'];
   for my $entry ( @{ $self->entries } ) {
     $out .= $entry->_serialize($indent . $indent_add, $indent_add, $styles);
+    $out .= "\n"
+      if $entry->has_entries;
   }
   return $out;
 };

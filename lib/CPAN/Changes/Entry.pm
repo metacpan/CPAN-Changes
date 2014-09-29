@@ -19,7 +19,7 @@ sub _serialize {
     $text = s/^ /$style/;
   }
   elsif (length $style == 2) {
-    $text = substr($style, 0, 1) . " $text " . substr($style, 1, 1);
+    $text = substr($style, 0, 1) . " $text " . substr($style, 1, 1) . "\n";
   }
   $text =~ s/^(.)/$indent$1/m;
   return $text;

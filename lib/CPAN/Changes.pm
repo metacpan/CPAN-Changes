@@ -44,7 +44,9 @@ sub find_release {
 
 sub serialize {
   my ($self) = @_;
-  my $out = $self->preamble . "\n";
+  my $out = $self->preamble || '';
+  $out .= "\n\n"
+    if $out;
   my @styles = ('', '[]', '-', '*');
   my $indent_add = '  ';
   for my $release (@{$self->releases}) {
@@ -56,8 +58,11 @@ sub serialize {
     ) {
       $styles = [ '', '-', '*' ];
     }
-    $out .= "\n" . $release->_serialize('', '  ', $styles);
+    $out .= "\n"
+      unless $out eq '' || $out =~ /\n\n\z/;
+    $out .= $release->_serialize('', '  ', $styles);
   }
+  return $out;
 }
 
 1;

@@ -11,7 +11,11 @@ has line    => (is => 'ro');
 sub _serialize {
   my ($self, $indent, $indent_add, $styles) = @_;
 
-  $indent . $self->version . ' - ' . $self->date . ' ' . $self->note . "\n";
+  my $out = $indent . $self->version;
+  if ($self->date || $self->note) {
+    $out .= ' - ' . join ' ', (grep { defined } $self->date, $self->note);
+  }
+  $out . "\n";
 }
 
 1;
