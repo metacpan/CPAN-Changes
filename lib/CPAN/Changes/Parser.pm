@@ -271,7 +271,7 @@ sub split_date {
     }
 
     # start with W3CDTF, ignore rest
-    elsif ( $note =~ m{^($ISO_8601_DATE)} ) {
+    elsif ( $note =~ s{^($ISO_8601_DATE)}{} ) {
       $date = $1;
       $date =~ s{ }{T};
 
