@@ -37,7 +37,7 @@ sub find_release {
   my ($release) = grep { $_->version eq $version } @{ $self->releases };
   return $release
     if $release;
-  $version = _numify_version($version) || return;
+  $version = _numify_version($version) || return undef;
   ($release) = grep { _numify_version($_->version) == $version } @{ $self->releases };
   return $release;
 }
