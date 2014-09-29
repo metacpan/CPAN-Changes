@@ -8,6 +8,17 @@ sub has_entries {
   !!($self->entries && @{$self->entries});
 }
 
+sub find_entry {
+  my ($self, $find) = @_;
+  return undef
+    unless $self->has_entries;
+  if (ref $find ne 'Regexp') {
+    $find = qr/\A\Q$find\E\z/;
+  }
+  my ($entry) = grep { $_->text =~ $find } @{ $self->entries };
+  return $entry;
+}
+
 around _serialize => sub {
   my $orig = shift;
   my $self = shift;
