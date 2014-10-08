@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 33;
+use Test::More tests => 34;
 
 use_ok( 'CPAN::Changes' );
 
