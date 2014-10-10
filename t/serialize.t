@@ -90,8 +90,8 @@ EOCHANGES
 Revision history for perl module Foo::Bar
 
 0.01 2010-06-16
-  - Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis tortor
-    ac urna faucibus feugiat.
+  - Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis tortor ac
+    urna faucibus feugiat.
 EOCHANGES
 
     is( $changes->serialize, $expected, 'serialize with line-wrap' );

@@ -59,6 +59,7 @@ sub serialize {
       $output .= sprintf "  [ %s ]\n", $name if length $name;
       $indent .= '  ';
     }
+    local $Text::Wrap::columns = 79;
     $output .= Text::Wrap::wrap( "$indent- ", "$indent  ", $_ ) . "\n" for @{ $self->changes };
 
     return $output;
