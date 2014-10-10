@@ -13,7 +13,7 @@ sub _serialize {
 
   my $out = $indent . $self->version;
   if ($self->date || $self->note) {
-    $out .= ' - ' . join ' ', (grep { defined } $self->date, $self->note);
+    $out .= ' ' . join ' ', (grep { defined } $self->date, $self->note);
   }
   $out . "\n";
 }
