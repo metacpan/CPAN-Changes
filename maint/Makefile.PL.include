@@ -7,5 +7,6 @@ use ExtUtils::MakeMaker 6.57_10 ();
 author 'Brian Cassidy <bricas@cpan.org>';
 
 manifest_include bin => qr/.*/;
+manifest_include 't/corpus' => qr/.*/;
 
 1;
