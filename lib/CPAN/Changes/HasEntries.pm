@@ -1,7 +1,18 @@
 package CPAN::Changes::HasEntries;
 use Moo::Role;
+use Sub::Quote qw(qsub);
+use Types::Standard qw(ArrayRef InstanceOf Str);
 
-has entries => (is => 'ro');
+my $entry_type = (InstanceOf['CPAN::Changes::Entry'])->plus_coercions(
+  Str ,=> qsub q{ CPAN::Changes::Entry->new(text => $_[0]) },
+);
+
+has entries => (
+  is => 'ro',
+  default => sub { [] },
+  isa => ArrayRef[$entry_type],
+  coerce => (ArrayRef[$entry_type])->coercion,
+);
 
 sub has_entries {
   my $self = shift;
@@ -34,4 +45,5 @@ around _serialize => sub {
   return $out;
 };
 
+require CPAN::Changes::Entry;
 1;
