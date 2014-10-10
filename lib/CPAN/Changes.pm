@@ -1,7 +1,18 @@
 package CPAN::Changes;
 use Moo;
+use Sub::Quote qw(qsub);
+use Types::Standard qw(ArrayRef HashRef InstanceOf);
+use CPAN::Changes::Release;
 
-has releases => (is => 'ro', required => 1);
+my $release_type = (InstanceOf['CPAN::Changes::Release'])->plus_coercions(
+  HashRef ,=> qsub q{ CPAN::Changes::Release->new($_[0]) },
+);
+has releases => (
+  is => 'ro',
+  isa => ArrayRef[$release_type],
+  coerce => (ArrayRef[$release_type])->coercion,
+  default => qsub q{ [] },
+);
 has preamble => (is => 'ro');
 
 sub _numify_version {
