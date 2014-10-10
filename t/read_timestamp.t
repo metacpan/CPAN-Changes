@@ -29,6 +29,7 @@ for ( 0..@expected - 1 ) {
     }
     else {
         is( $releases[ $_ ]->date,  $expected[ $_ ], 'date' );
+        is( $releases[ $_ ]->note,  '', 'note' );
     }
 }
 
