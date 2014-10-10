@@ -16,7 +16,7 @@ $changes->add_release(
 {
     my $expected = <<EOCHANGES;
 0.01 2010-06-16
- - Initial release
+  - Initial release
 
 EOCHANGES
 
@@ -30,7 +30,7 @@ EOCHANGES
 Revision history for perl module Foo::Bar
 
 0.01 2010-06-16
- - Initial release
+  - Initial release
 
 EOCHANGES
 
@@ -46,8 +46,8 @@ EOCHANGES
 Revision history for perl module Foo::Bar
 
 0.01 2010-06-16
- [Group 1]
- - Initial release
+  [ Group 1 ]
+    - Initial release
 
 EOCHANGES
 
@@ -67,11 +67,11 @@ EOCHANGES
 Revision history for perl module Foo::Bar
 
 0.02 2010-06-17
- - New version
+  - New version
 
 0.01 2010-06-16
- [Group 1]
- - Initial release
+  [ Group 1 ]
+    - Initial release
 
 EOCHANGES
 
@@ -94,8 +94,8 @@ EOCHANGES
 Revision history for perl module Foo::Bar
 
 0.01 2010-06-16
- - Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis tortor
-   ac urna faucibus feugiat.
+  - Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis tortor
+    ac urna faucibus feugiat.
 
 EOCHANGES
 
@@ -119,7 +119,7 @@ EOCHANGES
 Revision history for perl module Foo::Bar
 
 0.01 2010-06-16 Note
- - Test
+  - Test
 
 EOCHANGES
 
@@ -143,7 +143,7 @@ EOCHANGES
 Revision history for perl module Foo::Bar
 
 0.01 Unknown (Oops)
- - Test
+  - Test
 
 EOCHANGES
 
@@ -161,7 +161,7 @@ EOCHANGES
     );
     my $expected = <<EOCHANGES;
 0.01
- - Initial release
+  - Initial release
 
 EOCHANGES
 
