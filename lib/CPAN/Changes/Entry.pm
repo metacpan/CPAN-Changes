@@ -12,7 +12,7 @@ sub _serialize {
   my $text = $self->text;
   if (length($style) < 2) {
     my $width = 80 - length($indent) - 2 * length($style);
-    $text =~ s/\G[ \t]*([^\n]{1,$width}|\S+)(\s+|$)/$1$2\n/mg;
+    $text =~ s/\G[ \t]*([^\n]{1,$width}|[^ \t\r\n]+)([ \t\r\n]+|$)/$1\n/mg;
     $text =~ s/[ \t]+\n/\n/g;
     my $space = ' ' x (2*length $style);
     $text =~ s/^(.)/$space$1/mg;
