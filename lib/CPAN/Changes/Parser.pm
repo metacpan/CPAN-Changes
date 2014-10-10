@@ -301,7 +301,7 @@ sub split_date {
         || $date =~ m{\.\d+$};
     }
 
-    $note =~ s/^[-*#\s]+//;
+    $note =~ s/^\s+//;
   }
 
   defined $_ && !length $_ && undef $_ for ($date, $note);
