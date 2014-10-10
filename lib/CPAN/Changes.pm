@@ -49,7 +49,7 @@ sub serialize {
     if $out;
   my @styles = ('', '[]', '-', '*');
   my $indent_add = '  ';
-  for my $release (@{$self->releases}) {
+  for my $release (reverse @{$self->releases}) {
     my $styles = \@styles;
     if (
       grep {
