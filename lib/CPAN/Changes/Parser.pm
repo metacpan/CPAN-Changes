@@ -111,7 +111,7 @@ sub _parse {
       next;
     }
     elsif (!@indents) {
-      $preamble .= $line;
+      $preamble .= (length $preamble ? "\n" : '') . $line;
       next;
     }
 
