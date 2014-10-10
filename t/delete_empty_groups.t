@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 2;
+use Test::More;
 
 use CPAN::Changes;
 
@@ -50,3 +50,5 @@ END_CHANGES
     } ] );
 
 };
+
+done_testing;

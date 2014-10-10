@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 19;
+use Test::More;
 
 use_ok( 'CPAN::Changes' );
 
@@ -47,3 +47,5 @@ sub check_releases {
         'one change line'
     );
 }
+
+done_testing;

@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 8;
+use Test::More;
 
 use CPAN::Changes;
 
@@ -28,3 +28,5 @@ for ( 0..@expected - 1 ) {
     is( $releases[ $_ ]->date, $expected[ $_ ]->{ date }, 'date' );
     is( $releases[ $_ ]->note, $expected[ $_ ]->{ note }, 'note' );
 }
+
+done_testing;

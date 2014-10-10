@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 6;
+use Test::More;
 
 use CPAN::Changes;
 
@@ -37,3 +37,5 @@ sub expected_order {
     my $re = join '.*', map { "\\[$_\\]" } @groups;
     return qr/$re/s;
 }
+
+done_testing;

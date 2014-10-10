@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 8;
+use Test::More;
 
 use CPAN::Changes;
 
@@ -19,3 +19,5 @@ my @dates = (
 for my $date ( @dates ) {
     ok( $date =~ m[^${CPAN::Changes::W3CDTF_REGEX}$], "Valid Date: $date" );
 }
+
+done_testing;

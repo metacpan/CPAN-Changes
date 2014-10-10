@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 5;
+use Test::More;
 
 use_ok( 'CPAN::Changes' );
 
@@ -14,3 +14,5 @@ is( scalar @releases, 1, 'has 1 release' );
 
 isa_ok( $releases[ 0 ], 'CPAN::Changes::Release' );
 is( $releases[ 0 ]->date, '2010-12-28T00:15:12Z', 'date' );
+
+done_testing;

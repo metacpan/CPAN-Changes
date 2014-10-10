@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 16;
+use Test::More;
 
 use_ok( 'CPAN::Changes' );
 
@@ -43,3 +43,5 @@ is_deeply(
     [ 'Testing tabs' ],
     'one change line'
 );
+
+done_testing;

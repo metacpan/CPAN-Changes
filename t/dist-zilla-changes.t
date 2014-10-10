@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 17;
+use Test::More;
 
 use_ok( 'CPAN::Changes' );
 
@@ -42,3 +42,4 @@ isa_ok( $releases[ 1 ], 'CPAN::Changes::Release' );
 is( $releases[ 1 ]->version, '1.0.0',      'version' );
 is( $releases[ 1 ]->date,    '2010-11-30', 'date' );
 
+done_testing;

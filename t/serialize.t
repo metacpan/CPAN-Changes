@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 9;
+use Test::More;
 
 use_ok( 'CPAN::Changes' );
 
@@ -167,3 +167,5 @@ EOCHANGES
 
     is( $changes->serialize, $expected, 'serialize w/ defined but empty date and note' );
 }
+
+done_testing;

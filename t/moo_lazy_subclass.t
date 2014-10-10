@@ -62,4 +62,3 @@ subtest 'noargs' => sub {
 };
 
 done_testing;
-

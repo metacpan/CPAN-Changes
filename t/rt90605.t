@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 3;
+use Test::More;
 
 use_ok( 'CPAN::Changes' );
 
@@ -19,3 +19,5 @@ $a->release( '1.0' )->add_changes( @changes );
 
 is_deeply( $a->release( '1.0' )->changes, { '' => [ 'hello' ] }, 'changes on "A"' );
 is_deeply( $b->release( '1.0' )->changes, { }, 'no changes on "B"' );
+
+done_testing;

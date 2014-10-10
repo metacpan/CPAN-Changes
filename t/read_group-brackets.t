@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 10;
+use Test::More;
 
 use_ok( 'CPAN::Changes' );
 
@@ -27,3 +27,5 @@ is_deeply(
     [ 'Initial release [not a group], seriously.' ],
     'one change line'
 );
+
+done_testing;
