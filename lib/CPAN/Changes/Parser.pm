@@ -50,8 +50,8 @@ sub _transform {
       map {
         $release_class->new(
           version => $_->{version},
-          ($_->{date} ? (date => $_->{date}) : ()),
-          ($_->{note} ? (note => $_->{note}) : ()),
+          (defined $_->{date} ? (date => $_->{date}) : ()),
+          (defined $_->{note} ? (note => $_->{note}) : ()),
           ($_->{entries} ? (
             entries => [
               map { _trans_entry($entry_class, $_) } @{$_->{entries}},
@@ -91,14 +91,14 @@ sub _parse {
       my $version = $1;
       my $note    = $2;
       my $date;
-      if ($note) {
+      if (defined $note) {
         ($date, $note) = split_date($note);
       }
 
       my $release = {
         version => $version,
-        date    => $date,
-        note    => $note,
+        (defined $date ? (date => $date) : ()),
+        (defined $note ? (note => $note) : ()),
         entries => [],
         line    => $line_number,
       };
@@ -245,7 +245,7 @@ sub split_date {
   my $note = shift;
   my $date;
   # munge date formats, save the remainder as note
-  if ($note) {
+  if (defined $note && length $note) {
     $note =~ s/^[-*#\s]+//;
     $note =~ s/\s+$//;
 
@@ -288,6 +288,9 @@ sub split_date {
 
     $note =~ s/^[-*#\s]+//;
   }
+
+  defined $_ && !length $_ && undef $_ for ($date, $note);
+
   return ($date, $note);
 }
 
