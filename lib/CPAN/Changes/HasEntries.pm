@@ -42,6 +42,7 @@ around _serialize => sub {
     $out .= "\n"
       if $entry->has_entries;
   }
+  $out =~ s/\n\n+\z/\n/;
   return $out;
 };
 
