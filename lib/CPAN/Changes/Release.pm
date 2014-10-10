@@ -3,9 +3,9 @@ use Moo;
 
 with 'CPAN::Changes::HasEntries';
 
-has version => (is => 'ro');
-has date    => (is => 'ro');
-has note    => (is => 'ro');
+has version => (is => 'rw');
+has date    => (is => 'rw');
+has note    => (is => 'rw');
 has line    => (is => 'ro');
 
 sub _serialize {

@@ -8,12 +8,12 @@ my $release_type = (InstanceOf['CPAN::Changes::Release'])->plus_coercions(
   HashRef ,=> qsub q{ CPAN::Changes::Release->new($_[0]) },
 );
 has releases => (
-  is => 'ro',
+  is => 'rw',
   isa => ArrayRef[$release_type],
   coerce => (ArrayRef[$release_type])->coercion,
   default => qsub q{ [] },
 );
-has preamble => (is => 'ro');
+has preamble => (is => 'rw');
 
 sub _numify_version {
     my $version = shift;

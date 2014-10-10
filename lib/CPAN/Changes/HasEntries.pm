@@ -8,7 +8,7 @@ my $entry_type = (InstanceOf['CPAN::Changes::Entry'])->plus_coercions(
 );
 
 has entries => (
-  is => 'ro',
+  is => 'rw',
   default => sub { [] },
   isa => ArrayRef[$entry_type],
   coerce => (ArrayRef[$entry_type])->coercion,
@@ -44,6 +44,21 @@ around _serialize => sub {
   }
   return $out;
 };
+
+sub add_entry {
+  my ($self, $entry) = @_;
+  $entry = $entry_type->coerce($entry);
+  push @{ $self->entries }, $entry;
+  return $entry;
+}
+
+sub remove_entry {
+  my ($self, $entry) = @_;
+  $entry = ref $entry ? $entry : $self->find_entry($entry);
+  return unless $entry;
+  my @entries = grep { $_ != $entry } @{ $self->entries };
+  $self->entries(\@entries);
+}
 
 require CPAN::Changes::Entry;
 1;
