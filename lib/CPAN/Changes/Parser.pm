@@ -20,10 +20,14 @@ has _entry_class => (
   default => 'CPAN::Changes::Entry',
   coerce => sub { use_module($_[0]) },
 );
+has _next_token => (
+  is => 'ro',
+  init_arg => 'next_token',
+);
 
 sub parse_string {
   my ($self, $string) = @_;
-  $self->_transform(_parse($string));
+  $self->_transform(_parse($string, version_like => $self->_next_token));
 }
 
 sub parse_file {
