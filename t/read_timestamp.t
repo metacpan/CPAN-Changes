@@ -25,7 +25,7 @@ my @expected = (
     { d => '2011-04-13T12:00Z', n => 'Test' },
     { d => '2011-04-14T12:00:00Z', n => 'America/Halifax' },
     '2011-04-14T13:00:00.123Z',
-    { d => '2011-04-12T12:00:00+01:00', n => '' },
+    { d => '2011-04-12T12:00:00+01:00', n => undef },
 );
 for ( 0..@expected - 1 ) {
     isa_ok( $releases[ $_ ], 'CPAN::Changes::Release' );
@@ -36,7 +36,7 @@ for ( 0..@expected - 1 ) {
     }
     else {
         is( $releases[ $_ ]->date,  $expected[ $_ ], 'date' );
-        is( $releases[ $_ ]->note,  '', 'note' );
+        is( $releases[ $_ ]->note,  undef, 'note' );
     }
 }
 
