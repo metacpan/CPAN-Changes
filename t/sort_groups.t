@@ -34,7 +34,7 @@ sub reverse_order {
 
 sub expected_order {
     my @groups = @_;
-    my $re = join '.*', map { "\\[$_\\]" } @groups;
+    my $re = join '.*', map { "\\[\\s*$_\\s*\\]" } @groups;
     return qr/$re/s;
 }
 
