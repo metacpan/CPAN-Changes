@@ -289,6 +289,7 @@ sub serialize {
     @r = reverse @r unless $args{reverse};  # not a typo!
 
     $output .= $_->serialize( %release_args ) for @r;
+    $output =~ s/\n\n+\z/\n/;
 
     return $output;
 }

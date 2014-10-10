@@ -17,7 +17,6 @@ $changes->add_release(
     my $expected = <<EOCHANGES;
 0.01 2010-06-16
   - Initial release
-
 EOCHANGES
 
     is( $changes->serialize, $expected, 'serialize' );
@@ -31,7 +30,6 @@ Revision history for perl module Foo::Bar
 
 0.01 2010-06-16
   - Initial release
-
 EOCHANGES
 
     is( $changes->serialize, $expected, 'serialize with preamble' );
@@ -48,7 +46,6 @@ Revision history for perl module Foo::Bar
 0.01 2010-06-16
   [ Group 1 ]
     - Initial release
-
 EOCHANGES
 
     is( $changes->serialize, $expected,
@@ -72,7 +69,6 @@ Revision history for perl module Foo::Bar
 0.01 2010-06-16
   [ Group 1 ]
     - Initial release
-
 EOCHANGES
 
     is( $changes->serialize, $expected, 'serialize with multiple releases' );
@@ -96,7 +92,6 @@ Revision history for perl module Foo::Bar
 0.01 2010-06-16
   - Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis tortor
     ac urna faucibus feugiat.
-
 EOCHANGES
 
     is( $changes->serialize, $expected, 'serialize with line-wrap' );
@@ -120,7 +115,6 @@ Revision history for perl module Foo::Bar
 
 0.01 2010-06-16 Note
   - Test
-
 EOCHANGES
 
     is( $changes->serialize, $expected, 'serialize with note' );
@@ -144,7 +138,6 @@ Revision history for perl module Foo::Bar
 
 0.01 Unknown (Oops)
   - Test
-
 EOCHANGES
 
     is( $changes->serialize, $expected, 'serialize with unknown date and note' );
@@ -162,7 +155,6 @@ EOCHANGES
     my $expected = <<EOCHANGES;
 0.01
   - Initial release
-
 EOCHANGES
 
     is( $changes->serialize, $expected, 'serialize w/ defined but empty date and note' );
