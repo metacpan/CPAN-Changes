@@ -260,7 +260,7 @@ sub split_date {
   my $date;
   # munge date formats, save the remainder as note
   if (defined $note && length $note) {
-    $note =~ s/^[-*#\s]+//;
+    $note =~ s/^[^\w\s]*\s+//;
     $note =~ s/\s+$//;
 
     # explicitly unknown dates
