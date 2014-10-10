@@ -19,6 +19,12 @@ my %META = (
         'Text::Wrap' => 0.003,
       },
     },
+    develop => {
+      requires => {
+        'Test::Pod' => 1.00,
+        'Test::Pod::Coverage' => 1.00,
+      },
+    },
   },
   resources => {
     repository => {
