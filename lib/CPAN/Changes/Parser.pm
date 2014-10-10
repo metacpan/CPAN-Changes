@@ -27,10 +27,14 @@ sub parse_string {
 }
 
 sub parse_file {
-  my ($self, $file) = @_;
-  open my $fh, '<:raw', $file or croak "Can't open $file: $!";
+  my ($self, $file, $layers) = @_;
+  my $mode = defined $layers ? "<$layers" : '<:raw';
+  open my $fh, $mode, $file or croak "Can't open $file: $!";
   my $content = do { local $/; <$fh> };
-  eval { $content = decode('UTF-8', $content, FB_CROAK | LEAVE_SRC) };
+  if (!defined $layers) {
+    # if it's valid UTF-8, decode that.  otherwise, assume latin 1 and leave it.
+    eval { $content = decode('UTF-8', $content, FB_CROAK | LEAVE_SRC) };
+  }
   $self->parse_string($content);
 }
 
