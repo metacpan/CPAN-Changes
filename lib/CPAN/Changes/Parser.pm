@@ -195,9 +195,9 @@ my %months;
   my $m = 0;
   $months{lc $_} = ++$m for qw( Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec );
 }
-our $SHORT_DAY = qr{Sun|Mon|Tue|Wed|Thu|Fri|Sun}i;
-our ($SHORT_MONTH) = map qr{$_}i, join('|', keys %months);
-our $UNKNOWN_DATE = qr{
+our $_SHORT_DAY = qr{Sun|Mon|Tue|Wed|Thu|Fri|Sun}i;
+our ($_SHORT_MONTH) = map qr{$_}i, join('|', keys %months);
+our $_UNKNOWN_DATE = qr{
   Unknown\ Release\ Date
   |Unknown
   |Not\ Released
@@ -206,19 +206,29 @@ our $UNKNOWN_DATE = qr{
   |Developer\ Release
 }xi;
 
-our $LOCALTIME_DATE = qr{
-  (?:$SHORT_DAY\s+)?
-  ($SHORT_MONTH)\s+
+our $_LOCALTIME_DATE = qr{
+  (?:$_SHORT_DAY\s+)?
+  ($_SHORT_MONTH)\s+
   (\d{1,2})\s+  # date
   ([\d:]+)?\D*  # time
   (\d{4})       # year
 }x;
 
-our $RFC_2822_DATE = qr{$SHORT_DAY,\s+(\d{1,2})\s+($SHORT_MONTH)\s+(\d{4})\s+(\d\d:\d\d:\d\d)\s+([+-])(\d{2})(\d{2})};
+our $_RFC_2822_DATE = qr{
+  $_SHORT_DAY,\s+
+  (\d{1,2})\s+
+  ($_SHORT_MONTH)\s+
+  (\d{4})\s+
+  (\d\d:\d\d:\d\d)\s+
+  ([+-])(\d{2})(\d{2})
+}x;
 
-our $DZIL_DATE = qr{(\d{4}-\d\d-\d\d)\s+(\d\d:\d\d(?::\d\d)?)(?:\s+[A-Za-z]+/[A-Za-z_-]+)};
+our $_DZIL_DATE = qr{
+  (\d{4}-\d\d-\d\d)\s+
+  (\d\d:\d\d(?::\d\d)?)(\s+[A-Za-z]+/[A-Za-z_-]+)
+}x;
 
-our $ISO_8601_DATE = qr{
+our $_ISO_8601_DATE = qr{
   \d\d\d\d # Year
   (?:
     -\d\d # -Month
@@ -250,12 +260,12 @@ sub split_date {
     $note =~ s/\s+$//;
 
     # explicitly unknown dates
-    if ( $note =~ s{^($UNKNOWN_DATE)}{}i ) {
+    if ( $note =~ s{^($_UNKNOWN_DATE)}{}i ) {
       $date = $1;
     }
 
     # handle localtime-like timestamps
-    elsif ( $note =~ s{^$LOCALTIME_DATE}{} ) {
+    elsif ( $note =~ s{^$_LOCALTIME_DATE}{} ) {
       $date = sprintf( '%d-%02d-%02d', $4, $months{lc $1}, $2 );
       if ($3) {
         # unfortunately ignores TZ data
@@ -264,18 +274,19 @@ sub split_date {
     }
 
     # RFC 2822
-    elsif ( $note =~ s{^$RFC_2822_DATE}{} ) {
+    elsif ( $note =~ s{^$_RFC_2822_DATE}{} ) {
       $date = sprintf( '%d-%02d-%02dT%s%s%02d:%02d',
         $3, $months{lc $2}, $1, $4, $5, $6, $7 );
     }
 
     # handle dist-zilla style, again ingoring TZ data
-    elsif ( $note =~ s{^$DZIL_DATE}{} ) {
+    elsif ( $note =~ s{^$_DZIL_DATE}{} ) {
       $date = sprintf( '%sT%sZ', $1, $2 );
+      $note = $3 . $note;
     }
 
     # start with W3CDTF, ignore rest
-    elsif ( $note =~ s{^($ISO_8601_DATE)}{} ) {
+    elsif ( $note =~ s{^($_ISO_8601_DATE)}{} ) {
       $date = $1;
       $date =~ s{ }{T};
 
