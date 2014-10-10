@@ -3,7 +3,7 @@ use warnings;
 
 use Test::More;
 
-use_ok( 'CPAN::Changes' );
+use CPAN::Changes;
 
 my $changes = CPAN::Changes->load( 't/corpus/different-indentation.changes' );
 

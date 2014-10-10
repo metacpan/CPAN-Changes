@@ -3,7 +3,7 @@ use warnings;
 
 use Test::More;
 
-use_ok( 'CPAN::Changes' );
+use CPAN::Changes;
 
 my $changes = CPAN::Changes->new;
 $changes->add_release(
