@@ -196,7 +196,7 @@ my %months;
   $months{lc $_} = ++$m for qw( Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec );
 }
 our $SHORT_DAY = qr{Sun|Mon|Tue|Wed|Thu|Fri|Sun}i;
-our $SHORT_MONTH = map qr{$_}i, join('|', keys %months);
+our ($SHORT_MONTH) = map qr{$_}i, join('|', keys %months);
 our $UNKNOWN_DATE = qr{
   Unknown\ Release\ Date
   |Unknown
