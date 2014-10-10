@@ -56,7 +56,7 @@ sub serialize {
     my $name = $self->name;
     my $indent = '  ';
     if (length $name) {
-      $output .= sprintf "  [ %s ]\n", $name if length $name;
+      $output .= sprintf "  [%s]\n", $name if length $name;
       $indent .= '  ';
     }
     $output .= Text::Wrap::wrap( "$indent- ", "$indent  ", $_ ) . "\n" for @{ $self->changes };
