@@ -1,5 +1,9 @@
 Revision history for perl module CPAN::Changes
 
+  - Clean up packaging
+
+  - Return undef for dates or notes that don't exist
+
   - Quote meta chars to fix a problem that clobbered dates 
     with timezones due to the '+' char (GH #20)
 
