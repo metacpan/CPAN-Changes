@@ -1,7 +1,5 @@
 Revision history for perl module CPAN::Changes
 
-0.31 TBD
-
   - Quote meta chars to fix a problem that clobbered dates 
     with timezones due to the '+' char (GH #20)
 
