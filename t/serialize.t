@@ -160,4 +160,25 @@ EOCHANGES
     is( $changes->serialize, $expected, 'serialize w/ defined but empty date and note' );
 }
 
+{
+    my $changes = CPAN::Changes->new;
+    $changes->add_release(
+        {   date    => '',
+            version => '0.01',
+            note    => '',
+            changes => { '' => [
+                'http://www.cpan.org/abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz',
+                "\x{026B}this_entry_should_not_be_wrapped_on_the_nonbreaking_space\x{00A0}in_it_even_though_it_is_over_80_characters_long",
+            ] },
+        }
+    );
+    my $expected = <<EOCHANGES;
+0.01
+  - http://www.cpan.org/abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+  - \x{026B}this_entry_should_not_be_wrapped_on_the_nonbreaking_space\x{00A0}in_it_even_though_it_is_over_80_characters_long
+EOCHANGES
+
+    is( $changes->serialize, $expected, 'serialize does not wrap long tokens or split on nbsp' );
+}
+
 done_testing;

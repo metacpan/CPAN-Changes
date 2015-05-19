@@ -59,6 +59,10 @@ sub serialize {
       $output .= sprintf "  [ %s ]\n", $name if length $name;
       $indent .= '  ';
     }
+    # change logs commonly have long URLs we shouldn't break, and by default
+    # Text::Wrap wraps on NONBREAKING SPACE.
+    local $Text::Wrap::break = '[\t ]';
+    local $Text::Wrap::huge = 'overflow';
     $output .= Text::Wrap::wrap( "$indent- ", "$indent  ", $_ ) . "\n" for @{ $self->changes };
 
     return $output;
