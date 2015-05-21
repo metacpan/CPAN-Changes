@@ -18,13 +18,19 @@ is( $releases[ 0 ]->version, '0.01',       'version' );
 is( $releases[ 0 ]->date,    '2010-06-16', 'date' );
 is_deeply(
     $releases[ 0 ]->changes,
-    { 'Group 1' => [ 'Initial release [not a group], seriously.' ] },
+    { 'Group 1' => [
+        'Initial release [not a group], seriously.',
+        'change [also] [not a group]',
+    ] },
     'full changes'
 );
 is_deeply( [ $releases[ 0 ]->groups ], [ 'Group 1' ], 'one group' );
 is_deeply(
     $releases[ 0 ]->changes( 'Group 1' ),
-    [ 'Initial release [not a group], seriously.' ],
+    [
+        'Initial release [not a group], seriously.',
+        'change [also] [not a group]',
+    ],
     'one change line'
 );
 
