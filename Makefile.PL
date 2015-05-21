@@ -17,6 +17,7 @@ my %META = (
     runtime => {
       requires => {
         'Text::Wrap' => 0.003,
+        'version'    => 0.9906,
       },
     },
     develop => {
