@@ -1,5 +1,6 @@
 Revision history for perl module CPAN::Changes
 
+  - only treat bracketed text if it is on its own line with no other brackets
   - bump version.pm prereq to make sure it works properly
   - Let long tokens (like URLs) overflow rather than splitting them into
     multiple likes
