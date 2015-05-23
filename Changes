@@ -1,5 +1,6 @@
 Revision history for perl module CPAN::Changes
 
+0.400001 - 2015-05-23
   - accept either UTF-8 or ISO-8859-1 files and decode them
   - only treat bracketed text if it is on its own line with no other brackets
   - bump version.pm prereq to make sure it works properly
