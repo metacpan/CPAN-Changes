@@ -6,6 +6,7 @@ use warnings;
 use CPAN::Changes::Release;
 use Scalar::Util ();
 use version      ();
+use Encode qw(decode FB_CROAK LEAVE_SRC);
 
 our $VERSION = '0.400001';
 
@@ -45,11 +46,16 @@ sub new {
 sub load {
     my ( $class, $file, @args ) = @_;
 
-    open( my $fh, '<', $file ) or die $!;
-    my $changes = $class->load_string( do { local $/; <$fh>; }, @args );
-    close( $fh );
+    open( my $fh, '<:raw', $file ) or die $!;
 
-    return $changes;
+    my $content = do { local $/; <$fh> };
+
+    close $fh;
+
+    # if it's valid UTF-8, decode that.  otherwise, assume latin 1 and leave it.
+    eval { $content = decode('UTF-8', $content, FB_CROAK | LEAVE_SRC) };
+
+    return $class->load_string( $content, @args );
 }
 
 sub load_string {
