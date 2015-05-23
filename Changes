@@ -2,13 +2,9 @@ Revision history for perl module CPAN::Changes
 
   - Let long tokens (like URLs) overflow rather than splitting them into
     multiple likes
-
   - Don't wrap on non-breaking spaces
-
   - Clean up packaging
-
   - Return undef for dates or notes that don't exist
-
   - Quote meta chars to fix a problem that clobbered dates 
     with timezones due to the '+' char (GH #20)
 
