@@ -6,7 +6,7 @@ use Test::More;
 use CPAN::Changes;
 
 my $changes = CPAN::Changes->load( 't/corpus/dist-zilla.changes',
-    next_token => qr/{{\$NEXT}}/);
+    next_token => qr/\{\{\$NEXT\}\}/);
 
 isa_ok( $changes, 'CPAN::Changes' );
 is( $changes->preamble, 'Revision history for Catalyst-Plugin-Sitemap',
