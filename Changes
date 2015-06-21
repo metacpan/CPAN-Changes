@@ -1,5 +1,6 @@
 Revision history for perl module CPAN::Changes
 
+0.400002 - 2015-06-21
   - revert whitespace changes that were inadvertantly included in previous
     release.
   - escape curly brackets in test to avoid warning in perl 5.22
