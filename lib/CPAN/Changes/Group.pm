@@ -56,7 +56,7 @@ sub serialize {
     my $name = $self->name;
     my $indent = '  ';
     if (length $name) {
-      $output .= sprintf "  [ %s ]\n", $name if length $name;
+      $output .= sprintf "  [%s]\n", $name if length $name;
       $indent .= '  ';
     }
     # change logs commonly have long URLs we shouldn't break, and by default

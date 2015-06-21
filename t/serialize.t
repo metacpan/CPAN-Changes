@@ -44,7 +44,7 @@ EOCHANGES
 Revision history for perl module Foo::Bar
 
 0.01 2010-06-16
-  [ Group 1 ]
+  [Group 1]
     - Initial release
 EOCHANGES
 
@@ -67,7 +67,7 @@ Revision history for perl module Foo::Bar
   - New version
 
 0.01 2010-06-16
-  [ Group 1 ]
+  [Group 1]
     - Initial release
 EOCHANGES
 
