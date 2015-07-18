@@ -84,20 +84,33 @@ sub serialize {
   my $out = $self->preamble || '';
   $out .= "\n\n"
     if $out;
-  my @styles = ('', '[]', '-', '*');
-  my $indent_add = '  ';
+
+  my $width = $opts{width} || 76;
+  my @styles = @{ $opts{styles} || ['', '[]', '-', '*'] };
+  my @indents = @{ $opts{indents} || ['', ' ', ''] };
+
   for my $release (reverse @{$self->_releases}) {
     my $styles = \@styles;
+    my $indents = \@indents;
     if (
       grep {
-        length($_->text) > 78 - 4 - length($indent_add) || !$_->has_entries
-      } @{ $release->entries }
+        length($_->text) + length($indents->[0]) + length($styles->[1]) > $width
+      }
+        @{ $release->entries }
+      or
+      !grep { $_->has_entries }
+        @{ $release->entries }
     ) {
       $styles = [ '', '-', '*' ];
     }
     $out .= "\n"
       unless $out eq '' || $out =~ /\n\n\z/;
-    $out .= $release->_serialize('', '  ', $styles);
+    my $sub = $release->serialize(
+      indents => $indents,
+      styles => $styles,
+      width => $width - length $indents->[0],
+    );
+    $out .= $sub;
   }
   return $out;
 }

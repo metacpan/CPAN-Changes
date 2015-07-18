@@ -36,17 +36,25 @@ sub find_entry {
   return $entry;
 }
 
-around _serialize => sub {
-  my $orig = shift;
-  my $self = shift;
-  my ($indent, $indent_add, $styles) = @_;
+around serialize => sub {
+  my ($orig, $self, %args) = @_;
+  my $indents = $args{indents} || [];
+  my $styles = $args{styles} || [];
+  my $width = $args{width} || 76;
+  $indents = [ @{$indents}[1 .. $#$indents], '  '],
+  $styles = [ @{$styles}[1 .. $#$styles], '-'],
   my $out = $self->$orig(@_);
-  $styles = [ @{$styles}[1 .. $#$styles], '-'];
   my $entries = $self->entries || [];
   for my $entry ( @$entries ) {
-    $out .= $entry->_serialize($indent . $indent_add, $indent_add, $styles);
-    $out .= "\n"
+    my $sub = $entry->serialize(
+      indents => $indents,
+      styles => $styles,
+      width => $width - length $indents->[0],
+    );
+    $sub =~ s/^(.)/$indents->[0]$1/mg;
+    $sub .= "\n"
       if $entry->has_entries;
+    $out .= $sub;
   }
   $out =~ s/\n\n+\z/\n/;
   return $out;

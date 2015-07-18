@@ -35,18 +35,25 @@ around BUILDARGS => sub {
 };
 
 sub serialize {
-  $_[0]->_serialize('', ' ', ['', '[]']);
-}
+  my ($self, %args) = @_;
+  my $indents = $args{indents} || ['', ' ', ''];
+  my $styles = $args{styles} || ['', '[]'];
+  my $width = $args{width} || 76;
 
-sub _serialize {
-  my ($self, $indent, $indent_add, $styles) = @_;
-
-  my $out = $indent . $self->version;
+  my $out = $indents->[0] . $styles->[0] . $self->version;
   if ($self->date || $self->note) {
     $out .= ' ' . join ' ', (grep { defined } $self->date, $self->note);
   }
   $out . "\n";
 }
+
+around serialize => sub {
+  my ($orig, $self, %args) = @_;
+  $args{indents} ||= ['', ' ', ''];
+  $args{styles} ||= ['', '[]'];
+  $args{width} ||= 76;
+  $self->$orig(%args);
+};
 
 sub changes {
   my ($self, $group) = @_;
