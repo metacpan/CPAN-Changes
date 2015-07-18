@@ -80,14 +80,13 @@ sub serialize {
   if ($opts{reverse}) {
     $self = $self->clone(releases => [ reverse @{ $self->_releases } ]);
   }
+  my $width = $opts{width} || 76;
+  my @styles = @{ $opts{styles} || ['', '[]', '-', '*'] };
+  my @indents = @{ $opts{indents} || ['', ' ', ''] };
 
   my $out = $self->preamble || '';
   $out .= "\n\n"
     if $out;
-
-  my $width = $opts{width} || 76;
-  my @styles = @{ $opts{styles} || ['', '[]', '-', '*'] };
-  my @indents = @{ $opts{indents} || ['', ' ', ''] };
 
   for my $release (reverse @{$self->_releases}) {
     my $styles = \@styles;
@@ -106,10 +105,10 @@ sub serialize {
     $out .= "\n"
       unless $out eq '' || $out =~ /\n\n\z/;
     my $sub = $release->serialize(
+      %opts,
       indents => $indents,
       styles => $styles,
       width => $width - length $indents->[0],
-      group_sort => $opts{group_sort},
     );
     $out .= $sub;
   }
