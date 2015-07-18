@@ -7,13 +7,26 @@ has _entry => (
   is => 'rw',
   handles => {
     is_empty => 'has_entries',
-    serialize => 'serialize',
     add_changes => 'add_entry',
+    name => 'text',
   },
   lazy => 1,
-  default => qsub q{ CPAN::Changes::Entry->new },
+  default => qsub q{ CPAN::Changes::Entry->new(text => '') },
   predicate => 1,
 );
+
+sub _maybe_entry {
+  my $self = shift;
+  if ($self->can('changes') == \&CPAN::Changes::Group::changes) {
+    return $self->_entry;
+  }
+  else {
+    return CPAN::Changes::Entry->new(
+      text => $self->name,
+      entries => $self->changes,
+    );
+  }
+}
 
 around BUILDARGS => sub {
   my ($orig, $self, @args) = @_;
@@ -26,14 +39,6 @@ around BUILDARGS => sub {
   }
   $args;
 };
-
-sub name {
-  my ($self, @changes) = @_;
-  return ''
-    unless $self->_has_entry;
-  my $entry = $self->_entry;
-  $entry->can('text') ? $entry->text : '';
-}
 
 sub changes {
   my ($self) = @_;
@@ -53,6 +58,13 @@ sub clear_changes {
   my $entry = $self->_entry;
   @{$entry->entries} = ();
   $self->changes;
+}
+
+sub serialize {
+  my ($self, %args) = @_;
+  $args{indents} ||= [' ', ' '];
+  $args{styles} ||= ['[]', '-'];
+  $self->_maybe_entry->serialize(%args);
 }
 
 1;

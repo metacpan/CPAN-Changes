@@ -145,7 +145,7 @@ sub get_group {
 
 sub attach_group {
   my ($self, $group) = @_;
-  my $entry = $group->_entry;
+  my $entry = $group->_maybe_entry;
   if ($entry->text eq '') {
     push @{ $self->entries }, @{ $entry->entries };
   }
