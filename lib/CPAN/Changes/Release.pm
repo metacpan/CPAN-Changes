@@ -52,6 +52,10 @@ around serialize => sub {
   $args{indents} ||= ['', ' ', ''];
   $args{styles} ||= ['', '[]'];
   $args{width} ||= 76;
+  if (my $sort = $args{group_sort}) {
+    my $entries = $self->_sorted_groups($sort);
+    $self = $self->clone(entries => $entries);
+  }
   $self->$orig(%args);
 };
 
@@ -153,6 +157,20 @@ sub attach_group {
 sub group_values {
   my ($self, @groups) = @_;
   return map { $self->get_group($_) } $self->groups(@groups);
+}
+
+sub _sorted_groups {
+  my ($self, $sort_function) = @_;
+  my @groups = grep { $_->has_entries } @{ $self->entries };
+  my @bare = grep { !$_->has_entries } @{ $self->entries };
+  return \@bare
+    if !@groups;
+
+  my %entries = map { $_->text => [$_] } @groups;
+  $entries{''} = \@bare
+    if @bare;
+  my @sorted = $sort_function->(keys %entries);
+  return [ map { @{ $entries{$_} } } @sorted ];
 }
 
 1;

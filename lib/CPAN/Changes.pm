@@ -109,6 +109,7 @@ sub serialize {
       indents => $indents,
       styles => $styles,
       width => $width - length $indents->[0],
+      group_sort => $opts{group_sort},
     );
     $out .= $sub;
   }
