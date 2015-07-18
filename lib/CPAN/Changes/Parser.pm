@@ -84,9 +84,12 @@ sub _trans_entry {
 sub _parse {
   my ($string, %opts) = @_;
 
-  my $version_token = $opts{version_like}
-    ? qr/$version::LAX|$opts{version_like}/
-    : qr/$version::LAX/;
+  my $version_prefix = qr/version|revision/i;
+  $version_prefix = qr/$version_prefix|$opts{version_prefix}/
+    if $opts{version_prefix};
+  my $version_token = $version::LAX;
+  $version_token = qr/$version_token|$opts{version_like}/
+    if $opts{version_like};
 
   my @lines = split /\r\n?|\n/, $string;
 
@@ -95,7 +98,7 @@ sub _parse {
   my @indents;
   for my $line_number ( 0 .. $#lines ) {
     my $line = $lines[$line_number];
-    if ( $line =~ /^(?:(?:version|revision)\s+)?($version_token)(?:\s+(.*))?$/i ) {
+    if ( $line =~ /^(?:$version_prefix\s+)?($version_token)(?:\s+(.*))?$/i ) {
       my $version = $1;
       my $note    = $2;
       my $date;
