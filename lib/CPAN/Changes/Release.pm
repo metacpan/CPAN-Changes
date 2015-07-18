@@ -97,7 +97,7 @@ sub groups {
 
 sub add_group {
   my ($self, @groups) = @_;
-  push @{ $self->entries }, map { $_->_entry } @groups;
+  push @{ $self->entries }, map { CPAN::Changes::Entry->new(text => $_) } @groups;
 }
 
 sub delete_group {
