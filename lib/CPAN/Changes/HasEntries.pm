@@ -14,6 +14,12 @@ has entries => (
   coerce => (ArrayRef[$entry_type])->coercion,
 );
 
+sub clone {
+  my $self = shift;
+  my %args = @_;
+  (ref $self)->new(%$self, %args);
+}
+
 sub has_entries {
   my $self = shift;
   !!($self->entries && @{$self->entries});
