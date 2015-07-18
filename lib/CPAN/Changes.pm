@@ -38,29 +38,29 @@ sub releases {
 }
 
 sub _numify_version {
-    my $version = shift;
-    $version = _fix_version($version);
-    $version =~ s/_//g;
-    if ($version =~ s/^v//i || $version =~ tr/.// > 1) {
-        my @parts = split /\./, $version;
-        my $n = shift @parts;
-        $version = sprintf(join('.', '%s', ('%03s' x @parts)), $n, @parts);
-    }
-    $version += 0;
-    return $version;
+  my $version = shift;
+  $version = _fix_version($version);
+  $version =~ s/_//g;
+  if ($version =~ s/^v//i || $version =~ tr/.// > 1) {
+    my @parts = split /\./, $version;
+    my $n = shift @parts;
+    $version = sprintf(join('.', '%s', ('%03s' x @parts)), $n, @parts);
+  }
+  $version += 0;
+  return $version;
 }
 
 sub _fix_version {
-    my $version = shift;
-    return 0 unless defined $version;
-    my $v = ($version =~ s/^v//i);
-    $version =~ s/[^\d\._].*//;
-    $version =~ s/\.[._]+/./;
-    $version =~ s/[._]*_[._]*/_/g;
-    $version =~ s/\.{2,}/./g;
-    $v ||= $version =~ tr/.// > 1;
-    $version ||= 0;
-    return (($v ? 'v' : '') . $version);
+  my $version = shift;
+  return 0 unless defined $version;
+  my $v = ($version =~ s/^v//i);
+  $version =~ s/[^\d\._].*//;
+  $version =~ s/\.[._]+/./;
+  $version =~ s/[._]*_[._]*/_/g;
+  $version =~ s/\.{2,}/./g;
+  $v ||= $version =~ tr/.// > 1;
+  $version ||= 0;
+  return (($v ? 'v' : '') . $version);
 }
 
 sub find_release {
