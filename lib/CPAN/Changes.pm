@@ -133,8 +133,21 @@ sub load_string {
 }
 
 sub add_release {
-  my ($self, @releases) = @_;
-  push @{ $self->_releases }, map { $release_type->coerce($_) } @releases;
+  my ($self, @new_releases) = @_;
+  @new_releases = map { $release_type->coerce($_) } @new_releases;
+  my @releases = @{ $self->_releases };
+  for my $new_release (@new_releases) {
+    my $version = _numify_version($new_release->version);
+    for my $release (@releases) {
+      if (_numify_version($release->version) == $version) {
+        $release = $new_release;
+        undef $new_release;
+      }
+    }
+  }
+  push @releases, grep { defined } @new_releases;
+  $self->_releases(\@releases);
+  return 1;
 }
 
 sub delete_release {
