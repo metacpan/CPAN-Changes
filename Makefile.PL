@@ -48,6 +48,7 @@ my %META = (
 
 my %MM_ARGS = (
   EXE_FILES => [ 'bin/tidy_changelog' ],
+  test => { TESTS => 't/*.t t/*/*.t' },
 );
 
 ## BOILERPLATE ###############################################################
