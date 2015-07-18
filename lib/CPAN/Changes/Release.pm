@@ -109,8 +109,14 @@ sub delete_group {
   $self->entries(\@entries);
 }
 
+# this is nonsense, but try to emulate.  if nothing has entries, then there
+# are no "groups", so leave everything.
 sub delete_empty_groups {
-  # this is nonsense
+  my ($self) = @_;
+  my @entries = grep { $_->has_entries } @{ $self->entries };
+  return
+    if !@entries;
+  $self->entries(\@entries);
 }
 
 sub get_group {
