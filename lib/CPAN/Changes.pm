@@ -136,3 +136,38 @@ sub delete_empty_groups {
 }
 
 1;
+__END__
+
+=head1 NAME
+
+CPAN::Changes - Parser for CPAN style change logs
+
+=head1 SYNOPSIS
+
+  use CPAN::Changes;
+  my $changes = CPAN::Changes->load('Changes');
+  $changes->release('0.01');
+
+=head1 DESCRIPTION
+
+Attemptes to parse CPAN style changelogs as best as possible.
+
+=head1 AUTHOR
+
+haarg - Graham Knop (cpan:HAARG) <haarg@haarg.org>
+
+=head1 CONTRIBUTORS
+
+Brian Cassidy <bricas@cpan.org>
+
+=head1 COPYRIGHT
+
+Copyright (c) 2011-2015 the CPAN::Changes L</AUTHOR> and L</CONTRIBUTORS>
+as listed above.
+
+=head1 LICENSE
+
+This library is free software and may be distributed under the same terms
+as perl itself. See L<http://dev.perl.org/licenses/>.
+
+=cut
