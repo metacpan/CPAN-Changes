@@ -23,6 +23,11 @@ has preamble => (
   default => '',
 );
 
+sub clone {
+  my $self = shift;
+  return (ref $self)->new(%$self, @_);
+}
+
 # backcompat
 sub releases {
   my ($self, @args) = @_;
@@ -70,7 +75,12 @@ sub find_release {
 }
 
 sub serialize {
-  my ($self) = @_;
+  my ($self, %opts) = @_;
+
+  if ($opts{reverse}) {
+    $self = $self->clone(releases => [ reverse @{ $self->_releases } ]);
+  }
+
   my $out = $self->preamble || '';
   $out .= "\n\n"
     if $out;
