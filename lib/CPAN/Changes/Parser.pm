@@ -201,13 +201,10 @@ sub _parse {
   };
 }
 
-my %months;
-{
-  my $m = 0;
-  $months{lc $_} = ++$m for qw( Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec );
-}
-our $_SHORT_DAY = qr{Sun|Mon|Tue|Wed|Thu|Fri|Sun}i;
-our ($_SHORT_MONTH) = map qr{$_}i, join('|', keys %months);
+my @months = qw( Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec );
+my %months = map {; lc $months[$_] => $_ } 0 .. $#months;
+our $_SHORT_DAY = qr{Sun|Mon|Tue|Wed|Thu|Fri|Sat}i;
+our ($_SHORT_MONTH) = map qr{$_}i, join('|', @months);
 our $_UNKNOWN_DATE = qr{
   Unknown\ Release\ Date
   |Unknown
@@ -277,7 +274,7 @@ sub split_date {
 
     # handle localtime-like timestamps
     elsif ( $note =~ s{^$_LOCALTIME_DATE}{} ) {
-      $date = sprintf( '%d-%02d-%02d', $4, $months{lc $1}, $2 );
+      $date = sprintf( '%d-%02d-%02d', $4, 1+$months{lc $1}, $2 );
       if ($3) {
         # unfortunately ignores TZ data
         $date .= sprintf( 'T%sZ', $3 );
@@ -287,7 +284,7 @@ sub split_date {
     # RFC 2822
     elsif ( $note =~ s{^$_RFC_2822_DATE}{} ) {
       $date = sprintf( '%d-%02d-%02dT%s%s%02d:%02d',
-        $3, $months{lc $2}, $1, $4, $5, $6, $7 );
+        $3, 1+$months{lc $2}, $1, $4, $5, $6, $7 );
     }
 
     # handle dist-zilla style, again ingoring TZ data
