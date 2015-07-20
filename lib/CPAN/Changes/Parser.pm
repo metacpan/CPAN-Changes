@@ -218,7 +218,8 @@ our $_LOCALTIME_DATE = qr{
   (?:$_SHORT_DAY\s+)?
   ($_SHORT_MONTH)\s+
   (\d{1,2})\s+  # date
-  ([\d:]+)?\D*  # time
+  (?: ([\d:]+)\s+ )?  # time
+  (?: ([A-Z]+)\s+ )?  # timezone
   (\d{4})       # year
 }x;
 
@@ -274,9 +275,9 @@ sub split_date {
 
     # handle localtime-like timestamps
     elsif ( $note =~ s{^$_LOCALTIME_DATE}{} ) {
-      $date = sprintf( '%d-%02d-%02d', $4, 1+$months{lc $1}, $2 );
+      $date = sprintf( '%d-%02d-%02d', $5, 1+$months{lc $1}, $2 );
       if ($3) {
-        # unfortunately ignores TZ data
+        # unfortunately ignores TZ data ($4)
         $date .= sprintf( 'T%sZ', $3 );
       }
     }
