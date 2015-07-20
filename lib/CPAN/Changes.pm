@@ -80,7 +80,7 @@ sub serialize {
   if ($opts{reverse}) {
     $self = $self->clone(releases => [ reverse @{ $self->_releases } ]);
   }
-  my $width = $opts{width} || 76;
+  my $width = $opts{width} || 75;
   my @styles = @{ $opts{styles} || ['', '[]', '-', '*'] };
   my @indents = @{ $opts{indents} || ['', ' ', ''] };
 

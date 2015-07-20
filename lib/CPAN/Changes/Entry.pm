@@ -10,7 +10,7 @@ sub serialize {
   my ($self, %args) = @_;
   my $indents = $args{indents} || [];
   my $styles = $args{styles} || [];
-  my $width = $args{width} || 76;
+  my $width = $args{width} || 75;
 
   my $indent = $indents->[0];
   my $style = $styles->[0];

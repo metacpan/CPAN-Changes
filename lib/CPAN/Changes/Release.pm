@@ -38,7 +38,7 @@ sub serialize {
   my ($self, %args) = @_;
   my $indents = $args{indents} || ['', ' ', ''];
   my $styles = $args{styles} || ['', '[]'];
-  my $width = $args{width} || 76;
+  my $width = $args{width} || 75;
 
   my $out = $indents->[0] . $styles->[0] . $self->version;
   if ($self->date || $self->note) {
@@ -51,7 +51,7 @@ around serialize => sub {
   my ($orig, $self, %args) = @_;
   $args{indents} ||= ['', ' ', ''];
   $args{styles} ||= ['', '[]'];
-  $args{width} ||= 76;
+  $args{width} ||= 75;
   if (my $sort = $args{group_sort}) {
     my $entries = $self->_sorted_groups($sort);
     $self = $self->clone(entries => $entries);
