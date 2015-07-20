@@ -11,6 +11,7 @@
         }
       ],
       "line" => 248,
+      "raw_date" => "Mon Oct 15 19:18:49 2001",
       "version" => "0.01"
     },
     {
@@ -23,6 +24,7 @@
         }
       ],
       "line" => 245,
+      "raw_date" => "Wed Dec 19 02:34:38 PST 2001",
       "version" => "0.25"
     },
     {
@@ -115,6 +117,7 @@
         }
       ],
       "line" => 226,
+      "raw_date" => "Wed Jan  9 21:13:45 PST 2002",
       "version" => "0.26"
     },
     {
@@ -197,9 +200,11 @@
         }
       ],
       "line" => 204,
+      "raw_date" => "Tue Jan 15 01:46:18 PST 2002",
       "version" => "0.27"
     },
     {
+      "date" => "2002-05-11T19:54:52Z",
       "entries" => [
         {
           "line" => 194,
@@ -248,7 +253,7 @@
         }
       ],
       "line" => 193,
-      "note" => "Sat May 11 19:54:52 EDT 2002",
+      "raw_date" => "Sat May 11 19:54:52 EDT 2002",
       "version" => "0.32"
     },
     {
@@ -266,6 +271,7 @@
         }
       ],
       "line" => 189,
+      "raw_date" => "Sun Jan 30 21:00:28 PST 2005",
       "version" => "0.36"
     },
     {
@@ -278,6 +284,7 @@
         }
       ],
       "line" => 185,
+      "raw_date" => "Thu Mar 31 01:56:24 CST 2005",
       "version" => "0.37"
     },
     {
@@ -290,6 +297,7 @@
         }
       ],
       "line" => 182,
+      "raw_date" => "Thu Mar 31 01:43:21 PST 2005",
       "version" => "0.38"
     },
     {
@@ -302,6 +310,7 @@
         }
       ],
       "line" => 179,
+      "raw_date" => "Tue Apr 12 15:28:40 PDT 2005",
       "version" => "0.39"
     },
     {
@@ -389,9 +398,11 @@
         }
       ],
       "line" => 159,
+      "raw_date" => "Sun Dec 25 11:09:18 PST 2005",
       "version" => "0.50"
     },
     {
+      "date" => "2006-01-14T17:09:09Z",
       "entries" => [
         {
           "line" => 156,
@@ -405,7 +416,7 @@
         }
       ],
       "line" => 155,
-      "note" => "Sat Jan 14 17:09:09 GMT 2006",
+      "raw_date" => "Sat Jan 14 17:09:09 GMT 2006",
       "version" => "0.51"
     },
     {
@@ -418,6 +429,7 @@
         }
       ],
       "line" => 152,
+      "raw_date" => "Wed Jan 18 14:25:24 PST 2006",
       "version" => "0.52"
     },
     {
@@ -430,6 +442,7 @@
         }
       ],
       "line" => 149,
+      "raw_date" => "Thu Jan 19 06:03:17 PST 2006",
       "version" => "0.53"
     },
     {
@@ -442,6 +455,7 @@
         }
       ],
       "line" => 146,
+      "raw_date" => "Sun Jan 29 17:28:46 PST 2006",
       "version" => "0.54"
     },
     {
@@ -454,6 +468,7 @@
         }
       ],
       "line" => 142,
+      "raw_date" => "Sun Jan 29 19:03:35 PST 2006",
       "version" => "0.55"
     },
     {
@@ -466,6 +481,7 @@
         }
       ],
       "line" => 139,
+      "raw_date" => "Mon Jan 30 10:26:33 PST 2006",
       "version" => "0.56"
     },
     {
@@ -478,6 +494,7 @@
         }
       ],
       "line" => 136,
+      "raw_date" => "Wed Feb  1 23:06:25 PST 2006",
       "version" => "0.57"
     },
     {
@@ -495,6 +512,7 @@
         }
       ],
       "line" => 132,
+      "raw_date" => "Tue Feb 14 12:42:34 PST 2006",
       "version" => "0.58"
     },
     {
@@ -522,6 +540,7 @@
         }
       ],
       "line" => 126,
+      "raw_date" => "Fri Jun 30 21:55:55 CDT 2006",
       "version" => "0.60"
     },
     {
@@ -534,6 +553,7 @@
         }
       ],
       "line" => 123,
+      "raw_date" => "Sun Jul  2 15:25:08 CDT 2006",
       "version" => "0.61"
     },
     {
@@ -546,6 +566,7 @@
         }
       ],
       "line" => 120,
+      "raw_date" => "Mon Jul  3 15:41:20 PDT 2006",
       "version" => "0.62"
     },
     {
@@ -563,6 +584,7 @@
         }
       ],
       "line" => 115,
+      "raw_date" => "Wed Jun 20 16:03:22 PDT 2007",
       "version" => "0.63"
     },
     {
@@ -575,6 +597,7 @@
         }
       ],
       "line" => 112,
+      "raw_date" => "Thu Jun 21 14:31:20 PDT 2007",
       "version" => "0.64"
     },
     {
@@ -592,6 +615,7 @@
         }
       ],
       "line" => 108,
+      "raw_date" => "Thu Jun 21 17:37:32 PDT 2007",
       "version" => "0.65"
     },
     {
@@ -604,6 +628,7 @@
         }
       ],
       "line" => 105,
+      "raw_date" => "Thu Sep 27 01:37:16 PDT 2007",
       "version" => "0.66"
     },
     {
@@ -626,6 +651,7 @@
         }
       ],
       "line" => 100,
+      "raw_date" => "Mon Dec  1 02:34:21 PST 2008",
       "version" => "0.67"
     },
     {
@@ -638,6 +664,7 @@
         }
       ],
       "line" => 97,
+      "raw_date" => "Thu Dec  4 01:00:44 PST 2008",
       "version" => "0.68"
     },
     {
@@ -660,6 +687,7 @@
         }
       ],
       "line" => 92,
+      "raw_date" => "Sun Jul  9 02:01:12 AEST 2009",
       "version" => "0.69_01"
     },
     {
@@ -672,6 +700,7 @@
         }
       ],
       "line" => 89,
+      "raw_date" => "Mon Aug 10 22:37:37 AEST 2009",
       "version" => "0.69_02"
     },
     {
@@ -689,6 +718,7 @@
         }
       ],
       "line" => 83,
+      "raw_date" => "Tue Aug 11 02:52:10 AEST 2009",
       "version" => "0.70"
     },
     {
@@ -706,6 +736,7 @@
         }
       ],
       "line" => 77,
+      "raw_date" => "Sun Jan 3 12:25:00 AEST 2010",
       "version" => "0.71"
     },
     {
@@ -728,6 +759,7 @@
         }
       ],
       "line" => 71,
+      "raw_date" => "Wed Sep 1 11:54:00 AEST 2010",
       "version" => "0.72"
     },
     {
@@ -740,6 +772,7 @@
         }
       ],
       "line" => 68,
+      "raw_date" => "Tue Apr 19 20:14:59 EST 2011",
       "version" => "0.73"
     },
     {
@@ -762,6 +795,7 @@
         }
       ],
       "line" => 63,
+      "raw_date" => "Sun Sep 25 22:05:05 CEST 2011",
       "version" => "0.74"
     },
     {
@@ -779,6 +813,7 @@
         }
       ],
       "line" => 59,
+      "raw_date" => "Tue Sep 27 00:46:19 CEST 2011",
       "version" => "0.75"
     },
     {
@@ -791,6 +826,7 @@
         }
       ],
       "line" => 56,
+      "raw_date" => "Wed Sep 28 12:05:08 CEST 2011",
       "version" => "0.76"
     },
     {
@@ -808,6 +844,7 @@
         }
       ],
       "line" => 52,
+      "raw_date" => "Thu Sep 29 18:28:25 CEST 2011",
       "version" => "0.77"
     },
     {
@@ -820,6 +857,7 @@
         }
       ],
       "line" => 49,
+      "raw_date" => "Sun Jan  1 23:53:57 PST 2012",
       "version" => "0.78"
     },
     {
@@ -832,6 +870,7 @@
         }
       ],
       "line" => 45,
+      "raw_date" => "Wed Feb  8 17:25:55 PST 2012",
       "version" => "0.79"
     },
     {
@@ -849,6 +888,7 @@
         }
       ],
       "line" => 41,
+      "raw_date" => "Fri Feb 10 12:56:08 PST 2012",
       "version" => "0.80"
     },
     {
@@ -866,6 +906,7 @@
         }
       ],
       "line" => 36,
+      "raw_date" => "Thu Apr 19 11:03:38 PDT 2012",
       "version" => "0.81"
     },
     {
@@ -878,6 +919,7 @@
         }
       ],
       "line" => 32,
+      "raw_date" => "Thu Jul 12 18:49:45 GMT 2012",
       "version" => "0.82"
     },
     {
@@ -895,6 +937,7 @@
         }
       ],
       "line" => 28,
+      "raw_date" => "Fri Jul 13 15:44:03 GMT 2012",
       "version" => "0.83"
     },
     {
@@ -907,6 +950,7 @@
         }
       ],
       "line" => 25,
+      "raw_date" => "Fri Jul 13 18:17:27 GMT 2012",
       "version" => "0.84"
     },
     {
@@ -929,6 +973,7 @@
         }
       ],
       "line" => 19,
+      "raw_date" => "Sun Nov 24 07:43:13 PST 2013",
       "version" => "0.85"
     },
     {
@@ -941,9 +986,11 @@
         }
       ],
       "line" => 16,
+      "raw_date" => "Tue Nov 26 16:43:27 UTC 2013",
       "version" => "0.86"
     },
     {
+      "date" => "2013-11-30T21:51:48Z",
       "entries" => [
         {
           "line" => 13,
@@ -952,7 +999,7 @@
         }
       ],
       "line" => 12,
-      "note" => "Sat Nov 30 21:51:48 PST 2013",
+      "raw_date" => "Sat Nov 30 21:51:48 PST 2013",
       "version" => "0.87"
     },
     {
@@ -965,9 +1012,11 @@
         }
       ],
       "line" => 8,
+      "raw_date" => "Tue Dec  3 05:29:34 UTC 2013",
       "version" => "0.88"
     },
     {
+      "date" => "2014-11-08T12:51:48Z",
       "entries" => [
         {
           "line" => 5,
@@ -981,7 +1030,7 @@
         }
       ],
       "line" => 4,
-      "note" => "Sat Nov  8 12:51:48 PST 2014",
+      "raw_date" => "Sat Nov  8 12:51:48 PST 2014",
       "version" => "0.89"
     },
     {
@@ -994,6 +1043,7 @@
         }
       ],
       "line" => 1,
+      "raw_date" => "Mon Feb 10 08:42:31 PST 2014",
       "version" => "0.90"
     }
   ]

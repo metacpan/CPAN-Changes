@@ -11,6 +11,7 @@
         }
       ],
       "line" => 37,
+      "raw_date" => "Wed Jan  7 17:38:23 2004",
       "version" => "0.01"
     },
     {
@@ -44,6 +45,7 @@
         }
       ],
       "line" => 28,
+      "raw_date" => "2006-10-12",
       "version" => "1.011"
     },
     {
@@ -56,6 +58,7 @@
         }
       ],
       "line" => 25,
+      "raw_date" => "2006-11-25",
       "version" => "1.012"
     },
     {
@@ -68,6 +71,7 @@
         }
       ],
       "line" => 22,
+      "raw_date" => "2007-03-20",
       "version" => "1.013"
     },
     {
@@ -80,6 +84,7 @@
         }
       ],
       "line" => 19,
+      "raw_date" => "2007-03-22",
       "version" => "1.014"
     },
     {
@@ -92,6 +97,7 @@
         }
       ],
       "line" => 16,
+      "raw_date" => "2009-01-22",
       "version" => "1.015"
     },
     {
@@ -110,6 +116,7 @@
       ],
       "line" => 9,
       "note" => "America/New_York",
+      "raw_date" => "2013-08-10 23:14:42 America/New_York",
       "version" => "1.016"
     },
     {
@@ -130,6 +137,7 @@
       ],
       "line" => 5,
       "note" => "America/New_York",
+      "raw_date" => "2013-08-10 23:19:14 America/New_York",
       "version" => "1.017"
     }
   ]

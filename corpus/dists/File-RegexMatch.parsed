@@ -2,6 +2,7 @@
   "preamble" => "Revision history for Perl module File::RegexMatch",
   "releases" => [
     {
+      "date" => "2011-12-17",
       "entries" => [
         {
           "line" => 26,
@@ -10,7 +11,7 @@
         }
       ],
       "line" => 25,
-      "note" => "Sat Dec 17 2011",
+      "raw_date" => "Sat Dec 17 2011",
       "version" => "0.01"
     },
     {
@@ -23,6 +24,7 @@
         }
       ],
       "line" => 22,
+      "raw_date" => "Mon Dec 19 2011",
       "version" => "0.02"
     },
     {

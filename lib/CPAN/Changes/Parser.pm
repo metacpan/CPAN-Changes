@@ -52,10 +52,10 @@ sub _transform {
     (defined $data->{preamble} ? (preamble => $data->{preamble}) : ()),
     releases => [
       map {
+        my $r = $_;
         $release_class->new(
-          version => $_->{version},
-          (defined $_->{date} ? (date => $_->{date}) : ()),
-          (defined $_->{note} ? (note => $_->{note}) : ()),
+          (map { defined $r->{$_} ? ($_ => $r->{$_}) : () }
+            qw(version line date raw_date note)),
           ($_->{entries} ? (
             entries => [
               map { _trans_entry($entry_class, $_) } @{$_->{entries}},
@@ -102,13 +102,15 @@ sub _parse {
       my $version = $1;
       my $note    = $2;
       my $date;
+      my $raw_date;
       if (defined $note) {
-        ($date, $note) = split_date($note);
+        ($date, $raw_date, $note) = _split_date($note);
       }
 
       my $release = {
         version => $version,
         (defined $date ? (date => $date) : ()),
+        (defined $raw_date ? (raw_date => $raw_date) : ()),
         (defined $note ? (note => $note) : ()),
         entries => [],
         line    => $line_number+1,
@@ -260,58 +262,62 @@ our $_ISO_8601_DATE = qr{
   )?
 }x;
 
-sub split_date {
+sub _split_date {
   my $note = shift;
   my $date;
+  my $parsed_date;
   # munge date formats, save the remainder as note
   if (defined $note && length $note) {
     $note =~ s/^[^\w\s]*\s+//;
     $note =~ s/\s+$//;
 
     # explicitly unknown dates
-    if ( $note =~ s{^($_UNKNOWN_DATE)}{}i ) {
-      $date = $1;
+    if ( $note =~ s{^($_UNKNOWN_DATE)}{} ) {
+      $parsed_date = $date = $1;
     }
 
     # handle localtime-like timestamps
-    elsif ( $note =~ s{^$_LOCALTIME_DATE}{} ) {
-      $date = sprintf( '%d-%02d-%02d', $5, 1+$months{lc $1}, $2 );
-      if ($3) {
-        # unfortunately ignores TZ data ($4)
-        $date .= sprintf( 'T%sZ', $3 );
+    elsif ( $note =~ s{^($_LOCALTIME_DATE)}{} ) {
+      $date = $1;
+      $parsed_date = sprintf( '%d-%02d-%02d', $6, 1+$months{lc $2}, $3 );
+      if ($4) {
+        # unfortunately ignores TZ data ($5)
+        $parsed_date .= sprintf( 'T%sZ', $4 );
       }
     }
 
     # RFC 2822
-    elsif ( $note =~ s{^$_RFC_2822_DATE}{} ) {
-      $date = sprintf( '%d-%02d-%02dT%s%s%02d:%02d',
-        $3, 1+$months{lc $2}, $1, $4, $5, $6, $7 );
+    elsif ( $note =~ s{^($_RFC_2822_DATE)}{} ) {
+      $date = $1;
+      $parsed_date = sprintf( '%d-%02d-%02dT%s%s%02d:%02d',
+        $4, 1+$months{lc $3}, $2, $5, $6, $7, $8 );
     }
 
     # handle dist-zilla style, again ingoring TZ data
-    elsif ( $note =~ s{^$_DZIL_DATE}{} ) {
-      $date = sprintf( '%sT%sZ', $1, $2 );
-      $note = $3 . $note;
+    elsif ( $note =~ s{^($_DZIL_DATE)}{} ) {
+      $date = $1;
+      $parsed_date = sprintf( '%sT%sZ', $2, $3 );
+      $note = $4 . $note;
     }
 
     # start with W3CDTF, ignore rest
     elsif ( $note =~ s{^($_ISO_8601_DATE)}{} ) {
-      $date = $1;
-      $date =~ s{ }{T};
+      $parsed_date = $date = $1;
+      $parsed_date =~ s{ }{T};
 
       # Add UTC TZ if date ends at H:M, H:M:S or H:M:S.FS
-      $date .= 'Z'
-        if length($date) == 16
-        || length($date) == 19
-        || $date =~ m{\.\d+$};
+      $parsed_date .= 'Z'
+        if length($parsed_date) == 16
+        || length($parsed_date) == 19
+        || $parsed_date =~ m{\.\d+$};
     }
 
     $note =~ s/^\s+//;
   }
 
-  defined $_ && !length $_ && undef $_ for ($date, $note);
+  defined $_ && !length $_ && undef $_ for ($parsed_date, $date, $note);
 
-  return ($date, $note);
+  return ($parsed_date, $date, $note);
 }
 
 sub _expand_tab {

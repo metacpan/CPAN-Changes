@@ -16,6 +16,7 @@
         }
       ],
       "line" => 183,
+      "raw_date" => "Thu Nov 22 09:42:06 EST 2001",
       "version" => "0.01"
     },
     {
@@ -28,6 +29,7 @@
         }
       ],
       "line" => 180,
+      "raw_date" => "Thu Nov 22 10:08:00 EST 2001",
       "version" => "0.02"
     },
     {
@@ -45,6 +47,7 @@
         }
       ],
       "line" => 176,
+      "raw_date" => "Fri Nov 23 00:39:11 EST 2001",
       "version" => "0.03"
     },
     {
@@ -57,6 +60,7 @@
         }
       ],
       "line" => 172,
+      "raw_date" => "Fri Nov 23 14:49:21 EST 2001",
       "version" => "0.04"
     },
     {
@@ -69,9 +73,11 @@
         }
       ],
       "line" => 168,
+      "raw_date" => "Fri Nov 23 18:06:22 EST 2001",
       "version" => "0.05"
     },
     {
+      "date" => "2001-11-24T20:45:15Z",
       "entries" => [
         {
           "line" => 164,
@@ -85,7 +91,7 @@
         }
       ],
       "line" => 163,
-      "note" => "Sat Nov 24 20:45:15 EST 2001",
+      "raw_date" => "Sat Nov 24 20:45:15 EST 2001",
       "version" => "0.06"
     },
     {
@@ -108,6 +114,7 @@
         }
       ],
       "line" => 157,
+      "raw_date" => "Mon Dec 10 11:09:40 EST 2001",
       "version" => "0.07"
     },
     {
@@ -125,6 +132,7 @@
         }
       ],
       "line" => 153,
+      "raw_date" => "Mon Dec 10 14:24:56 EST 2001",
       "version" => "0.08"
     },
     {
@@ -137,6 +145,7 @@
         }
       ],
       "line" => 150,
+      "raw_date" => "Mon Dec 10 14:55:09 EST 2001",
       "version" => "0.09"
     },
     {
@@ -149,9 +158,11 @@
         }
       ],
       "line" => 146,
+      "raw_date" => "Wed Dec 12 05:40:14 EST 2001",
       "version" => "0.10"
     },
     {
+      "date" => "2002-02-02T16:54:23Z",
       "entries" => [
         {
           "line" => 136,
@@ -195,10 +206,11 @@
         }
       ],
       "line" => 135,
-      "note" => "Sat Feb  2 16:54:23 EST 2002",
+      "raw_date" => "Sat Feb  2 16:54:23 EST 2002",
       "version" => "0.11"
     },
     {
+      "date" => "2002-02-02T19:41:01Z",
       "entries" => [
         {
           "line" => 128,
@@ -227,10 +239,11 @@
         }
       ],
       "line" => 127,
-      "note" => "Sat Feb  2 19:41:01 EST 2002",
+      "raw_date" => "Sat Feb  2 19:41:01 EST 2002",
       "version" => "0.12"
     },
     {
+      "date" => "2002-12-07T10:29:42Z",
       "entries" => [
         {
           "line" => 108,
@@ -304,7 +317,7 @@
         }
       ],
       "line" => 107,
-      "note" => "Sat Dec  7 10:29:42 CET 2002",
+      "raw_date" => "Sat Dec  7 10:29:42 CET 2002",
       "version" => "0.13"
     },
     {
@@ -322,6 +335,7 @@
         }
       ],
       "line" => 103,
+      "raw_date" => "Sun Dec  8 11:42:11 CET 2002",
       "version" => "0.14"
     },
     {
@@ -339,6 +353,7 @@
         }
       ],
       "line" => 99,
+      "raw_date" => "Mon Dec 23 15:08:14 CET 2002",
       "version" => "0.15"
     },
     {
@@ -351,6 +366,7 @@
         }
       ],
       "line" => 95,
+      "raw_date" => "Wed Jan  1 21:21:31 CET 2003",
       "version" => "0.16"
     },
     {
@@ -368,9 +384,11 @@
         }
       ],
       "line" => 91,
+      "raw_date" => "Sun Mar  2 11:01:55 CET 2003",
       "version" => "0.17"
     },
     {
+      "date" => "2003-03-08T17:44:24Z",
       "entries" => [
         {
           "line" => 88,
@@ -384,7 +402,7 @@
         }
       ],
       "line" => 87,
-      "note" => "Sat Mar  8 17:44:24 CET 2003",
+      "raw_date" => "Sat Mar  8 17:44:24 CET 2003",
       "version" => "0.18"
     },
     {
@@ -402,6 +420,7 @@
         }
       ],
       "line" => 83,
+      "raw_date" => "Tue Apr  1 15:45:43 CEST 2003",
       "version" => "0.19"
     },
     {
@@ -424,6 +443,7 @@
         }
       ],
       "line" => 77,
+      "raw_date" => "Thu May 22 10:30:31 CEST 2003",
       "version" => "0.20"
     },
     {
@@ -441,6 +461,7 @@
         }
       ],
       "line" => 72,
+      "raw_date" => "Fri Aug 15 18:48:53 CEST 2003",
       "version" => "0.21"
     },
     {
@@ -458,6 +479,7 @@
         }
       ],
       "line" => 67,
+      "raw_date" => "Mon Aug 18 14:44:23 CEST 2003",
       "version" => "0.22"
     },
     {
@@ -470,6 +492,7 @@
         }
       ],
       "line" => 63,
+      "raw_date" => "Thu Sep  4 17:44:52 CEST 2003",
       "version" => "0.23"
     },
     {
@@ -482,6 +505,7 @@
         }
       ],
       "line" => 60,
+      "raw_date" => "Wed Oct  1 11:45:45 CEST 2003",
       "version" => "0.24"
     },
     {
@@ -499,6 +523,7 @@
         }
       ],
       "line" => 54,
+      "raw_date" => "Sun Jul 11 16:36:11 CEST 2004",
       "version" => "0.25"
     },
     {
@@ -511,6 +536,7 @@
         }
       ],
       "line" => 51,
+      "raw_date" => "Sun Jul 11 17:15:36 CEST 2004",
       "version" => "0.26"
     },
     {
@@ -528,6 +554,7 @@
         }
       ],
       "line" => 45,
+      "raw_date" => "Fri Mar  4 07:56:58 CET 2005",
       "version" => "0.27"
     },
     {
@@ -555,6 +582,7 @@
         }
       ],
       "line" => 35,
+      "raw_date" => "Sun Apr 17 17:10:33 CET 2005",
       "version" => "0.28"
     },
     {
@@ -572,6 +600,7 @@
         }
       ],
       "line" => 29,
+      "raw_date" => "Sun Jul 10 21:48:19 CEST 2005",
       "version" => "0.28_50"
     },
     {
@@ -589,6 +618,7 @@
         }
       ],
       "line" => 25,
+      "raw_date" => "Tue Nov 22 21:28:26 CET 2005",
       "version" => "0.29"
     },
     {
@@ -601,6 +631,7 @@
         }
       ],
       "line" => 21,
+      "raw_date" => "Tue Dec 20 20:17:09 CET 2005",
       "version" => "0.30"
     },
     {
@@ -618,6 +649,7 @@
         }
       ],
       "line" => 17,
+      "raw_date" => "Mon May 28 21:40:10 CEST 2007",
       "version" => "0.31"
     },
     {
@@ -630,6 +662,7 @@
         }
       ],
       "line" => 14,
+      "raw_date" => "Mon Apr 12 23:53:53 CEST 2010",
       "version" => "0.31_01"
     },
     {
@@ -642,9 +675,11 @@
         }
       ],
       "line" => 10,
+      "raw_date" => "Wed Sep  8 23:15:13 CEST 2010",
       "version" => "0.32"
     },
     {
+      "date" => "2013-02-09T13:12:22Z",
       "entries" => [
         {
           "line" => 7,
@@ -653,7 +688,7 @@
         }
       ],
       "line" => 6,
-      "note" => "Sat Feb  9 13:12:22 CET 2013",
+      "raw_date" => "Sat Feb  9 13:12:22 CET 2013",
       "version" => "0.33"
     },
     {
@@ -671,6 +706,7 @@
         }
       ],
       "line" => 1,
+      "raw_date" => "Tue May 21 21:48:49 CEST 2013",
       "version" => "0.34"
     }
   ]
