@@ -5,96 +5,96 @@
       "date" => "2012-07-18",
       "entries" => [
         {
-          "line" => 40,
+          "line" => 41,
           "style" => "",
           "text" => "Various bugfixes for data sanitizing Fixed issue with unit tests"
         }
       ],
-      "line" => 39,
+      "line" => 40,
       "version" => "0.08"
     },
     {
       "date" => "2012-07-15",
       "entries" => [
         {
-          "line" => 37,
+          "line" => 38,
           "style" => "",
           "text" => "Updates to documentation and example scripts"
         }
       ],
-      "line" => 36,
+      "line" => 37,
       "version" => "0.07"
     },
     {
       "date" => "2012-07-14",
       "entries" => [
         {
-          "line" => 32,
+          "line" => 33,
           "style" => "",
           "text" => "Added part of speech info to output of get_translations() Included translations from other wiktionary pages linked to the original one"
         }
       ],
-      "line" => 31,
+      "line" => 32,
       "version" => "0.06"
     },
     {
       "date" => "2012-07-14",
       "entries" => [
         {
-          "line" => 26,
+          "line" => 27,
           "style" => "",
           "text" => "updated documentation Added example scripts in /bin Various bugfixes"
         }
       ],
-      "line" => 25,
+      "line" => 26,
       "version" => "0.05"
     },
     {
       "date" => "2012-07-11",
       "entries" => [
         {
-          "line" => 20,
+          "line" => 21,
           "style" => "",
           "text" => "Added unit test for parsing a document Added unit test for parsing translations Refactored translation parser"
         }
       ],
-      "line" => 19,
+      "line" => 20,
       "version" => "0.04"
     },
     {
       "date" => "2012-07-08",
       "entries" => [
         {
-          "line" => 13,
+          "line" => 14,
           "style" => "",
           "text" => "Added subdocuments to provide more functionality when retrieving child sections of the document. Follow Wikisaurus links for synonyms, hyponyms, hypernyms, etc and include content from those pages. Provided method for downloading audio files for pronunciations Normalize language codes and provide consistent language names"
         }
       ],
-      "line" => 12,
+      "line" => 13,
       "version" => "0.03"
     },
     {
       "date" => "2012-07-07",
       "entries" => [
         {
-          "line" => 6,
+          "line" => 7,
           "style" => "",
           "text" => "accessors for translations, synonyms, hyponyms, hypernyms, antonyms, pronunciations, word senses, parts of speech stubbed out accessors for etymologies, derived words, alternative forms added methods for accessing and traversing document sections utilize MediaWiki::API package"
         }
       ],
-      "line" => 5,
+      "line" => 6,
       "version" => "0.02"
     },
     {
       "date" => "2012-07-05",
       "entries" => [
         {
-          "line" => 3,
+          "line" => 4,
           "style" => "",
           "text" => "First version"
         }
       ],
-      "line" => 2,
+      "line" => 3,
       "version" => "0.01"
     }
   ]

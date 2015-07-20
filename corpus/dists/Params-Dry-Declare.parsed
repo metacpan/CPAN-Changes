@@ -3,19 +3,19 @@
   "releases" => [
     {
       "entries" => [],
-      "line" => 4,
+      "line" => 5,
       "note" => "Fix example (Param -> Param::Dry",
       "version" => "0.9901"
     },
     {
       "entries" => [
         {
-          "line" => 3,
+          "line" => 4,
           "style" => "",
           "text" => "First version, released on an unsuspecting world."
         }
       ],
-      "line" => 2,
+      "line" => 3,
       "note" => "Date/time",
       "version" => "0.99"
     }

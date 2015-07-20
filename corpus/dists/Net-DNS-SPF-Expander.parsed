@@ -5,81 +5,81 @@
       "date" => "2013-07-25",
       "entries" => [
         {
-          "line" => 29,
+          "line" => 30,
           "style" => "-",
           "text" => "Initial release. Hello world!"
         }
       ],
-      "line" => 28,
+      "line" => 29,
       "version" => "0.001"
     },
     {
       "date" => "2013-07-25",
       "entries" => [
         {
-          "line" => 25,
+          "line" => 26,
           "style" => "-",
           "text" => "Make module get opts, and"
         },
         {
-          "line" => 26,
+          "line" => 27,
           "style" => "-",
           "text" => "add script"
         }
       ],
-      "line" => 24,
+      "line" => 25,
       "version" => "0.002"
     },
     {
       "date" => "2013-07-25",
       "entries" => [
         {
-          "line" => 22,
+          "line" => 23,
           "style" => "-",
           "text" => "Make script be found and installed."
         }
       ],
-      "line" => 21,
+      "line" => 22,
       "version" => "0.003"
     },
     {
       "date" => "2013-07-26",
       "entries" => [
         {
-          "line" => 19,
+          "line" => 20,
           "style" => "-",
           "text" => "Add documentation."
         }
       ],
-      "line" => 18,
+      "line" => 19,
       "version" => "0.004"
     },
     {
       "entries" => [
         {
-          "line" => 15,
+          "line" => 16,
           "style" => "-",
           "text" => "Make sure that our split spf records contain the protocol, v=spf1."
         }
       ],
-      "line" => 14,
+      "line" => 15,
       "version" => "0.005"
     },
     {
       "date" => "2013-07-29",
       "entries" => [
         {
-          "line" => 5,
+          "line" => 6,
           "style" => "-",
           "text" => "Make sure we can run the script on the same zonefile again without creating nonsense."
         },
         {
-          "line" => 8,
+          "line" => 9,
           "style" => "-",
           "text" => "Fix tests by not reading from the file, but using a new return scalar value from ->write. It used to return 1, now it returns the string that will be written out."
         }
       ],
-      "line" => 4,
+      "line" => 5,
       "version" => "0.006"
     }
   ]

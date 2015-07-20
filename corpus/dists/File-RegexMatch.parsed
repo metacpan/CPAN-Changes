@@ -4,12 +4,12 @@
     {
       "entries" => [
         {
-          "line" => 25,
+          "line" => 26,
           "style" => "-",
           "text" => "Original version; created by ExtUtils::ModuleMaker 0.51"
         }
       ],
-      "line" => 24,
+      "line" => 25,
       "note" => "Sat Dec 17 2011",
       "version" => "0.01"
     },
@@ -17,94 +17,94 @@
       "date" => "2011-12-19",
       "entries" => [
         {
-          "line" => 22,
+          "line" => 23,
           "style" => "-",
           "text" => "Was a problem when verbose was disabled, now fixed."
         }
       ],
-      "line" => 21,
+      "line" => 22,
       "version" => "0.02"
     },
     {
       "entries" => [
         {
-          "line" => 14,
+          "line" => 15,
           "style" => "-",
           "text" => "Now checks hidden files for matches"
         },
         {
-          "line" => 15,
+          "line" => 16,
           "style" => "-",
           "text" => "Updated documentation"
         },
         {
-          "line" => 16,
+          "line" => 17,
           "style" => "-",
           "text" => "If the given base directory path is relative, the absolute path of the files found in the base directory are returned instead of the relative path"
         },
         {
-          "line" => 17,
+          "line" => 18,
           "style" => "-",
           "text" => "Warnings added for chdir if verbose is enabled"
         },
         {
-          "line" => 18,
+          "line" => 19,
           "style" => "-",
           "text" => "Support for hidden files added"
         },
         {
-          "line" => 19,
+          "line" => 20,
           "style" => "-",
           "text" => "Cleanup of code"
         }
       ],
-      "line" => 13,
+      "line" => 14,
       "note" => "Thur Dec 29 2011",
       "version" => "0.03"
     },
     {
       "entries" => [
         {
-          "line" => 10,
+          "line" => 11,
           "style" => "-",
           "text" => "Module pretty much re-written, old code was smelly."
         },
         {
-          "line" => 11,
+          "line" => 12,
           "style" => "-",
           "text" => "Instead of returning the path of each file, a File::RegexMatch::Object is returned."
         }
       ],
-      "line" => 9,
+      "line" => 10,
       "note" => "Tue July 23 2013",
       "version" => "0.1"
     },
     {
       "entries" => [
         {
-          "line" => 7,
+          "line" => 8,
           "style" => "-",
           "text" => "Updated documentation"
         }
       ],
-      "line" => 6,
+      "line" => 7,
       "note" => "Wed July 24 2013",
       "version" => "0.1.1"
     },
     {
       "entries" => [
         {
-          "line" => 3,
+          "line" => 4,
           "style" => "-",
           "text" => "Renamed match() parameter from regex_pattern to match_pattern."
         },
         {
-          "line" => 4,
+          "line" => 5,
           "style" => "-",
           "text" => "Added functionality to ignore file names based on regular expression."
         }
       ],
-      "line" => 2,
+      "line" => 3,
       "note" => "Mon July 29 2013",
       "version" => "0.1.2"
     }

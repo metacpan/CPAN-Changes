@@ -5,133 +5,133 @@
       "date" => "unknown",
       "entries" => [
         {
-          "line" => 41,
+          "line" => 42,
           "style" => "-",
           "text" => "Initial release."
         }
       ],
-      "line" => 40,
+      "line" => 41,
       "version" => "1.102"
     },
     {
       "date" => "unknown",
       "entries" => [
         {
-          "line" => 37,
+          "line" => 38,
           "style" => "-",
           "text" => "Fixed bug in decompression (wasn't saving last character)."
         },
         {
-          "line" => 38,
+          "line" => 39,
           "style" => "-",
           "text" => "Fixed \"NoComment\" bug."
         }
       ],
-      "line" => 36,
+      "line" => 37,
       "version" => "1.103"
     },
     {
       "date" => "unknown",
       "entries" => [
         {
-          "line" => 32,
+          "line" => 33,
           "style" => "-",
           "text" => "Added BIN-to-HEX conversion.  Eh.  It's a start."
         },
         {
-          "line" => 33,
+          "line" => 34,
           "style" => "-",
           "text" => "Also, a lot of documentation additions and cleanups."
         },
         {
-          "line" => 34,
+          "line" => 35,
           "style" => "-",
           "text" => "Some methods were also renamed."
         }
       ],
-      "line" => 30,
+      "line" => 31,
       "version" => "1.114"
     },
     {
       "date" => "unknown",
       "entries" => [
         {
-          "line" => 27,
+          "line" => 28,
           "style" => "-",
           "text" => "Fixed another bug in comp2bin, related to the MARK falling on a boundary between inputs.  Added testing code."
         }
       ],
-      "line" => 25,
+      "line" => 26,
       "version" => "1.115"
     },
     {
       "date" => "unknown",
       "entries" => [
         {
-          "line" => 21,
+          "line" => 22,
           "style" => "-",
           "text" => "Ready to go public (with Paul's version, patched for native Mac support)!"
         },
         {
-          "line" => 22,
+          "line" => 23,
           "style" => "-",
           "text" => "Warnings have been suppressed in a few places where undefined values appear."
         }
       ],
-      "line" => 19,
+      "line" => 20,
       "version" => "1.118"
     },
     {
       "date" => "1997-06-27",
       "entries" => [
         {
-          "line" => 17,
+          "line" => 18,
           "style" => "-",
           "text" => "Changes unknown, but this was the last (and first?) CPAN release by ERYQ"
         }
       ],
-      "line" => 16,
+      "line" => 17,
       "version" => "1.119"
     },
     {
       "date" => "2013-08-22",
       "entries" => [
         {
-          "line" => 13,
+          "line" => 14,
           "style" => "-",
           "text" => "First CPAN release by Stephen Nelson (STEPHEN), who's now maintaining this module."
         }
       ],
-      "line" => 12,
+      "line" => 13,
       "version" => "1.120"
     },
     {
       "date" => "2013-08-23",
       "entries" => [
         {
-          "line" => 9,
+          "line" => 10,
           "style" => "-",
           "text" => "Changes file reformatted thanks to Neil Bowers (NEILB)"
         },
         {
-          "line" => 10,
+          "line" => 11,
           "style" => "-",
           "text" => "Moved to Dist::Zilla's OurPkgVersion for keeping \$VERSIONs in sync"
         }
       ],
-      "line" => 8,
+      "line" => 9,
       "version" => "1.121"
     },
     {
       "date" => "2013-08-25",
       "entries" => [
         {
-          "line" => 6,
+          "line" => 7,
           "style" => "-",
           "text" => "Added unit tests for OO and CRC code"
         }
       ],
-      "line" => 5,
+      "line" => 6,
       "version" => "1.122"
     }
   ]

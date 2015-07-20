@@ -5,60 +5,60 @@
       "date" => "2005-11-13T05:41:23Z",
       "entries" => [
         {
-          "line" => 19,
+          "line" => 20,
           "style" => "-",
           "text" => "original version; created by h2xs 1.23 with options -XA -n Crypt::SaltedHash"
         }
       ],
-      "line" => 18,
+      "line" => 19,
       "version" => "0.01"
     },
     {
       "date" => "2005-11-14T17:54:00Z",
       "entries" => [
         {
-          "line" => 16,
+          "line" => 17,
           "style" => "-",
           "text" => "fixed some bugs; added tests and documentation"
         }
       ],
-      "line" => 15,
+      "line" => 16,
       "version" => "0.02"
     },
     {
       "date" => "2005-11-14T23:59:59Z",
       "entries" => [
         {
-          "line" => 13,
+          "line" => 14,
           "style" => "-",
           "text" => "spelling fixed"
         }
       ],
-      "line" => 12,
+      "line" => 13,
       "version" => "0.03"
     },
     {
       "date" => "2006-01-26T04:56:56Z",
       "entries" => [
         {
-          "line" => 10,
+          "line" => 11,
           "style" => "-",
           "text" => "algorithm recognition fixed"
         }
       ],
-      "line" => 9,
+      "line" => 10,
       "version" => "0.04"
     },
     {
       "date" => "2006-08-10T03:04:33Z",
       "entries" => [
         {
-          "line" => 7,
+          "line" => 8,
           "style" => "-",
           "text" => "switched to Module::Build"
         }
       ],
-      "line" => 6,
+      "line" => 7,
       "version" => "0.05"
     },
     {
@@ -67,17 +67,17 @@
         {
           "entries" => [
             {
-              "line" => 4,
+              "line" => 5,
               "style" => "-",
               "text" => "add returns now \$self"
             }
           ],
-          "line" => 3,
+          "line" => 4,
           "style" => "-",
           "text" => "added clear method"
         }
       ],
-      "line" => 2,
+      "line" => 3,
       "version" => "0.06"
     }
   ]

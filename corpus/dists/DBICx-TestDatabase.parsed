@@ -4,36 +4,36 @@
     {
       "entries" => [
         {
-          "line" => 7,
+          "line" => 8,
           "style" => "-",
           "text" => "first version, released upon an unsuspecting world"
         }
       ],
-      "line" => 6,
+      "line" => 7,
       "note" => "7 October 2007",
       "version" => "0.01"
     },
     {
       "entries" => [
         {
-          "line" => 4,
+          "line" => 5,
           "style" => "-",
           "text" => "use an in-memory sqlite database by default"
         }
       ],
-      "line" => 3,
+      "line" => 4,
       "note" => "14 December 2010",
       "version" => "0.03"
     },
     {
       "entries" => [
         {
-          "line" => 1,
+          "line" => 2,
           "style" => "-",
           "text" => "support unicode (patch by diegok)"
         }
       ],
-      "line" => 0,
+      "line" => 1,
       "note" => "14 December 2010",
       "version" => "0.04"
     }

@@ -4,48 +4,48 @@
     {
       "entries" => [
         {
-          "line" => 17,
+          "line" => 18,
           "style" => "-",
           "text" => "original version"
         }
       ],
-      "line" => 16,
+      "line" => 17,
       "note" => "Wed, 12 Oct 2011",
       "version" => "0.01"
     },
     {
       "entries" => [
         {
-          "line" => 14,
+          "line" => 15,
           "style" => "-",
           "text" => "Add dependencies"
         }
       ],
-      "line" => 13,
+      "line" => 14,
       "note" => "Sun, 23 Oct 2011",
       "version" => "0.02"
     },
     {
       "entries" => [
         {
-          "line" => 11,
+          "line" => 12,
           "style" => "-",
           "text" => "Fix dependencies (reported by mschwern)"
         }
       ],
-      "line" => 10,
+      "line" => 11,
       "note" => "Tue, 26 Jun 2012",
       "version" => "0.03"
     },
     {
       "entries" => [
         {
-          "line" => 8,
+          "line" => 9,
           "style" => "-",
           "text" => "Fix a bug related perl contexts."
         }
       ],
-      "line" => 7,
+      "line" => 8,
       "note" => "Sat, 13 Oct 2012",
       "version" => "0.04"
     },
@@ -53,12 +53,12 @@
       "date" => "2013-09-08T00:23:32Z",
       "entries" => [
         {
-          "line" => 5,
+          "line" => 6,
           "style" => "-",
           "text" => "Fix the bug which breaks Data::Monad::CondVar on perl 5.17.2"
         }
       ],
-      "line" => 4,
+      "line" => 5,
       "note" => "JST",
       "version" => "0.05"
     }

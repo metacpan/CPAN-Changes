@@ -4,48 +4,48 @@
     {
       "entries" => [
         {
-          "line" => 16,
+          "line" => 17,
           "style" => "",
           "text" => "(ms) Where it all began."
         }
       ],
-      "line" => 15,
+      "line" => 16,
       "note" => "(2005/03/27)",
       "version" => "0.01"
     },
     {
       "entries" => [
         {
-          "line" => 12,
+          "line" => 13,
           "style" => "",
           "text" => "(ms) Replace \"Foo/Bar\" in files just like \"Foo::Bar\". (ms) Replace pm files outside the regular dir structure."
         }
       ],
-      "line" => 11,
+      "line" => 12,
       "note" => "(2005/03/28)",
       "version" => "0.02"
     },
     {
       "entries" => [
         {
-          "line" => 9,
+          "line" => 10,
           "style" => "",
           "text" => "(ms) Added sandbox/eg to MANIFEST to fix installation problem"
         }
       ],
-      "line" => 8,
+      "line" => 9,
       "note" => "(2005/04/09)",
       "version" => "0.03"
     },
     {
       "entries" => [
         {
-          "line" => 4,
+          "line" => 5,
           "style" => "",
           "text" => "(ms) [rt.cpan.org #87172] Applied changes by Jim Cochrane to add a -g switch, which uses \"git mv\" instead of mv. Added various fixes and test cases."
         }
       ],
-      "line" => 3,
+      "line" => 4,
       "note" => "(2013/07/27)",
       "version" => "0.04"
     }

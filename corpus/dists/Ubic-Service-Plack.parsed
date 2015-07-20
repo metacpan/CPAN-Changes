@@ -4,107 +4,107 @@
     {
       "entries" => [
         {
-          "line" => 28,
+          "line" => 29,
           "style" => "",
           "text" => "First opensource release."
         }
       ],
-      "line" => 27,
+      "line" => 28,
       "note" => "Fri Jul 30, 2010",
       "version" => "1.10"
     },
     {
       "entries" => [
         {
-          "line" => 25,
+          "line" => 26,
           "style" => "",
           "text" => "Add Plack into CPAN deps."
         }
       ],
-      "line" => 24,
+      "line" => 25,
       "note" => "Sat Jul 31, 2010",
       "version" => "1.11"
     },
     {
       "entries" => [
         {
-          "line" => 22,
+          "line" => 23,
           "style" => "",
           "text" => "Pass 'port' option to plackup."
         }
       ],
-      "line" => 21,
+      "line" => 22,
       "note" => "Sun Nov 07, 2010",
       "version" => "1.12"
     },
     {
       "entries" => [
         {
-          "line" => 15,
+          "line" => 16,
           "style" => "*",
           "text" => "Compatible with new ubic 'default user' feature"
         },
         {
-          "line" => 16,
+          "line" => 17,
           "style" => "*",
           "text" => "Support arrayref values in server_args"
         },
         {
-          "line" => 17,
+          "line" => 18,
           "style" => "*",
           "text" => "Support single-letter keys in server_args"
         },
         {
-          "line" => 18,
+          "line" => 19,
           "style" => "*",
           "text" => "bin() method, pidfile() method, refactor to use Ubic::Service::Skeleton instead of Ubic::Service::Common"
         }
       ],
-      "line" => 14,
+      "line" => 15,
       "note" => "Wed Jul 13, 2011",
       "version" => "1.13"
     },
     {
       "entries" => [
         {
-          "line" => 10,
+          "line" => 11,
           "style" => "*",
           "text" => "group, env and cmd options"
         },
         {
-          "line" => 11,
+          "line" => 12,
           "style" => "*",
           "text" => "deprecate app_name option, derive pidfile from service's full_name"
         },
         {
-          "line" => 12,
+          "line" => 13,
           "style" => "*",
           "text" => "improve and cleanup docs"
         }
       ],
-      "line" => 9,
+      "line" => 10,
       "note" => "Tue Jan 10, 2012",
       "version" => "1.14"
     },
     {
       "entries" => [
         {
-          "line" => 5,
+          "line" => 6,
           "style" => "*",
           "text" => "minor POD improvements"
         },
         {
-          "line" => 6,
+          "line" => 7,
           "style" => "*",
           "text" => "don't package debian/ into CPAN distribution"
         },
         {
-          "line" => 7,
+          "line" => 8,
           "style" => "*",
           "text" => "fix cwd test on OS X"
         }
       ],
-      "line" => 4,
+      "line" => 5,
       "note" => "Sun Oct 14, 2012",
       "version" => "1.15"
     }

@@ -7,17 +7,17 @@
         {
           "entries" => [
             {
-              "line" => 52,
+              "line" => 53,
               "style" => "-",
               "text" => "First public release."
             }
           ],
-          "line" => 51,
+          "line" => 52,
           "style" => "[]",
           "text" => "Stanislaw Pusep <stas\@sysd.org>"
         }
       ],
-      "line" => 50,
+      "line" => 51,
       "version" => "v0.1"
     },
     {
@@ -26,37 +26,37 @@
         {
           "entries" => [
             {
-              "line" => 44,
+              "line" => 45,
               "style" => "-",
               "text" => "Bugfixes;"
             },
             {
-              "line" => 45,
+              "line" => 46,
               "style" => "-",
               "text" => "Screen(1) compatibility;"
             },
             {
-              "line" => 46,
+              "line" => 47,
               "style" => "-",
               "text" => "Fewer dependencies;"
             },
             {
-              "line" => 47,
+              "line" => 48,
               "style" => "-",
               "text" => "A smaller runtime footprint;"
             },
             {
-              "line" => 48,
+              "line" => 49,
               "style" => "-",
               "text" => "Memory allocation bar reordering."
             }
           ],
-          "line" => 43,
+          "line" => 44,
           "style" => "[]",
           "text" => "Stanislaw Pusep <stas\@sysd.org>"
         }
       ],
-      "line" => 42,
+      "line" => 43,
       "version" => "v0.2"
     },
     {
@@ -65,27 +65,27 @@
         {
           "entries" => [
             {
-              "line" => 38,
+              "line" => 39,
               "style" => "-",
               "text" => "This release uses the \"CPU utilization %\" metric instead of the \"load average\" by default;"
             },
             {
-              "line" => 39,
+              "line" => 40,
               "style" => "-",
               "text" => "CPU/RAM stats are pulled from a single call to top(1) on Mac OS X (Linux still accesses /proc for everything);"
             },
             {
-              "line" => 40,
+              "line" => 41,
               "style" => "-",
               "text" => "Shebang has been changed to use Perl from PATH instead of the hardcoded /usr/bin/perl"
             }
           ],
-          "line" => 37,
+          "line" => 38,
           "style" => "[]",
           "text" => "Stanislaw Pusep <stas\@sysd.org>"
         }
       ],
-      "line" => 36,
+      "line" => 37,
       "version" => "v0.3"
     },
     {
@@ -94,27 +94,27 @@
         {
           "entries" => [
             {
-              "line" => 32,
+              "line" => 33,
               "style" => "-",
               "text" => "Bundled with the Module::Build installer;"
             },
             {
-              "line" => 33,
+              "line" => 34,
               "style" => "-",
               "text" => "Updated docs (Installation & Configuration sections);"
             },
             {
-              "line" => 34,
+              "line" => 35,
               "style" => "-",
               "text" => "Released to CPAN!"
             }
           ],
-          "line" => 31,
+          "line" => 32,
           "style" => "[]",
           "text" => "Stanislaw Pusep <stas\@sysd.org>"
         }
       ],
-      "line" => 30,
+      "line" => 31,
       "version" => "v0.4"
     },
     {
@@ -123,39 +123,39 @@
         {
           "entries" => [
             {
-              "line" => 24,
+              "line" => 25,
               "style" => "-",
               "text" => "Add option that will display the time remaining until the battery is fully charged/empty;"
             },
             {
-              "line" => 25,
+              "line" => 26,
               "style" => "-",
               "text" => "Remove one second delay after executing top;"
             },
             {
-              "line" => 26,
+              "line" => 27,
               "style" => "-",
               "text" => "Add new screenshot to readme."
             }
           ],
-          "line" => 23,
+          "line" => 24,
           "style" => "[]",
           "text" => "Joe Hassick <joe.hassick\@gmail.com>"
         },
         {
           "entries" => [
             {
-              "line" => 28,
+              "line" => 29,
               "style" => "-",
               "text" => "Bookkeeping."
             }
           ],
-          "line" => 27,
+          "line" => 28,
           "style" => "[]",
           "text" => "Stanislaw Pusep <stas\@sysd.org>"
         }
       ],
-      "line" => 22,
+      "line" => 23,
       "version" => "v0.5"
     },
     {
@@ -164,27 +164,27 @@
         {
           "entries" => [
             {
-              "line" => 18,
+              "line" => 19,
               "style" => "-",
               "text" => "Added support for the 256-color palette;"
             },
             {
-              "line" => 19,
+              "line" => 20,
               "style" => "-",
               "text" => "Added support for ~/.rainbarf.conf;"
             },
             {
-              "line" => 20,
+              "line" => 21,
               "style" => "-",
               "text" => "Code cleanup."
             }
           ],
-          "line" => 17,
+          "line" => 18,
           "style" => "[]",
           "text" => "Stanislaw Pusep <stas\@sysd.org>"
         }
       ],
-      "line" => 16,
+      "line" => 17,
       "version" => "v0.6"
     },
     {
@@ -193,34 +193,34 @@
         {
           "entries" => [
             {
-              "line" => 11,
+              "line" => 12,
               "style" => "-",
               "text" => "Allow --nobattery --remaining (show remaining time with no battery symbol)."
             }
           ],
-          "line" => 10,
+          "line" => 11,
           "style" => "[]",
           "text" => "Tom Cammann <tom.cammann\@vmci.net>"
         },
         {
           "entries" => [
             {
-              "line" => 13,
+              "line" => 14,
               "style" => "-",
               "text" => "FreeBSD compatibility;"
             },
             {
-              "line" => 14,
+              "line" => 15,
               "style" => "-",
               "text" => "Code cleanup."
             }
           ],
-          "line" => 12,
+          "line" => 13,
           "style" => "[]",
           "text" => "Stanislaw Pusep <stas\@sysd.org>"
         }
       ],
-      "line" => 9,
+      "line" => 10,
       "version" => "v0.7"
     },
     {
@@ -229,32 +229,32 @@
         {
           "entries" => [
             {
-              "line" => 4,
+              "line" => 5,
               "style" => "-",
               "text" => "Config file can be specified via RAINBARF environment variable;"
             },
             {
-              "line" => 5,
+              "line" => 6,
               "style" => "-",
               "text" => "Use select() instead of sleep() for faster execution under Linux;"
             },
             {
-              "line" => 6,
+              "line" => 7,
               "style" => "-",
               "text" => "Documentation enhancements;"
             },
             {
-              "line" => 7,
+              "line" => 8,
               "style" => "-",
               "text" => "Better CPAN compliance."
             }
           ],
-          "line" => 3,
+          "line" => 4,
           "style" => "[]",
           "text" => "Stanislaw Pusep <stas\@sysd.org>"
         }
       ],
-      "line" => 2,
+      "line" => 3,
       "version" => "v0.8"
     }
   ]

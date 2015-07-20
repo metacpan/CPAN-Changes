@@ -5,23 +5,23 @@
       "date" => "2013-06-23",
       "entries" => [
         {
-          "line" => 6,
+          "line" => 7,
           "style" => "*",
           "text" => "Switched to Dist::Zilla"
         }
       ],
-      "line" => 5,
+      "line" => 6,
       "version" => "0.02"
     },
     {
       "entries" => [
         {
-          "line" => 3,
+          "line" => 4,
           "style" => "",
           "text" => "First release."
         }
       ],
-      "line" => 2,
+      "line" => 3,
       "note" => "Tue Oct 26, 2010",
       "version" => "0.01"
     }

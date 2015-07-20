@@ -111,7 +111,7 @@ sub _parse {
         (defined $date ? (date => $date) : ()),
         (defined $note ? (note => $note) : ()),
         entries => [],
-        line    => $line_number,
+        line    => $line_number+1,
       };
       push @releases, $release;
       @indents = ($release);
@@ -173,7 +173,7 @@ sub _parse {
 
     my $entry = {
       text   => $change,
-      line   => $line_number,
+      line   => $line_number+1,
       done   => $done,
       nest   => $nest,
       nested => $nested,

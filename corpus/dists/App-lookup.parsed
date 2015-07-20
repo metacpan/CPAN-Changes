@@ -4,12 +4,12 @@
     {
       "entries" => [
         {
-          "line" => 3,
+          "line" => 4,
           "style" => "",
           "text" => "First version, released on an unsuspecting world."
         }
       ],
-      "line" => 2,
+      "line" => 3,
       "note" => "Date/time",
       "version" => "0.01"
     }
