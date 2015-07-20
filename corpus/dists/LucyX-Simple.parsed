@@ -1,0 +1,60 @@
+{
+  "preamble" => undef,
+  "releases" => [
+    {
+      "entries" => [
+        {
+          "line" => 9,
+          "style" => "",
+          "text" => "First release"
+        }
+      ],
+      "line" => 8,
+      "version" => "0.001"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 7,
+          "style" => "",
+          "text" => "Will now always try and create search index dir if doesn't exist"
+        }
+      ],
+      "line" => 6,
+      "version" => "0.002"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 5,
+          "style" => "",
+          "text" => "removed errornous analazyer attribute from QueryParser, added more test cases"
+        }
+      ],
+      "line" => 4,
+      "version" => "0.003"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 3,
+          "style" => "",
+          "text" => "version bump for inc::Module::Install upgrade (http://weblog.bulknews.net/post/33907905561/do-not-ship-modules-with-module-install-1-04)"
+        }
+      ],
+      "line" => 2,
+      "version" => "0.004"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 1,
+          "style" => "",
+          "text" => "no changes, I accidently deleted the tar.gz from cpan, had to reupload, can't upload same version twice"
+        }
+      ],
+      "line" => 0,
+      "version" => "0.005"
+    }
+  ]
+}

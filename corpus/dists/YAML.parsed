@@ -1,0 +1,1000 @@
+{
+  "preamble" => undef,
+  "releases" => [
+    {
+      "date" => "2001-10-15T19:18:49Z",
+      "entries" => [
+        {
+          "line" => 248,
+          "style" => "-",
+          "text" => "original version; created by h2xs 1.19"
+        }
+      ],
+      "line" => 247,
+      "version" => "0.01"
+    },
+    {
+      "date" => "2001-12-19T02:34:38Z",
+      "entries" => [
+        {
+          "line" => 245,
+          "style" => "-",
+          "text" => "Initial module shipped to CPAN"
+        }
+      ],
+      "line" => 244,
+      "version" => "0.25"
+    },
+    {
+      "date" => "2002-01-09T21:13:45Z",
+      "entries" => [
+        {
+          "line" => 226,
+          "style" => "-",
+          "text" => "Detect implicit scalars more correctly"
+        },
+        {
+          "line" => 227,
+          "style" => "-",
+          "text" => "Refactor test suite"
+        },
+        {
+          "line" => 228,
+          "style" => "-",
+          "text" => "Proofed documentation"
+        },
+        {
+          "line" => 229,
+          "style" => "-",
+          "text" => "Fix ysh doc. Document flags in the pod."
+        },
+        {
+          "line" => 230,
+          "style" => "-",
+          "text" => "Move test code out of YAML.pm and into testlib"
+        },
+        {
+          "line" => 231,
+          "style" => "-",
+          "text" => "Change directives to use"
+        },
+        {
+          "line" => 232,
+          "style" => "-",
+          "text" => "Parse regexes"
+        },
+        {
+          "line" => 233,
+          "style" => "-",
+          "text" => "YAC-017. Change !perl/ syntax"
+        },
+        {
+          "line" => 234,
+          "style" => "-",
+          "text" => "Emit regexes"
+        },
+        {
+          "line" => 235,
+          "style" => "-",
+          "text" => "support 'ysh -v' and 'ysh -V' and 'ysh -h'"
+        },
+        {
+          "line" => 236,
+          "style" => "-",
+          "text" => "Support blessed globs"
+        },
+        {
+          "line" => 237,
+          "style" => "-",
+          "text" => "Make ysh installable"
+        },
+        {
+          "line" => 238,
+          "style" => "-",
+          "text" => "Parse CODE leaves"
+        },
+        {
+          "line" => 239,
+          "style" => "-",
+          "text" => "Support blessed scalars"
+        },
+        {
+          "line" => 240,
+          "style" => "-",
+          "text" => "Test warnings as well as errors"
+        },
+        {
+          "line" => 241,
+          "style" => "-",
+          "text" => "Use B::Deparse to serialize code"
+        },
+        {
+          "line" => 242,
+          "style" => "-",
+          "text" => "Change 'implicit' to 'simple'"
+        }
+      ],
+      "line" => 225,
+      "version" => "0.26"
+    },
+    {
+      "date" => "2002-01-15T01:46:18Z",
+      "entries" => [
+        {
+          "line" => 204,
+          "style" => "-",
+          "text" => "Make '-' chomp all trailing newlines"
+        },
+        {
+          "line" => 205,
+          "style" => "-",
+          "text" => "Change folded indicator from '^' to ']'."
+        },
+        {
+          "line" => 206,
+          "style" => "-",
+          "text" => "YAC-010 Allow a map as a sequence entry to be collapsed to one line."
+        },
+        {
+          "line" => 207,
+          "style" => "-",
+          "text" => "Changed the nextline scalar indicators. '^' means folded, and escaping ('\\') can be applied to folded or blocks. Chomping is now '-'."
+        },
+        {
+          "line" => 209,
+          "style" => "-",
+          "text" => "YAC-013. Generic indentation. This change was big, ugly, hard and it really made my brain hurt. But look. It works! :)"
+        },
+        {
+          "line" => 211,
+          "style" => "-",
+          "text" => "YAC-012. Added ability to put comments anywhere, at any indentation level."
+        },
+        {
+          "line" => 213,
+          "style" => "-",
+          "text" => "Added \$YAML::UseBlock and \$YAML::UseFold"
+        },
+        {
+          "line" => 214,
+          "style" => "-",
+          "text" => "Changed \$YAML::PerlCode to \$YAML::UseCode"
+        },
+        {
+          "line" => 215,
+          "style" => "-",
+          "text" => "Added \$YAML::Indent config option"
+        },
+        {
+          "line" => 216,
+          "style" => "-",
+          "text" => "YAC-012. Handled all Throwaway Issues. Blank lines and comments can be used anywhere, and they will work appropriately."
+        },
+        {
+          "line" => 218,
+          "style" => "-",
+          "text" => "Converted Changes file (this file) to use YAML"
+        },
+        {
+          "line" => 219,
+          "style" => "-",
+          "text" => "AC-016. Support \"assumed header\" (---"
+        },
+        {
+          "line" => 220,
+          "style" => "-",
+          "text" => "Added \$YAML::UseBlock option"
+        },
+        {
+          "line" => 221,
+          "style" => "-",
+          "text" => "YAC-015. Support Top Level Inline nodes"
+        },
+        {
+          "line" => 222,
+          "style" => "-",
+          "text" => "Added testing for Store to test suite. (Now there's no excuse not to create lot's of new tests. :)"
+        }
+      ],
+      "line" => 203,
+      "version" => "0.27"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 193,
+          "style" => "-",
+          "text" => "Moved error handling into YAML::Error"
+        },
+        {
+          "line" => 194,
+          "style" => "-",
+          "text" => "Enabled UseAliases=0 to mean skip Dump checking of alias nodes."
+        },
+        {
+          "line" => 195,
+          "style" => "-",
+          "text" => "Changed Defaults. Indent=2. CompressSeries=1."
+        },
+        {
+          "line" => 196,
+          "style" => "-",
+          "text" => "Deprecated Store() in favor of Dump()"
+        },
+        {
+          "line" => 197,
+          "style" => "-",
+          "text" => "Refactored test suite"
+        },
+        {
+          "line" => 198,
+          "style" => "-",
+          "text" => "Added key list to SortKeys"
+        },
+        {
+          "line" => 199,
+          "style" => "-",
+          "text" => "Added ForceBlock option"
+        },
+        {
+          "line" => 200,
+          "style" => "-",
+          "text" => "CONTROL-D can be used to terminate ysh. Ryan King will be happy."
+        },
+        {
+          "line" => 201,
+          "style" => "-",
+          "text" => "Added the ability to direct STDIN to the ysh."
+        }
+      ],
+      "line" => 192,
+      "note" => "Sat May 11 19:54:52 EDT 2002",
+      "version" => "0.32"
+    },
+    {
+      "date" => "2005-01-30T21:00:28Z",
+      "entries" => [
+        {
+          "line" => 189,
+          "style" => "-",
+          "text" => "Slight changes to the way things are dumped."
+        },
+        {
+          "line" => 190,
+          "style" => "-",
+          "text" => "Fixed bugs dumping \"foo\\nbar\" for svk acceptance"
+        }
+      ],
+      "line" => 188,
+      "version" => "0.36"
+    },
+    {
+      "date" => "2005-03-31T01:56:24Z",
+      "entries" => [
+        {
+          "line" => 185,
+          "style" => "-",
+          "text" => "All the edge cases with hash key dumping (commas, [], {}, etc) should now be covered"
+        }
+      ],
+      "line" => 184,
+      "version" => "0.37"
+    },
+    {
+      "date" => "2005-03-31T01:43:21Z",
+      "entries" => [
+        {
+          "line" => 182,
+          "style" => "-",
+          "text" => "Deleted Spiffy -XXX artifact :("
+        }
+      ],
+      "line" => 181,
+      "version" => "0.38"
+    },
+    {
+      "date" => "2005-04-12T15:28:40Z",
+      "entries" => [
+        {
+          "line" => 179,
+          "style" => "-",
+          "text" => "Need newer Test::More or tests hang."
+        }
+      ],
+      "line" => 178,
+      "version" => "0.39"
+    },
+    {
+      "date" => "2005-12-25T11:09:18Z",
+      "entries" => [
+        {
+          "line" => 159,
+          "style" => "-",
+          "text" => "Major refactoring of YAML.pm"
+        },
+        {
+          "line" => 160,
+          "style" => "-",
+          "text" => "Completely OO with same old functional UI"
+        },
+        {
+          "line" => 161,
+          "style" => "-",
+          "text" => "Support the \$YAML::Stringify option which most be on for objects to get stringified. Otherwise dump the object."
+        },
+        {
+          "line" => 163,
+          "style" => "-",
+          "text" => "Can dump overloaded objects now."
+        },
+        {
+          "line" => 164,
+          "style" => "-",
+          "text" => "Completely refactor test suite using Test::Base"
+        },
+        {
+          "line" => 165,
+          "style" => "-",
+          "text" => "Create Test::YAML"
+        },
+        {
+          "line" => 166,
+          "style" => "-",
+          "text" => "Make test framework compatible with YAML::Syck - Test-Base-0.45"
+        },
+        {
+          "line" => 167,
+          "style" => "-",
+          "text" => "Reviewed all rt bugs. fixed many"
+        },
+        {
+          "line" => 168,
+          "style" => "-",
+          "text" => "Reviewed all emailed bugs. Fixed many."
+        },
+        {
+          "line" => 169,
+          "style" => "-",
+          "text" => "Helped audrey complete YAML::Syck and worked on interoperability issues"
+        },
+        {
+          "line" => 170,
+          "style" => "-",
+          "text" => "Test well known yaml docs like svk and META.yml"
+        },
+        {
+          "line" => 171,
+          "style" => "-",
+          "text" => "Eliminate unsafe string evals"
+        },
+        {
+          "line" => 172,
+          "style" => "-",
+          "text" => "Can use with autouse. Spiffy-0.25"
+        },
+        {
+          "line" => 173,
+          "style" => "-",
+          "text" => "Support YAML::Marshall to help classes that want to do their own marshalling"
+        },
+        {
+          "line" => 175,
+          "style" => "-",
+          "text" => "Make objects tags configurable"
+        },
+        {
+          "line" => 176,
+          "style" => "-",
+          "text" => "-M option for ysh to test other implementations like YAML::Syck"
+        }
+      ],
+      "line" => 158,
+      "version" => "0.50"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 155,
+          "style" => "-",
+          "text" => "Tests pass on win32 and cygwin"
+        },
+        {
+          "line" => 156,
+          "style" => "-",
+          "text" => "Don't gpg sign the distribution tarball"
+        }
+      ],
+      "line" => 154,
+      "note" => "Sat Jan 14 17:09:09 GMT 2006",
+      "version" => "0.51"
+    },
+    {
+      "date" => "2006-01-18T14:25:24Z",
+      "entries" => [
+        {
+          "line" => 152,
+          "style" => "-",
+          "text" => "Error in Spiffy-0.26 causing problems. Require 0.27"
+        }
+      ],
+      "line" => 151,
+      "version" => "0.52"
+    },
+    {
+      "date" => "2006-01-19T06:03:17Z",
+      "entries" => [
+        {
+          "line" => 149,
+          "style" => "-",
+          "text" => "Depend on Class::Spiffy instead of Spiffy. No source filtering."
+        }
+      ],
+      "line" => 148,
+      "version" => "0.53"
+    },
+    {
+      "date" => "2006-01-29T17:28:46Z",
+      "entries" => [
+        {
+          "line" => 146,
+          "style" => "-",
+          "text" => "Remove dependency on Class::Spiffy (and/or Spiffy)."
+        }
+      ],
+      "line" => 145,
+      "version" => "0.54"
+    },
+    {
+      "date" => "2006-01-29T19:03:35Z",
+      "entries" => [
+        {
+          "line" => 142,
+          "style" => "-",
+          "text" => "Load YAML::Node because Module::Build expects it to be loaded. We can undo this when Module::Build starts loading it for itself."
+        }
+      ],
+      "line" => 141,
+      "version" => "0.55"
+    },
+    {
+      "date" => "2006-01-30T10:26:33Z",
+      "entries" => [
+        {
+          "line" => 139,
+          "style" => "-",
+          "text" => "Add Module::Install::TestBase support"
+        }
+      ],
+      "line" => 138,
+      "version" => "0.56"
+    },
+    {
+      "date" => "2006-02-01T23:06:25Z",
+      "entries" => [
+        {
+          "line" => 136,
+          "style" => "-",
+          "text" => "Add obligatory '1;' to end of each module."
+        }
+      ],
+      "line" => 135,
+      "version" => "0.57"
+    },
+    {
+      "date" => "2006-02-14T12:42:34Z",
+      "entries" => [
+        {
+          "line" => 132,
+          "style" => "-",
+          "text" => "Fixed bug reported by Slaven Rezic on 5.8.0"
+        },
+        {
+          "line" => 133,
+          "style" => "-",
+          "text" => "Fixed a ysh bug reported on rt. 17589"
+        }
+      ],
+      "line" => 131,
+      "version" => "0.58"
+    },
+    {
+      "date" => "2006-06-30T21:55:55Z",
+      "entries" => [
+        {
+          "line" => 126,
+          "style" => "-",
+          "text" => "Changed object tag format in non backwards compatible way"
+        },
+        {
+          "line" => 127,
+          "style" => "-",
+          "text" => "Removed support for folded scalar emission"
+        },
+        {
+          "line" => 128,
+          "style" => "-",
+          "text" => "Added new tests"
+        },
+        {
+          "line" => 129,
+          "style" => "-",
+          "text" => "Sync with YAML::Syck"
+        }
+      ],
+      "line" => 125,
+      "version" => "0.60"
+    },
+    {
+      "date" => "2006-07-02T15:25:08Z",
+      "entries" => [
+        {
+          "line" => 123,
+          "style" => "-",
+          "text" => "New CGI.pm made test fail."
+        }
+      ],
+      "line" => 122,
+      "version" => "0.61"
+    },
+    {
+      "date" => "2006-07-03T15:41:20Z",
+      "entries" => [
+        {
+          "line" => 120,
+          "style" => "-",
+          "text" => "Patch from rgs for Catalyst users"
+        }
+      ],
+      "line" => 119,
+      "version" => "0.62"
+    },
+    {
+      "date" => "2007-06-20T16:03:22Z",
+      "entries" => [
+        {
+          "line" => 115,
+          "style" => "-",
+          "text" => "Don't emit nodes blessed into '' in the new tag scheme, and improve semantics of loading such nodes."
+        },
+        {
+          "line" => 117,
+          "style" => "-",
+          "text" => "New support for dumping/loading regexps."
+        }
+      ],
+      "line" => 114,
+      "version" => "0.63"
+    },
+    {
+      "date" => "2007-06-21T14:31:20Z",
+      "entries" => [
+        {
+          "line" => 112,
+          "style" => "-",
+          "text" => "Better support for loading regexps. audreyt++"
+        }
+      ],
+      "line" => 111,
+      "version" => "0.64"
+    },
+    {
+      "date" => "2007-06-21T17:37:32Z",
+      "entries" => [
+        {
+          "line" => 108,
+          "style" => "-",
+          "text" => "\\z is really \\0"
+        },
+        {
+          "line" => 109,
+          "style" => "-",
+          "text" => "Speed up regexp loading. audreyt++"
+        }
+      ],
+      "line" => 107,
+      "version" => "0.65"
+    },
+    {
+      "date" => "2007-09-27T01:37:16Z",
+      "entries" => [
+        {
+          "line" => 105,
+          "style" => "-",
+          "text" => "Blessed code refs with LoadCode=0 still get blessed. rafl++"
+        }
+      ],
+      "line" => 104,
+      "version" => "0.66"
+    },
+    {
+      "date" => "2008-12-01T02:34:21Z",
+      "entries" => [
+        {
+          "line" => 100,
+          "style" => "-",
+          "text" => "Add YAML::Any"
+        },
+        {
+          "line" => 101,
+          "style" => "-",
+          "text" => "Move ysh to YAML::Shell"
+        },
+        {
+          "line" => 102,
+          "style" => "-",
+          "text" => "Add doc section explaining YAML::Old"
+        }
+      ],
+      "line" => 99,
+      "version" => "0.67"
+    },
+    {
+      "date" => "2008-12-04T01:00:44Z",
+      "entries" => [
+        {
+          "line" => 97,
+          "style" => "-",
+          "text" => "Used update Test::Base to ensure Filter::Util::Call"
+        }
+      ],
+      "line" => 96,
+      "version" => "0.68"
+    },
+    {
+      "date" => "2009-07-09T02:01:12Z",
+      "entries" => [
+        {
+          "line" => 92,
+          "style" => "-",
+          "text" => "Added \$VERSION to all modules"
+        },
+        {
+          "line" => 93,
+          "style" => "-",
+          "text" => "Removed the use of use base"
+        },
+        {
+          "line" => 94,
+          "style" => "-",
+          "text" => "Imported into the svn.ali.as repo"
+        }
+      ],
+      "line" => 91,
+      "version" => "0.69_01"
+    },
+    {
+      "date" => "2009-08-10T22:37:37Z",
+      "entries" => [
+        {
+          "line" => 89,
+          "style" => "-",
+          "text" => "Developer \$VERSION now has eval correction"
+        }
+      ],
+      "line" => 88,
+      "version" => "0.69_02"
+    },
+    {
+      "date" => "2009-08-11T02:52:10Z",
+      "entries" => [
+        {
+          "line" => 83,
+          "style" => "-",
+          "text" => "Updated Module::Install dependency to 0.91"
+        },
+        {
+          "line" => 84,
+          "style" => "-",
+          "text" => "Bumping dependency to 5.8.0 but I think it's only in the test suite. However, I can't prove it. So if anyone wants 5.6 compatibility back you need to fix or rewrite the test suite."
+        }
+      ],
+      "line" => 82,
+      "version" => "0.70"
+    },
+    {
+      "date" => "2010-01-03T12:25:00Z",
+      "entries" => [
+        {
+          "line" => 77,
+          "style" => "-",
+          "text" => "Set file encoding to UTF-8 in LoadFile/DumpFile (RT#25434) by Olivier Mengue"
+        },
+        {
+          "line" => 79,
+          "style" => "-",
+          "text" => "We shouldn't have to care about 5.8.0. Since it's causing CPAN Testers failures, bump the minimum Perl to 5.8.1"
+        }
+      ],
+      "line" => 76,
+      "version" => "0.71"
+    },
+    {
+      "date" => "2010-09-01T11:54:00Z",
+      "entries" => [
+        {
+          "line" => 71,
+          "style" => "-",
+          "text" => "Upgrade to Module::Install 1.00"
+        },
+        {
+          "line" => 72,
+          "style" => "-",
+          "text" => "Upgraded author tests via new ADAMK release automation"
+        },
+        {
+          "line" => 73,
+          "style" => "-",
+          "text" => "Normalise Ingy's name to ASCII in Makefile.PL so that we don't have Unicode in our own META.yml"
+        }
+      ],
+      "line" => 70,
+      "version" => "0.72"
+    },
+    {
+      "date" => "2011-04-19T20:14:59Z",
+      "entries" => [
+        {
+          "line" => 68,
+          "style" => "-",
+          "text" => "Apply ANDK's patch for 5.14.0"
+        }
+      ],
+      "line" => 67,
+      "version" => "0.73"
+    },
+    {
+      "date" => "2011-09-25T22:05:05Z",
+      "entries" => [
+        {
+          "line" => 63,
+          "style" => "-",
+          "text" => "Switch to Module::Package"
+        },
+        {
+          "line" => 64,
+          "style" => "-",
+          "text" => "Removed extra \$VERSION lines from submodules"
+        },
+        {
+          "line" => 65,
+          "style" => "-",
+          "text" => "Released from Liz++ and Wendy++'s Tool Basement!"
+        }
+      ],
+      "line" => 62,
+      "version" => "0.74"
+    },
+    {
+      "date" => "2011-09-27T00:46:19Z",
+      "entries" => [
+        {
+          "line" => 59,
+          "style" => "-",
+          "text" => "Switch to Mo for OO (YAML::Mo)"
+        },
+        {
+          "line" => 60,
+          "style" => "-",
+          "text" => "use_test_base in Makefile.PL."
+        }
+      ],
+      "line" => 58,
+      "version" => "0.75"
+    },
+    {
+      "date" => "2011-09-28T12:05:08Z",
+      "entries" => [
+        {
+          "line" => 56,
+          "style" => "-",
+          "text" => "Removed YAML::import per mst."
+        }
+      ],
+      "line" => 55,
+      "version" => "0.76"
+    },
+    {
+      "date" => "2011-09-29T18:28:25Z",
+      "entries" => [
+        {
+          "line" => 52,
+          "style" => "-",
+          "text" => "Add \$VERSION back to all modules."
+        },
+        {
+          "line" => 53,
+          "style" => "-",
+          "text" => "Released from Liz++ and Wendy++ garage attic!"
+        }
+      ],
+      "line" => 51,
+      "version" => "0.77"
+    },
+    {
+      "date" => "2012-01-01T23:53:57Z",
+      "entries" => [
+        {
+          "line" => 49,
+          "style" => "-",
+          "text" => "Apply patch from ANDK++ to deal with B::Deparse changes."
+        }
+      ],
+      "line" => 48,
+      "version" => "0.78"
+    },
+    {
+      "date" => "2012-02-08T17:25:55Z",
+      "entries" => [
+        {
+          "line" => 45,
+          "style" => "-",
+          "text" => "Peter Scott and others noticed Mo::xxx causing problems on newer perls. Removed xxx for now."
+        }
+      ],
+      "line" => 44,
+      "version" => "0.79"
+    },
+    {
+      "date" => "2012-02-10T12:56:08Z",
+      "entries" => [
+        {
+          "line" => 41,
+          "style" => "-",
+          "text" => "Patch from https://rt.cpan.org/Ticket/Display.html?id=73702"
+        },
+        {
+          "line" => 42,
+          "style" => "-",
+          "text" => "Make YAML::Node subclass YAML::Mo::Object as well as Exporter (MSTROUT)"
+        }
+      ],
+      "line" => 40,
+      "version" => "0.80"
+    },
+    {
+      "date" => "2012-04-19T11:03:38Z",
+      "entries" => [
+        {
+          "line" => 36,
+          "style" => "-",
+          "text" => "Patch from https://rt.cpan.org/Public/Bug/Display.html?id=74826"
+        },
+        {
+          "line" => 37,
+          "style" => "-",
+          "text" => "YAML::Mo uses Safe Mo https://rt.cpan.org/Public/Bug/Display.html?id=76664"
+        }
+      ],
+      "line" => 35,
+      "version" => "0.81"
+    },
+    {
+      "date" => "2012-07-12T18:49:45Z",
+      "entries" => [
+        {
+          "line" => 32,
+          "style" => "-",
+          "text" => "Test scalar \@array rather than deprecated defined \@array (Sebastian Stumpf)"
+        }
+      ],
+      "line" => 31,
+      "version" => "0.82"
+    },
+    {
+      "date" => "2012-07-13T15:44:03Z",
+      "entries" => [
+        {
+          "line" => 28,
+          "style" => "-",
+          "text" => "Only call stat() and tell() on a filehandle if fileno existed"
+        },
+        {
+          "line" => 29,
+          "style" => "-",
+          "text" => "Explicit tied() call on globs to avoid a 5.16 deprecation warning"
+        }
+      ],
+      "line" => 27,
+      "version" => "0.83"
+    },
+    {
+      "date" => "2012-07-13T18:17:27Z",
+      "entries" => [
+        {
+          "line" => 25,
+          "style" => "-",
+          "text" => "Resolve distribution error that caused .git to be shipped in the .tar.gz"
+        }
+      ],
+      "line" => 24,
+      "version" => "0.84"
+    },
+    {
+      "date" => "2013-11-24T07:43:13Z",
+      "entries" => [
+        {
+          "line" => 19,
+          "style" => "-",
+          "text" => "Fix for https://rt.cpan.org/Ticket/Display.html?id=19838 where synopsis in YAML::Dumper doesn't work as exptected."
+        },
+        {
+          "line" => 21,
+          "style" => "-",
+          "text" => "Thorsten++ https://rt.cpan.org/Public/Bug/Display.html?id=90593"
+        },
+        {
+          "line" => 22,
+          "style" => "-",
+          "text" => "Upgrade to latest Mo"
+        }
+      ],
+      "line" => 18,
+      "version" => "0.85"
+    },
+    {
+      "date" => "2013-11-26T16:43:27Z",
+      "entries" => [
+        {
+          "line" => 16,
+          "style" => "-",
+          "text" => "Revert YAML::Mo for https://rt.cpan.org/Public/Bug/Display.html?id=90817"
+        }
+      ],
+      "line" => 15,
+      "version" => "0.86"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 12,
+          "style" => "-",
+          "text" => "Using latest Test::Builder tp fix https://rt.cpan.org/Public/Bug/Display.html?id=90847"
+        }
+      ],
+      "line" => 11,
+      "note" => "Sat Nov 30 21:51:48 PST 2013",
+      "version" => "0.87"
+    },
+    {
+      "date" => "2013-12-03T05:29:34Z",
+      "entries" => [
+        {
+          "line" => 8,
+          "style" => "-",
+          "text" => "Fixed YAML loading on perl 5.8 (broken in YAML 0.85) by removing 5.10-specific regex construct. -- hobbs++"
+        }
+      ],
+      "line" => 7,
+      "version" => "0.88"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 4,
+          "style" => "-",
+          "text" => "Fixed tests to work under parallel testing -- kentnl"
+        },
+        {
+          "line" => 5,
+          "style" => "-",
+          "text" => "Switched to dzil release process"
+        }
+      ],
+      "line" => 3,
+      "note" => "Sat Nov  8 12:51:48 PST 2014",
+      "version" => "0.89"
+    },
+    {
+      "date" => "2014-02-10T08:42:31Z",
+      "entries" => [
+        {
+          "line" => 1,
+          "style" => "-",
+          "text" => "Revert Mo from 0.38 to 0.31 - zefram++ reported it breaking cpan client"
+        }
+      ],
+      "line" => 0,
+      "version" => "0.90"
+    }
+  ]
+}

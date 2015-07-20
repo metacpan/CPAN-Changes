@@ -1,0 +1,68 @@
+{
+  "preamble" => undef,
+  "releases" => [
+    {
+      "entries" => [
+        {
+          "line" => 10,
+          "style" => "-",
+          "text" => "First version"
+        }
+      ],
+      "line" => 9,
+      "note" => "23 Oct 2011",
+      "version" => "0.01"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 8,
+          "style" => "-",
+          "text" => "Fix bugs at 32bit platform"
+        }
+      ],
+      "line" => 7,
+      "note" => "26 Oct 2011",
+      "version" => "0.02"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 4,
+          "style" => "-",
+          "text" => "Fix some critical bugs"
+        },
+        {
+          "line" => 5,
+          "style" => "-",
+          "text" => "Rename module to Data::MPQ::* (https://rt.cpan.org/Public/Bug/Display.html?id=71938)"
+        },
+        {
+          "line" => 6,
+          "style" => "-",
+          "text" => "Add a bit of Pod documentation"
+        }
+      ],
+      "line" => 3,
+      "note" => "29 Oct 2011",
+      "version" => "0.03"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 1,
+          "style" => "-",
+          "text" => "Add full covered tests for Data::MPQ"
+        },
+        {
+          "line" => 2,
+          "style" => "-",
+          "text" => "Change repository name in META"
+        }
+      ],
+      "line" => 0,
+      "note" => "30 Oct 2011",
+      "version" => "0.04"
+    }
+  ]
+}

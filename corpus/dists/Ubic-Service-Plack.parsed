@@ -1,0 +1,112 @@
+{
+  "preamble" => "Revision history for Ubic-Service-Plack\n\n{{\$NEXT}}",
+  "releases" => [
+    {
+      "entries" => [
+        {
+          "line" => 28,
+          "style" => "",
+          "text" => "First opensource release."
+        }
+      ],
+      "line" => 27,
+      "note" => "Fri Jul 30, 2010",
+      "version" => "1.10"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 25,
+          "style" => "",
+          "text" => "Add Plack into CPAN deps."
+        }
+      ],
+      "line" => 24,
+      "note" => "Sat Jul 31, 2010",
+      "version" => "1.11"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 22,
+          "style" => "",
+          "text" => "Pass 'port' option to plackup."
+        }
+      ],
+      "line" => 21,
+      "note" => "Sun Nov 07, 2010",
+      "version" => "1.12"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 15,
+          "style" => "*",
+          "text" => "Compatible with new ubic 'default user' feature"
+        },
+        {
+          "line" => 16,
+          "style" => "*",
+          "text" => "Support arrayref values in server_args"
+        },
+        {
+          "line" => 17,
+          "style" => "*",
+          "text" => "Support single-letter keys in server_args"
+        },
+        {
+          "line" => 18,
+          "style" => "*",
+          "text" => "bin() method, pidfile() method, refactor to use Ubic::Service::Skeleton instead of Ubic::Service::Common"
+        }
+      ],
+      "line" => 14,
+      "note" => "Wed Jul 13, 2011",
+      "version" => "1.13"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 10,
+          "style" => "*",
+          "text" => "group, env and cmd options"
+        },
+        {
+          "line" => 11,
+          "style" => "*",
+          "text" => "deprecate app_name option, derive pidfile from service's full_name"
+        },
+        {
+          "line" => 12,
+          "style" => "*",
+          "text" => "improve and cleanup docs"
+        }
+      ],
+      "line" => 9,
+      "note" => "Tue Jan 10, 2012",
+      "version" => "1.14"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 5,
+          "style" => "*",
+          "text" => "minor POD improvements"
+        },
+        {
+          "line" => 6,
+          "style" => "*",
+          "text" => "don't package debian/ into CPAN distribution"
+        },
+        {
+          "line" => 7,
+          "style" => "*",
+          "text" => "fix cwd test on OS X"
+        }
+      ],
+      "line" => 4,
+      "note" => "Sun Oct 14, 2012",
+      "version" => "1.15"
+    }
+  ]
+}

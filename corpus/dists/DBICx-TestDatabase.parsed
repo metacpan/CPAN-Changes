@@ -1,0 +1,41 @@
+{
+  "preamble" => undef,
+  "releases" => [
+    {
+      "entries" => [
+        {
+          "line" => 7,
+          "style" => "-",
+          "text" => "first version, released upon an unsuspecting world"
+        }
+      ],
+      "line" => 6,
+      "note" => "7 October 2007",
+      "version" => "0.01"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 4,
+          "style" => "-",
+          "text" => "use an in-memory sqlite database by default"
+        }
+      ],
+      "line" => 3,
+      "note" => "14 December 2010",
+      "version" => "0.03"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 1,
+          "style" => "-",
+          "text" => "support unicode (patch by diegok)"
+        }
+      ],
+      "line" => 0,
+      "note" => "14 December 2010",
+      "version" => "0.04"
+    }
+  ]
+}

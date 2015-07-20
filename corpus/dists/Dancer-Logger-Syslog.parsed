@@ -1,0 +1,52 @@
+{
+  "preamble" => "Revision history for Dancer-Logger-Syslog",
+  "releases" => [
+    {
+      "entries" => [
+        {
+          "line" => 12,
+          "style" => "*",
+          "text" => "First version, released on an unsuspecting world."
+        }
+      ],
+      "line" => 11,
+      "note" => "Jan 29th, 2010",
+      "version" => "0.1"
+    },
+    {
+      "entries" => [],
+      "line" => 9,
+      "note" => "October 5th, 2010",
+      "version" => "0.2"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 6,
+          "style" => "*",
+          "text" => "Add 'info' in the log levels. (GH#2, Sam Crawley)"
+        },
+        {
+          "line" => 7,
+          "style" => "*",
+          "text" => "Facility can be set via config. (GH#1, Sam Crawley)"
+        }
+      ],
+      "line" => 5,
+      "note" => "April 14th, 2013",
+      "version" => "0.3"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 3,
+          "style" => "*",
+          "text" => "Call 'openlog()' in all child processes. (GH#4, Sam Crawley)"
+        }
+      ],
+      "line" => 2,
+      "note" => "April 22nd, 2013",
+      "version" => "0.4"
+    }
+  ]
+}

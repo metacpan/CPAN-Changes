@@ -1,0 +1,264 @@
+{
+  "preamble" => undef,
+  "releases" => [
+    {
+      "date" => "2009-07-08",
+      "entries" => [
+        {
+          "line" => 88,
+          "style" => "*",
+          "text" => "Initial release"
+        }
+      ],
+      "line" => 86,
+      "version" => "1.00"
+    },
+    {
+      "date" => "2009-08-11",
+      "entries" => [
+        {
+          "line" => 80,
+          "style" => "*",
+          "text" => "Fix breakage under Mouse due to Moose references"
+        },
+        {
+          "line" => 81,
+          "style" => "*",
+          "text" => "New Config::GitLike::Git module for loading config files from the git locations"
+        },
+        {
+          "line" => 83,
+          "style" => "*",
+          "text" => "various cleanups of Makefile.PL"
+        },
+        {
+          "line" => 84,
+          "style" => "*",
+          "text" => "remove extraneous dep Regexp::Common"
+        }
+      ],
+      "line" => 78,
+      "version" => "1.01"
+    },
+    {
+      "date" => "2009-08-19",
+      "entries" => [
+        {
+          "line" => 74,
+          "style" => "*",
+          "text" => "Bugfixes and extra tests for escaped \\ and \" in subsections (sunnavy)"
+        },
+        {
+          "line" => 75,
+          "style" => "*",
+          "text" => "win32 fixes (sunnavy)"
+        },
+        {
+          "line" => 76,
+          "style" => "*",
+          "text" => "auto-escape \\ and \" in subsections on set (sunnavy)"
+        }
+      ],
+      "line" => 72,
+      "version" => "1.02"
+    },
+    {
+      "date" => "2010-01-03",
+      "entries" => [
+        {
+          "line" => 65,
+          "style" => "*",
+          "text" => "Filter without replace_all should only replace the _first_ match (alexmv)"
+        },
+        {
+          "line" => 66,
+          "style" => "*",
+          "text" => "Having a matching filter with multiple and not replace_all does mean replacement (alexmv)"
+        },
+        {
+          "line" => 68,
+          "style" => "*",
+          "text" => "Fix a test that failed because multiple now works, and we're too smart (alexmv)"
+        },
+        {
+          "line" => 70,
+          "style" => "*",
+          "text" => "Fix for when ->set_multiple called with no arguments (alexmv)"
+        }
+      ],
+      "line" => 63,
+      "version" => "1.03"
+    },
+    {
+      "date" => "2010-04-03",
+      "entries" => [
+        {
+          "line" => 52,
+          "style" => "*",
+          "text" => "The functionality of Config::GitLike::Cascaded has been folded into Config::GitLike as a \"cascade\" option, and the subpackage is now deprecated. (alexmv)"
+        },
+        {
+          "line" => 55,
+          "style" => "*",
+          "text" => "Config::GitLike::Git->new->load(\"/path/to/git\") when the path is lacking a \".git\", or is a bare repository, now works. (alexmv)"
+        },
+        {
+          "line" => 57,
+          "style" => "*",
+          "text" => "Fixed a bug wherein the home directory config file would be loaded twice, causing all values to be multiple, if that was your cwd. Reported by rjbs. (alexmv)"
+        },
+        {
+          "line" => 60,
+          "style" => "*",
+          "text" => "Allow explicitly calling ->load_file without previously having called ->load (alexmv)"
+        }
+      ],
+      "line" => 50,
+      "version" => "1.04"
+    },
+    {
+      "date" => "2011-01-07",
+      "entries" => [
+        {
+          "line" => 46,
+          "style" => "*",
+          "text" => "support Module::Install::ExtraTests 0.007 (sunnavy)"
+        },
+        {
+          "line" => 47,
+          "style" => "*",
+          "text" => "properly set is => 'rw' in inherited classes (trs, alexmv)"
+        },
+        {
+          "line" => 48,
+          "style" => "*",
+          "text" => "silence lc warnings on undef under perl 5.12 (iarnell\@gmail.com)"
+        }
+      ],
+      "line" => 44,
+      "version" => "1.05"
+    },
+    {
+      "date" => "2011-10-12",
+      "entries" => [
+        {
+          "line" => 34,
+          "style" => "*",
+          "text" => "Allow calling ->load_file as a class method, for simple use cases (alexmv)"
+        },
+        {
+          "line" => 36,
+          "style" => "*",
+          "text" => "Fix a parsing bug when quoted strings directly adjoined to unquoted strings (alexmv)"
+        },
+        {
+          "line" => 38,
+          "style" => "*",
+          "text" => "Calling ->load_file on a nonexistant file no longer sets ->is_loaded (alexmv)"
+        },
+        {
+          "line" => 40,
+          "style" => "*",
+          "text" => "Document that getters implicitly call ->load (alexmv)"
+        },
+        {
+          "line" => 41,
+          "style" => "*",
+          "text" => "Make ->dump implicitly call ->load as well (alexmv)"
+        },
+        {
+          "line" => 42,
+          "style" => "*",
+          "text" => "Minor POD fixes (alexmv, spang)"
+        }
+      ],
+      "line" => 32,
+      "version" => "1.06"
+    },
+    {
+      "date" => "2011-10-25",
+      "entries" => [
+        {
+          "line" => 29,
+          "style" => "*",
+          "text" => "Fix a spelling mistake in Config::GitLike::Cascaded (gregoa\@debian.org, forwarded by carnil\@debian.org)"
+        }
+      ],
+      "line" => 27,
+      "version" => "1.07"
+    },
+    {
+      "date" => "2012-02-15",
+      "entries" => [
+        {
+          "line" => 24,
+          "style" => "*",
+          "text" => "Fix loading of user_file, broken in dcdd01f, due to unexpanded ~ (alexmv, clkao\@clkao.org)"
+        }
+      ],
+      "line" => 22,
+      "version" => "1.08"
+    },
+    {
+      "date" => "2012-08-10",
+      "entries" => [
+        {
+          "line" => 14,
+          "style" => "*",
+          "text" => "Multiple bug fixes concerning filters, including empty filters, valueless keys, and applying filters to single values."
+        },
+        {
+          "line" => 16,
+          "style" => "*",
+          "text" => "Add \"human\" argument to get_all and get_regexp, to match get"
+        },
+        {
+          "line" => 17,
+          "style" => "*",
+          "text" => "Add an add_comment method"
+        },
+        {
+          "line" => 18,
+          "style" => "*",
+          "text" => "Add an encoding attribute, which adds the appropriate layer on file I/O"
+        },
+        {
+          "line" => 20,
+          "style" => "*",
+          "text" => "Enforce that all keys must have sections, as git 1.7.4.4 began doing"
+        }
+      ],
+      "line" => 12,
+      "version" => "1.09"
+    },
+    {
+      "date" => "2012-11-07",
+      "entries" => [
+        {
+          "line" => 6,
+          "style" => "*",
+          "text" => "Provide and API got accessing the original key that a value was set with, in a case-preserving way.  If the case of the key in a file matters, it is now possible to determine."
+        },
+        {
+          "line" => 9,
+          "style" => "*",
+          "text" => "The 'name' value passed to the 'callback' parameter is now no longer forced to lower-case, as a consequence."
+        }
+      ],
+      "line" => 4,
+      "version" => "1.10"
+    },
+    {
+      "date" => "2013-08-04",
+      "entries" => [
+        {
+          "line" => 2,
+          "style" => "*",
+          "text" => "Switch from the deprecated Any::Moose to Moo"
+        }
+      ],
+      "line" => 0,
+      "version" => "1.11"
+    }
+  ]
+}

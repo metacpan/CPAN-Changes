@@ -1,0 +1,71 @@
+{
+  "preamble" => "Revision history for Perl extension if.",
+  "releases" => [
+    {
+      "entries" => [],
+      "line" => 19,
+      "note" => "The update of 0.0401 was lost during update to 0.05",
+      "version" => "0.0601"
+    },
+    {
+      "entries" => [],
+      "line" => 17,
+      "note" => "Update email address.",
+      "version" => "0.06"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 14,
+          "style" => "",
+          "text" => "Better error handling. Suggest significance of => in the docs."
+        }
+      ],
+      "line" => 13,
+      "note" => "Sync with perl5.12.2:",
+      "version" => "0.05"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 11,
+          "style" => "",
+          "text" => "older versions of Perl."
+        }
+      ],
+      "line" => 10,
+      "note" => "test was using a discipline for open.pm not supported with",
+      "version" => "0.0401"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 8,
+          "style" => "",
+          "text" => "fix `require or die'."
+        }
+      ],
+      "line" => 7,
+      "note" => "support package names which are simultaneously keywords (open).",
+      "version" => "0.04"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 5,
+          "style" => "",
+          "text" => "test adopted for backward-compatibility"
+        }
+      ],
+      "line" => 4,
+      "note" => "`our' removed for backward-compatibility.",
+      "version" => "0.010001"
+    },
+    {
+      "entries" => [],
+      "line" => 2,
+      "note" => "The version of 5.7.3.",
+      "version" => "0.01"
+    }
+  ]
+}

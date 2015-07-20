@@ -2,7 +2,6 @@ use strict;
 use warnings;
 use Test::More;
 
-use File::Basename;
 use CPAN::Changes::Parser;
 
 my $parser = CPAN::Changes::Parser->new;

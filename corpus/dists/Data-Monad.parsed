@@ -1,0 +1,66 @@
+{
+  "preamble" => "Revision history for Perl extension Data::Monad\n\n{{\$NEXT}}",
+  "releases" => [
+    {
+      "entries" => [
+        {
+          "line" => 17,
+          "style" => "-",
+          "text" => "original version"
+        }
+      ],
+      "line" => 16,
+      "note" => "Wed, 12 Oct 2011",
+      "version" => "0.01"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 14,
+          "style" => "-",
+          "text" => "Add dependencies"
+        }
+      ],
+      "line" => 13,
+      "note" => "Sun, 23 Oct 2011",
+      "version" => "0.02"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 11,
+          "style" => "-",
+          "text" => "Fix dependencies (reported by mschwern)"
+        }
+      ],
+      "line" => 10,
+      "note" => "Tue, 26 Jun 2012",
+      "version" => "0.03"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 8,
+          "style" => "-",
+          "text" => "Fix a bug related perl contexts."
+        }
+      ],
+      "line" => 7,
+      "note" => "Sat, 13 Oct 2012",
+      "version" => "0.04"
+    },
+    {
+      "date" => "2013-09-08T00:23:32Z",
+      "entries" => [
+        {
+          "line" => 5,
+          "style" => "-",
+          "text" => "Fix the bug which breaks Data::Monad::CondVar on perl 5.17.2"
+        }
+      ],
+      "line" => 4,
+      "note" => "JST",
+      "version" => "0.05"
+    }
+  ]
+}

@@ -1,0 +1,1235 @@
+{
+  "preamble" => undef,
+  "releases" => [
+    {
+      "entries" => [
+        {
+          "line" => 429,
+          "style" => "*",
+          "text" => "Initial release."
+        }
+      ],
+      "line" => 427,
+      "note" => "(11.13.2004) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.01"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 425,
+          "style" => "*",
+          "text" => "Added missing prerequisite (Rose::URI)"
+        }
+      ],
+      "line" => 423,
+      "note" => "(11.14.2004) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.011"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 421,
+          "style" => "*",
+          "text" => "Added copyright info.  Versions 0.01 and 0.011 removed."
+        }
+      ],
+      "line" => 419,
+      "note" => "(11.14.2004) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.012"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 417,
+          "style" => "*",
+          "text" => "Fixed some tests that relied on keys()/values() order."
+        }
+      ],
+      "line" => 415,
+      "note" => "(12.07.2004) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.013"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 411,
+          "style" => "*",
+          "text" => "Added code to tests to drop back to UTC time zone if the local time zone cannot be determined (e.g., on Win32)"
+        },
+        {
+          "line" => 413,
+          "style" => "*",
+          "text" => "Added warnings for ancient versions of DateTime."
+        }
+      ],
+      "line" => 409,
+      "note" => "(12.30.2004) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.0131"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 406,
+          "style" => "*",
+          "text" => "Fixed a bug that caused a misleading error message when trying to select multiple items in a pop-up menu."
+        }
+      ],
+      "line" => 404,
+      "note" => "(04.21.2005) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.0132"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 400,
+          "style" => "*",
+          "text" => "Added functionality to the value_label() method of on/off field groups and restored the original meaning of the label() method for those fields."
+        }
+      ],
+      "line" => 398,
+      "note" => "(04.22.2005) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.014"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 396,
+          "style" => "*",
+          "text" => "Added class=\"required\" to the label tag of required fields."
+        }
+      ],
+      "line" => 394,
+      "note" => "(04.22.2005) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.0141"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 392,
+          "style" => "*",
+          "text" => "Added build_on_init() method to form objects."
+        }
+      ],
+      "line" => 390,
+      "note" => "(04.27.2005) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.0142"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 386,
+          "style" => "*",
+          "text" => "Added scalar context to the input_value() call in init_with_object(), and to the deflate_value() call in output_value()."
+        },
+        {
+          "line" => 388,
+          "style" => "*",
+          "text" => "Fixed mistakes in TextArea documentation."
+        }
+      ],
+      "line" => 384,
+      "note" => "(05.02.2005) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.0143"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 378,
+          "style" => "*",
+          "text" => "Added support for multi-valued internal values."
+        },
+        {
+          "line" => 379,
+          "style" => "*",
+          "text" => "Added support for fields with partial values (e.g., a compound time field with just an hour and an AM/PM specifier filled out.)"
+        },
+        {
+          "line" => 381,
+          "style" => "*",
+          "text" => "Shored up support for deeply-nested compound fields."
+        },
+        {
+          "line" => 382,
+          "style" => "*",
+          "text" => "Added hour, minute, second, start date, end date, and date range fields."
+        }
+      ],
+      "line" => 376,
+      "note" => "(06.27.2005) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.02"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 374,
+          "style" => "*",
+          "text" => "Added set field."
+        }
+      ],
+      "line" => 372,
+      "note" => "(06.28.2005) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.021"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 370,
+          "style" => "*",
+          "text" => "POD fixes."
+        }
+      ],
+      "line" => 368,
+      "note" => "(08.20.2005) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.022"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 366,
+          "style" => "*",
+          "text" => "Fixed compound field renaming bug."
+        }
+      ],
+      "line" => 364,
+      "note" => "(10.09.2005) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.023"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 361,
+          "style" => "*",
+          "text" => "Fixed POD links and altered POD formatting."
+        },
+        {
+          "line" => 362,
+          "style" => "*",
+          "text" => "Added support information and links to selected modules."
+        }
+      ],
+      "line" => 359,
+      "note" => "(10.10.2005) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.024"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 356,
+          "style" => "*",
+          "text" => "Fixed a bug that caused a fatal error when passing name/value pairs to the options() method of option containers."
+        }
+      ],
+      "line" => 354,
+      "note" => "(10.21.2005) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.025"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 351,
+          "style" => "*",
+          "text" => "Documented value/label pair argument format for select boxes, pop-up menus, and checkbox and radio button groups."
+        }
+      ],
+      "line" => 349,
+      "note" => "(10.22.2005) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.026"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 346,
+          "style" => "*",
+          "text" => "Fixed a bug that caused the incorrect initialization of compound fields nested 3 or more levels deep."
+        }
+      ],
+      "line" => 344,
+      "note" => "(10.23.2005) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.027"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 340,
+          "style" => "*",
+          "text" => "Adjusted tests to pass despite a backward-incompatible change in HTML::Entities as part of the HTML::Parser 3.46 release."
+        },
+        {
+          "line" => 342,
+          "style" => "*",
+          "text" => "Big version number bump."
+        }
+      ],
+      "line" => 338,
+      "note" => "(11.08.2005) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.30"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 334,
+          "style" => "*",
+          "text" => "Field order can now be customized in Rose::HTML::Form subclasses by overriding the new compare_fields() method or the revised field_names() method."
+        }
+      ],
+      "line" => 332,
+      "note" => "(12.27.2005) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.31"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 327,
+          "style" => "*",
+          "text" => "Added a rank() attribute to field objects, and a rank_counter() to forms.  Fields are ranked in the order that they are added to the form.  Subclasses can override compare_fields() to sort based on this rank."
+        }
+      ],
+      "line" => 325,
+      "note" => "(12.30.2005) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.32"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 320,
+          "style" => "*",
+          "text" => "Fixed a bug in input_value() on hidden fields that caused incorrect html() and xhtml() results.  (Reported by Sean Davis)"
+        },
+        {
+          "line" => 322,
+          "style" => "*",
+          "text" => "Compound datetime fields now correctly indicate invalid data when partially filled out.  (Reported by Sean Davis)"
+        }
+      ],
+      "line" => 318,
+      "note" => "(01.13.2006) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.33"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 315,
+          "style" => "*",
+          "text" => "Added a size() attribute to the text area field."
+        },
+        {
+          "line" => 316,
+          "style" => "*",
+          "text" => "Corrected the POD for the start/end date fields."
+        }
+      ],
+      "line" => 313,
+      "note" => "(01.17.2006) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.34"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 306,
+          "style" => "*",
+          "text" => "Added the ability to nest forms."
+        },
+        {
+          "line" => 307,
+          "style" => "*",
+          "text" => "Added a more concise syntax for adding fields to forms."
+        },
+        {
+          "line" => 308,
+          "style" => "*",
+          "text" => "Revised sub-field addressing to accommodate sub-form addressing."
+        },
+        {
+          "line" => 309,
+          "style" => "*",
+          "text" => "Added choices() aliases for the various divergently-named radio_buttons(), checkboxes(), and options() methods."
+        },
+        {
+          "line" => 311,
+          "style" => "*",
+          "text" => "Big version number bump to signify substantial progress towards 1.0."
+        }
+      ],
+      "line" => 304,
+      "note" => "(02.22.2006) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.50"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 297,
+          "style" => "*",
+          "text" => "Added CGI and Apache integration methods to Rose::HTML::Form: params_from_cgi(), params_from_apache(), init_fields_with_cgi(), and init_fields_with_apache()."
+        },
+        {
+          "line" => 300,
+          "style" => "*",
+          "text" => "Tweaked the copy/reference semantics of the params() method in Rose::HTML::Form."
+        },
+        {
+          "line" => 302,
+          "style" => "*",
+          "text" => "Made some small fixes and additions to the documentation."
+        }
+      ],
+      "line" => 295,
+      "note" => "(03.02.2006) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.51"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 291,
+          "style" => "*",
+          "text" => "Added a children() method to Rose::HTML::Object and all derived classes to provide uniform access to sub-objects."
+        },
+        {
+          "line" => 293,
+          "style" => "*",
+          "text" => "Added Rose::HTML::Form::Field::Integer."
+        }
+      ],
+      "line" => 289,
+      "note" => "(03.08.2006) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.52"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 284,
+          "style" => "*",
+          "text" => "Added Script, Link, and Anchor tag classes."
+        },
+        {
+          "line" => 285,
+          "style" => "*",
+          "text" => "Added missing documentation for xhtml_error()."
+        },
+        {
+          "line" => 286,
+          "style" => "*",
+          "text" => "Fixed a bug that caused some compound date/time fields to consider empty strings as \"non-empty\" values.  (Reported by Guillermo Roditi)"
+        }
+      ],
+      "line" => 282,
+      "note" => "(06.14.2006) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.53"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 270,
+          "style" => "*",
+          "text" => "Added the has_error() method."
+        },
+        {
+          "line" => 271,
+          "style" => "*",
+          "text" => "Added special handling to object_from_form() for checkboxes that set boolean columns in Rose::DB::Object-derived objects."
+        },
+        {
+          "line" => 273,
+          "style" => "*",
+          "text" => "The xhtml_table() method for checkbox and radio button groups now correctly returns XHTML markup.  (Reported by Jacques Supcik)"
+        },
+        {
+          "line" => 275,
+          "style" => "*",
+          "text" => "Restored the field_names() method, making it call the newly documented field_monikers() method.  (Reported by Andrei Kozovski)"
+        },
+        {
+          "line" => 277,
+          "style" => "*",
+          "text" => "Nesting a field or form within itself now results in a fatal error instead of an infinite loop."
+        },
+        {
+          "line" => 279,
+          "style" => "*",
+          "text" => "Preliminary localization infrastructure created.  (No public APIs are available yet.)"
+        }
+      ],
+      "line" => 268,
+      "note" => "(10.06.2006) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.54"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 264,
+          "style" => "*",
+          "text" => "Added German localization, translated by Uwe Voelker."
+        },
+        {
+          "line" => 265,
+          "style" => "*",
+          "text" => "Added French localization, translated by Jacques Supcik."
+        },
+        {
+          "line" => 266,
+          "style" => "*",
+          "text" => "Corrected some of the English error messages."
+        }
+      ],
+      "line" => 262,
+      "note" => "(10.20.2006) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.541"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 259,
+          "style" => "*",
+          "text" => "Fixed localization inheritence for checkboxes, options, and other nested, labeled elements."
+        }
+      ],
+      "line" => 257,
+      "note" => "(11.07.2006) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.542"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 254,
+          "style" => "*",
+          "text" => "Removed a stray reference to Scalar::Defer, which is not a prerequesite.  (Reported by Sebastian Riedel)"
+        }
+      ],
+      "line" => 252,
+      "note" => "(11.22.2006) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.543"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 245,
+          "style" => "*",
+          "text" => "Added a field_value() method to Rose::HTML::Form.  (Suggested by Guillermo Roditi)"
+        },
+        {
+          "line" => 247,
+          "style" => "*",
+          "text" => "Added validation and an error message for text field input that exceeds maxlength.  (Patch by Cees Hek)"
+        },
+        {
+          "line" => 249,
+          "style" => "*",
+          "text" => "Added the \"disabled\" boolean attribute to SelectBox and PopUpMenu. (Reported by Andrei Kozovski)"
+        }
+      ],
+      "line" => 243,
+      "note" => "(11.29.2006) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.544"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 231,
+          "style" => "*",
+          "text" => "Added param_exists_for_field() method to Rose::HTML::Form."
+        },
+        {
+          "line" => 232,
+          "style" => "*",
+          "text" => "Added positive() and negative() methods to integer fields."
+        },
+        {
+          "line" => 233,
+          "style" => "*",
+          "text" => "Fixed a bug that caused validation to fail for certain compound fields with labels.  (Reported by Guillermo Roditi)"
+        },
+        {
+          "line" => 235,
+          "style" => "*",
+          "text" => "Improved error messages for empty, split datetime fields."
+        },
+        {
+          "line" => 236,
+          "style" => "*",
+          "text" => "Added class mapping for the \"int\" and \"integer\" field types."
+        },
+        {
+          "line" => 237,
+          "style" => "*",
+          "text" => "Corrected the construction of the string overflow error message."
+        },
+        {
+          "line" => 238,
+          "style" => "*",
+          "text" => "Improved importing of message constants."
+        },
+        {
+          "line" => 239,
+          "style" => "*",
+          "text" => "Fixed a bug that caused a field in a nested form with the same name as a field in its parent form to become invisible."
+        },
+        {
+          "line" => 241,
+          "style" => "*",
+          "text" => "Made nested form/field name conflicts fatal."
+        }
+      ],
+      "line" => 229,
+      "note" => "(12.08.2006) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.545"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 222,
+          "style" => "*",
+          "text" => "Fixed a bug that prevented params() from correctly cascading to nested forms."
+        },
+        {
+          "line" => 224,
+          "style" => "*",
+          "text" => "Added a field_value() method to the Compound field class. (Suggested by Guillermo Roditi)"
+        },
+        {
+          "line" => 226,
+          "style" => "*",
+          "text" => "Added a cascade parameter to validate(), which defaults to true. (Suggested by Guillermo Roditi)"
+        }
+      ],
+      "line" => 220,
+      "note" => "(01.15.2007) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.546"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 208,
+          "style" => "*",
+          "text" => "Eliminated redundant validation of fields in nested forms."
+        },
+        {
+          "line" => 209,
+          "style" => "*",
+          "text" => "Made is_empty() smarter about honoring the trim_spaces() setting."
+        },
+        {
+          "line" => 210,
+          "style" => "*",
+          "text" => "Pop-up menus and other group-type fields now correctly clear errors on reset() and clear()."
+        },
+        {
+          "line" => 212,
+          "style" => "*",
+          "text" => "Fixed a bug that caused option containers to fail to display hidden fields when a selected option had a false, but defined value. (Reported by Andrei Kozovski)"
+        },
+        {
+          "line" => 215,
+          "style" => "*",
+          "text" => "Fixed a bug that caused a fatal error when requesting a subfield of a compound field from a form that does not contain the parent field."
+        },
+        {
+          "line" => 217,
+          "style" => "*",
+          "text" => "Fixed a bug that caused input_value() in on/off groups to treat any reference as an array reference.  (Reported by Derek Watson)"
+        }
+      ],
+      "line" => 206,
+      "note" => "(02.23.2007) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.547"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 189,
+          "style" => "*",
+          "text" => "Added prepare() methods to Field and Form."
+        },
+        {
+          "line" => 190,
+          "style" => "*",
+          "text" => "Added a was_submitted() method to Form."
+        },
+        {
+          "line" => 191,
+          "style" => "*",
+          "text" => "Expanded the powers of the field_value() method in the Form class."
+        },
+        {
+          "line" => 192,
+          "style" => "*",
+          "text" => "Added more flexible syntax for specifying choices in group fields (radio button groups, select boxes, etc.)"
+        },
+        {
+          "line" => 194,
+          "style" => "*",
+          "text" => "Added maxlength limit to TextArea."
+        },
+        {
+          "line" => 195,
+          "style" => "*",
+          "text" => "Added a disabled() method to the Compound field base class."
+        },
+        {
+          "line" => 196,
+          "style" => "*",
+          "text" => "Changed the behavior of internal_value() on RadioButtonGroup objects to return the selected value in scalar context, rather than a reference to an array."
+        },
+        {
+          "line" => 199,
+          "style" => "*",
+          "text" => "Changed the behavior of internal_value() on SelectBox objects to return an array ref in scalar context only when multiple() is true."
+        },
+        {
+          "line" => 201,
+          "style" => "*",
+          "text" => "Fixed a TextArea bug that prevented errors from showing up in the html() and xhtml() output.  (Reported by Drew Taylor)"
+        },
+        {
+          "line" => 203,
+          "style" => "*",
+          "text" => "Silenced an uninitialized value warning in Rose::HTML::Form. (Reported by Peter Karman)"
+        }
+      ],
+      "line" => 187,
+      "note" => "(05.04.2007) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.548"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 176,
+          "style" => "*",
+          "text" => "Added Bulgarian localization, translated by Svilen Ivanov."
+        },
+        {
+          "line" => 177,
+          "style" => "*",
+          "text" => "Added a numeric field class.  (Patch by Denis Moskowitz\0)"
+        },
+        {
+          "line" => 178,
+          "style" => "*",
+          "text" => "Corrected html_field() class HTML attribute value."
+        },
+        {
+          "line" => 179,
+          "style" => "*",
+          "text" => "Added the set_error() and unset_error() methods."
+        },
+        {
+          "line" => 180,
+          "style" => "*",
+          "text" => "Corrected error messages for Integer fields."
+        },
+        {
+          "line" => 181,
+          "style" => "*",
+          "text" => "Connected Form's prepare() method with the correct implementation."
+        },
+        {
+          "line" => 182,
+          "style" => "*",
+          "text" => "Made DateTime fields more flexible about handling infinity."
+        },
+        {
+          "line" => 183,
+          "style" => "*",
+          "text" => "Fixed a bug that caused valid HTML attributes to be rejected by form objects.  (Reported by Uwe Voelker)"
+        },
+        {
+          "line" => 185,
+          "style" => "*",
+          "text" => "Improved built-in maxlength validation."
+        }
+      ],
+      "line" => 174,
+      "note" => "(07.21.2007) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.549"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 167,
+          "style" => "*",
+          "text" => "Added id and class attributes to hidden fields generated from non-hidden fields."
+        },
+        {
+          "line" => 169,
+          "style" => "*",
+          "text" => "Deferred evaluation of parents for grouped items."
+        },
+        {
+          "line" => 170,
+          "style" => "*",
+          "text" => "Corrected substring-based value coalescing in some date/time fields. (Reported by Tobias Kremer)"
+        },
+        {
+          "line" => 172,
+          "style" => "*",
+          "text" => "Added fix for perl 5.10 (Patch by RJBS)"
+        }
+      ],
+      "line" => 165,
+      "note" => "(10.16.2007) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.550"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 157,
+          "style" => "*",
+          "text" => "Added the ability to hide, show, and delete grouped items (options, checkboxes, radio buttons, etc.)"
+        },
+        {
+          "line" => 159,
+          "style" => "*",
+          "text" => "Form prepare() now calls subform prepare() methods."
+        },
+        {
+          "line" => 160,
+          "style" => "*",
+          "text" => "Fixed a bug that caused group fields in nested forms to have incorrect HTML \"name\" attributes.  (Reported by Daniel Koch)"
+        },
+        {
+          "line" => 162,
+          "style" => "*",
+          "text" => "Removed dependency on Scalar::Defer due to an incompatibility with Scalar::Defer 0.11 See: http://rt.cpan.org/Ticket/Display.html?id=31039"
+        }
+      ],
+      "line" => 155,
+      "note" => "(12.10.2007) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.551"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 152,
+          "style" => "*",
+          "text" => "Fixed handling of empty string values in the Numeric field class."
+        },
+        {
+          "line" => 153,
+          "style" => "*",
+          "text" => "Corrected some typos in the documentation."
+        }
+      ],
+      "line" => 150,
+      "note" => "(12.13.2007) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.552"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 148,
+          "style" => "*",
+          "text" => "Fixed typos in Form POD."
+        }
+      ],
+      "line" => 146,
+      "note" => "(01.30.2007) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.5521"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 144,
+          "style" => "*",
+          "text" => "Changed mailing list URLs."
+        }
+      ],
+      "line" => 142,
+      "note" => "(02.25.2008) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.553"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 127,
+          "style" => "*",
+          "text" => "Added automation for repeatable sub-forms."
+        },
+        {
+          "line" => 128,
+          "style" => "*",
+          "text" => "Made Rose::HTML::Object suitable for generic HTML building by adding parent/child/descendant and related methods."
+        },
+        {
+          "line" => 130,
+          "style" => "*",
+          "text" => "Extended and documented child-related methods to form and field classes."
+        },
+        {
+          "line" => 131,
+          "style" => "*",
+          "text" => "Added the local_fields() method.  (Suggested by Zbigniew Lukasiak)"
+        },
+        {
+          "line" => 132,
+          "style" => "*",
+          "text" => "Adding items to grouped fields (e.g., checkbox groups) inside named forms no longer causes an error.  (Patch by Kevin McGrath)"
+        },
+        {
+          "line" => 134,
+          "style" => "*",
+          "text" => "Fixed a bug that prevented full field detection in compound fields with checkable sub-fields (e.g., radio buttons and checkboxes)"
+        },
+        {
+          "line" => 136,
+          "style" => "*",
+          "text" => "Added empty_is_ok attribute to ease the handling of optional sub-forms."
+        },
+        {
+          "line" => 137,
+          "style" => "*",
+          "text" => "Added the items_html_attr() family of methods for setting HTML attributes on items in radio button, checkbox, and select box group fields.  (Suggested by Jason Gottshall)"
+        },
+        {
+          "line" => 140,
+          "style" => "*",
+          "text" => "Made (x)html_error_formatter a get_set_init attribute."
+        }
+      ],
+      "line" => 125,
+      "note" => "(05.28.2008) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.554"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 122,
+          "style" => "*",
+          "text" => "Fixed a memory leak in group fields (RT 38837)"
+        },
+        {
+          "line" => 123,
+          "style" => "*",
+          "text" => "Corrected documentation and implementation of init_with_objects()."
+        }
+      ],
+      "line" => 120,
+      "note" => "(10.22.2008) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.555"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 111,
+          "style" => "*",
+          "text" => "Added localization support."
+        },
+        {
+          "line" => 112,
+          "style" => "*",
+          "text" => "Added private library support."
+        },
+        {
+          "line" => 113,
+          "style" => "*",
+          "text" => "Rose::HTML::Form::Field::PopUpMenu's internal_value() is now unconditionally singular, and undef when no items are selected."
+        },
+        {
+          "line" => 115,
+          "style" => "*",
+          "text" => "Fixed a bug in Rose::HTML::Image that made detection of image sizes dependent on method call order.  (Reported by Sean Allen)"
+        },
+        {
+          "line" => 117,
+          "style" => "*",
+          "text" => "Added mod_perl 2.x support to Rose::HTML::Image.  (Reported by Sean Allen)"
+        }
+      ],
+      "line" => 109,
+      "note" => "(12.13.2008) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.600"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 107,
+          "style" => "*",
+          "text" => "Fixed an uninitialized value warning in Rose::HTML::Text."
+        }
+      ],
+      "line" => 105,
+      "note" => "(01.09.2009) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.601"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 100,
+          "style" => "*",
+          "text" => "Fixed an HTML escaping bug caused by overload's interaction with Rose::Object's Class::XSAccessor support."
+        },
+        {
+          "line" => 102,
+          "style" => "*",
+          "text" => "Made Rose::HTML::Form's inherited html() and xhtml() methods do something vaguely sensible.  (Inspired by Christof Kr\303\274ger)"
+        }
+      ],
+      "line" => 98,
+      "note" => "(02.22.2009) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.602"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 95,
+          "style" => "*",
+          "text" => "Fixed a bug that cause the class attribite on label tags not to be cleared correctly.  (Reported by Denis Moskowitz)"
+        }
+      ],
+      "line" => 93,
+      "note" => "(05.06.2009) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.603"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 89,
+          "style" => "*",
+          "text" => "Fixed a bug that caused html() to fail when called on a form that contained a compound field.  (Reported by Will Hawes)"
+        },
+        {
+          "line" => 91,
+          "style" => "*",
+          "text" => "Make sure custom validator is called from DateTime fields."
+        }
+      ],
+      "line" => 87,
+      "note" => "(09.14.2009) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.604"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 85,
+          "style" => "*",
+          "text" => "Updated eval blocks to avoid stomping on \$\@ from an outer scope."
+        }
+      ],
+      "line" => 83,
+      "note" => "(10.16.2009) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.605"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 78,
+          "style" => "*",
+          "text" => "Overhauled inheritance to fix \"Inconsistent hierarchy\" mro c3 errors (RT 51168)"
+        },
+        {
+          "line" => 80,
+          "style" => "*",
+          "text" => "Added \"use utf8\" statements to ensure proper treatment of UTF-8 text stored in the __DATA__ sections of various modules (RT 29131)"
+        }
+      ],
+      "line" => 76,
+      "note" => "(11.16.2009) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.606"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 73,
+          "style" => "*",
+          "text" => "Altered tests to work around strange UTF-8 errors in some installations of perl.  (Thanks to Michael Lackhoff for help debugging.)"
+        }
+      ],
+      "line" => 71,
+      "note" => "(11.19.2009) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.6061"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 68,
+          "style" => "*",
+          "text" => "Moved version number back to three places after the decimal in order to placate Unix package management systems."
+        }
+      ],
+      "line" => 66,
+      "note" => "(04.28.2010) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.607"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 61,
+          "style" => "*",
+          "text" => "Silenced a warning in t/form-field.t"
+        },
+        {
+          "line" => 62,
+          "style" => "*",
+          "text" => "Clarified the precedence of object_from_form() initialization in cases where a parent form and sub-form have fields with the same local_name() (Reported by Christopher Masto)"
+        }
+      ],
+      "line" => 59,
+      "note" => "(10.01.2010) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.608"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 54,
+          "style" => "*",
+          "text" => "Fixed a bad probe in form-nested.t that was causing spurious test failures."
+        },
+        {
+          "line" => 56,
+          "style" => "*",
+          "text" => "Attempted to fix mro-c3.t test failures that I've thus far been unable to reproduce locally."
+        }
+      ],
+      "line" => 52,
+      "note" => "(10.02.2010) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.610"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 49,
+          "style" => "*",
+          "text" => "Added default HTML serialization for compound fields."
+        },
+        {
+          "line" => 50,
+          "style" => "*",
+          "text" => "Removed documentation for nonexistent field_names() method."
+        }
+      ],
+      "line" => 47,
+      "note" => "(11.16.2010) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.611"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 43,
+          "style" => "*",
+          "text" => "Worked around fatal error triggered by loading Rose::HTML::Form in the perl debugger in some older versions of perl. (e.g., perl -I lib -d lib/Rose/HTML/Form.pm)"
+        }
+      ],
+      "line" => 41,
+      "note" => "(03.26.2012) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.612"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 38,
+          "style" => "*",
+          "text" => "Added make_next_form() method to repeatable forms."
+        },
+        {
+          "line" => 39,
+          "style" => "*",
+          "text" => "Documented the empty_is_ok() attribute of repeatable forms."
+        }
+      ],
+      "line" => 36,
+      "note" => "(04.02.2012) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.613"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 32,
+          "style" => "*",
+          "text" => "Deprecated and undocumented the form_rank_counter() method.  It will be removed in a future release."
+        },
+        {
+          "line" => 34,
+          "style" => "*",
+          "text" => "Fixed a bug that could cause a repeated form to get the wrong rank."
+        }
+      ],
+      "line" => 30,
+      "note" => "(04.02.2012) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.614"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 28,
+          "style" => "*",
+          "text" => "Minor efficiency improvements in HTML generation."
+        }
+      ],
+      "line" => 26,
+      "note" => "(05.01.2012) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.615"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 22,
+          "style" => "*",
+          "text" => "Added add_class(es) and delete_class(es) methods."
+        },
+        {
+          "line" => 23,
+          "style" => "*",
+          "text" => "Added was_submitted() method to the submit button class."
+        },
+        {
+          "line" => 24,
+          "style" => "*",
+          "text" => "Calling clear() on a hidden field now clears it."
+        }
+      ],
+      "line" => 20,
+      "note" => "(05.09.2012) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.616"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 15,
+          "style" => "*",
+          "text" => "Added base 2.18 as a prerequisite to avoid a load-order bug that occurs with some older versions."
+        },
+        {
+          "line" => 17,
+          "style" => "*",
+          "text" => "Preserve custom class attributes on label objects (RT 82333) (Patch by Tom Heady)"
+        }
+      ],
+      "line" => 13,
+      "note" => "(12.30.2012) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.617"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 11,
+          "style" => "*",
+          "text" => "Made compatible with perl 5.17.10 (RT 84279)"
+        }
+      ],
+      "line" => 9,
+      "note" => "(03.29.2013) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.618"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 7,
+          "style" => "*",
+          "text" => "Fixed incorrect return statements (RT 87253) (Patch by Reini Urban)"
+        }
+      ],
+      "line" => 5,
+      "note" => "(07.24.2013) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.619"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 2,
+          "style" => "*",
+          "text" => "Eliminate a perl 5.19 \"precedence issue with control flow operator\" warning."
+        }
+      ],
+      "line" => 0,
+      "note" => "(12.18.2013) - John Siracusa <siracusa\@gmail.com>",
+      "version" => "0.620"
+    }
+  ]
+}

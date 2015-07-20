@@ -1,0 +1,635 @@
+{
+  "preamble" => "Revision history for Perl extension Business::PayPal::API.\n\nRelease 0.71\n-------------------------------------------\n\n- Merge in changes from Ron Phipps.\n  - Reduce SOAP version requirement.\n  - Protection eligibility support.\n- Merge in changes from Tomas Doran.\n  - CPAN packaging enhancements.\n- Extract out more payer details from XML. (PayerName, NameSuffix, PayerCountry).\n- Fix https://rt.cpan.org/Public/Bug/Display.html?id=67386\n\nRelease 0.70 - First OALDERS release\n-------------------------------------\n- Fixes RT #70424 (Syntax deprecated in perl v5.14)\n>>>>>>> Fixes RT #70424 and bumps version to 0.70 for release.\n\nRelease 0.68 - First hembreed release\n-------------------------------------\nI've moved the module's scm to http://github.com/hembreed/Business-PayPal-API so others may share my pain. CPAN will be updated from there.\n\n- API.pm\n   1. Changed eq 'Success' to =~ /Success/ to accomodate variations introduced\n      by PayPal.\n   2. Changed test for duplicates to test for defined variable first. This\n      was causing errors in 5.10+ perl versions.\n-t/*t Changed test for Success in all test modules as above\n-t/RecurringPayments Corrected errors in type definitions and testing. Needs more work.\n-TransactionSearch Corrected test instructions and code to allow transaction searches using the transactionID. This works for some types of transactions but not others as per PayPal. It is   the only way to get MassPayment information.\n\nRelease 0.62 - last scottw release\n----------------------------",
+  "releases" => [
+    {
+      "entries" => [
+        {
+          "line" => 203,
+          "style" => "",
+          "text" => "date: 2006/03/15 23:33:53;  author: scott;  state: Exp;"
+        },
+        {
+          "line" => 204,
+          "style" => "-",
+          "text" => "moved from Business::PayPal::WPP::ExpressCheckout"
+        },
+        {
+          "line" => 205,
+          "style" => "-",
+          "text" => "uses API.pm for authorization/authentication and other common functions"
+        }
+      ],
+      "line" => 202,
+      "version" => "1.1"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 198,
+          "style" => "",
+          "text" => "date: 2006/03/16 23:33:49;  author: scott;  state: Exp;  lines: +184 -26"
+        },
+        {
+          "line" => 199,
+          "style" => "-",
+          "text" => "initial checkin of API and subclasses"
+        },
+        {
+          "line" => 200,
+          "style" => "-",
+          "text" => "all tests working, documentation done"
+        }
+      ],
+      "line" => 197,
+      "version" => "1.2"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 192,
+          "style" => "",
+          "text" => "date: 2006/03/21 22:05:19;  author: scott;  state: Exp;  lines: +55 -31"
+        },
+        {
+          "line" => 193,
+          "style" => "-",
+          "text" => "minor debugging changes"
+        },
+        {
+          "line" => 194,
+          "style" => "-",
+          "text" => "documentation update for developers"
+        },
+        {
+          "line" => 195,
+          "style" => "-",
+          "text" => "note about using IO::Socket::SSL (don't)"
+        }
+      ],
+      "line" => 191,
+      "version" => "1.3"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 188,
+          "style" => "",
+          "text" => "date: 2006/03/21 22:15:11;  author: scott;  state: Exp;  lines: +2 -2"
+        },
+        {
+          "line" => 189,
+          "style" => "-",
+          "text" => "bump version"
+        }
+      ],
+      "line" => 187,
+      "version" => "1.4"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 182,
+          "style" => "",
+          "text" => "date: 2006/03/22 23:19:03;  author: scott;  state: Exp;  lines: +40 -13"
+        },
+        {
+          "line" => 183,
+          "style" => "-",
+          "text" => "add GetTransactionDetails API"
+        },
+        {
+          "line" => 184,
+          "style" => "-",
+          "text" => "add TransactionSearch API"
+        },
+        {
+          "line" => 185,
+          "style" => "-",
+          "text" => "getFieldList() for API.pm"
+        }
+      ],
+      "line" => 181,
+      "version" => "1.5"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 178,
+          "style" => "",
+          "text" => "date: 2006/03/22 23:20:09;  author: scott;  state: Exp;  lines: +2 -2"
+        },
+        {
+          "line" => 179,
+          "style" => "-",
+          "text" => "version bump"
+        }
+      ],
+      "line" => 177,
+      "version" => "1.6"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 174,
+          "style" => "",
+          "text" => "date: 2006/03/23 17:28:10;  author: scott;  state: Exp;  lines: +90 -9"
+        },
+        {
+          "line" => 175,
+          "style" => "-",
+          "text" => "allow subclass methods to be imported into API.pm namespace"
+        }
+      ],
+      "line" => 173,
+      "version" => "1.7"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 167,
+          "style" => "",
+          "text" => "date: 2006/03/24 17:12:59;  author: scott;  state: Exp;  lines: +14 -4"
+        },
+        {
+          "line" => 168,
+          "style" => "-",
+          "text" => "fix fault printing"
+        },
+        {
+          "line" => 169,
+          "style" => "-",
+          "text" => "fix getFieldsList record population"
+        },
+        {
+          "line" => 171,
+          "style" => "",
+          "text" => "Release 0.20"
+        }
+      ],
+      "line" => 166,
+      "version" => "1.8"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 161,
+          "style" => "",
+          "text" => "date: 2006/03/28 18:05:03;  author: scott;  state: Exp;  lines: +54 -44"
+        },
+        {
+          "line" => 162,
+          "style" => "-",
+          "text" => "documentation updates"
+        },
+        {
+          "line" => 164,
+          "style" => "",
+          "text" => "Release 0.21"
+        }
+      ],
+      "line" => 160,
+      "version" => "1.9"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 153,
+          "style" => "",
+          "text" => "date: 2006/04/04 19:29:08;  author: scott;  state: Exp;  lines: +12 -5"
+        },
+        {
+          "line" => 154,
+          "style" => "-",
+          "text" => "typo fix"
+        },
+        {
+          "line" => 155,
+          "style" => "-",
+          "text" => "wrap soap call in eval for safety (if ssl neg. fails w/ paypal, it croaks)"
+        },
+        {
+          "line" => 156,
+          "style" => "-",
+          "text" => "version bump"
+        },
+        {
+          "line" => 158,
+          "style" => "",
+          "text" => "Release 0.22"
+        }
+      ],
+      "line" => 152,
+      "version" => "1.10"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 147,
+          "style" => "",
+          "text" => "date: 2006/04/18 16:23:18;  author: scott;  state: Exp;  lines: +2 -2"
+        },
+        {
+          "line" => 148,
+          "style" => "-",
+          "text" => "added DirectPayments API by Daniel Hembree. Thanks Daniel!"
+        },
+        {
+          "line" => 150,
+          "style" => "",
+          "text" => "Release 0.23"
+        }
+      ],
+      "line" => 146,
+      "version" => "1.11"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 141,
+          "style" => "",
+          "text" => "date: 2006/06/29 02:36:24;  author: scott;  state: Exp;  lines: +2 -2"
+        },
+        {
+          "line" => 142,
+          "style" => "-",
+          "text" => "fix StateOrProvince typo [rt.cpan.org #20176]"
+        },
+        {
+          "line" => 144,
+          "style" => "",
+          "text" => "Release 0.30"
+        }
+      ],
+      "line" => 140,
+      "version" => "1.12"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 135,
+          "style" => "",
+          "text" => "date: 2006/07/03 15:40:16;  author: scott;  state: Exp;  lines: +11 -2"
+        },
+        {
+          "line" => 136,
+          "style" => "-",
+          "text" => "fix for 3-token auth"
+        },
+        {
+          "line" => 138,
+          "style" => "",
+          "text" => "Release 0.31"
+        }
+      ],
+      "line" => 134,
+      "version" => "1.13"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 131,
+          "style" => "",
+          "text" => "date: 2006/07/03 15:46:24;  author: scott;  state: Exp;  lines: +16 -1"
+        },
+        {
+          "line" => 132,
+          "style" => "-",
+          "text" => "acknowledgements section"
+        }
+      ],
+      "line" => 130,
+      "version" => "1.14"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 121,
+          "style" => "",
+          "text" => "date: 2006/07/05 18:05:39;  author: scott;  state: Exp;  lines: +2 -2"
+        },
+        {
+          "line" => 122,
+          "style" => "-",
+          "text" => "fix documentation regarding SetExpressCheckout (returns a hash, not a scalar). If you were following the code in the SYNOPSIS for ExpressCheckout and getting a token with '3/8' or '4/8', you should change the \$token to %response, since SetExpressCheckout() returns a hash (big thanks to Andy Spiegl for finding this)."
+        },
+        {
+          "line" => 128,
+          "style" => "",
+          "text" => "Release 0.32"
+        }
+      ],
+      "line" => 120,
+      "version" => "1.15"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 115,
+          "style" => "",
+          "text" => "date: 2006/07/06 15:25:21;  author: scott;  state: Exp;  lines: +9 -2"
+        },
+        {
+          "line" => 116,
+          "style" => "-",
+          "text" => "add acknowledgement and pointers to example code from Andy Spiegl and others"
+        },
+        {
+          "line" => 118,
+          "style" => "",
+          "text" => "Release 0.33"
+        }
+      ],
+      "line" => 114,
+      "version" => "1.16"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 103,
+          "style" => "",
+          "text" => "date: 2006/10/06 17:49:50;  author: scott;  state: Exp;  lines: +42 -38"
+        },
+        {
+          "line" => 104,
+          "style" => "-",
+          "text" => "using PayPal API version 2.0"
+        },
+        {
+          "line" => 105,
+          "style" => "-",
+          "text" => "note about SSL requirements of LWP"
+        },
+        {
+          "line" => 106,
+          "style" => "-",
+          "text" => "minor documentation cleanup"
+        },
+        {
+          "line" => 107,
+          "style" => "-",
+          "text" => "DirectPayments tests added"
+        },
+        {
+          "line" => 108,
+          "style" => "-",
+          "text" => "New modules (with tests!) from Danny Hembree: AuthorizationRequest.pm CaptureRequest.pm ReauthorizationRequest.pm VoidRequest.pm"
+        }
+      ],
+      "line" => 102,
+      "version" => "1.17"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 99,
+          "style" => "",
+          "text" => "date: 2006/10/06 17:53:44;  author: scott;  state: Exp;  lines: +2 -2"
+        },
+        {
+          "line" => 100,
+          "style" => "-",
+          "text" => "version bump"
+        }
+      ],
+      "line" => 98,
+      "version" => "1.18"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 93,
+          "style" => "",
+          "text" => "date: 2007/05/15 20:46:56;  author: scott;  state: Exp;  lines: +34 -12"
+        },
+        {
+          "line" => 94,
+          "style" => "-",
+          "text" => "some minor documentation additions"
+        },
+        {
+          "line" => 96,
+          "style" => "",
+          "text" => "Release 0.40"
+        }
+      ],
+      "line" => 92,
+      "version" => "1.19"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 85,
+          "style" => "",
+          "text" => "date: 2007/05/21 21:59:33;  author: scott;  state: Exp;  lines: +5 -5"
+        },
+        {
+          "line" => 86,
+          "style" => "-",
+          "text" => "minor doc changes"
+        },
+        {
+          "line" => 87,
+          "style" => "-",
+          "text" => "new Mass Pay API module included"
+        },
+        {
+          "line" => 90,
+          "style" => "",
+          "text" => "Release 0.41"
+        }
+      ],
+      "line" => 84,
+      "version" => "1.20"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 79,
+          "style" => "",
+          "text" => "date: 2007/08/29 20:56:42;  author: scott;  state: Exp;  lines: +4 -2"
+        },
+        {
+          "line" => 80,
+          "style" => "-",
+          "text" => "fix PayerStatus location in DOM, add AddressStatus element (patch: Michael Hendricks)"
+        },
+        {
+          "line" => 82,
+          "style" => "",
+          "text" => "Release 0.50"
+        }
+      ],
+      "line" => 78,
+      "version" => "1.10"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 70,
+          "style" => "",
+          "text" => "date: 2007/09/27 20:32:31;  author: scott;  state: Exp;  lines: +18 -6"
+        },
+        {
+          "line" => 71,
+          "style" => "-",
+          "text" => "[API.pm] add three-token signature testing URI (Oliver Ready)"
+        },
+        {
+          "line" => 72,
+          "style" => "-",
+          "text" => "[DirectPayments.pm] add ShippingTotal field (patch: Michael Hendricks)"
+        },
+        {
+          "line" => 73,
+          "style" => "-",
+          "text" => "[VoidRequest.pm] documentation fixes for method call (Oliver Ready)"
+        },
+        {
+          "line" => 74,
+          "style" => "-",
+          "text" => "[ReauthorizationRequest.pm] documentation fixes for method call (Oliver Ready)"
+        },
+        {
+          "line" => 76,
+          "style" => "",
+          "text" => "Release 0.51"
+        }
+      ],
+      "line" => 69,
+      "version" => "1.22"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 64,
+          "style" => "",
+          "text" => "date: 2008/05/05 15:15:04;  author: scott;  state: Exp;"
+        },
+        {
+          "line" => 65,
+          "style" => "-",
+          "text" => "add base for RecurringPayments (not working yet)"
+        },
+        {
+          "line" => 67,
+          "style" => "",
+          "text" => "Release 0.51"
+        }
+      ],
+      "line" => 63,
+      "note" => "[RecurringPayments.pm]",
+      "version" => "1.1"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 60,
+          "style" => "",
+          "text" => "date: 2008/05/05 15:11:51;  author: scott;  state: Exp;  lines: +11 -3"
+        },
+        {
+          "line" => 61,
+          "style" => "-",
+          "text" => "MaxAmount parameter take currencyID attribute (Sandbox)"
+        }
+      ],
+      "line" => 59,
+      "note" => "[ExpressCheckout.pm]",
+      "version" => "1.12"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 56,
+          "style" => "",
+          "text" => "date: 2008/05/05 15:11:14;  author: scott;  state: Exp;  lines: +34 -2"
+        },
+        {
+          "line" => 57,
+          "style" => "-",
+          "text" => "add shipto parameters"
+        }
+      ],
+      "line" => 55,
+      "note" => "[DirectPayments.pm]",
+      "version" => "1.4"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 51,
+          "style" => "",
+          "text" => "date: 2008/05/05 15:10:40;  author: scott;  state: Exp;  lines: +37 -5"
+        },
+        {
+          "line" => 52,
+          "style" => "-",
+          "text" => "timeout setting available"
+        },
+        {
+          "line" => 53,
+          "style" => "-",
+          "text" => "additional troubleshooting documentation (auth error handling, URL munging)"
+        }
+      ],
+      "line" => 50,
+      "version" => "1.23"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 34,
+          "style" => "",
+          "text" => "date: 2009/07/28 18:00:58;  author: scott;  state: Exp;  lines: +44 -4"
+        },
+        {
+          "line" => 35,
+          "style" => "-",
+          "text" => "getFields() returns an array ref if multiple values are returned from PayPal, otherwise it behaves as it always did, returning a non-ref scalar."
+        },
+        {
+          "line" => 38,
+          "style" => "-",
+          "text" => "BillingAgreement information returned in ExpressCheckout"
+        },
+        {
+          "line" => 39,
+          "style" => "-",
+          "text" => "Fix GetTransactionDetails 'PII_SalesTax' parameter"
+        },
+        {
+          "line" => 40,
+          "style" => "-",
+          "text" => "Fix GetTransactionDetails to return multiple PaymentItems"
+        },
+        {
+          "line" => 41,
+          "style" => "-",
+          "text" => "Fix MassPay to use the correct UniqueID parameter"
+        },
+        {
+          "line" => 42,
+          "style" => "-",
+          "text" => "Add DoReferenceTransaction to RecurringPayments API"
+        },
+        {
+          "line" => 43,
+          "style" => "-",
+          "text" => "Lots of credit given to great folks with patches in API docs"
+        },
+        {
+          "line" => 45,
+          "style" => "",
+          "text" => "Thanks everyone! I'm handing this module off to Danny Hembree for maintenance now."
+        },
+        {
+          "line" => 48,
+          "style" => "",
+          "text" => "Release 0.61"
+        }
+      ],
+      "line" => 33,
+      "version" => "1.24"
+    }
+  ]
+}

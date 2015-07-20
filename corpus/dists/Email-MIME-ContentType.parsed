@@ -1,0 +1,136 @@
+{
+  "preamble" => "Revision history for Perl extension Email::MIME::ContentType\n\n{{\$NEXT}}",
+  "releases" => [
+    {
+      "date" => "2004-01-07T17:38:23Z",
+      "entries" => [
+        {
+          "line" => 37,
+          "style" => "-",
+          "text" => "original version; created by h2xs 1.22 with options -AX -b 5.6.0 -n Email::MIME::ContentType"
+        }
+      ],
+      "line" => 36,
+      "version" => "0.01"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 32,
+          "style" => "-",
+          "text" => "typo fix in documentation by John Linderman."
+        },
+        {
+          "line" => 33,
+          "style" => "-",
+          "text" => "new author, Casey West."
+        },
+        {
+          "line" => 34,
+          "style" => "-",
+          "text" => "Fix bug with blank space following parameters."
+        }
+      ],
+      "line" => 31,
+      "version" => "1.01"
+    },
+    {
+      "date" => "2006-10-12",
+      "entries" => [
+        {
+          "line" => 28,
+          "style" => "-",
+          "text" => "clearer special case for undef/empty content-type (thanks, JESSE!)"
+        }
+      ],
+      "line" => 27,
+      "version" => "1.011"
+    },
+    {
+      "date" => "2006-11-25",
+      "entries" => [
+        {
+          "line" => 25,
+          "style" => "-",
+          "text" => "allow carp-avoidance through (ugh) package variable; bug 14076"
+        }
+      ],
+      "line" => 24,
+      "version" => "1.012"
+    },
+    {
+      "date" => "2007-03-20",
+      "entries" => [
+        {
+          "line" => 22,
+          "style" => "-",
+          "text" => "fix significantly broken SYNOPSIS"
+        }
+      ],
+      "line" => 21,
+      "version" => "1.013"
+    },
+    {
+      "date" => "2007-03-22",
+      "entries" => [
+        {
+          "line" => 19,
+          "style" => "-",
+          "text" => "packaging improvements"
+        }
+      ],
+      "line" => 18,
+      "version" => "1.014"
+    },
+    {
+      "date" => "2009-01-22",
+      "entries" => [
+        {
+          "line" => 16,
+          "style" => "-",
+          "text" => "add repo metadata"
+        }
+      ],
+      "line" => 15,
+      "version" => "1.015"
+    },
+    {
+      "date" => "2013-08-10T23:14:42Z",
+      "entries" => [
+        {
+          "line" => 9,
+          "style" => "-",
+          "text" => "correct the longstanding and embarrassing misuse of \"discrete\" and \"composite\" to mean \"type\" and \"subtype\"; the returned data still contains the wrong old names so your code shouldn't break"
+        },
+        {
+          "line" => 13,
+          "style" => "-",
+          "text" => "repackage to update bugtracker, repo, etc."
+        }
+      ],
+      "line" => 8,
+      "note" => "America/New_York",
+      "version" => "1.016"
+    },
+    {
+      "date" => "2013-08-10T23:19:14Z",
+      "entries" => [
+        {
+          "entries" => [
+            {
+              "line" => 6,
+              "style" => "[]",
+              "text" => "rt.cpan.org #87460"
+            }
+          ],
+          "line" => 5,
+          "style" => "-",
+          "text" => "make \$STRICT_PARAMS actually work! (thanks, Matthew Green!)"
+        }
+      ],
+      "line" => 4,
+      "note" => "America/New_York",
+      "version" => "1.017"
+    }
+  ]
+}
