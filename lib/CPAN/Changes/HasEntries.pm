@@ -61,10 +61,11 @@ around serialize => sub {
 };
 
 sub add_entry {
-  my ($self, $entry) = @_;
-  $entry = $entry_type->coerce($entry);
-  push @{ $self->entries }, $entry;
-  return $entry;
+  my ($self, @entries) = @_;
+  $_ = $entry_type->coerce($_)
+    for @entries;
+  push @{ $self->entries }, @entries;
+  return wantarray ? @entries : $entries[-1];
 }
 
 sub remove_entry {

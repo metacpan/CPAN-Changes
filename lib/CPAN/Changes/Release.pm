@@ -146,11 +146,16 @@ sub get_group {
 sub attach_group {
   my ($self, $group) = @_;
   my $entry = $group->_maybe_entry;
-  if ($entry->text eq '') {
-    push @{ $self->entries }, @{ $entry->entries };
+  my $text = $entry->text;
+  my $entries = $self->entries;
+  if ($text eq '') {
+    $self->add_entry( @{ $entry->entries } );
+  }
+  elsif (my ($found) = grep { $_->text eq $text } @$entries) {
+    $found->add_entry( @{ $entry->entries } );
   }
   else {
-    push @{ $self->entries }, $entry;
+    $self->add_entry( $entry );
   }
 }
 
