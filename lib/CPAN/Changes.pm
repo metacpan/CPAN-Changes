@@ -74,11 +74,16 @@ sub find_release {
   return $release;
 }
 
+sub reversed {
+  my ($self) = @_;
+  return $self->clone(releases => [ reverse @{ $self->_releases } ]);
+}
+
 sub serialize {
   my ($self, %opts) = @_;
 
   if ($opts{reverse}) {
-    $self = $self->clone(releases => [ reverse @{ $self->_releases } ]);
+    $self = $self->reversed;
   }
   my $width = $opts{width} || 75;
   my @styles = @{ $opts{styles} || ['', '[]', '-', '*'] };
