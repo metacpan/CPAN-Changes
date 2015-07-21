@@ -191,7 +191,75 @@ CPAN::Changes - Parser for CPAN style change logs
 
 =head1 DESCRIPTION
 
-Attemptes to parse CPAN style changelogs as best as possible.
+It is standard practice to include a Changes file in your distribution. The
+purpose the Changes file is to help a user figure out what has changed since
+the last release.
+
+People have devised many ways to write the Changes file. A preliminary
+specification has been created (L<CPAN::Changes::Spec>) to encourage module
+authors to write clear and concise Changes.
+
+This module will help users programmatically read and write Changes files that
+conform to the specification.
+
+=head1 METHODS
+
+=head2 new ( %args )
+
+Creates a B<CPAN::Changes> object.
+
+=head3 %args
+
+=over 4
+
+=item preamble
+
+The preamble section of the changelog.
+
+=item releases
+
+An arrayref of L<CPAN::Changes::Release> objects.
+
+=back
+
+=head2 load ( $filename, %args )
+
+Creates a new B<CPAN::Changes> object by parsing the given file via
+L<CPAN::Changes::Parser>.
+
+=head2 load_string ( $filename, %args )
+
+Creates a new B<CPAN::Changes> object by parsing the given string via
+L<CPAN::Changes::Parser>.
+
+=head2 preamble ( [ $preamble ] )
+
+Gets or sets the preamble section.
+
+=head2 releases ( [ @releases ] )
+
+Gets or sets the list of releases as L<CPAN::Changes::Release> objects.
+
+=head2 add_release ( @releases )
+
+Adds the given releases to the change log.  If a release of the same version
+exists, it will be overwritten.
+
+=head2 delete_release ( @versions )
+
+Removes the given versions from change log.
+
+=head2 reversed
+
+Returns a new B<CPAN::Changes> object with the releases in the opposite order.
+
+=head2 serialize
+
+Returns the change log as a string suitable for saving as a F<Changes> file.
+
+=head1 LEGACY METHODS
+
+=head1 delete_empty_groups
 
 =head1 AUTHOR
 
