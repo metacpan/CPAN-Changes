@@ -118,31 +118,41 @@ Test::CPAN::Changes - Validation of the Changes file in a CPAN distribution
 
 =head1 SYNOPSIS
 
-    use Test::More;
-    eval 'use Test::CPAN::Changes';
-    plan skip_all => 'Test::CPAN::Changes required for this test' if $@;
-    changes_ok();
+  # in xt/author/cpan-changes.t
+  use Test::More;
+  use Test::CPAN::Changes;
+  changes_ok;
+
+  # checking for specific version
+  use My::Module;
+  use Test::More;
+  use Test::CPAN::Changes;
+  changes_ok({ version => My::Module->VERSION });
 
 =head1 DESCRIPTION
 
-This module allows CPAN authors to write automated tests to ensure their 
+This module allows CPAN authors to write automated tests to ensure their
 changelogs match the specification.
 
-=head1 METHODS
+=head1 SUBROUTINES
 
-=head2 changes_ok( )
+=head2 changes_ok( \%args )
 
-Simple wrapper around C<changes_file_ok>. Declares a four test plan, and 
-uses the default filename of C<Changes>.
+Simple wrapper around C<changes_file_ok>. Declares a test plan, and uses the
+default filename of C<Changes>.
 
 =head2 changes_file_ok( $filename, \%arg )
 
-Checks the contents of the changes file against the specification. No plan 
+Checks the contents of the changes file against the specification. No plan
 is declared and if the filename is undefined, C<Changes> is used.
 
-C<%arg> may include a I<version> entry, in which case the entry for that
-version must exist and have content.  This is useful to ensure that the version
-currently being released has documented changes.
+Four tests are performed.  The file must be parsable, must have releases in it,
+and the versions and dates listed must be valid.
+
+C<%arg> may include a I<version> entry, in which case two additional tests are
+performed.  The entry for that version must exist and have content.  This is
+useful to ensure that the version currently being released has documented
+changes.
 
 =head1 SEE ALSO
 
@@ -154,15 +164,12 @@ currently being released has documented changes.
 
 =back
 
-=head1 AUTHOR
+=head1 AUTHORS
 
-Brian Cassidy E<lt>bricas@cpan.orgE<gt>
+See L<CPAN::Changes> for authors.
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2011-2013 by Brian Cassidy
-
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself. 
+See L<CPAN::Changes> for the copyright and license.
 
 =cut
