@@ -179,3 +179,87 @@ sub _sorted_groups {
 }
 
 1;
+__END__
+
+=head1 NAME
+
+CPAN::Changes::Release - A release in a CPAN Changs file
+
+=head1 SYNOPSIS
+
+  my $release = CPAN::Changes::Release->new(
+    version => '0.01',
+    date    => '2015-07-20',
+  );
+
+  $release->add_entry('This is a change');
+
+=head1 DESCRIPTION
+
+A changelog is made up of one or more releases. This object provides access to
+all of the key data that embodies a release including the version number, date
+of release, and all of the changelog information lines.
+
+=head1 ATTRIBUTES
+
+=head2 version
+
+The version number of the release.
+
+=head2 date
+
+The date for the release.
+
+=head2 note
+
+The note attached to the release.
+
+=head2 entries
+
+An array ref of L<entries|CPAN::Changes::Entry> in the release.
+
+=head1 METHODS
+
+=head2 serialize
+
+=head2 changes
+
+=head2 add_changes
+
+=head2 set_changes
+
+=head2 clear_changes
+
+=head2 groups
+
+=head2 add_group
+
+=head2 delete_group
+
+=head2 delete_empty_groups
+
+=head2 get_group
+
+=head2 attach_group
+
+=head2 group_values
+
+=head1 SEE ALSO
+
+=over 4
+
+=item * L<CPAN::Changes::Spec>
+
+=item * L<CPAN::Changes>
+
+=back
+
+=head1 AUTHORS
+
+See L<CPAN::Changes> for authors.
+
+=head1 COPYRIGHT AND LICENSE
+
+See L<CPAN::Changes> for the copyright and license.
+
+=cut
