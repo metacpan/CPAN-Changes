@@ -14,7 +14,7 @@ has _releases => (
   is => 'rw',
   init_arg => 'releases',
   isa => ArrayRef[$release_type],
-  coerce => (ArrayRef[$release_type])->coercion,
+  coerce => 1,
   default => qsub q{ [] },
 );
 

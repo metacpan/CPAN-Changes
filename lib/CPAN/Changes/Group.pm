@@ -17,7 +17,7 @@ has _entry => (
 
 sub _maybe_entry {
   my $self = shift;
-  if ($self->can('changes') == \&CPAN::Changes::Group::changes) {
+  if ($self->can('changes') == \&changes) {
     return $self->_entry;
   }
   else {

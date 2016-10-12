@@ -11,7 +11,7 @@ has entries => (
   is => 'rw',
   default => sub { [] },
   isa => ArrayRef[$entry_type],
-  coerce => (ArrayRef[$entry_type])->coercion,
+  coerce => 1,
 );
 
 sub clone {
