@@ -21,8 +21,7 @@ sub _dump {
 
 sub _eq {
   if (HAVE_DIFF) {
-    @_ = (@_[0..2], { context => 5 });
-    goto &Test::Differences::eq_or_diff;
+    Test::Differences::eq_or_diff(@_[0..2], { context => 5 });
   }
   elsif (ref $_[0] && ref $_[1]) {
     goto &Test::More::is_deeply;
