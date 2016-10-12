@@ -22,7 +22,7 @@ sub _dump {
 
 sub _eq {
   if (HAVE_DIFF) {
-    Test::Differences::eq_or_diff(@_[0..2], { context => 5 });
+    Test::Differences::eq_or_diff(_dump($_[0]), _dump($_[1]), $_[2], { context => 5 });
   }
   elsif (ref $_[0] && ref $_[1]) {
     goto &Test::More::is_deeply;
