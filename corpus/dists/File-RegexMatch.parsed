@@ -2,30 +2,50 @@
   "preamble" => "Revision history for Perl module File::RegexMatch",
   "releases" => [
     {
-      "date" => "2011-12-17",
       "entries" => [
         {
-          "line" => 26,
+          "line" => 4,
           "style" => "-",
-          "text" => "Original version; created by ExtUtils::ModuleMaker 0.51"
+          "text" => "Renamed match() parameter from regex_pattern to match_pattern."
+        },
+        {
+          "line" => 5,
+          "style" => "-",
+          "text" => "Added functionality to ignore file names based on regular expression."
         }
       ],
-      "line" => 25,
-      "raw_date" => "Sat Dec 17 2011",
-      "version" => "0.01"
+      "line" => 3,
+      "note" => "Mon July 29 2013",
+      "version" => "0.1.2"
     },
     {
-      "date" => "2011-12-19",
       "entries" => [
         {
-          "line" => 23,
+          "line" => 8,
           "style" => "-",
-          "text" => "Was a problem when verbose was disabled, now fixed."
+          "text" => "Updated documentation"
         }
       ],
-      "line" => 22,
-      "raw_date" => "Mon Dec 19 2011",
-      "version" => "0.02"
+      "line" => 7,
+      "note" => "Wed July 24 2013",
+      "version" => "0.1.1"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 11,
+          "style" => "-",
+          "text" => "Module pretty much re-written, old code was smelly."
+        },
+        {
+          "line" => 12,
+          "style" => "-",
+          "text" => "Instead of returning the path of each file, a File::RegexMatch::Object is returned."
+        }
+      ],
+      "line" => 10,
+      "note" => "Tue July 23 2013",
+      "version" => "0.1"
     },
     {
       "entries" => [
@@ -65,50 +85,30 @@
       "version" => "0.03"
     },
     {
+      "date" => "2011-12-19",
       "entries" => [
         {
-          "line" => 11,
+          "line" => 23,
           "style" => "-",
-          "text" => "Module pretty much re-written, old code was smelly."
-        },
-        {
-          "line" => 12,
-          "style" => "-",
-          "text" => "Instead of returning the path of each file, a File::RegexMatch::Object is returned."
+          "text" => "Was a problem when verbose was disabled, now fixed."
         }
       ],
-      "line" => 10,
-      "note" => "Tue July 23 2013",
-      "version" => "0.1"
+      "line" => 22,
+      "raw_date" => "Mon Dec 19 2011",
+      "version" => "0.02"
     },
     {
+      "date" => "2011-12-17",
       "entries" => [
         {
-          "line" => 8,
+          "line" => 26,
           "style" => "-",
-          "text" => "Updated documentation"
+          "text" => "Original version; created by ExtUtils::ModuleMaker 0.51"
         }
       ],
-      "line" => 7,
-      "note" => "Wed July 24 2013",
-      "version" => "0.1.1"
-    },
-    {
-      "entries" => [
-        {
-          "line" => 4,
-          "style" => "-",
-          "text" => "Renamed match() parameter from regex_pattern to match_pattern."
-        },
-        {
-          "line" => 5,
-          "style" => "-",
-          "text" => "Added functionality to ignore file names based on regular expression."
-        }
-      ],
-      "line" => 3,
-      "note" => "Mon July 29 2013",
-      "version" => "0.1.2"
+      "line" => 25,
+      "raw_date" => "Sat Dec 17 2011",
+      "version" => "0.01"
     }
   ]
 }

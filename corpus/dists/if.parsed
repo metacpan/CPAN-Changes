@@ -3,39 +3,21 @@
   "releases" => [
     {
       "entries" => [],
-      "line" => 20,
-      "note" => "The update of 0.0401 was lost during update to 0.05",
-      "version" => "0.0601"
-    },
-    {
-      "entries" => [],
-      "line" => 18,
-      "note" => "Update email address.",
-      "version" => "0.06"
+      "line" => 3,
+      "note" => "The version of 5.7.3.",
+      "version" => "0.01"
     },
     {
       "entries" => [
         {
-          "line" => 15,
+          "line" => 6,
           "style" => "",
-          "text" => "Better error handling. Suggest significance of => in the docs."
+          "text" => "test adopted for backward-compatibility"
         }
       ],
-      "line" => 14,
-      "note" => "Sync with perl5.12.2:",
-      "version" => "0.05"
-    },
-    {
-      "entries" => [
-        {
-          "line" => 12,
-          "style" => "",
-          "text" => "older versions of Perl."
-        }
-      ],
-      "line" => 11,
-      "note" => "test was using a discipline for open.pm not supported with",
-      "version" => "0.0401"
+      "line" => 5,
+      "note" => "`our' removed for backward-compatibility.",
+      "version" => "0.010001"
     },
     {
       "entries" => [
@@ -52,20 +34,38 @@
     {
       "entries" => [
         {
-          "line" => 6,
+          "line" => 12,
           "style" => "",
-          "text" => "test adopted for backward-compatibility"
+          "text" => "older versions of Perl."
         }
       ],
-      "line" => 5,
-      "note" => "`our' removed for backward-compatibility.",
-      "version" => "0.010001"
+      "line" => 11,
+      "note" => "test was using a discipline for open.pm not supported with",
+      "version" => "0.0401"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 15,
+          "style" => "",
+          "text" => "Better error handling. Suggest significance of => in the docs."
+        }
+      ],
+      "line" => 14,
+      "note" => "Sync with perl5.12.2:",
+      "version" => "0.05"
     },
     {
       "entries" => [],
-      "line" => 3,
-      "note" => "The version of 5.7.3.",
-      "version" => "0.01"
+      "line" => 18,
+      "note" => "Update email address.",
+      "version" => "0.06"
+    },
+    {
+      "entries" => [],
+      "line" => 20,
+      "note" => "The update of 0.0401 was lost during update to 0.05",
+      "version" => "0.0601"
     }
   ]
 }

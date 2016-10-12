@@ -62,7 +62,7 @@ sub _transform {
             ],
           ) : () ),
         )
-      } @{$data->{releases}},
+      } reverse @{$data->{releases}},
     ],
   );
 }
@@ -199,7 +199,7 @@ sub _parse {
   }
   return {
     preamble => $preamble,
-    releases => [ reverse @releases ],
+    releases => \@releases,
   };
 }
 

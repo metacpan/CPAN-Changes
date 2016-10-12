@@ -2,102 +2,199 @@
   "preamble" => "Revision history for Archer\n\n{{\$NEXT}}",
   "releases" => [
     {
-      "date" => "2006-10-06T12:38:02Z",
+      "date" => "2013-07-25T06:32:29Z",
       "entries" => [
         {
-          "line" => 103,
+          "line" => 6,
+          "style" => "-",
+          "text" => "fix asset_dir resolving in ConfigLoader"
+        },
+        {
+          "line" => 7,
+          "style" => "-",
+          "text" => "restore ShareDir missing in 0.14 and move asset/ to share/asset for Minilla friendly."
+        },
+        {
+          "line" => 8,
+          "style" => "-",
+          "text" => "add error message of Archer::Util."
+        }
+      ],
+      "line" => 5,
+      "raw_date" => "2013-07-25T06:32:29Z",
+      "version" => "0.16"
+    },
+    {
+      "date" => "2013-06-18T02:20:51Z",
+      "entries" => [
+        {
+          "line" => 11,
+          "style" => "-",
+          "text" => "fix dependencies"
+        },
+        {
+          "line" => 12,
+          "style" => "-",
+          "text" => "fix tests for perl5.17 or higher"
+        }
+      ],
+      "line" => 10,
+      "raw_date" => "2013-06-18T02:20:51Z",
+      "version" => "0.15"
+    },
+    {
+      "date" => "2013-06-17T12:06:02Z",
+      "entries" => [
+        {
+          "line" => 15,
+          "style" => "-",
+          "text" => "Switch to Minilla"
+        },
+        {
+          "line" => 16,
+          "style" => "-",
+          "text" => "Fixup dependencies"
+        },
+        {
+          "line" => 17,
+          "style" => "-",
+          "text" => "move script files to bin"
+        },
+        {
+          "line" => 18,
+          "style" => "-",
+          "text" => "fix typo in documents"
+        }
+      ],
+      "line" => 14,
+      "raw_date" => "2013-06-17T12:06:02Z",
+      "version" => "0.14"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 21,
+          "style" => "-",
+          "text" => "add 'ready' phase."
+        },
+        {
+          "line" => 22,
+          "style" => "-",
+          "text" => "appropriately handling when specified several values in --skip and --with."
+        },
+        {
+          "line" => 23,
+          "style" => "-",
+          "text" => "remove old descriptions."
+        },
+        {
+          "line" => 24,
+          "style" => "-",
+          "text" => "refactor tests."
+        }
+      ],
+      "line" => 20,
+      "version" => "0.13"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 27,
+          "style" => "-",
+          "text" => "add validate feature in Plugin::Exec::Local."
+        },
+        {
+          "line" => 28,
+          "style" => "-",
+          "text" => "depend to Test::More 0.98."
+        }
+      ],
+      "line" => 26,
+      "version" => "0.12"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 31,
+          "style" => "-",
+          "text" => "add install_script `archer`"
+        },
+        {
+          "line" => 32,
+          "style" => "-",
+          "text" => "fix shebang in archer.pl and arher"
+        },
+        {
+          "line" => 33,
+          "style" => "-",
+          "text" => "set default assets path to share_dir"
+        }
+      ],
+      "line" => 30,
+      "version" => "0.11"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 37,
+          "style" => "-",
+          "text" => "hide from pause SVN::Agent"
+        }
+      ],
+      "line" => 35,
+      "version" => "0.10"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 41,
+          "style" => "-",
+          "text" => "add feature to specify multi roles in config.yaml"
+        },
+        {
+          "line" => 42,
+          "style" => "-",
+          "text" => "use IO::Prompt::Simple instead of IO::Prompt, because IO::Prompt doesn't work in perl-5.14 after."
+        },
+        {
+          "line" => 43,
+          "style" => "-",
+          "text" => "add feature to specify role in command line option"
+        },
+        {
+          "line" => 44,
+          "style" => "-",
+          "text" => "role support in Archer::Schell"
+        }
+      ],
+      "line" => 39,
+      "version" => "0.09"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 48,
           "style" => "",
-          "text" => "Initial release."
-        }
-      ],
-      "line" => 102,
-      "raw_date" => "Fri Oct  6 12:38:02 2006",
-      "version" => "0.01"
-    },
-    {
-      "entries" => [
-        {
-          "line" => 100,
-          "style" => "-",
-          "text" => "initial cpan release."
-        }
-      ],
-      "line" => 98,
-      "version" => "0.02"
-    },
-    {
-      "entries" => [
-        {
-          "line" => 95,
-          "style" => "-",
-          "text" => "fixed test."
+          "text" => "commit 239829c5d2fd0a15abdbecbe593146c466905c3c Author: Masayuki Matsuki <y.songmu\@gmail.com> Date:   Wed Dec 14 19:13:15 2011 +0900"
         },
         {
-          "line" => 96,
-          "style" => "-",
-          "text" => "no feature changes."
+          "line" => 52,
+          "style" => "",
+          "text" => "stringify \$rsync->out and \$rsync->err for log."
+        },
+        {
+          "line" => 54,
+          "style" => "",
+          "text" => "File::Rsync::out and File::Rsync::err retruns array in array context, and retruns array ref in scalar context."
+        },
+        {
+          "line" => 57,
+          "style" => "",
+          "text" => "lib/Archer/Plugin/Rsync.pm |    4 ++-- 1 files changed, 2 insertions(+), 2 deletions(-)"
         }
       ],
-      "line" => 93,
-      "version" => "0.03"
-    },
-    {
-      "entries" => [
-        {
-          "line" => 90,
-          "style" => "-",
-          "text" => "fixed test script."
-        },
-        {
-          "line" => 91,
-          "style" => "-",
-          "text" => "no feature changes."
-        }
-      ],
-      "line" => 88,
-      "version" => "0.04"
-    },
-    {
-      "entries" => [
-        {
-          "line" => 83,
-          "style" => "-",
-          "text" => "Plugin::Flock: added"
-        },
-        {
-          "line" => 84,
-          "style" => "-",
-          "text" => "Plugin::Confirm: support timeout"
-        },
-        {
-          "line" => 85,
-          "style" => "-",
-          "text" => "Plugin::Exec::Remote: do not use sudo when does not specify user name in configuration(by mizzy++)"
-        },
-        {
-          "line" => 86,
-          "style" => "-",
-          "text" => "fixed some test problem."
-        }
-      ],
-      "line" => 81,
-      "version" => "0.05"
-    },
-    {
-      "entries" => [
-        {
-          "line" => 78,
-          "style" => "-",
-          "text" => "added YAML::Syck support"
-        },
-        {
-          "line" => 79,
-          "style" => "-",
-          "text" => "specify assets path in config.yaml"
-        }
-      ],
-      "line" => 76,
-      "version" => "0.06"
+      "line" => 46,
+      "version" => "0.08"
     },
     {
       "entries" => [
@@ -173,197 +270,100 @@
     {
       "entries" => [
         {
-          "line" => 48,
+          "line" => 78,
+          "style" => "-",
+          "text" => "added YAML::Syck support"
+        },
+        {
+          "line" => 79,
+          "style" => "-",
+          "text" => "specify assets path in config.yaml"
+        }
+      ],
+      "line" => 76,
+      "version" => "0.06"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 83,
+          "style" => "-",
+          "text" => "Plugin::Flock: added"
+        },
+        {
+          "line" => 84,
+          "style" => "-",
+          "text" => "Plugin::Confirm: support timeout"
+        },
+        {
+          "line" => 85,
+          "style" => "-",
+          "text" => "Plugin::Exec::Remote: do not use sudo when does not specify user name in configuration(by mizzy++)"
+        },
+        {
+          "line" => 86,
+          "style" => "-",
+          "text" => "fixed some test problem."
+        }
+      ],
+      "line" => 81,
+      "version" => "0.05"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 90,
+          "style" => "-",
+          "text" => "fixed test script."
+        },
+        {
+          "line" => 91,
+          "style" => "-",
+          "text" => "no feature changes."
+        }
+      ],
+      "line" => 88,
+      "version" => "0.04"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 95,
+          "style" => "-",
+          "text" => "fixed test."
+        },
+        {
+          "line" => 96,
+          "style" => "-",
+          "text" => "no feature changes."
+        }
+      ],
+      "line" => 93,
+      "version" => "0.03"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 100,
+          "style" => "-",
+          "text" => "initial cpan release."
+        }
+      ],
+      "line" => 98,
+      "version" => "0.02"
+    },
+    {
+      "date" => "2006-10-06T12:38:02Z",
+      "entries" => [
+        {
+          "line" => 103,
           "style" => "",
-          "text" => "commit 239829c5d2fd0a15abdbecbe593146c466905c3c Author: Masayuki Matsuki <y.songmu\@gmail.com> Date:   Wed Dec 14 19:13:15 2011 +0900"
-        },
-        {
-          "line" => 52,
-          "style" => "",
-          "text" => "stringify \$rsync->out and \$rsync->err for log."
-        },
-        {
-          "line" => 54,
-          "style" => "",
-          "text" => "File::Rsync::out and File::Rsync::err retruns array in array context, and retruns array ref in scalar context."
-        },
-        {
-          "line" => 57,
-          "style" => "",
-          "text" => "lib/Archer/Plugin/Rsync.pm |    4 ++-- 1 files changed, 2 insertions(+), 2 deletions(-)"
+          "text" => "Initial release."
         }
       ],
-      "line" => 46,
-      "version" => "0.08"
-    },
-    {
-      "entries" => [
-        {
-          "line" => 41,
-          "style" => "-",
-          "text" => "add feature to specify multi roles in config.yaml"
-        },
-        {
-          "line" => 42,
-          "style" => "-",
-          "text" => "use IO::Prompt::Simple instead of IO::Prompt, because IO::Prompt doesn't work in perl-5.14 after."
-        },
-        {
-          "line" => 43,
-          "style" => "-",
-          "text" => "add feature to specify role in command line option"
-        },
-        {
-          "line" => 44,
-          "style" => "-",
-          "text" => "role support in Archer::Schell"
-        }
-      ],
-      "line" => 39,
-      "version" => "0.09"
-    },
-    {
-      "entries" => [
-        {
-          "line" => 37,
-          "style" => "-",
-          "text" => "hide from pause SVN::Agent"
-        }
-      ],
-      "line" => 35,
-      "version" => "0.10"
-    },
-    {
-      "entries" => [
-        {
-          "line" => 31,
-          "style" => "-",
-          "text" => "add install_script `archer`"
-        },
-        {
-          "line" => 32,
-          "style" => "-",
-          "text" => "fix shebang in archer.pl and arher"
-        },
-        {
-          "line" => 33,
-          "style" => "-",
-          "text" => "set default assets path to share_dir"
-        }
-      ],
-      "line" => 30,
-      "version" => "0.11"
-    },
-    {
-      "entries" => [
-        {
-          "line" => 27,
-          "style" => "-",
-          "text" => "add validate feature in Plugin::Exec::Local."
-        },
-        {
-          "line" => 28,
-          "style" => "-",
-          "text" => "depend to Test::More 0.98."
-        }
-      ],
-      "line" => 26,
-      "version" => "0.12"
-    },
-    {
-      "entries" => [
-        {
-          "line" => 21,
-          "style" => "-",
-          "text" => "add 'ready' phase."
-        },
-        {
-          "line" => 22,
-          "style" => "-",
-          "text" => "appropriately handling when specified several values in --skip and --with."
-        },
-        {
-          "line" => 23,
-          "style" => "-",
-          "text" => "remove old descriptions."
-        },
-        {
-          "line" => 24,
-          "style" => "-",
-          "text" => "refactor tests."
-        }
-      ],
-      "line" => 20,
-      "version" => "0.13"
-    },
-    {
-      "date" => "2013-06-17T12:06:02Z",
-      "entries" => [
-        {
-          "line" => 15,
-          "style" => "-",
-          "text" => "Switch to Minilla"
-        },
-        {
-          "line" => 16,
-          "style" => "-",
-          "text" => "Fixup dependencies"
-        },
-        {
-          "line" => 17,
-          "style" => "-",
-          "text" => "move script files to bin"
-        },
-        {
-          "line" => 18,
-          "style" => "-",
-          "text" => "fix typo in documents"
-        }
-      ],
-      "line" => 14,
-      "raw_date" => "2013-06-17T12:06:02Z",
-      "version" => "0.14"
-    },
-    {
-      "date" => "2013-06-18T02:20:51Z",
-      "entries" => [
-        {
-          "line" => 11,
-          "style" => "-",
-          "text" => "fix dependencies"
-        },
-        {
-          "line" => 12,
-          "style" => "-",
-          "text" => "fix tests for perl5.17 or higher"
-        }
-      ],
-      "line" => 10,
-      "raw_date" => "2013-06-18T02:20:51Z",
-      "version" => "0.15"
-    },
-    {
-      "date" => "2013-07-25T06:32:29Z",
-      "entries" => [
-        {
-          "line" => 6,
-          "style" => "-",
-          "text" => "fix asset_dir resolving in ConfigLoader"
-        },
-        {
-          "line" => 7,
-          "style" => "-",
-          "text" => "restore ShareDir missing in 0.14 and move asset/ to share/asset for Minilla friendly."
-        },
-        {
-          "line" => 8,
-          "style" => "-",
-          "text" => "add error message of Archer::Util."
-        }
-      ],
-      "line" => 5,
-      "raw_date" => "2013-07-25T06:32:29Z",
-      "version" => "0.16"
+      "line" => 102,
+      "raw_date" => "Fri Oct  6 12:38:02 2006",
+      "version" => "0.01"
     }
   ]
 }

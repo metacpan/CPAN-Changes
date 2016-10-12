@@ -2,35 +2,92 @@
   "preamble" => "Revision history for Perl module Convert::BinHex\n\n{{\$NEXT}}\n\t- Fixed pod error in debinhex and added pod tests",
   "releases" => [
     {
-      "date" => "unknown",
+      "date" => "2013-08-25",
       "entries" => [
         {
-          "line" => 42,
+          "line" => 7,
           "style" => "-",
-          "text" => "Initial release."
+          "text" => "Added unit tests for OO and CRC code"
         }
       ],
-      "line" => 41,
-      "raw_date" => "unknown",
-      "version" => "1.102"
+      "line" => 6,
+      "raw_date" => "2013-08-25",
+      "version" => "1.122"
+    },
+    {
+      "date" => "2013-08-23",
+      "entries" => [
+        {
+          "line" => 10,
+          "style" => "-",
+          "text" => "Changes file reformatted thanks to Neil Bowers (NEILB)"
+        },
+        {
+          "line" => 11,
+          "style" => "-",
+          "text" => "Moved to Dist::Zilla's OurPkgVersion for keeping \$VERSIONs in sync"
+        }
+      ],
+      "line" => 9,
+      "raw_date" => "2013-08-23",
+      "version" => "1.121"
+    },
+    {
+      "date" => "2013-08-22",
+      "entries" => [
+        {
+          "line" => 14,
+          "style" => "-",
+          "text" => "First CPAN release by Stephen Nelson (STEPHEN), who's now maintaining this module."
+        }
+      ],
+      "line" => 13,
+      "raw_date" => "2013-08-22",
+      "version" => "1.120"
+    },
+    {
+      "date" => "1997-06-27",
+      "entries" => [
+        {
+          "line" => 18,
+          "style" => "-",
+          "text" => "Changes unknown, but this was the last (and first?) CPAN release by ERYQ"
+        }
+      ],
+      "line" => 17,
+      "raw_date" => "1997-06-27",
+      "version" => "1.119"
     },
     {
       "date" => "unknown",
       "entries" => [
         {
-          "line" => 38,
+          "line" => 22,
           "style" => "-",
-          "text" => "Fixed bug in decompression (wasn't saving last character)."
+          "text" => "Ready to go public (with Paul's version, patched for native Mac support)!"
         },
         {
-          "line" => 39,
+          "line" => 23,
           "style" => "-",
-          "text" => "Fixed \"NoComment\" bug."
+          "text" => "Warnings have been suppressed in a few places where undefined values appear."
         }
       ],
-      "line" => 37,
+      "line" => 20,
       "raw_date" => "unknown",
-      "version" => "1.103"
+      "version" => "1.118"
+    },
+    {
+      "date" => "unknown",
+      "entries" => [
+        {
+          "line" => 28,
+          "style" => "-",
+          "text" => "Fixed another bug in comp2bin, related to the MARK falling on a boundary between inputs.  Added testing code."
+        }
+      ],
+      "line" => 26,
+      "raw_date" => "unknown",
+      "version" => "1.115"
     },
     {
       "date" => "unknown",
@@ -59,89 +116,32 @@
       "date" => "unknown",
       "entries" => [
         {
-          "line" => 28,
+          "line" => 38,
           "style" => "-",
-          "text" => "Fixed another bug in comp2bin, related to the MARK falling on a boundary between inputs.  Added testing code."
+          "text" => "Fixed bug in decompression (wasn't saving last character)."
+        },
+        {
+          "line" => 39,
+          "style" => "-",
+          "text" => "Fixed \"NoComment\" bug."
         }
       ],
-      "line" => 26,
+      "line" => 37,
       "raw_date" => "unknown",
-      "version" => "1.115"
+      "version" => "1.103"
     },
     {
       "date" => "unknown",
       "entries" => [
         {
-          "line" => 22,
+          "line" => 42,
           "style" => "-",
-          "text" => "Ready to go public (with Paul's version, patched for native Mac support)!"
-        },
-        {
-          "line" => 23,
-          "style" => "-",
-          "text" => "Warnings have been suppressed in a few places where undefined values appear."
+          "text" => "Initial release."
         }
       ],
-      "line" => 20,
+      "line" => 41,
       "raw_date" => "unknown",
-      "version" => "1.118"
-    },
-    {
-      "date" => "1997-06-27",
-      "entries" => [
-        {
-          "line" => 18,
-          "style" => "-",
-          "text" => "Changes unknown, but this was the last (and first?) CPAN release by ERYQ"
-        }
-      ],
-      "line" => 17,
-      "raw_date" => "1997-06-27",
-      "version" => "1.119"
-    },
-    {
-      "date" => "2013-08-22",
-      "entries" => [
-        {
-          "line" => 14,
-          "style" => "-",
-          "text" => "First CPAN release by Stephen Nelson (STEPHEN), who's now maintaining this module."
-        }
-      ],
-      "line" => 13,
-      "raw_date" => "2013-08-22",
-      "version" => "1.120"
-    },
-    {
-      "date" => "2013-08-23",
-      "entries" => [
-        {
-          "line" => 10,
-          "style" => "-",
-          "text" => "Changes file reformatted thanks to Neil Bowers (NEILB)"
-        },
-        {
-          "line" => 11,
-          "style" => "-",
-          "text" => "Moved to Dist::Zilla's OurPkgVersion for keeping \$VERSIONs in sync"
-        }
-      ],
-      "line" => 9,
-      "raw_date" => "2013-08-23",
-      "version" => "1.121"
-    },
-    {
-      "date" => "2013-08-25",
-      "entries" => [
-        {
-          "line" => 7,
-          "style" => "-",
-          "text" => "Added unit tests for OO and CRC code"
-        }
-      ],
-      "line" => 6,
-      "raw_date" => "2013-08-25",
-      "version" => "1.122"
+      "version" => "1.102"
     }
   ]
 }

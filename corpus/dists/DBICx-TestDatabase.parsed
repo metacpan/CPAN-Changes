@@ -4,14 +4,14 @@
     {
       "entries" => [
         {
-          "line" => 8,
+          "line" => 2,
           "style" => "-",
-          "text" => "first version, released upon an unsuspecting world"
+          "text" => "support unicode (patch by diegok)"
         }
       ],
-      "line" => 7,
-      "note" => "7 October 2007",
-      "version" => "0.01"
+      "line" => 1,
+      "note" => "14 December 2010",
+      "version" => "0.04"
     },
     {
       "entries" => [
@@ -28,14 +28,14 @@
     {
       "entries" => [
         {
-          "line" => 2,
+          "line" => 8,
           "style" => "-",
-          "text" => "support unicode (patch by diegok)"
+          "text" => "first version, released upon an unsuspecting world"
         }
       ],
-      "line" => 1,
-      "note" => "14 December 2010",
-      "version" => "0.04"
+      "line" => 7,
+      "note" => "7 October 2007",
+      "version" => "0.01"
     }
   ]
 }

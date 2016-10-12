@@ -2,6 +2,617 @@
   "preamble" => "History file for ack.  http://beyondgrep.com/",
   "releases" => [
     {
+      "date" => "2014-09-03T22:48:00Z",
+      "entries" => [
+        {
+          "entries" => [
+            {
+              "line" => 6,
+              "style" => "",
+              "text" => "The -s flag would fail to suppress certain warnings.  Thanks, Kassio Borges. (GitHub ticket #439)"
+            },
+            {
+              "line" => 9,
+              "style" => "",
+              "text" => "The -w flag would fail to work properly with regex features such as alternation.  Thanks to Ed Avis for the report (GitHub ticket #443)"
+            },
+            {
+              "line" => 12,
+              "style" => "",
+              "text" => "The -g flag should now work faster on larger codebases.  Thanks to Manuel Meurer for the report (GitHub ticket #458)"
+            }
+          ],
+          "line" => 5,
+          "style" => "[]",
+          "text" => "FIXES"
+        },
+        {
+          "entries" => [
+            {
+              "line" => 16,
+              "style" => "",
+              "text" => "ack now ignores JavaScript and CSS source maps.  Thanks, Chris Rebert."
+            },
+            {
+              "line" => 19,
+              "style" => "",
+              "text" => "ack now ships with customized shell completion scripts for bash and zsh."
+            }
+          ],
+          "line" => 15,
+          "style" => "[]",
+          "text" => "ENHANCEMENTS"
+        }
+      ],
+      "line" => 3,
+      "raw_date" => "Wed Sep  3 22:48:00 CDT 2014",
+      "version" => "2.14"
+    },
+    {
+      "date" => "2014-01-25T23:36:09Z",
+      "entries" => [
+        {
+          "entries" => [
+            {
+              "line" => 25,
+              "style" => "",
+              "text" => "More fixes for Windows tests.  Thanks to GitHub user \@ispedals."
+            }
+          ],
+          "line" => 24,
+          "style" => "[]",
+          "text" => "FIXES"
+        },
+        {
+          "entries" => [
+            {
+              "line" => 29,
+              "style" => "",
+              "text" => "Add docs for available colors in ack."
+            }
+          ],
+          "line" => 27,
+          "style" => "[]",
+          "text" => "ENHANCEMENTS"
+        }
+      ],
+      "line" => 22,
+      "raw_date" => "Sat Jan 25 23:36:09 CST 2014",
+      "version" => "2.13_06"
+    },
+    {
+      "date" => "2014-01-09T22:41:33Z",
+      "entries" => [
+        {
+          "entries" => [
+            {
+              "line" => 34,
+              "style" => "",
+              "text" => "More whack-a-mole with Windows failures.  This time, it's POSIX::mkfifo dying on Windows instead of returning undef like the docs implied, or at least that I inferred."
+            }
+          ],
+          "line" => 33,
+          "style" => "[]",
+          "text" => "FIXES"
+        },
+        {
+          "entries" => [
+            {
+              "line" => 39,
+              "style" => "",
+              "text" => "--create-ackrc keeps the comments that describe each of the options, and it shows the ack version number."
+            }
+          ],
+          "line" => 38,
+          "style" => "[]",
+          "text" => "ENHANCEMENTS"
+        }
+      ],
+      "line" => 31,
+      "raw_date" => "Thu Jan  9 22:41:33 CST 2014",
+      "version" => "2.13_05"
+    },
+    {
+      "date" => "2014-01-04T11:17:28Z",
+      "entries" => [
+        {
+          "entries" => [
+            {
+              "line" => 46,
+              "style" => "",
+              "text" => "Fixed incorrect deduping of config files under Windows.  Thanks, Denis Howe."
+            }
+          ],
+          "line" => 45,
+          "style" => "[]",
+          "text" => "FIXES"
+        }
+      ],
+      "line" => 43,
+      "raw_date" => "Sat Jan  4 11:17:28 CST 2014",
+      "version" => "2.13_04"
+    },
+    {
+      "date" => "2014-01-02T22:23:03Z",
+      "entries" => [
+        {
+          "entries" => [
+            {
+              "line" => 53,
+              "style" => "",
+              "text" => "More build fixes for Windows.  Windows config finder fixes from James McCoy."
+            },
+            {
+              "line" => 56,
+              "style" => "",
+              "text" => "t/ack-named-pipes.t uses POSIX::mkfifo instead of the external command, which should be more portable.  Thanks, Pete Krawczyk."
+            }
+          ],
+          "line" => 52,
+          "style" => "[]",
+          "text" => "FIXES"
+        },
+        {
+          "entries" => [
+            {
+              "line" => 60,
+              "style" => "",
+              "text" => "Now ignores Cabal (Haskell) sandboxes.  Thanks, Fraser Tweedale."
+            },
+            {
+              "line" => 62,
+              "style" => "",
+              "text" => "Added filetypes for Jade, Smarty and Stylus.  Thanks, Ra\303\272l Gund\303\255n."
+            }
+          ],
+          "line" => 59,
+          "style" => "[]",
+          "text" => "ENHANCEMENTS"
+        }
+      ],
+      "line" => 50,
+      "raw_date" => "Thu Jan  2 22:23:03 CST 2014",
+      "version" => "2.13_03"
+    },
+    {
+      "date" => "2013-12-27T12:54:27Z",
+      "entries" => [
+        {
+          "entries" => [
+            {
+              "line" => 68,
+              "style" => "",
+              "text" => "The building of ack-standalone relied on the output of `perldoc -l`, which I apparently can't rely on having been installed.  I've changed the way that the squash program finds File::Next."
+            }
+          ],
+          "line" => 67,
+          "style" => "[]",
+          "text" => "FIXES"
+        }
+      ],
+      "line" => 65,
+      "raw_date" => "Fri Dec 27 12:54:27 CST 2013",
+      "version" => "2.13_02"
+    },
+    {
+      "date" => "2013-12-25T13:36:08Z",
+      "entries" => [
+        {
+          "entries" => [
+            {
+              "line" => 79,
+              "style" => "--",
+              "text" => "via Pete Krawczyk"
+            }
+          ],
+          "line" => 75,
+          "style" => "",
+          "text" => "So this is Christmas And what have you done I'm sitting here hacking On ack 2.13_01"
+        },
+        {
+          "entries" => [
+            {
+              "line" => 82,
+              "style" => "",
+              "text" => "Issue #313: ack would fail when trying to check files for readability on some networked filesystems, or on Mac OS X with ACLs.  Now it uses the filetest pragma.  Thanks, Jonathan Perret."
+            }
+          ],
+          "line" => 81,
+          "style" => "[]",
+          "text" => "FIXES"
+        },
+        {
+          "entries" => [
+            {
+              "line" => 88,
+              "style" => "",
+              "text" => "ack's entire test suite now runs under Perl's -T taint flag.  We'll build more security tests on top of this."
+            },
+            {
+              "line" => 91,
+              "style" => "",
+              "text" => "Added some checks to the squash program that I hope will turn up errors in the Windows builds."
+            }
+          ],
+          "line" => 87,
+          "style" => "[]",
+          "text" => "INTERNALS"
+        }
+      ],
+      "line" => 73,
+      "raw_date" => "Wed Dec 25 13:36:08 CST 2013",
+      "version" => "2.13_01"
+    },
+    {
+      "date" => "2013-12-03T07:05:02Z",
+      "entries" => [
+        {
+          "entries" => [
+            {
+              "line" => 98,
+              "style" => "",
+              "text" => "This verison of ack prevents the --pager, --regex and --output options from being used from project-level ackrc files.  It is possible to execute malicious code with these options, and we want to prevent the security risk of acking through a potentially malicious codebase, such as one downloaded from an Internet site or checked out from a code repository."
+            },
+            {
+              "line" => 105,
+              "style" => "",
+              "text" => "The --pager, --regex and --output options may still be used from the global /etc/ackrc, your own private ~/.ackrc, the ACK_OPTIONS environment variable, and of course from the command line."
+            }
+          ],
+          "line" => 97,
+          "style" => "[]",
+          "text" => "SECURITY FIXES"
+        },
+        {
+          "entries" => [
+            {
+              "line" => 110,
+              "style" => "",
+              "text" => "Now ignores Eclipse .metadata directory.  Thanks, Steffen Jaeckel."
+            }
+          ],
+          "line" => 109,
+          "style" => "[]",
+          "text" => "ENHANCEMENTS"
+        },
+        {
+          "entries" => [
+            {
+              "line" => 113,
+              "style" => "",
+              "text" => "Removed the Git revision tracking in the --version."
+            }
+          ],
+          "line" => 112,
+          "style" => "[]",
+          "text" => "INTERNALS"
+        }
+      ],
+      "line" => 95,
+      "raw_date" => "Tue Dec  3 07:05:02 CST 2013",
+      "version" => "2.12"
+    },
+    {
+      "date" => "2013-10-06T12:39:21Z",
+      "entries" => [
+        {
+          "line" => 118,
+          "style" => "[]",
+          "text" => "FIXES"
+        }
+      ],
+      "line" => 116,
+      "raw_date" => "Sun Oct  6 12:39:21 CDT 2013",
+      "version" => "2.11_02"
+    },
+    {
+      "entries" => [],
+      "line" => 119,
+      "note" => "was mispackaged.  This fixes that.",
+      "version" => "2.11_01"
+    },
+    {
+      "date" => "2013-09-29T13:15:41Z",
+      "entries" => [
+        {
+          "entries" => [
+            {
+              "line" => 125,
+              "style" => "",
+              "text" => "Fixed a race condition in t/file-permission.t that was causing failures if tests were run in parallel."
+            }
+          ],
+          "line" => 124,
+          "style" => "[]",
+          "text" => "FIXES"
+        }
+      ],
+      "line" => 122,
+      "raw_date" => "Sun Sep 29 13:15:41 CDT 2013",
+      "version" => "2.11_01"
+    },
+    {
+      "date" => "2013-09-24T16:24:11Z",
+      "entries" => [
+        {
+          "entries" => [
+            {
+              "line" => 132,
+              "style" => "",
+              "text" => "Add --perltest for *.t files."
+            },
+            {
+              "line" => 134,
+              "style" => "",
+              "text" => "Added Matlab support.  Thanks, Zertrin."
+            }
+          ],
+          "line" => 131,
+          "style" => "[]",
+          "text" => "ENHANCEMENTS"
+        },
+        {
+          "entries" => [
+            {
+              "line" => 137,
+              "style" => "",
+              "text" => "Fix the test suite for Win32.  Many thanks to Christian Walde for bringing the severity of this issue to our attention, as well as providing a Win32 development environment for us to work with."
+            },
+            {
+              "line" => 141,
+              "style" => "",
+              "text" => "Fixed Win32-detection in the Makefile.PL.  Thanks, Michael Beijen and Alexandr Ciornii."
+            },
+            {
+              "line" => 144,
+              "style" => "",
+              "text" => "More compatibility fixes for Perl 5.8.8."
+            }
+          ],
+          "line" => 136,
+          "style" => "[]",
+          "text" => "FIXES"
+        }
+      ],
+      "line" => 129,
+      "raw_date" => "Tue Sep 24 16:24:11 CDT 2013",
+      "version" => "2.10"
+    },
+    {
+      "date" => "2013-08-22T23:11:45Z",
+      "entries" => [
+        {
+          "entries" => [
+            {
+              "line" => 150,
+              "style" => "",
+              "text" => "ack now ignores CMake's build/cache directories by default.  Thanks, Volodymyr Medvid."
+            },
+            {
+              "line" => 153,
+              "style" => "",
+              "text" => "Add shebang matching for --lua files."
+            },
+            {
+              "line" => 155,
+              "style" => "",
+              "text" => "Add documentation for --ackrc."
+            },
+            {
+              "line" => 157,
+              "style" => "",
+              "text" => "Add Elixir filetype."
+            },
+            {
+              "line" => 159,
+              "style" => "",
+              "text" => "Add --cathy option.  Thanks to Joe McMahon."
+            },
+            {
+              "line" => 161,
+              "style" => "",
+              "text" => "Add some helpful debugging tips when an invalid option is found. Thanks to Charles Lee."
+            },
+            {
+              "line" => 164,
+              "style" => "",
+              "text" => "Ignore PDF files by default, because Perl will detect them as text."
+            },
+            {
+              "line" => 166,
+              "style" => "",
+              "text" => "Ignore .gif, .jpg, .jpeg and .png files.  They won't normally be selected, but this is an optimization so that ack doesn't have to open them to know."
+            }
+          ],
+          "line" => 149,
+          "style" => "[]",
+          "text" => "ENHANCEMENTS"
+        },
+        {
+          "entries" => [
+            {
+              "line" => 171,
+              "style" => "",
+              "text" => "Ack's colorizing of output would get confused with multiple sets of parentheses.  This has been fixed.  (Issue #276)"
+            },
+            {
+              "line" => 174,
+              "style" => "",
+              "text" => "Ack would get confused when trying to colorize the output in DOS-format files.  This has been fixed.  (Issue #145)"
+            }
+          ],
+          "line" => 170,
+          "style" => "[]",
+          "text" => "FIXES"
+        }
+      ],
+      "line" => 147,
+      "raw_date" => "Thu Aug 22 23:11:45 CDT 2013",
+      "version" => "2.08"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 180,
+          "style" => "",
+          "text" => "This mistake of an upload lived for only about 15 minutes."
+        }
+      ],
+      "line" => 178,
+      "version" => "2.06"
+    },
+    {
+      "date" => "2013-05-28T10:12:04Z",
+      "entries" => [
+        {
+          "entries" => [
+            {
+              "line" => 187,
+              "style" => "",
+              "text" => "We now ignore the node_modules directories created by npm.  Thanks, Konrad Borowski."
+            },
+            {
+              "line" => 190,
+              "style" => "",
+              "text" => "--pager without an argument implies --pager=\$PAGER."
+            },
+            {
+              "line" => 192,
+              "style" => "",
+              "text" => "--perl now recognizes Plack-style .psgi files.  Thanks, Ron Savage."
+            },
+            {
+              "line" => 194,
+              "style" => "",
+              "text" => "Added filetypes for Coffescript, JSON, LESS, and Sass."
+            }
+          ],
+          "line" => 186,
+          "style" => "[]",
+          "text" => "ENHANCEMENTS"
+        },
+        {
+          "entries" => [
+            {
+              "line" => 197,
+              "style" => "",
+              "text" => "Command-line options now override options set in ackrc files."
+            },
+            {
+              "line" => 199,
+              "style" => "",
+              "text" => "ACK_PAGER and ACK_PAGER_COLOR now work as advertised."
+            },
+            {
+              "line" => 201,
+              "style" => "",
+              "text" => "Fix a bug resulting in uninitialized variable warnings when more than one capture group was specified in the search pattern."
+            },
+            {
+              "line" => 204,
+              "style" => "",
+              "text" => "Make sure ack is happy to build and test under cron and other console-less environments."
+            },
+            {
+              "line" => 207,
+              "style" => "",
+              "text" => "Colored output is now supported and on by default on Windows."
+            }
+          ],
+          "line" => 196,
+          "style" => "[]",
+          "text" => "FIXES"
+        }
+      ],
+      "line" => 184,
+      "raw_date" => "Tue May 28 10:12:04 CDT 2013",
+      "version" => "2.05_01"
+    },
+    {
+      "date" => "2013-04-26T22:47:55Z",
+      "entries" => [
+        {
+          "line" => 211,
+          "style" => "",
+          "text" => "ack now runs on a standard Perl 5.8.8 install with no module updates. The minimum Perl requirement for ack is now explicitly 5.8.8.  Anything before 5.8.8 will not work, and we've added checks.  Thanks, Michael McClimon."
+        },
+        {
+          "entries" => [
+            {
+              "line" => 217,
+              "style" => "",
+              "text" => "ack was colorizing captured groups even if --nocolor was given. Thanks, Dale Sedivic."
+            }
+          ],
+          "line" => 216,
+          "style" => "[]",
+          "text" => "FIXES"
+        },
+        {
+          "entries" => [
+            {
+              "line" => 221,
+              "style" => "",
+              "text" => "The --shell file type now recognizes the fish shell."
+            },
+            {
+              "line" => 223,
+              "style" => "",
+              "text" => "We now ignore minified CSS or Javascript, in the form of either *.css.min or *.min.css, or *.js.min or *.min.js."
+            },
+            {
+              "line" => 226,
+              "style" => "",
+              "text" => "Added support for the Dart language."
+            },
+            {
+              "line" => 228,
+              "style" => "",
+              "text" => "ack 2.02 was much slower than ack 1.96, up to 8x slower in some cases. These slowdowns have been mostly eliminated, and in some cases ack 2.04 is now faster than 1.96."
+            }
+          ],
+          "line" => 220,
+          "style" => "[]",
+          "text" => "ENHANCEMENTS"
+        }
+      ],
+      "line" => 209,
+      "raw_date" => "Fri Apr 26 22:47:55 CDT 2013",
+      "version" => "2.04"
+    },
+    {
+      "date" => "2013-04-18T23:51:52Z",
+      "entries" => [
+        {
+          "entries" => [
+            {
+              "line" => 236,
+              "style" => "",
+              "text" => "The firstlinematch file type detection option now only searches the first 250 characters of the first line of the file.  Otherwise, ack would read entire text files that were only one line long, such as minified JavaScript, and that would be slow.  Thanks, Michael McClimon."
+            }
+          ],
+          "line" => 235,
+          "style" => "[]",
+          "text" => "ENHANCEMENTS"
+        },
+        {
+          "entries" => [
+            {
+              "line" => 243,
+              "style" => "",
+              "text" => "Many clarifications and cleanups.  Thanks, Michael McClimon."
+            }
+          ],
+          "line" => 242,
+          "style" => "[]",
+          "text" => "DOCUMENTATION"
+        }
+      ],
+      "line" => 233,
+      "raw_date" => "Thu Apr 18 23:51:52 CDT 2013",
+      "version" => "2.02"
+    },
+    {
       "date" => "2013-04-17T22:49:41Z",
       "entries" => [
         {
@@ -177,617 +788,6 @@
       "line" => 246,
       "raw_date" => "Wed Apr 17 22:49:41 CDT 2013",
       "version" => "2.00"
-    },
-    {
-      "date" => "2013-04-18T23:51:52Z",
-      "entries" => [
-        {
-          "entries" => [
-            {
-              "line" => 236,
-              "style" => "",
-              "text" => "The firstlinematch file type detection option now only searches the first 250 characters of the first line of the file.  Otherwise, ack would read entire text files that were only one line long, such as minified JavaScript, and that would be slow.  Thanks, Michael McClimon."
-            }
-          ],
-          "line" => 235,
-          "style" => "[]",
-          "text" => "ENHANCEMENTS"
-        },
-        {
-          "entries" => [
-            {
-              "line" => 243,
-              "style" => "",
-              "text" => "Many clarifications and cleanups.  Thanks, Michael McClimon."
-            }
-          ],
-          "line" => 242,
-          "style" => "[]",
-          "text" => "DOCUMENTATION"
-        }
-      ],
-      "line" => 233,
-      "raw_date" => "Thu Apr 18 23:51:52 CDT 2013",
-      "version" => "2.02"
-    },
-    {
-      "date" => "2013-04-26T22:47:55Z",
-      "entries" => [
-        {
-          "line" => 211,
-          "style" => "",
-          "text" => "ack now runs on a standard Perl 5.8.8 install with no module updates. The minimum Perl requirement for ack is now explicitly 5.8.8.  Anything before 5.8.8 will not work, and we've added checks.  Thanks, Michael McClimon."
-        },
-        {
-          "entries" => [
-            {
-              "line" => 217,
-              "style" => "",
-              "text" => "ack was colorizing captured groups even if --nocolor was given. Thanks, Dale Sedivic."
-            }
-          ],
-          "line" => 216,
-          "style" => "[]",
-          "text" => "FIXES"
-        },
-        {
-          "entries" => [
-            {
-              "line" => 221,
-              "style" => "",
-              "text" => "The --shell file type now recognizes the fish shell."
-            },
-            {
-              "line" => 223,
-              "style" => "",
-              "text" => "We now ignore minified CSS or Javascript, in the form of either *.css.min or *.min.css, or *.js.min or *.min.js."
-            },
-            {
-              "line" => 226,
-              "style" => "",
-              "text" => "Added support for the Dart language."
-            },
-            {
-              "line" => 228,
-              "style" => "",
-              "text" => "ack 2.02 was much slower than ack 1.96, up to 8x slower in some cases. These slowdowns have been mostly eliminated, and in some cases ack 2.04 is now faster than 1.96."
-            }
-          ],
-          "line" => 220,
-          "style" => "[]",
-          "text" => "ENHANCEMENTS"
-        }
-      ],
-      "line" => 209,
-      "raw_date" => "Fri Apr 26 22:47:55 CDT 2013",
-      "version" => "2.04"
-    },
-    {
-      "date" => "2013-05-28T10:12:04Z",
-      "entries" => [
-        {
-          "entries" => [
-            {
-              "line" => 187,
-              "style" => "",
-              "text" => "We now ignore the node_modules directories created by npm.  Thanks, Konrad Borowski."
-            },
-            {
-              "line" => 190,
-              "style" => "",
-              "text" => "--pager without an argument implies --pager=\$PAGER."
-            },
-            {
-              "line" => 192,
-              "style" => "",
-              "text" => "--perl now recognizes Plack-style .psgi files.  Thanks, Ron Savage."
-            },
-            {
-              "line" => 194,
-              "style" => "",
-              "text" => "Added filetypes for Coffescript, JSON, LESS, and Sass."
-            }
-          ],
-          "line" => 186,
-          "style" => "[]",
-          "text" => "ENHANCEMENTS"
-        },
-        {
-          "entries" => [
-            {
-              "line" => 197,
-              "style" => "",
-              "text" => "Command-line options now override options set in ackrc files."
-            },
-            {
-              "line" => 199,
-              "style" => "",
-              "text" => "ACK_PAGER and ACK_PAGER_COLOR now work as advertised."
-            },
-            {
-              "line" => 201,
-              "style" => "",
-              "text" => "Fix a bug resulting in uninitialized variable warnings when more than one capture group was specified in the search pattern."
-            },
-            {
-              "line" => 204,
-              "style" => "",
-              "text" => "Make sure ack is happy to build and test under cron and other console-less environments."
-            },
-            {
-              "line" => 207,
-              "style" => "",
-              "text" => "Colored output is now supported and on by default on Windows."
-            }
-          ],
-          "line" => 196,
-          "style" => "[]",
-          "text" => "FIXES"
-        }
-      ],
-      "line" => 184,
-      "raw_date" => "Tue May 28 10:12:04 CDT 2013",
-      "version" => "2.05_01"
-    },
-    {
-      "entries" => [
-        {
-          "line" => 180,
-          "style" => "",
-          "text" => "This mistake of an upload lived for only about 15 minutes."
-        }
-      ],
-      "line" => 178,
-      "version" => "2.06"
-    },
-    {
-      "date" => "2013-08-22T23:11:45Z",
-      "entries" => [
-        {
-          "entries" => [
-            {
-              "line" => 150,
-              "style" => "",
-              "text" => "ack now ignores CMake's build/cache directories by default.  Thanks, Volodymyr Medvid."
-            },
-            {
-              "line" => 153,
-              "style" => "",
-              "text" => "Add shebang matching for --lua files."
-            },
-            {
-              "line" => 155,
-              "style" => "",
-              "text" => "Add documentation for --ackrc."
-            },
-            {
-              "line" => 157,
-              "style" => "",
-              "text" => "Add Elixir filetype."
-            },
-            {
-              "line" => 159,
-              "style" => "",
-              "text" => "Add --cathy option.  Thanks to Joe McMahon."
-            },
-            {
-              "line" => 161,
-              "style" => "",
-              "text" => "Add some helpful debugging tips when an invalid option is found. Thanks to Charles Lee."
-            },
-            {
-              "line" => 164,
-              "style" => "",
-              "text" => "Ignore PDF files by default, because Perl will detect them as text."
-            },
-            {
-              "line" => 166,
-              "style" => "",
-              "text" => "Ignore .gif, .jpg, .jpeg and .png files.  They won't normally be selected, but this is an optimization so that ack doesn't have to open them to know."
-            }
-          ],
-          "line" => 149,
-          "style" => "[]",
-          "text" => "ENHANCEMENTS"
-        },
-        {
-          "entries" => [
-            {
-              "line" => 171,
-              "style" => "",
-              "text" => "Ack's colorizing of output would get confused with multiple sets of parentheses.  This has been fixed.  (Issue #276)"
-            },
-            {
-              "line" => 174,
-              "style" => "",
-              "text" => "Ack would get confused when trying to colorize the output in DOS-format files.  This has been fixed.  (Issue #145)"
-            }
-          ],
-          "line" => 170,
-          "style" => "[]",
-          "text" => "FIXES"
-        }
-      ],
-      "line" => 147,
-      "raw_date" => "Thu Aug 22 23:11:45 CDT 2013",
-      "version" => "2.08"
-    },
-    {
-      "date" => "2013-09-24T16:24:11Z",
-      "entries" => [
-        {
-          "entries" => [
-            {
-              "line" => 132,
-              "style" => "",
-              "text" => "Add --perltest for *.t files."
-            },
-            {
-              "line" => 134,
-              "style" => "",
-              "text" => "Added Matlab support.  Thanks, Zertrin."
-            }
-          ],
-          "line" => 131,
-          "style" => "[]",
-          "text" => "ENHANCEMENTS"
-        },
-        {
-          "entries" => [
-            {
-              "line" => 137,
-              "style" => "",
-              "text" => "Fix the test suite for Win32.  Many thanks to Christian Walde for bringing the severity of this issue to our attention, as well as providing a Win32 development environment for us to work with."
-            },
-            {
-              "line" => 141,
-              "style" => "",
-              "text" => "Fixed Win32-detection in the Makefile.PL.  Thanks, Michael Beijen and Alexandr Ciornii."
-            },
-            {
-              "line" => 144,
-              "style" => "",
-              "text" => "More compatibility fixes for Perl 5.8.8."
-            }
-          ],
-          "line" => 136,
-          "style" => "[]",
-          "text" => "FIXES"
-        }
-      ],
-      "line" => 129,
-      "raw_date" => "Tue Sep 24 16:24:11 CDT 2013",
-      "version" => "2.10"
-    },
-    {
-      "date" => "2013-09-29T13:15:41Z",
-      "entries" => [
-        {
-          "entries" => [
-            {
-              "line" => 125,
-              "style" => "",
-              "text" => "Fixed a race condition in t/file-permission.t that was causing failures if tests were run in parallel."
-            }
-          ],
-          "line" => 124,
-          "style" => "[]",
-          "text" => "FIXES"
-        }
-      ],
-      "line" => 122,
-      "raw_date" => "Sun Sep 29 13:15:41 CDT 2013",
-      "version" => "2.11_01"
-    },
-    {
-      "entries" => [],
-      "line" => 119,
-      "note" => "was mispackaged.  This fixes that.",
-      "version" => "2.11_01"
-    },
-    {
-      "date" => "2013-10-06T12:39:21Z",
-      "entries" => [
-        {
-          "line" => 118,
-          "style" => "[]",
-          "text" => "FIXES"
-        }
-      ],
-      "line" => 116,
-      "raw_date" => "Sun Oct  6 12:39:21 CDT 2013",
-      "version" => "2.11_02"
-    },
-    {
-      "date" => "2013-12-03T07:05:02Z",
-      "entries" => [
-        {
-          "entries" => [
-            {
-              "line" => 98,
-              "style" => "",
-              "text" => "This verison of ack prevents the --pager, --regex and --output options from being used from project-level ackrc files.  It is possible to execute malicious code with these options, and we want to prevent the security risk of acking through a potentially malicious codebase, such as one downloaded from an Internet site or checked out from a code repository."
-            },
-            {
-              "line" => 105,
-              "style" => "",
-              "text" => "The --pager, --regex and --output options may still be used from the global /etc/ackrc, your own private ~/.ackrc, the ACK_OPTIONS environment variable, and of course from the command line."
-            }
-          ],
-          "line" => 97,
-          "style" => "[]",
-          "text" => "SECURITY FIXES"
-        },
-        {
-          "entries" => [
-            {
-              "line" => 110,
-              "style" => "",
-              "text" => "Now ignores Eclipse .metadata directory.  Thanks, Steffen Jaeckel."
-            }
-          ],
-          "line" => 109,
-          "style" => "[]",
-          "text" => "ENHANCEMENTS"
-        },
-        {
-          "entries" => [
-            {
-              "line" => 113,
-              "style" => "",
-              "text" => "Removed the Git revision tracking in the --version."
-            }
-          ],
-          "line" => 112,
-          "style" => "[]",
-          "text" => "INTERNALS"
-        }
-      ],
-      "line" => 95,
-      "raw_date" => "Tue Dec  3 07:05:02 CST 2013",
-      "version" => "2.12"
-    },
-    {
-      "date" => "2013-12-25T13:36:08Z",
-      "entries" => [
-        {
-          "entries" => [
-            {
-              "line" => 79,
-              "style" => "--",
-              "text" => "via Pete Krawczyk"
-            }
-          ],
-          "line" => 75,
-          "style" => "",
-          "text" => "So this is Christmas And what have you done I'm sitting here hacking On ack 2.13_01"
-        },
-        {
-          "entries" => [
-            {
-              "line" => 82,
-              "style" => "",
-              "text" => "Issue #313: ack would fail when trying to check files for readability on some networked filesystems, or on Mac OS X with ACLs.  Now it uses the filetest pragma.  Thanks, Jonathan Perret."
-            }
-          ],
-          "line" => 81,
-          "style" => "[]",
-          "text" => "FIXES"
-        },
-        {
-          "entries" => [
-            {
-              "line" => 88,
-              "style" => "",
-              "text" => "ack's entire test suite now runs under Perl's -T taint flag.  We'll build more security tests on top of this."
-            },
-            {
-              "line" => 91,
-              "style" => "",
-              "text" => "Added some checks to the squash program that I hope will turn up errors in the Windows builds."
-            }
-          ],
-          "line" => 87,
-          "style" => "[]",
-          "text" => "INTERNALS"
-        }
-      ],
-      "line" => 73,
-      "raw_date" => "Wed Dec 25 13:36:08 CST 2013",
-      "version" => "2.13_01"
-    },
-    {
-      "date" => "2013-12-27T12:54:27Z",
-      "entries" => [
-        {
-          "entries" => [
-            {
-              "line" => 68,
-              "style" => "",
-              "text" => "The building of ack-standalone relied on the output of `perldoc -l`, which I apparently can't rely on having been installed.  I've changed the way that the squash program finds File::Next."
-            }
-          ],
-          "line" => 67,
-          "style" => "[]",
-          "text" => "FIXES"
-        }
-      ],
-      "line" => 65,
-      "raw_date" => "Fri Dec 27 12:54:27 CST 2013",
-      "version" => "2.13_02"
-    },
-    {
-      "date" => "2014-01-02T22:23:03Z",
-      "entries" => [
-        {
-          "entries" => [
-            {
-              "line" => 53,
-              "style" => "",
-              "text" => "More build fixes for Windows.  Windows config finder fixes from James McCoy."
-            },
-            {
-              "line" => 56,
-              "style" => "",
-              "text" => "t/ack-named-pipes.t uses POSIX::mkfifo instead of the external command, which should be more portable.  Thanks, Pete Krawczyk."
-            }
-          ],
-          "line" => 52,
-          "style" => "[]",
-          "text" => "FIXES"
-        },
-        {
-          "entries" => [
-            {
-              "line" => 60,
-              "style" => "",
-              "text" => "Now ignores Cabal (Haskell) sandboxes.  Thanks, Fraser Tweedale."
-            },
-            {
-              "line" => 62,
-              "style" => "",
-              "text" => "Added filetypes for Jade, Smarty and Stylus.  Thanks, Ra\303\272l Gund\303\255n."
-            }
-          ],
-          "line" => 59,
-          "style" => "[]",
-          "text" => "ENHANCEMENTS"
-        }
-      ],
-      "line" => 50,
-      "raw_date" => "Thu Jan  2 22:23:03 CST 2014",
-      "version" => "2.13_03"
-    },
-    {
-      "date" => "2014-01-04T11:17:28Z",
-      "entries" => [
-        {
-          "entries" => [
-            {
-              "line" => 46,
-              "style" => "",
-              "text" => "Fixed incorrect deduping of config files under Windows.  Thanks, Denis Howe."
-            }
-          ],
-          "line" => 45,
-          "style" => "[]",
-          "text" => "FIXES"
-        }
-      ],
-      "line" => 43,
-      "raw_date" => "Sat Jan  4 11:17:28 CST 2014",
-      "version" => "2.13_04"
-    },
-    {
-      "date" => "2014-01-09T22:41:33Z",
-      "entries" => [
-        {
-          "entries" => [
-            {
-              "line" => 34,
-              "style" => "",
-              "text" => "More whack-a-mole with Windows failures.  This time, it's POSIX::mkfifo dying on Windows instead of returning undef like the docs implied, or at least that I inferred."
-            }
-          ],
-          "line" => 33,
-          "style" => "[]",
-          "text" => "FIXES"
-        },
-        {
-          "entries" => [
-            {
-              "line" => 39,
-              "style" => "",
-              "text" => "--create-ackrc keeps the comments that describe each of the options, and it shows the ack version number."
-            }
-          ],
-          "line" => 38,
-          "style" => "[]",
-          "text" => "ENHANCEMENTS"
-        }
-      ],
-      "line" => 31,
-      "raw_date" => "Thu Jan  9 22:41:33 CST 2014",
-      "version" => "2.13_05"
-    },
-    {
-      "date" => "2014-01-25T23:36:09Z",
-      "entries" => [
-        {
-          "entries" => [
-            {
-              "line" => 25,
-              "style" => "",
-              "text" => "More fixes for Windows tests.  Thanks to GitHub user \@ispedals."
-            }
-          ],
-          "line" => 24,
-          "style" => "[]",
-          "text" => "FIXES"
-        },
-        {
-          "entries" => [
-            {
-              "line" => 29,
-              "style" => "",
-              "text" => "Add docs for available colors in ack."
-            }
-          ],
-          "line" => 27,
-          "style" => "[]",
-          "text" => "ENHANCEMENTS"
-        }
-      ],
-      "line" => 22,
-      "raw_date" => "Sat Jan 25 23:36:09 CST 2014",
-      "version" => "2.13_06"
-    },
-    {
-      "date" => "2014-09-03T22:48:00Z",
-      "entries" => [
-        {
-          "entries" => [
-            {
-              "line" => 6,
-              "style" => "",
-              "text" => "The -s flag would fail to suppress certain warnings.  Thanks, Kassio Borges. (GitHub ticket #439)"
-            },
-            {
-              "line" => 9,
-              "style" => "",
-              "text" => "The -w flag would fail to work properly with regex features such as alternation.  Thanks to Ed Avis for the report (GitHub ticket #443)"
-            },
-            {
-              "line" => 12,
-              "style" => "",
-              "text" => "The -g flag should now work faster on larger codebases.  Thanks to Manuel Meurer for the report (GitHub ticket #458)"
-            }
-          ],
-          "line" => 5,
-          "style" => "[]",
-          "text" => "FIXES"
-        },
-        {
-          "entries" => [
-            {
-              "line" => 16,
-              "style" => "",
-              "text" => "ack now ignores JavaScript and CSS source maps.  Thanks, Chris Rebert."
-            },
-            {
-              "line" => 19,
-              "style" => "",
-              "text" => "ack now ships with customized shell completion scripts for bash and zsh."
-            }
-          ],
-          "line" => 15,
-          "style" => "[]",
-          "text" => "ENHANCEMENTS"
-        }
-      ],
-      "line" => 3,
-      "raw_date" => "Wed Sep  3 22:48:00 CDT 2014",
-      "version" => "2.14"
     }
   ]
 }

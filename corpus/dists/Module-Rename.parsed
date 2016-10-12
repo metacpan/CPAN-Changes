@@ -4,26 +4,14 @@
     {
       "entries" => [
         {
-          "line" => 17,
+          "line" => 5,
           "style" => "",
-          "text" => "(ms) Where it all began."
+          "text" => "(ms) [rt.cpan.org #87172] Applied changes by Jim Cochrane to add a -g switch, which uses \"git mv\" instead of mv. Added various fixes and test cases."
         }
       ],
-      "line" => 16,
-      "note" => "(2005/03/27)",
-      "version" => "0.01"
-    },
-    {
-      "entries" => [
-        {
-          "line" => 13,
-          "style" => "",
-          "text" => "(ms) Replace \"Foo/Bar\" in files just like \"Foo::Bar\". (ms) Replace pm files outside the regular dir structure."
-        }
-      ],
-      "line" => 12,
-      "note" => "(2005/03/28)",
-      "version" => "0.02"
+      "line" => 4,
+      "note" => "(2013/07/27)",
+      "version" => "0.04"
     },
     {
       "entries" => [
@@ -40,14 +28,26 @@
     {
       "entries" => [
         {
-          "line" => 5,
+          "line" => 13,
           "style" => "",
-          "text" => "(ms) [rt.cpan.org #87172] Applied changes by Jim Cochrane to add a -g switch, which uses \"git mv\" instead of mv. Added various fixes and test cases."
+          "text" => "(ms) Replace \"Foo/Bar\" in files just like \"Foo::Bar\". (ms) Replace pm files outside the regular dir structure."
         }
       ],
-      "line" => 4,
-      "note" => "(2013/07/27)",
-      "version" => "0.04"
+      "line" => 12,
+      "note" => "(2005/03/28)",
+      "version" => "0.02"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 17,
+          "style" => "",
+          "text" => "(ms) Where it all began."
+        }
+      ],
+      "line" => 16,
+      "note" => "(2005/03/27)",
+      "version" => "0.01"
     }
   ]
 }

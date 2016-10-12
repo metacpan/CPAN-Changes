@@ -2,520 +2,581 @@
   "preamble" => "Revision history for Bread-Board\n\n{{\$NEXT}}",
   "releases" => [
     {
-      "date" => "2008-01-07",
+      "date" => "2014-02-02",
       "entries" => [
         {
-          "line" => 361,
+          "line" => 6,
           "style" => "-",
-          "text" => "Out with the old (IOC) and in with the new (Bread::Board)"
+          "text" => "fix deprecated use of Class::MOP::load_class (Caleb Cushing, #33)"
         }
       ],
-      "line" => 360,
-      "raw_date" => "2008-01-07",
-      "version" => "0.01"
+      "line" => 5,
+      "raw_date" => "2014-02-02",
+      "version" => "0.30"
     },
     {
-      "date" => "2008-01-08",
+      "date" => "2013-11-21",
       "entries" => [
         {
-          "line" => 358,
+          "line" => 9,
           "style" => "-",
-          "text" => "forgot a dependency, whoops."
+          "text" => "Fix deprecated enum syntax"
         }
       ],
-      "line" => 357,
-      "raw_date" => "2008-01-08",
-      "version" => "0.02"
+      "line" => 8,
+      "raw_date" => "2013-11-21",
+      "version" => "0.29"
     },
     {
-      "date" => "2008-01-08",
+      "date" => "2013-08-30",
       "entries" => [
         {
-          "entries" => [
-            {
-              "entries" => [
-                {
-                  "line" => 355,
-                  "style" => "-",
-                  "text" => "added tests for this"
-                }
-              ],
-              "line" => 351,
-              "style" => "-",
-              "text" => "fixed the parameter validation to use a custom cache key, this is so that it plays nicely with the new MooseX::Params::Validate"
-            }
-          ],
-          "line" => 350,
-          "style" => "*",
-          "text" => "Bread::Board::Service::WithParameters"
+          "line" => 12,
+          "style" => "-",
+          "text" => "Allow overriding of services and containers. This is useful when using the common pattern of \"sub BUILD { my \$self = shift; container \$self => as { ... } }\" since the BUILD method in a subclass can modify existing services and containers that were defined in a superclass, rather than only being able to replace them (Florian Ragwitz, #26, #27)."
         }
       ],
-      "line" => 349,
-      "raw_date" => "2008-01-08",
-      "version" => "0.03"
+      "line" => 11,
+      "raw_date" => "2013-08-30",
+      "version" => "0.28"
     },
     {
-      "date" => "2008-10-31",
+      "date" => "2013-08-06",
       "entries" => [
         {
-          "entries" => [
-            {
-              "entries" => [
-                {
-                  "line" => 339,
-                  "style" => "-",
-                  "text" => "added tests for this"
-                }
-              ],
-              "line" => 338,
-              "style" => "-",
-              "text" => "fix root path handling (thanks to Daisuke Maki)"
-            }
-          ],
-          "line" => 336,
-          "style" => "*",
-          "text" => "Bread::Board Bread::Board::Traversable"
+          "line" => 19,
+          "style" => "-",
+          "text" => "allow the 'container \$obj' sugar for parameterized containers (Florian Ragwitz, #25)"
+        }
+      ],
+      "line" => 18,
+      "raw_date" => "2013-08-06",
+      "version" => "0.27"
+    },
+    {
+      "date" => "2013-08-01",
+      "entries" => [
+        {
+          "line" => 23,
+          "style" => "-",
+          "text" => "allow cloning containers with parameterized subcontainers (Florian Ragwitz, #22)"
         },
         {
-          "entries" => [
-            {
-              "line" => 342,
-              "style" => "-",
-              "text" => "Simple utility for dumping containers (thanks to Daisuke Maki)"
-            }
-          ],
-          "line" => 341,
-          "style" => "*",
-          "text" => "Bread::Board::Dumper"
+          "line" => 25,
+          "style" => "-",
+          "text" => "allow referencing parent services from parameterized subcontainers (Florian Ragwitz, #23)"
         },
         {
-          "entries" => [
-            {
-              "line" => 346,
-              "style" => "-",
-              "text" => "fixing the plans so that new versions of Test::More stop complaining"
-            }
-          ],
-          "line" => 345,
-          "style" => "*",
-          "text" => "t/"
+          "line" => 27,
+          "style" => "-",
+          "text" => "deprecate special case in path traversal where a path component with the name of the current container was ignored (doy, #20)"
+        },
+        {
+          "line" => 29,
+          "style" => "-",
+          "text" => "fix setting the current container multiple times from outside of a container (doy)"
+        },
+        {
+          "line" => 31,
+          "style" => "-",
+          "text" => "make some error messages more helpful (Jason Galea, #14)"
+        },
+        {
+          "line" => 32,
+          "style" => "-",
+          "text" => "doc improvements (Sterling Hanenkamp, zdk, Philippe Bruhat, and Gabor Szabo; #15, #17, #19, #21)"
+        },
+        {
+          "line" => 34,
+          "style" => "-",
+          "text" => "remove the (unmaintained) Bread::Board::GraphViz"
         }
       ],
-      "line" => 335,
-      "raw_date" => "2008-10-31",
-      "version" => "0.04"
+      "line" => 22,
+      "raw_date" => "2013-08-01",
+      "version" => "0.26"
     },
     {
-      "date" => "2008-11-03",
+      "date" => "2011-10-20",
       "entries" => [
-        {
-          "line" => 323,
-          "style" => "-",
-          "text" => "Applied immutablity to classes where applicable, and vigorously unimport Moose keywords when they are no longer needed. This results in x 2 performance as far as defining a Bread::Board model (Daisuke Maki)."
-        },
         {
           "entries" => [
             {
-              "line" => 328,
+              "line" => 38,
               "style" => "-",
-              "text" => "Implemented unimport(), thus allowing you to remove keywords exported by Bread::Board (Daisuke Maki)."
+              "text" => "the container sugar was misbehaving (since April 2010 apparently), so we have fixed it and clarified it"
             }
           ],
-          "line" => 327,
+          "line" => 37,
           "style" => "*",
           "text" => "Bread::Board"
+        }
+      ],
+      "line" => 36,
+      "raw_date" => "2011-10-20",
+      "version" => "0.25"
+    },
+    {
+      "date" => "2011-10-15",
+      "entries" => [
+        {
+          "entries" => [
+            {
+              "line" => 44,
+              "style" => "-",
+              "text" => "make sure to clone subcontainers, this is necessary for parameterized containers to retain their connections"
+            }
+          ],
+          "line" => 43,
+          "style" => "*",
+          "text" => "Bread::Board::Container"
         },
         {
           "entries" => [
             {
-              "line" => 332,
+              "line" => 49,
               "style" => "-",
-              "text" => "Unrolled recursive calls to loops, and removed Sub::Current dependency (Daisuke Maki)"
+              "text" => "add some errors, be a little more defensive"
             }
           ],
-          "line" => 331,
+          "line" => 48,
           "style" => "*",
           "text" => "Bread::Board::Traversable"
         }
       ],
-      "line" => 322,
-      "raw_date" => "2008-11-03",
-      "version" => "0.05"
+      "line" => 42,
+      "raw_date" => "2011-10-15",
+      "version" => "0.24"
     },
     {
-      "date" => "2008-11-03",
-      "entries" => [
-        {
-          "line" => 320,
-          "style" => "-",
-          "text" => "Forgot to update MANIFEST before uploading to CPAN."
-        }
-      ],
-      "line" => 319,
-      "raw_date" => "2008-11-03",
-      "version" => "0.06"
-    },
-    {
-      "date" => "2009-02-18",
-      "entries" => [
-        {
-          "line" => 316,
-          "style" => "-",
-          "text" => "Work with new MooseX::Params::Validate"
-        },
-        {
-          "line" => 317,
-          "style" => "-",
-          "text" => "Specify MX::P::Validate version number in Makefile.PL"
-        }
-      ],
-      "line" => 315,
-      "raw_date" => "2009-02-18",
-      "version" => "0.07"
-    },
-    {
-      "date" => "2009-07-18",
-      "entries" => [
-        {
-          "line" => 305,
-          "style" => "-",
-          "text" => "updating dates on all files"
-        },
-        {
-          "entries" => [
-            {
-              "line" => 308,
-              "style" => "-",
-              "text" => "new module added to support the idea of a singleton lifecycle keyed on the parameters rather then just a per-instance item."
-            }
-          ],
-          "line" => 307,
-          "style" => "*",
-          "text" => "Bread::Board::LifeCycle::Singleton::WithParameters"
-        },
-        {
-          "entries" => [
-            {
-              "line" => 313,
-              "style" => "-",
-              "text" => "fixed the is_weak_ref mis-spelling"
-            }
-          ],
-          "line" => 312,
-          "style" => "*",
-          "text" => "Bread::Board::Traversable"
-        }
-      ],
-      "line" => 304,
-      "raw_date" => "2009-07-18",
-      "version" => "0.08"
-    },
-    {
-      "date" => "2009-07-29",
-      "entries" => [
-        {
-          "entries" => [
-            {
-              "line" => 294,
-              "style" => "-",
-              "text" => "adding tests for this"
-            }
-          ],
-          "line" => 292,
-          "style" => "",
-          "text" => "Add cloning support for containers and services (thanks to jrockway for this)"
-        },
-        {
-          "entries" => [
-            {
-              "line" => 297,
-              "style" => "-",
-              "text" => "use meta->constructor_name instead of \"new\" if possible (jrockway)"
-            }
-          ],
-          "line" => 296,
-          "style" => "*",
-          "text" => "Bread::Board::ConstructorInjection"
-        },
-        {
-          "entries" => [
-            {
-              "line" => 301,
-              "style" => "-",
-              "text" => "fixing a leak where we would hold onto parameters that were passed into get()"
-            }
-          ],
-          "line" => 300,
-          "style" => "*",
-          "text" => "Bread::Board::Service::WithParameters"
-        }
-      ],
-      "line" => 291,
-      "raw_date" => "2009-07-29",
-      "version" => "0.09"
-    },
-    {
-      "date" => "2010-02-22",
-      "entries" => [
-        {
-          "entries" => [
-            {
-              "line" => 281,
-              "style" => "-",
-              "text" => "import strict and warnings into the caller upon import (Florian Ragwitz)"
-            },
-            {
-              "line" => 283,
-              "style" => "-",
-              "text" => "fixing the SYNOPSIS so that it will actually run (thanks to zby for spotting this)"
-            }
-          ],
-          "line" => 280,
-          "style" => "*",
-          "text" => "Bread::Board"
-        },
-        {
-          "entries" => [
-            {
-              "line" => 287,
-              "style" => "-",
-              "text" => "Add a constructor_name parameter for classes using MooseX::Traits or other things which need an alternately named constructor. (Tomas Doran)"
-            }
-          ],
-          "line" => 286,
-          "style" => "*",
-          "text" => "Bread::Board::ConstructorInjection"
-        }
-      ],
-      "line" => 279,
-      "raw_date" => "2010-02-22",
-      "version" => "0.10"
-    },
-    {
-      "date" => "2010-03-25",
-      "entries" => [
-        {
-          "line" => 276,
-          "style" => "*",
-          "text" => "Much improved documentation."
-        },
-        {
-          "line" => 277,
-          "style" => "*",
-          "text" => "Fixed inc/ to include all used Module-Install extensions."
-        }
-      ],
-      "line" => 275,
-      "raw_date" => "2010-03-25",
-      "version" => "0.11"
-    },
-    {
-      "date" => "2010-04-18",
+      "date" => "2011-10-14",
       "entries" => [
         {
           "entries" => [
             {
               "entries" => [
                 {
-                  "line" => 260,
+                  "line" => 57,
                   "style" => "-",
-                  "text" => "added tests for this"
+                  "text" => "this makes these containers more addressable when composed into higher level containers"
+                },
+                {
+                  "line" => 60,
+                  "style" => "-",
+                  "text" => "this helps when subclassing parameterized containers"
                 }
               ],
-              "line" => 257,
+              "line" => 54,
               "style" => "-",
-              "text" => "added the `include` keyword which will evaluate an external file within your Bread::Board configuration"
+              "text" => "retain control of names of the generated containers, so if your the container being generated has a name, it keeps it."
             },
             {
               "entries" => [
                 {
-                  "line" => 262,
+                  "line" => 64,
                   "style" => "-",
-                  "text" => "added tests for this"
+                  "text" => "also helps when subclassing parameterized containers as well"
                 }
               ],
-              "line" => 261,
+              "line" => 62,
               "style" => "-",
-              "text" => "added support for parameterized containers"
-            },
-            {
-              "entries" => [
-                {
-                  "line" => 266,
-                  "style" => "-",
-                  "text" => "added tests for this"
-                }
-              ],
-              "line" => 263,
-              "style" => "-",
-              "text" => "the 'container' keyword will now accept an instance of Bread::Board::Container instead of the name, this makes subclassing easier"
+              "text" => "switch the generated containers to be created with builder instead of default"
             }
           ],
-          "line" => 256,
+          "line" => 53,
           "style" => "*",
-          "text" => "Bread::Board"
-        },
-        {
-          "entries" => [
-            {
-              "line" => 269,
-              "style" => "-",
-              "text" => "added this module and tests"
-            }
-          ],
-          "line" => 268,
-          "style" => "+",
           "text" => "Bread::Board::Container::Parameterized"
         },
         {
           "entries" => [
             {
-              "line" => 272,
+              "line" => 68,
               "style" => "-",
-              "text" => "moved, re-organizad and added too the docs that were previously in Bread::Board.pm"
+              "text" => "fixing the error about Moose deprecations"
             }
           ],
-          "line" => 271,
-          "style" => "+",
-          "text" => "Bread::Baord::Manual"
+          "line" => 67,
+          "style" => "*",
+          "text" => "t/046_custom_parameter_service.t"
         }
       ],
-      "line" => 255,
-      "raw_date" => "2010-04-18",
-      "version" => "0.12"
+      "line" => 52,
+      "raw_date" => "2011-10-14",
+      "version" => "0.23"
     },
     {
-      "date" => "2010-04-23",
+      "date" => "2011-10-03",
+      "entries" => [
+        {
+          "line" => 71,
+          "style" => "-",
+          "text" => "When inferring a service for a type, allow subclasses to fulfill discovered types."
+        },
+        {
+          "line" => 73,
+          "style" => "-",
+          "text" => "Converted to Dist::Zilla"
+        }
+      ],
+      "line" => 70,
+      "raw_date" => "2011-10-03",
+      "version" => "0.22"
+    },
+    {
+      "date" => "2011-09-06",
       "entries" => [
         {
           "entries" => [
             {
               "entries" => [
                 {
-                  "line" => 241,
+                  "line" => 80,
                   "style" => "-",
-                  "text" => "added test for this"
+                  "text" => "added tests for this"
                 }
               ],
-              "line" => 239,
+              "line" => 77,
               "style" => "-",
-              "text" => "making the include keyword handle compilation errors better (doy)"
+              "text" => "Allow service() and alias() sugar functions to return the newly-created objects if the context container is not defined. (thanks to kip hampton)"
+            },
+            {
+              "line" => 81,
+              "style" => "-",
+              "text" => "this module is just an exporter, so it does not need to 'use Moose' (thanks to Tomas Doran)"
             }
           ],
-          "line" => 238,
+          "line" => 76,
           "style" => "*",
           "text" => "Bread::Board"
         },
         {
-          "entries" => [
-            {
-              "entries" => [
-                {
-                  "line" => 248,
-                  "style" => "-",
-                  "text" => "added tests for this"
-                }
-              ],
-              "line" => 245,
-              "style" => "-",
-              "text" => "it is now possible to store parameterized containers within regular containers and have them behave properly"
-            }
-          ],
-          "line" => 243,
-          "style" => "*",
-          "text" => "Bread::Board::Container Bread::Board::Container::Parameterized"
+          "line" => 84,
+          "style" => "-",
+          "text" => "fixed some spelling and grammar errors (thanks to ben hengst and Brad Bowman)"
         },
         {
           "entries" => [
             {
               "entries" => [
                 {
-                  "line" => 253,
+                  "line" => 91,
                   "style" => "-",
-                  "text" => "added tests to confirm they work"
+                  "text" => "added tests for this"
                 }
               ],
-              "line" => 251,
+              "line" => 88,
               "style" => "-",
-              "text" => "adding some examples of ways to use Bread::Board to the manual"
+              "text" => "parameters attribute now has a builder instead of a default, so as to allow better tweaking in subclasses (thanks to Andre Walker)"
             }
           ],
-          "line" => 250,
+          "line" => 87,
           "style" => "*",
-          "text" => "Bread::Board::Manual::Example::*"
+          "text" => "Bread::Board::Service::WithParameters"
         }
       ],
-      "line" => 237,
-      "raw_date" => "2010-04-23",
-      "version" => "0.13"
+      "line" => 75,
+      "raw_date" => "2011-09-06",
+      "version" => "0.21"
     },
     {
-      "date" => "2010-08-24",
+      "date" => "2011-06-13",
       "entries" => [
         {
           "entries" => [
             {
               "entries" => [
                 {
-                  "line" => 218,
+                  "line" => 97,
                   "style" => "-",
-                  "text" => "adjusted all the tests to account for this change."
-                },
-                {
-                  "line" => 220,
-                  "style" => "-",
-                  "text" => "adjusted all the docs to now use this approach instead"
+                  "text" => "added tests for this (thanks to perigrin)"
                 }
               ],
-              "line" => 215,
+              "line" => 95,
               "style" => "-",
-              "text" => "added the ->resolve method to replace the ->fetch( \$service )->get pattern that annoys mst so much."
+              "text" => "fix bug in singletons with circular refs (thanks to doy)"
             }
           ],
-          "line" => 214,
+          "line" => 94,
           "style" => "*",
-          "text" => "Bread::Board::Container"
-        },
+          "text" => "Bread::Board::Lifecycle::Singleton"
+        }
+      ],
+      "line" => 93,
+      "raw_date" => "2011-06-13",
+      "version" => "0.20"
+    },
+    {
+      "date" => "2011-06-01",
+      "entries" => [
         {
-          "line" => 223,
-          "style" => "-",
-          "text" => "now using Try::Tiny for all exception handling (except the Deferred service)"
+          "entries" => [
+            {
+              "entries" => [
+                {
+                  "line" => 103,
+                  "style" => "-",
+                  "text" => "note that this is optional and requires you to install optional dependencies"
+                }
+              ],
+              "line" => 101,
+              "style" => "-",
+              "text" => "added by jrockway, this allows you to visualise a Bread::Board system using GraphViz"
+            }
+          ],
+          "line" => 100,
+          "style" => "*",
+          "text" => "Bread::Board::GraphViz"
         },
         {
           "entries" => [
             {
               "entries" => [
                 {
-                  "line" => 232,
+                  "line" => 109,
                   "style" => "-",
                   "text" => "added tests for this"
                 }
               ],
-              "line" => 227,
+              "line" => 107,
               "style" => "-",
-              "text" => "if you want to depend on a parameterized service, now you can and it will return a Bread::Board::Service::Deferred::Thunk that you can call ->inflate on and pass in the parameters for it."
+              "text" => "add the ability to alias services under another name (thanks to doy)"
             }
           ],
-          "line" => 226,
+          "line" => 106,
           "style" => "*",
-          "text" => "Bread::Board::Service::WithDependencies"
+          "text" => "Bread::Board::Service::Alias"
         },
         {
           "entries" => [
             {
-              "line" => 235,
+              "line" => 112,
               "style" => "-",
-              "text" => "added this + tests for it"
+              "text" => "improving edge cases (thanks to doy)"
             }
           ],
-          "line" => 234,
+          "line" => 111,
           "style" => "*",
-          "text" => "Bread::Board::Service::Deferred::Thunk"
+          "text" => "Bread::Board::Service::Inferred"
+        },
+        {
+          "entries" => [
+            {
+              "line" => 115,
+              "style" => "-",
+              "text" => "several code improvements (thanks to doy)"
+            }
+          ],
+          "line" => 114,
+          "style" => "*",
+          "text" => "Bread::Board::Service::*"
+        },
+        {
+          "entries" => [
+            {
+              "entries" => [
+                {
+                  "line" => 120,
+                  "style" => "-",
+                  "text" => "added tests for this"
+                }
+              ],
+              "line" => 118,
+              "style" => "-",
+              "text" => "allow for custom Lifecycles by using the \"+\" prefix (thanks to jasonmay)"
+            }
+          ],
+          "line" => 117,
+          "style" => "*",
+          "text" => "Bread::Board::Service"
         }
       ],
-      "line" => 213,
-      "raw_date" => "2010-08-24",
-      "version" => "0.14"
+      "line" => 99,
+      "raw_date" => "2011-06-01",
+      "version" => "0.19"
+    },
+    {
+      "date" => "2011-04-13",
+      "entries" => [
+        {
+          "entries" => [
+            {
+              "line" => 124,
+              "style" => "-",
+              "text" => "added has_parameter_defaults method to check if a parameter has default values"
+            }
+          ],
+          "line" => 123,
+          "style" => "*",
+          "text" => "Bread::Board::Service::WithParameters"
+        },
+        {
+          "entries" => [
+            {
+              "entries" => [
+                {
+                  "line" => 129,
+                  "style" => "-",
+                  "text" => "added test for this (thanks to rafl)"
+                }
+              ],
+              "line" => 127,
+              "style" => "-",
+              "text" => "added a check for has_parameter_defaults before we make a Thunk"
+            }
+          ],
+          "line" => 126,
+          "style" => "*",
+          "text" => "Bread::Board::Service::WithDependencies"
+        }
+      ],
+      "line" => 122,
+      "raw_date" => "2011-04-13",
+      "version" => "0.18"
+    },
+    {
+      "date" => "2011-02-22",
+      "entries" => [
+        {
+          "entries" => [
+            {
+              "entries" => [
+                {
+                  "line" => 134,
+                  "style" => "-",
+                  "text" => "add tests for this"
+                }
+              ],
+              "line" => 133,
+              "style" => "-",
+              "text" => "make recrusive inferrence work"
+            }
+          ],
+          "line" => 132,
+          "style" => "*",
+          "text" => "Bread::Board::Service::Inferred"
+        },
+        {
+          "entries" => [
+            {
+              "line" => 137,
+              "style" => "-",
+              "text" => "small doc update about subclassing and the name parameter, resolving RT#63124 (thanks to Evan Haas)"
+            }
+          ],
+          "line" => 136,
+          "style" => "*",
+          "text" => "Bread::Board::Manual::Concepts::Advanced"
+        },
+        {
+          "line" => 141,
+          "style" => "",
+          "text" => "!! POSSIBLE BACK COMPAT BREAKAGE !!"
+        },
+        {
+          "entries" => [
+            {
+              "entries" => [
+                {
+                  "line" => 146,
+                  "style" => "-",
+                  "text" => "adjust tests accordingly"
+                },
+                {
+                  "line" => 147,
+                  "style" => "-",
+                  "text" => "this should fix RT#64478 as well"
+                }
+              ],
+              "line" => 143,
+              "style" => "-",
+              "text" => "make relative parent path traversal more sane, there should be no more need for excessive ../../ stuff in dependency service paths (thanks doy)"
+            }
+          ],
+          "line" => 142,
+          "style" => "*",
+          "text" => "Bread::Board::Traversal"
+        }
+      ],
+      "line" => 131,
+      "raw_date" => "2011-02-22",
+      "version" => "0.17"
+    },
+    {
+      "date" => "2011-01-10",
+      "entries" => [
+        {
+          "entries" => [
+            {
+              "entries" => [
+                {
+                  "line" => 154,
+                  "style" => "-",
+                  "text" => "added tests for this (062_service_class_w_sugar.t)"
+                }
+              ],
+              "line" => 151,
+              "style" => "-",
+              "text" => "adding the 'service_class' param for the service sugar function which allows you to pass in a custom service subclass"
+            }
+          ],
+          "line" => 150,
+          "style" => "*",
+          "text" => "Bread::Board::service sugar"
+        },
+        {
+          "entries" => [
+            {
+              "entries" => [
+                {
+                  "line" => 160,
+                  "style" => "-",
+                  "text" => "added tests for this (045_parameters_in_dependency.t)"
+                }
+              ],
+              "line" => 157,
+              "style" => "-",
+              "text" => "added the service_params attribute here so that it is possible to pass in parameters when you depend on a service which requires them"
+            }
+          ],
+          "line" => 156,
+          "style" => "*",
+          "text" => "Bread::Board::Dependency"
+        },
+        {
+          "entries" => [
+            {
+              "entries" => [
+                {
+                  "line" => 167,
+                  "style" => "-",
+                  "text" => "added tests for this (079_depending_on_type.t)"
+                }
+              ],
+              "line" => 163,
+              "style" => "-",
+              "text" => "when a typemapped service is created it is now named with the special 'type:' prefix. This allows you to depend on a typemapped service in a non-typemapped service"
+            }
+          ],
+          "line" => 162,
+          "style" => "*",
+          "text" => "Bread::Board::Service::Inferred"
+        },
+        {
+          "entries" => [
+            {
+              "line" => 170,
+              "style" => "-",
+              "text" => "improving the error messages when a container/service is not found"
+            }
+          ],
+          "line" => 169,
+          "style" => "*",
+          "text" => "Bread::Board::Traversable"
+        }
+      ],
+      "line" => 149,
+      "raw_date" => "2011-01-10",
+      "version" => "0.16"
     },
     {
       "date" => "2010-09-30",
@@ -648,581 +709,520 @@
       "version" => "0.15"
     },
     {
-      "date" => "2011-01-10",
+      "date" => "2010-08-24",
       "entries" => [
         {
           "entries" => [
             {
               "entries" => [
                 {
-                  "line" => 154,
+                  "line" => 218,
                   "style" => "-",
-                  "text" => "added tests for this (062_service_class_w_sugar.t)"
-                }
-              ],
-              "line" => 151,
-              "style" => "-",
-              "text" => "adding the 'service_class' param for the service sugar function which allows you to pass in a custom service subclass"
-            }
-          ],
-          "line" => 150,
-          "style" => "*",
-          "text" => "Bread::Board::service sugar"
-        },
-        {
-          "entries" => [
-            {
-              "entries" => [
-                {
-                  "line" => 160,
-                  "style" => "-",
-                  "text" => "added tests for this (045_parameters_in_dependency.t)"
-                }
-              ],
-              "line" => 157,
-              "style" => "-",
-              "text" => "added the service_params attribute here so that it is possible to pass in parameters when you depend on a service which requires them"
-            }
-          ],
-          "line" => 156,
-          "style" => "*",
-          "text" => "Bread::Board::Dependency"
-        },
-        {
-          "entries" => [
-            {
-              "entries" => [
-                {
-                  "line" => 167,
-                  "style" => "-",
-                  "text" => "added tests for this (079_depending_on_type.t)"
-                }
-              ],
-              "line" => 163,
-              "style" => "-",
-              "text" => "when a typemapped service is created it is now named with the special 'type:' prefix. This allows you to depend on a typemapped service in a non-typemapped service"
-            }
-          ],
-          "line" => 162,
-          "style" => "*",
-          "text" => "Bread::Board::Service::Inferred"
-        },
-        {
-          "entries" => [
-            {
-              "line" => 170,
-              "style" => "-",
-              "text" => "improving the error messages when a container/service is not found"
-            }
-          ],
-          "line" => 169,
-          "style" => "*",
-          "text" => "Bread::Board::Traversable"
-        }
-      ],
-      "line" => 149,
-      "raw_date" => "2011-01-10",
-      "version" => "0.16"
-    },
-    {
-      "date" => "2011-02-22",
-      "entries" => [
-        {
-          "entries" => [
-            {
-              "entries" => [
-                {
-                  "line" => 134,
-                  "style" => "-",
-                  "text" => "add tests for this"
-                }
-              ],
-              "line" => 133,
-              "style" => "-",
-              "text" => "make recrusive inferrence work"
-            }
-          ],
-          "line" => 132,
-          "style" => "*",
-          "text" => "Bread::Board::Service::Inferred"
-        },
-        {
-          "entries" => [
-            {
-              "line" => 137,
-              "style" => "-",
-              "text" => "small doc update about subclassing and the name parameter, resolving RT#63124 (thanks to Evan Haas)"
-            }
-          ],
-          "line" => 136,
-          "style" => "*",
-          "text" => "Bread::Board::Manual::Concepts::Advanced"
-        },
-        {
-          "line" => 141,
-          "style" => "",
-          "text" => "!! POSSIBLE BACK COMPAT BREAKAGE !!"
-        },
-        {
-          "entries" => [
-            {
-              "entries" => [
-                {
-                  "line" => 146,
-                  "style" => "-",
-                  "text" => "adjust tests accordingly"
+                  "text" => "adjusted all the tests to account for this change."
                 },
                 {
-                  "line" => 147,
+                  "line" => 220,
                   "style" => "-",
-                  "text" => "this should fix RT#64478 as well"
+                  "text" => "adjusted all the docs to now use this approach instead"
                 }
               ],
-              "line" => 143,
+              "line" => 215,
               "style" => "-",
-              "text" => "make relative parent path traversal more sane, there should be no more need for excessive ../../ stuff in dependency service paths (thanks doy)"
+              "text" => "added the ->resolve method to replace the ->fetch( \$service )->get pattern that annoys mst so much."
             }
           ],
-          "line" => 142,
+          "line" => 214,
           "style" => "*",
-          "text" => "Bread::Board::Traversal"
-        }
-      ],
-      "line" => 131,
-      "raw_date" => "2011-02-22",
-      "version" => "0.17"
-    },
-    {
-      "date" => "2011-04-13",
-      "entries" => [
+          "text" => "Bread::Board::Container"
+        },
         {
-          "entries" => [
-            {
-              "line" => 124,
-              "style" => "-",
-              "text" => "added has_parameter_defaults method to check if a parameter has default values"
-            }
-          ],
-          "line" => 123,
-          "style" => "*",
-          "text" => "Bread::Board::Service::WithParameters"
+          "line" => 223,
+          "style" => "-",
+          "text" => "now using Try::Tiny for all exception handling (except the Deferred service)"
         },
         {
           "entries" => [
             {
               "entries" => [
                 {
-                  "line" => 129,
+                  "line" => 232,
                   "style" => "-",
-                  "text" => "added test for this (thanks to rafl)"
+                  "text" => "added tests for this"
                 }
               ],
-              "line" => 127,
+              "line" => 227,
               "style" => "-",
-              "text" => "added a check for has_parameter_defaults before we make a Thunk"
+              "text" => "if you want to depend on a parameterized service, now you can and it will return a Bread::Board::Service::Deferred::Thunk that you can call ->inflate on and pass in the parameters for it."
             }
           ],
-          "line" => 126,
+          "line" => 226,
           "style" => "*",
           "text" => "Bread::Board::Service::WithDependencies"
+        },
+        {
+          "entries" => [
+            {
+              "line" => 235,
+              "style" => "-",
+              "text" => "added this + tests for it"
+            }
+          ],
+          "line" => 234,
+          "style" => "*",
+          "text" => "Bread::Board::Service::Deferred::Thunk"
         }
       ],
-      "line" => 122,
-      "raw_date" => "2011-04-13",
-      "version" => "0.18"
+      "line" => 213,
+      "raw_date" => "2010-08-24",
+      "version" => "0.14"
     },
     {
-      "date" => "2011-06-01",
+      "date" => "2010-04-23",
       "entries" => [
         {
           "entries" => [
             {
               "entries" => [
                 {
-                  "line" => 103,
+                  "line" => 241,
                   "style" => "-",
-                  "text" => "note that this is optional and requires you to install optional dependencies"
+                  "text" => "added test for this"
                 }
               ],
-              "line" => 101,
+              "line" => 239,
               "style" => "-",
-              "text" => "added by jrockway, this allows you to visualise a Bread::Board system using GraphViz"
+              "text" => "making the include keyword handle compilation errors better (doy)"
             }
           ],
-          "line" => 100,
-          "style" => "*",
-          "text" => "Bread::Board::GraphViz"
-        },
-        {
-          "entries" => [
-            {
-              "entries" => [
-                {
-                  "line" => 109,
-                  "style" => "-",
-                  "text" => "added tests for this"
-                }
-              ],
-              "line" => 107,
-              "style" => "-",
-              "text" => "add the ability to alias services under another name (thanks to doy)"
-            }
-          ],
-          "line" => 106,
-          "style" => "*",
-          "text" => "Bread::Board::Service::Alias"
-        },
-        {
-          "entries" => [
-            {
-              "line" => 112,
-              "style" => "-",
-              "text" => "improving edge cases (thanks to doy)"
-            }
-          ],
-          "line" => 111,
-          "style" => "*",
-          "text" => "Bread::Board::Service::Inferred"
-        },
-        {
-          "entries" => [
-            {
-              "line" => 115,
-              "style" => "-",
-              "text" => "several code improvements (thanks to doy)"
-            }
-          ],
-          "line" => 114,
-          "style" => "*",
-          "text" => "Bread::Board::Service::*"
-        },
-        {
-          "entries" => [
-            {
-              "entries" => [
-                {
-                  "line" => 120,
-                  "style" => "-",
-                  "text" => "added tests for this"
-                }
-              ],
-              "line" => 118,
-              "style" => "-",
-              "text" => "allow for custom Lifecycles by using the \"+\" prefix (thanks to jasonmay)"
-            }
-          ],
-          "line" => 117,
-          "style" => "*",
-          "text" => "Bread::Board::Service"
-        }
-      ],
-      "line" => 99,
-      "raw_date" => "2011-06-01",
-      "version" => "0.19"
-    },
-    {
-      "date" => "2011-06-13",
-      "entries" => [
-        {
-          "entries" => [
-            {
-              "entries" => [
-                {
-                  "line" => 97,
-                  "style" => "-",
-                  "text" => "added tests for this (thanks to perigrin)"
-                }
-              ],
-              "line" => 95,
-              "style" => "-",
-              "text" => "fix bug in singletons with circular refs (thanks to doy)"
-            }
-          ],
-          "line" => 94,
-          "style" => "*",
-          "text" => "Bread::Board::Lifecycle::Singleton"
-        }
-      ],
-      "line" => 93,
-      "raw_date" => "2011-06-13",
-      "version" => "0.20"
-    },
-    {
-      "date" => "2011-09-06",
-      "entries" => [
-        {
-          "entries" => [
-            {
-              "entries" => [
-                {
-                  "line" => 80,
-                  "style" => "-",
-                  "text" => "added tests for this"
-                }
-              ],
-              "line" => 77,
-              "style" => "-",
-              "text" => "Allow service() and alias() sugar functions to return the newly-created objects if the context container is not defined. (thanks to kip hampton)"
-            },
-            {
-              "line" => 81,
-              "style" => "-",
-              "text" => "this module is just an exporter, so it does not need to 'use Moose' (thanks to Tomas Doran)"
-            }
-          ],
-          "line" => 76,
+          "line" => 238,
           "style" => "*",
           "text" => "Bread::Board"
         },
         {
-          "line" => 84,
-          "style" => "-",
-          "text" => "fixed some spelling and grammar errors (thanks to ben hengst and Brad Bowman)"
-        },
-        {
           "entries" => [
             {
               "entries" => [
                 {
-                  "line" => 91,
+                  "line" => 248,
                   "style" => "-",
                   "text" => "added tests for this"
                 }
               ],
-              "line" => 88,
+              "line" => 245,
               "style" => "-",
-              "text" => "parameters attribute now has a builder instead of a default, so as to allow better tweaking in subclasses (thanks to Andre Walker)"
+              "text" => "it is now possible to store parameterized containers within regular containers and have them behave properly"
             }
           ],
-          "line" => 87,
+          "line" => 243,
           "style" => "*",
-          "text" => "Bread::Board::Service::WithParameters"
-        }
-      ],
-      "line" => 75,
-      "raw_date" => "2011-09-06",
-      "version" => "0.21"
-    },
-    {
-      "date" => "2011-10-03",
-      "entries" => [
-        {
-          "line" => 71,
-          "style" => "-",
-          "text" => "When inferring a service for a type, allow subclasses to fulfill discovered types."
+          "text" => "Bread::Board::Container Bread::Board::Container::Parameterized"
         },
         {
-          "line" => 73,
-          "style" => "-",
-          "text" => "Converted to Dist::Zilla"
+          "entries" => [
+            {
+              "entries" => [
+                {
+                  "line" => 253,
+                  "style" => "-",
+                  "text" => "added tests to confirm they work"
+                }
+              ],
+              "line" => 251,
+              "style" => "-",
+              "text" => "adding some examples of ways to use Bread::Board to the manual"
+            }
+          ],
+          "line" => 250,
+          "style" => "*",
+          "text" => "Bread::Board::Manual::Example::*"
         }
       ],
-      "line" => 70,
-      "raw_date" => "2011-10-03",
-      "version" => "0.22"
+      "line" => 237,
+      "raw_date" => "2010-04-23",
+      "version" => "0.13"
     },
     {
-      "date" => "2011-10-14",
+      "date" => "2010-04-18",
       "entries" => [
         {
           "entries" => [
             {
               "entries" => [
                 {
-                  "line" => 57,
+                  "line" => 260,
                   "style" => "-",
-                  "text" => "this makes these containers more addressable when composed into higher level containers"
-                },
-                {
-                  "line" => 60,
-                  "style" => "-",
-                  "text" => "this helps when subclassing parameterized containers"
+                  "text" => "added tests for this"
                 }
               ],
-              "line" => 54,
+              "line" => 257,
               "style" => "-",
-              "text" => "retain control of names of the generated containers, so if your the container being generated has a name, it keeps it."
+              "text" => "added the `include` keyword which will evaluate an external file within your Bread::Board configuration"
             },
             {
               "entries" => [
                 {
-                  "line" => 64,
+                  "line" => 262,
                   "style" => "-",
-                  "text" => "also helps when subclassing parameterized containers as well"
+                  "text" => "added tests for this"
                 }
               ],
-              "line" => 62,
+              "line" => 261,
               "style" => "-",
-              "text" => "switch the generated containers to be created with builder instead of default"
+              "text" => "added support for parameterized containers"
+            },
+            {
+              "entries" => [
+                {
+                  "line" => 266,
+                  "style" => "-",
+                  "text" => "added tests for this"
+                }
+              ],
+              "line" => 263,
+              "style" => "-",
+              "text" => "the 'container' keyword will now accept an instance of Bread::Board::Container instead of the name, this makes subclassing easier"
             }
           ],
-          "line" => 53,
+          "line" => 256,
           "style" => "*",
+          "text" => "Bread::Board"
+        },
+        {
+          "entries" => [
+            {
+              "line" => 269,
+              "style" => "-",
+              "text" => "added this module and tests"
+            }
+          ],
+          "line" => 268,
+          "style" => "+",
           "text" => "Bread::Board::Container::Parameterized"
         },
         {
           "entries" => [
             {
-              "line" => 68,
+              "line" => 272,
               "style" => "-",
-              "text" => "fixing the error about Moose deprecations"
+              "text" => "moved, re-organizad and added too the docs that were previously in Bread::Board.pm"
             }
           ],
-          "line" => 67,
-          "style" => "*",
-          "text" => "t/046_custom_parameter_service.t"
+          "line" => 271,
+          "style" => "+",
+          "text" => "Bread::Baord::Manual"
         }
       ],
-      "line" => 52,
-      "raw_date" => "2011-10-14",
-      "version" => "0.23"
+      "line" => 255,
+      "raw_date" => "2010-04-18",
+      "version" => "0.12"
     },
     {
-      "date" => "2011-10-15",
+      "date" => "2010-03-25",
+      "entries" => [
+        {
+          "line" => 276,
+          "style" => "*",
+          "text" => "Much improved documentation."
+        },
+        {
+          "line" => 277,
+          "style" => "*",
+          "text" => "Fixed inc/ to include all used Module-Install extensions."
+        }
+      ],
+      "line" => 275,
+      "raw_date" => "2010-03-25",
+      "version" => "0.11"
+    },
+    {
+      "date" => "2010-02-22",
       "entries" => [
         {
           "entries" => [
             {
-              "line" => 44,
+              "line" => 281,
               "style" => "-",
-              "text" => "make sure to clone subcontainers, this is necessary for parameterized containers to retain their connections"
+              "text" => "import strict and warnings into the caller upon import (Florian Ragwitz)"
+            },
+            {
+              "line" => 283,
+              "style" => "-",
+              "text" => "fixing the SYNOPSIS so that it will actually run (thanks to zby for spotting this)"
             }
           ],
-          "line" => 43,
+          "line" => 280,
           "style" => "*",
-          "text" => "Bread::Board::Container"
+          "text" => "Bread::Board"
         },
         {
           "entries" => [
             {
-              "line" => 49,
+              "line" => 287,
               "style" => "-",
-              "text" => "add some errors, be a little more defensive"
+              "text" => "Add a constructor_name parameter for classes using MooseX::Traits or other things which need an alternately named constructor. (Tomas Doran)"
             }
           ],
-          "line" => 48,
+          "line" => 286,
+          "style" => "*",
+          "text" => "Bread::Board::ConstructorInjection"
+        }
+      ],
+      "line" => 279,
+      "raw_date" => "2010-02-22",
+      "version" => "0.10"
+    },
+    {
+      "date" => "2009-07-29",
+      "entries" => [
+        {
+          "entries" => [
+            {
+              "line" => 294,
+              "style" => "-",
+              "text" => "adding tests for this"
+            }
+          ],
+          "line" => 292,
+          "style" => "",
+          "text" => "Add cloning support for containers and services (thanks to jrockway for this)"
+        },
+        {
+          "entries" => [
+            {
+              "line" => 297,
+              "style" => "-",
+              "text" => "use meta->constructor_name instead of \"new\" if possible (jrockway)"
+            }
+          ],
+          "line" => 296,
+          "style" => "*",
+          "text" => "Bread::Board::ConstructorInjection"
+        },
+        {
+          "entries" => [
+            {
+              "line" => 301,
+              "style" => "-",
+              "text" => "fixing a leak where we would hold onto parameters that were passed into get()"
+            }
+          ],
+          "line" => 300,
+          "style" => "*",
+          "text" => "Bread::Board::Service::WithParameters"
+        }
+      ],
+      "line" => 291,
+      "raw_date" => "2009-07-29",
+      "version" => "0.09"
+    },
+    {
+      "date" => "2009-07-18",
+      "entries" => [
+        {
+          "line" => 305,
+          "style" => "-",
+          "text" => "updating dates on all files"
+        },
+        {
+          "entries" => [
+            {
+              "line" => 308,
+              "style" => "-",
+              "text" => "new module added to support the idea of a singleton lifecycle keyed on the parameters rather then just a per-instance item."
+            }
+          ],
+          "line" => 307,
+          "style" => "*",
+          "text" => "Bread::Board::LifeCycle::Singleton::WithParameters"
+        },
+        {
+          "entries" => [
+            {
+              "line" => 313,
+              "style" => "-",
+              "text" => "fixed the is_weak_ref mis-spelling"
+            }
+          ],
+          "line" => 312,
           "style" => "*",
           "text" => "Bread::Board::Traversable"
         }
       ],
-      "line" => 42,
-      "raw_date" => "2011-10-15",
-      "version" => "0.24"
+      "line" => 304,
+      "raw_date" => "2009-07-18",
+      "version" => "0.08"
     },
     {
-      "date" => "2011-10-20",
+      "date" => "2009-02-18",
+      "entries" => [
+        {
+          "line" => 316,
+          "style" => "-",
+          "text" => "Work with new MooseX::Params::Validate"
+        },
+        {
+          "line" => 317,
+          "style" => "-",
+          "text" => "Specify MX::P::Validate version number in Makefile.PL"
+        }
+      ],
+      "line" => 315,
+      "raw_date" => "2009-02-18",
+      "version" => "0.07"
+    },
+    {
+      "date" => "2008-11-03",
+      "entries" => [
+        {
+          "line" => 320,
+          "style" => "-",
+          "text" => "Forgot to update MANIFEST before uploading to CPAN."
+        }
+      ],
+      "line" => 319,
+      "raw_date" => "2008-11-03",
+      "version" => "0.06"
+    },
+    {
+      "date" => "2008-11-03",
+      "entries" => [
+        {
+          "line" => 323,
+          "style" => "-",
+          "text" => "Applied immutablity to classes where applicable, and vigorously unimport Moose keywords when they are no longer needed. This results in x 2 performance as far as defining a Bread::Board model (Daisuke Maki)."
+        },
+        {
+          "entries" => [
+            {
+              "line" => 328,
+              "style" => "-",
+              "text" => "Implemented unimport(), thus allowing you to remove keywords exported by Bread::Board (Daisuke Maki)."
+            }
+          ],
+          "line" => 327,
+          "style" => "*",
+          "text" => "Bread::Board"
+        },
+        {
+          "entries" => [
+            {
+              "line" => 332,
+              "style" => "-",
+              "text" => "Unrolled recursive calls to loops, and removed Sub::Current dependency (Daisuke Maki)"
+            }
+          ],
+          "line" => 331,
+          "style" => "*",
+          "text" => "Bread::Board::Traversable"
+        }
+      ],
+      "line" => 322,
+      "raw_date" => "2008-11-03",
+      "version" => "0.05"
+    },
+    {
+      "date" => "2008-10-31",
       "entries" => [
         {
           "entries" => [
             {
-              "line" => 38,
+              "entries" => [
+                {
+                  "line" => 339,
+                  "style" => "-",
+                  "text" => "added tests for this"
+                }
+              ],
+              "line" => 338,
               "style" => "-",
-              "text" => "the container sugar was misbehaving (since April 2010 apparently), so we have fixed it and clarified it"
+              "text" => "fix root path handling (thanks to Daisuke Maki)"
             }
           ],
-          "line" => 37,
+          "line" => 336,
           "style" => "*",
-          "text" => "Bread::Board"
+          "text" => "Bread::Board Bread::Board::Traversable"
+        },
+        {
+          "entries" => [
+            {
+              "line" => 342,
+              "style" => "-",
+              "text" => "Simple utility for dumping containers (thanks to Daisuke Maki)"
+            }
+          ],
+          "line" => 341,
+          "style" => "*",
+          "text" => "Bread::Board::Dumper"
+        },
+        {
+          "entries" => [
+            {
+              "line" => 346,
+              "style" => "-",
+              "text" => "fixing the plans so that new versions of Test::More stop complaining"
+            }
+          ],
+          "line" => 345,
+          "style" => "*",
+          "text" => "t/"
         }
       ],
-      "line" => 36,
-      "raw_date" => "2011-10-20",
-      "version" => "0.25"
+      "line" => 335,
+      "raw_date" => "2008-10-31",
+      "version" => "0.04"
     },
     {
-      "date" => "2013-08-01",
+      "date" => "2008-01-08",
       "entries" => [
         {
-          "line" => 23,
-          "style" => "-",
-          "text" => "allow cloning containers with parameterized subcontainers (Florian Ragwitz, #22)"
-        },
-        {
-          "line" => 25,
-          "style" => "-",
-          "text" => "allow referencing parent services from parameterized subcontainers (Florian Ragwitz, #23)"
-        },
-        {
-          "line" => 27,
-          "style" => "-",
-          "text" => "deprecate special case in path traversal where a path component with the name of the current container was ignored (doy, #20)"
-        },
-        {
-          "line" => 29,
-          "style" => "-",
-          "text" => "fix setting the current container multiple times from outside of a container (doy)"
-        },
-        {
-          "line" => 31,
-          "style" => "-",
-          "text" => "make some error messages more helpful (Jason Galea, #14)"
-        },
-        {
-          "line" => 32,
-          "style" => "-",
-          "text" => "doc improvements (Sterling Hanenkamp, zdk, Philippe Bruhat, and Gabor Szabo; #15, #17, #19, #21)"
-        },
-        {
-          "line" => 34,
-          "style" => "-",
-          "text" => "remove the (unmaintained) Bread::Board::GraphViz"
+          "entries" => [
+            {
+              "entries" => [
+                {
+                  "line" => 355,
+                  "style" => "-",
+                  "text" => "added tests for this"
+                }
+              ],
+              "line" => 351,
+              "style" => "-",
+              "text" => "fixed the parameter validation to use a custom cache key, this is so that it plays nicely with the new MooseX::Params::Validate"
+            }
+          ],
+          "line" => 350,
+          "style" => "*",
+          "text" => "Bread::Board::Service::WithParameters"
         }
       ],
-      "line" => 22,
-      "raw_date" => "2013-08-01",
-      "version" => "0.26"
+      "line" => 349,
+      "raw_date" => "2008-01-08",
+      "version" => "0.03"
     },
     {
-      "date" => "2013-08-06",
+      "date" => "2008-01-08",
       "entries" => [
         {
-          "line" => 19,
+          "line" => 358,
           "style" => "-",
-          "text" => "allow the 'container \$obj' sugar for parameterized containers (Florian Ragwitz, #25)"
+          "text" => "forgot a dependency, whoops."
         }
       ],
-      "line" => 18,
-      "raw_date" => "2013-08-06",
-      "version" => "0.27"
+      "line" => 357,
+      "raw_date" => "2008-01-08",
+      "version" => "0.02"
     },
     {
-      "date" => "2013-08-30",
+      "date" => "2008-01-07",
       "entries" => [
         {
-          "line" => 12,
+          "line" => 361,
           "style" => "-",
-          "text" => "Allow overriding of services and containers. This is useful when using the common pattern of \"sub BUILD { my \$self = shift; container \$self => as { ... } }\" since the BUILD method in a subclass can modify existing services and containers that were defined in a superclass, rather than only being able to replace them (Florian Ragwitz, #26, #27)."
+          "text" => "Out with the old (IOC) and in with the new (Bread::Board)"
         }
       ],
-      "line" => 11,
-      "raw_date" => "2013-08-30",
-      "version" => "0.28"
-    },
-    {
-      "date" => "2013-11-21",
-      "entries" => [
-        {
-          "line" => 9,
-          "style" => "-",
-          "text" => "Fix deprecated enum syntax"
-        }
-      ],
-      "line" => 8,
-      "raw_date" => "2013-11-21",
-      "version" => "0.29"
-    },
-    {
-      "date" => "2014-02-02",
-      "entries" => [
-        {
-          "line" => 6,
-          "style" => "-",
-          "text" => "fix deprecated use of Class::MOP::load_class (Caleb Cushing, #33)"
-        }
-      ],
-      "line" => 5,
-      "raw_date" => "2014-02-02",
-      "version" => "0.30"
+      "line" => 360,
+      "raw_date" => "2008-01-07",
+      "version" => "0.01"
     }
   ]
 }

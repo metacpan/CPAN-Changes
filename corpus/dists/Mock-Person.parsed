@@ -2,6 +2,18 @@
   "preamble" => "Revision history for Mock::Person",
   "releases" => [
     {
+      "entries" => [
+        {
+          "line" => 4,
+          "style" => "",
+          "text" => "First release."
+        }
+      ],
+      "line" => 3,
+      "note" => "Tue Oct 26, 2010",
+      "version" => "0.01"
+    },
+    {
       "date" => "2013-06-23",
       "entries" => [
         {
@@ -13,18 +25,6 @@
       "line" => 6,
       "raw_date" => "2013-06-23",
       "version" => "0.02"
-    },
-    {
-      "entries" => [
-        {
-          "line" => 4,
-          "style" => "",
-          "text" => "First release."
-        }
-      ],
-      "line" => 3,
-      "note" => "Tue Oct 26, 2010",
-      "version" => "0.01"
     }
   ]
 }

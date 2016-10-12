@@ -4,20 +4,14 @@
     {
       "entries" => [
         {
-          "line" => 13,
+          "line" => 4,
           "style" => "*",
-          "text" => "First version, released on an unsuspecting world."
+          "text" => "Call 'openlog()' in all child processes. (GH#4, Sam Crawley)"
         }
       ],
-      "line" => 12,
-      "note" => "Jan 29th, 2010",
-      "version" => "0.1"
-    },
-    {
-      "entries" => [],
-      "line" => 10,
-      "note" => "October 5th, 2010",
-      "version" => "0.2"
+      "line" => 3,
+      "note" => "April 22nd, 2013",
+      "version" => "0.4"
     },
     {
       "entries" => [
@@ -37,16 +31,22 @@
       "version" => "0.3"
     },
     {
+      "entries" => [],
+      "line" => 10,
+      "note" => "October 5th, 2010",
+      "version" => "0.2"
+    },
+    {
       "entries" => [
         {
-          "line" => 4,
+          "line" => 13,
           "style" => "*",
-          "text" => "Call 'openlog()' in all child processes. (GH#4, Sam Crawley)"
+          "text" => "First version, released on an unsuspecting world."
         }
       ],
-      "line" => 3,
-      "note" => "April 22nd, 2013",
-      "version" => "0.4"
+      "line" => 12,
+      "note" => "Jan 29th, 2010",
+      "version" => "0.1"
     }
   ]
 }

@@ -2,147 +2,94 @@
   "preamble" => undef,
   "releases" => [
     {
-      "date" => "2009-07-08",
+      "date" => "2013-08-04",
       "entries" => [
         {
-          "line" => 89,
+          "line" => 3,
           "style" => "*",
-          "text" => "Initial release"
+          "text" => "Switch from the deprecated Any::Moose to Moo"
         }
       ],
-      "line" => 87,
-      "raw_date" => "2009-07-08",
-      "version" => "1.00"
+      "line" => 1,
+      "raw_date" => "2013-08-04",
+      "version" => "1.11"
     },
     {
-      "date" => "2009-08-11",
+      "date" => "2012-11-07",
       "entries" => [
         {
-          "line" => 81,
+          "line" => 7,
           "style" => "*",
-          "text" => "Fix breakage under Mouse due to Moose references"
+          "text" => "Provide and API got accessing the original key that a value was set with, in a case-preserving way.  If the case of the key in a file matters, it is now possible to determine."
         },
         {
-          "line" => 82,
+          "line" => 10,
           "style" => "*",
-          "text" => "New Config::GitLike::Git module for loading config files from the git locations"
-        },
-        {
-          "line" => 84,
-          "style" => "*",
-          "text" => "various cleanups of Makefile.PL"
-        },
-        {
-          "line" => 85,
-          "style" => "*",
-          "text" => "remove extraneous dep Regexp::Common"
+          "text" => "The 'name' value passed to the 'callback' parameter is now no longer forced to lower-case, as a consequence."
         }
       ],
-      "line" => 79,
-      "raw_date" => "2009-08-11",
-      "version" => "1.01"
+      "line" => 5,
+      "raw_date" => "2012-11-07",
+      "version" => "1.10"
     },
     {
-      "date" => "2009-08-19",
+      "date" => "2012-08-10",
       "entries" => [
         {
-          "line" => 75,
+          "line" => 15,
           "style" => "*",
-          "text" => "Bugfixes and extra tests for escaped \\ and \" in subsections (sunnavy)"
+          "text" => "Multiple bug fixes concerning filters, including empty filters, valueless keys, and applying filters to single values."
         },
         {
-          "line" => 76,
+          "line" => 17,
           "style" => "*",
-          "text" => "win32 fixes (sunnavy)"
+          "text" => "Add \"human\" argument to get_all and get_regexp, to match get"
         },
         {
-          "line" => 77,
+          "line" => 18,
           "style" => "*",
-          "text" => "auto-escape \\ and \" in subsections on set (sunnavy)"
+          "text" => "Add an add_comment method"
+        },
+        {
+          "line" => 19,
+          "style" => "*",
+          "text" => "Add an encoding attribute, which adds the appropriate layer on file I/O"
+        },
+        {
+          "line" => 21,
+          "style" => "*",
+          "text" => "Enforce that all keys must have sections, as git 1.7.4.4 began doing"
         }
       ],
-      "line" => 73,
-      "raw_date" => "2009-08-19",
-      "version" => "1.02"
+      "line" => 13,
+      "raw_date" => "2012-08-10",
+      "version" => "1.09"
     },
     {
-      "date" => "2010-01-03",
+      "date" => "2012-02-15",
       "entries" => [
         {
-          "line" => 66,
+          "line" => 25,
           "style" => "*",
-          "text" => "Filter without replace_all should only replace the _first_ match (alexmv)"
-        },
-        {
-          "line" => 67,
-          "style" => "*",
-          "text" => "Having a matching filter with multiple and not replace_all does mean replacement (alexmv)"
-        },
-        {
-          "line" => 69,
-          "style" => "*",
-          "text" => "Fix a test that failed because multiple now works, and we're too smart (alexmv)"
-        },
-        {
-          "line" => 71,
-          "style" => "*",
-          "text" => "Fix for when ->set_multiple called with no arguments (alexmv)"
+          "text" => "Fix loading of user_file, broken in dcdd01f, due to unexpanded ~ (alexmv, clkao\@clkao.org)"
         }
       ],
-      "line" => 64,
-      "raw_date" => "2010-01-03",
-      "version" => "1.03"
+      "line" => 23,
+      "raw_date" => "2012-02-15",
+      "version" => "1.08"
     },
     {
-      "date" => "2010-04-03",
+      "date" => "2011-10-25",
       "entries" => [
         {
-          "line" => 53,
+          "line" => 30,
           "style" => "*",
-          "text" => "The functionality of Config::GitLike::Cascaded has been folded into Config::GitLike as a \"cascade\" option, and the subpackage is now deprecated. (alexmv)"
-        },
-        {
-          "line" => 56,
-          "style" => "*",
-          "text" => "Config::GitLike::Git->new->load(\"/path/to/git\") when the path is lacking a \".git\", or is a bare repository, now works. (alexmv)"
-        },
-        {
-          "line" => 58,
-          "style" => "*",
-          "text" => "Fixed a bug wherein the home directory config file would be loaded twice, causing all values to be multiple, if that was your cwd. Reported by rjbs. (alexmv)"
-        },
-        {
-          "line" => 61,
-          "style" => "*",
-          "text" => "Allow explicitly calling ->load_file without previously having called ->load (alexmv)"
+          "text" => "Fix a spelling mistake in Config::GitLike::Cascaded (gregoa\@debian.org, forwarded by carnil\@debian.org)"
         }
       ],
-      "line" => 51,
-      "raw_date" => "2010-04-03",
-      "version" => "1.04"
-    },
-    {
-      "date" => "2011-01-07",
-      "entries" => [
-        {
-          "line" => 47,
-          "style" => "*",
-          "text" => "support Module::Install::ExtraTests 0.007 (sunnavy)"
-        },
-        {
-          "line" => 48,
-          "style" => "*",
-          "text" => "properly set is => 'rw' in inherited classes (trs, alexmv)"
-        },
-        {
-          "line" => 49,
-          "style" => "*",
-          "text" => "silence lc warnings on undef under perl 5.12 (iarnell\@gmail.com)"
-        }
-      ],
-      "line" => 45,
-      "raw_date" => "2011-01-07",
-      "version" => "1.05"
+      "line" => 28,
+      "raw_date" => "2011-10-25",
+      "version" => "1.07"
     },
     {
       "date" => "2011-10-12",
@@ -183,94 +130,147 @@
       "version" => "1.06"
     },
     {
-      "date" => "2011-10-25",
+      "date" => "2011-01-07",
       "entries" => [
         {
-          "line" => 30,
+          "line" => 47,
           "style" => "*",
-          "text" => "Fix a spelling mistake in Config::GitLike::Cascaded (gregoa\@debian.org, forwarded by carnil\@debian.org)"
+          "text" => "support Module::Install::ExtraTests 0.007 (sunnavy)"
+        },
+        {
+          "line" => 48,
+          "style" => "*",
+          "text" => "properly set is => 'rw' in inherited classes (trs, alexmv)"
+        },
+        {
+          "line" => 49,
+          "style" => "*",
+          "text" => "silence lc warnings on undef under perl 5.12 (iarnell\@gmail.com)"
         }
       ],
-      "line" => 28,
-      "raw_date" => "2011-10-25",
-      "version" => "1.07"
+      "line" => 45,
+      "raw_date" => "2011-01-07",
+      "version" => "1.05"
     },
     {
-      "date" => "2012-02-15",
+      "date" => "2010-04-03",
       "entries" => [
         {
-          "line" => 25,
+          "line" => 53,
           "style" => "*",
-          "text" => "Fix loading of user_file, broken in dcdd01f, due to unexpanded ~ (alexmv, clkao\@clkao.org)"
+          "text" => "The functionality of Config::GitLike::Cascaded has been folded into Config::GitLike as a \"cascade\" option, and the subpackage is now deprecated. (alexmv)"
+        },
+        {
+          "line" => 56,
+          "style" => "*",
+          "text" => "Config::GitLike::Git->new->load(\"/path/to/git\") when the path is lacking a \".git\", or is a bare repository, now works. (alexmv)"
+        },
+        {
+          "line" => 58,
+          "style" => "*",
+          "text" => "Fixed a bug wherein the home directory config file would be loaded twice, causing all values to be multiple, if that was your cwd. Reported by rjbs. (alexmv)"
+        },
+        {
+          "line" => 61,
+          "style" => "*",
+          "text" => "Allow explicitly calling ->load_file without previously having called ->load (alexmv)"
         }
       ],
-      "line" => 23,
-      "raw_date" => "2012-02-15",
-      "version" => "1.08"
+      "line" => 51,
+      "raw_date" => "2010-04-03",
+      "version" => "1.04"
     },
     {
-      "date" => "2012-08-10",
+      "date" => "2010-01-03",
       "entries" => [
         {
-          "line" => 15,
+          "line" => 66,
           "style" => "*",
-          "text" => "Multiple bug fixes concerning filters, including empty filters, valueless keys, and applying filters to single values."
+          "text" => "Filter without replace_all should only replace the _first_ match (alexmv)"
         },
         {
-          "line" => 17,
+          "line" => 67,
           "style" => "*",
-          "text" => "Add \"human\" argument to get_all and get_regexp, to match get"
+          "text" => "Having a matching filter with multiple and not replace_all does mean replacement (alexmv)"
         },
         {
-          "line" => 18,
+          "line" => 69,
           "style" => "*",
-          "text" => "Add an add_comment method"
+          "text" => "Fix a test that failed because multiple now works, and we're too smart (alexmv)"
         },
         {
-          "line" => 19,
+          "line" => 71,
           "style" => "*",
-          "text" => "Add an encoding attribute, which adds the appropriate layer on file I/O"
-        },
-        {
-          "line" => 21,
-          "style" => "*",
-          "text" => "Enforce that all keys must have sections, as git 1.7.4.4 began doing"
+          "text" => "Fix for when ->set_multiple called with no arguments (alexmv)"
         }
       ],
-      "line" => 13,
-      "raw_date" => "2012-08-10",
-      "version" => "1.09"
+      "line" => 64,
+      "raw_date" => "2010-01-03",
+      "version" => "1.03"
     },
     {
-      "date" => "2012-11-07",
+      "date" => "2009-08-19",
       "entries" => [
         {
-          "line" => 7,
+          "line" => 75,
           "style" => "*",
-          "text" => "Provide and API got accessing the original key that a value was set with, in a case-preserving way.  If the case of the key in a file matters, it is now possible to determine."
+          "text" => "Bugfixes and extra tests for escaped \\ and \" in subsections (sunnavy)"
         },
         {
-          "line" => 10,
+          "line" => 76,
           "style" => "*",
-          "text" => "The 'name' value passed to the 'callback' parameter is now no longer forced to lower-case, as a consequence."
+          "text" => "win32 fixes (sunnavy)"
+        },
+        {
+          "line" => 77,
+          "style" => "*",
+          "text" => "auto-escape \\ and \" in subsections on set (sunnavy)"
         }
       ],
-      "line" => 5,
-      "raw_date" => "2012-11-07",
-      "version" => "1.10"
+      "line" => 73,
+      "raw_date" => "2009-08-19",
+      "version" => "1.02"
     },
     {
-      "date" => "2013-08-04",
+      "date" => "2009-08-11",
       "entries" => [
         {
-          "line" => 3,
+          "line" => 81,
           "style" => "*",
-          "text" => "Switch from the deprecated Any::Moose to Moo"
+          "text" => "Fix breakage under Mouse due to Moose references"
+        },
+        {
+          "line" => 82,
+          "style" => "*",
+          "text" => "New Config::GitLike::Git module for loading config files from the git locations"
+        },
+        {
+          "line" => 84,
+          "style" => "*",
+          "text" => "various cleanups of Makefile.PL"
+        },
+        {
+          "line" => 85,
+          "style" => "*",
+          "text" => "remove extraneous dep Regexp::Common"
         }
       ],
-      "line" => 1,
-      "raw_date" => "2013-08-04",
-      "version" => "1.11"
+      "line" => 79,
+      "raw_date" => "2009-08-11",
+      "version" => "1.01"
+    },
+    {
+      "date" => "2009-07-08",
+      "entries" => [
+        {
+          "line" => 89,
+          "style" => "*",
+          "text" => "Initial release"
+        }
+      ],
+      "line" => 87,
+      "raw_date" => "2009-07-08",
+      "version" => "1.00"
     }
   ]
 }

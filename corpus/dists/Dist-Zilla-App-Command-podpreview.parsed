@@ -4,18 +4,6 @@
     {
       "entries" => [
         {
-          "line" => 9,
-          "style" => "*",
-          "text" => "Initial upload to CPAN"
-        }
-      ],
-      "line" => 8,
-      "note" => "01/04/2011",
-      "version" => "0.001"
-    },
-    {
-      "entries" => [
-        {
           "line" => 6,
           "style" => "*",
           "text" => "Fix error in pod"
@@ -24,6 +12,18 @@
       "line" => 5,
       "note" => "01/04/2011",
       "version" => "0.002"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 9,
+          "style" => "*",
+          "text" => "Initial upload to CPAN"
+        }
+      ],
+      "line" => 8,
+      "note" => "01/04/2011",
+      "version" => "0.001"
     }
   ]
 }

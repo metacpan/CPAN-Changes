@@ -4,38 +4,46 @@
     {
       "entries" => [
         {
-          "line" => 29,
-          "style" => "",
-          "text" => "First opensource release."
+          "line" => 6,
+          "style" => "*",
+          "text" => "minor POD improvements"
+        },
+        {
+          "line" => 7,
+          "style" => "*",
+          "text" => "don't package debian/ into CPAN distribution"
+        },
+        {
+          "line" => 8,
+          "style" => "*",
+          "text" => "fix cwd test on OS X"
         }
       ],
-      "line" => 28,
-      "note" => "Fri Jul 30, 2010",
-      "version" => "1.10"
+      "line" => 5,
+      "note" => "Sun Oct 14, 2012",
+      "version" => "1.15"
     },
     {
       "entries" => [
         {
-          "line" => 26,
-          "style" => "",
-          "text" => "Add Plack into CPAN deps."
-        }
-      ],
-      "line" => 25,
-      "note" => "Sat Jul 31, 2010",
-      "version" => "1.11"
-    },
-    {
-      "entries" => [
+          "line" => 11,
+          "style" => "*",
+          "text" => "group, env and cmd options"
+        },
         {
-          "line" => 23,
-          "style" => "",
-          "text" => "Pass 'port' option to plackup."
+          "line" => 12,
+          "style" => "*",
+          "text" => "deprecate app_name option, derive pidfile from service's full_name"
+        },
+        {
+          "line" => 13,
+          "style" => "*",
+          "text" => "improve and cleanup docs"
         }
       ],
-      "line" => 22,
-      "note" => "Sun Nov 07, 2010",
-      "version" => "1.12"
+      "line" => 10,
+      "note" => "Tue Jan 10, 2012",
+      "version" => "1.14"
     },
     {
       "entries" => [
@@ -67,46 +75,38 @@
     {
       "entries" => [
         {
-          "line" => 11,
-          "style" => "*",
-          "text" => "group, env and cmd options"
-        },
-        {
-          "line" => 12,
-          "style" => "*",
-          "text" => "deprecate app_name option, derive pidfile from service's full_name"
-        },
-        {
-          "line" => 13,
-          "style" => "*",
-          "text" => "improve and cleanup docs"
+          "line" => 23,
+          "style" => "",
+          "text" => "Pass 'port' option to plackup."
         }
       ],
-      "line" => 10,
-      "note" => "Tue Jan 10, 2012",
-      "version" => "1.14"
+      "line" => 22,
+      "note" => "Sun Nov 07, 2010",
+      "version" => "1.12"
     },
     {
       "entries" => [
         {
-          "line" => 6,
-          "style" => "*",
-          "text" => "minor POD improvements"
-        },
-        {
-          "line" => 7,
-          "style" => "*",
-          "text" => "don't package debian/ into CPAN distribution"
-        },
-        {
-          "line" => 8,
-          "style" => "*",
-          "text" => "fix cwd test on OS X"
+          "line" => 26,
+          "style" => "",
+          "text" => "Add Plack into CPAN deps."
         }
       ],
-      "line" => 5,
-      "note" => "Sun Oct 14, 2012",
-      "version" => "1.15"
+      "line" => 25,
+      "note" => "Sat Jul 31, 2010",
+      "version" => "1.11"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 29,
+          "style" => "",
+          "text" => "First opensource release."
+        }
+      ],
+      "line" => 28,
+      "note" => "Fri Jul 30, 2010",
+      "version" => "1.10"
     }
   ]
 }

@@ -2,64 +2,256 @@
   "preamble" => "Revision history for Perl extension WWW::Mechanize::Cached",
   "releases" => [
     {
+      "date" => "2013-06-29",
       "entries" => [
         {
-          "line" => 116,
-          "style" => "",
-          "text" => "Initial version, released by Iain Truskett."
+          "line" => 4,
+          "style" => "-",
+          "text" => "Allow caching w/ Content-Encoding == chunked + no size header (Kent Fredric)"
         }
       ],
-      "line" => 115,
-      "note" => "December 1, 2003",
-      "version" => "1.23"
+      "line" => 3,
+      "raw_date" => "2013-06-29",
+      "version" => "1.42"
     },
     {
-      "date" => "2004-01-18T23:10:40Z",
+      "date" => "2012-06-27",
       "entries" => [
         {
-          "line" => 107,
-          "style" => "",
-          "text" => "NO NEW FUNCTIONALITY."
+          "line" => 8,
+          "style" => "-",
+          "text" => "Account for content length when deciding whether to cache (Kent Fredric)"
+        }
+      ],
+      "line" => 7,
+      "raw_date" => "2012-06-27",
+      "version" => "1.41"
+    },
+    {
+      "date" => "2010-10-18",
+      "entries" => [
+        {
+          "line" => 11,
+          "style" => "-",
+          "text" => "Fixed file prefix in cache_key.t when run under Windows"
+        }
+      ],
+      "line" => 10,
+      "raw_date" => "2010-10-18",
+      "version" => "1.40"
+    },
+    {
+      "date" => "2010-10-09",
+      "entries" => [
+        {
+          "line" => 14,
+          "style" => "-",
+          "text" => "live tests now skip if we can't connect to the live URL"
         },
         {
-          "line" => 109,
-          "style" => "",
-          "text" => "On December 29th, 2003, Iain Truskett, the original author of WWW::Mechanize::Cached passed away.  I've taken over maintenance of the module.  If you're interested in carrying on Iain's work, let me know."
+          "line" => 15,
+          "style" => "-",
+          "text" => "Storable now has a specific version prerequisite"
         }
       ],
-      "line" => 105,
-      "raw_date" => "Sun Jan 18 23:10:40 CST 2004",
-      "version" => "1.24"
+      "line" => 13,
+      "raw_date" => "2010-10-09",
+      "version" => "1.39"
     },
     {
-      "date" => "2004-02-29T23:59:48Z",
+      "date" => "2010-10-07",
+      "entries" => [
+        {
+          "line" => 18,
+          "style" => "-",
+          "text" => "cache_key test should now be portable to Windows"
+        },
+        {
+          "line" => 19,
+          "style" => "-",
+          "text" => "Critic test removed as Dist::Zilla runs this test automatically"
+        },
+        {
+          "line" => 20,
+          "style" => "-",
+          "text" => "POD tests should now only be run by author"
+        }
+      ],
+      "line" => 17,
+      "raw_date" => "2010-10-07",
+      "version" => "1.38"
+    },
+    {
+      "date" => "2010-08-30",
+      "entries" => [
+        {
+          "line" => 23,
+          "style" => "-",
+          "text" => "Removed TestCache from Makefile.  Had been automatically added by Dist::Zilla"
+        }
+      ],
+      "line" => 22,
+      "raw_date" => "2010-08-30",
+      "version" => "1.37"
+    },
+    {
+      "date" => "2010-08-30",
+      "entries" => [
+        {
+          "line" => 27,
+          "style" => "-",
+          "text" => "Caching is now positive by default (was negative up to this point)"
+        },
+        {
+          "line" => 28,
+          "style" => "-",
+          "text" => "Referring URLs are now, by defaut, not used when creating cache keys. This reverses the behaviour of previous versions.  RT #56757"
+        },
+        {
+          "line" => 30,
+          "style" => "-",
+          "text" => "Now using Moose and Dist::Zilla"
+        }
+      ],
+      "line" => 26,
+      "raw_date" => "2010-08-30",
+      "version" => "1.36"
+    },
+    {
+      "date" => "2009-11-20",
+      "entries" => [
+        {
+          "line" => 33,
+          "style" => "-",
+          "text" => "Changed test URL, which was causing a small percentage of installs to fail"
+        },
+        {
+          "line" => 35,
+          "style" => "-",
+          "text" => "Added latest HTTP::Headers to prerequisites in order to prevent some failed installs"
+        }
+      ],
+      "line" => 32,
+      "raw_date" => "2009-11-20",
+      "version" => "1.35"
+    },
+    {
+      "date" => "2009-11-20",
+      "entries" => [
+        {
+          "line" => 39,
+          "style" => "-",
+          "text" => "Added first example script"
+        },
+        {
+          "line" => 40,
+          "style" => "-",
+          "text" => "Expanded documentation re: custom caches"
+        },
+        {
+          "line" => 41,
+          "style" => "-",
+          "text" => "Removed some outdated files from distro"
+        }
+      ],
+      "line" => 38,
+      "raw_date" => "2009-11-20",
+      "version" => "1.34"
+    },
+    {
+      "date" => "2009-07-13",
+      "entries" => [
+        {
+          "line" => 44,
+          "style" => "-",
+          "text" => "Now maintained by Olaf Alders.  Thanks to Andy Lester for offering to let me take this on."
+        },
+        {
+          "line" => 46,
+          "style" => "-",
+          "text" => "Applied patch from RT http://rt.cpan.org/Public/Bug/Display.html?id=42693 This fixes the \"Can't store CODE items\" errors"
+        },
+        {
+          "line" => 48,
+          "style" => "-",
+          "text" => "Now requires Test::Warn 0.11 (fixes errors in t/002-bad-custom-cache.t)"
+        },
+        {
+          "line" => 49,
+          "style" => "-",
+          "text" => "Moved development to GitHub: http://github.com/oalders/www-mechanize-cached/tree/master"
+        },
+        {
+          "line" => 50,
+          "style" => "-",
+          "text" => "Added Perl::Critic author tests"
+        }
+      ],
+      "line" => 43,
+      "raw_date" => "2009-07-13",
+      "version" => "1.33"
+    },
+    {
+      "date" => "2004-04-11T22:19:49Z",
       "entries" => [
         {
           "entries" => [
             {
-              "line" => 97,
+              "line" => 55,
               "style" => "*",
-              "text" => "Removed a duplicate \$key.  Cleaned up some of the internal code, and made the variable names more explicit."
+              "text" => "Added the \$mech->is_cached() method."
             },
             {
-              "line" => 100,
+              "line" => 57,
               "style" => "*",
-              "text" => "Added an autocheck=>1 to the t/cached.t test.  Also hits time.gov instead of Iain's now-gone website."
-            },
-            {
-              "line" => 103,
-              "style" => "*",
-              "text" => "Removed the SIGNATURE, which I don't intend to maintain."
+              "text" => "Verified that reusing an existing cache gives you the pages back."
             }
           ],
-          "line" => 96,
+          "line" => 54,
           "style" => "[]",
-          "text" => "FIXES"
+          "text" => "ENHANCEMENTS"
+        },
+        {
+          "entries" => [
+            {
+              "line" => 60,
+              "style" => "*",
+              "text" => "Now requires WWW::Mechanize 1.00, because previous versions goofed up the HTTP headers on some requests."
+            }
+          ],
+          "line" => 59,
+          "style" => "[]",
+          "text" => "INTERNAL"
         }
       ],
-      "line" => 94,
-      "raw_date" => "Sun Feb 29 23:59:48 CST 2004",
-      "version" => "1.26"
+      "line" => 52,
+      "raw_date" => "Sun Apr 11 22:19:49 CDT 2004",
+      "version" => "1.32"
+    },
+    {
+      "date" => "2004-03-14T02:51:19Z",
+      "entries" => [
+        {
+          "line" => 66,
+          "style" => "",
+          "text" => "No new features."
+        },
+        {
+          "entries" => [
+            {
+              "line" => 69,
+              "style" => "*",
+              "text" => "Fixed stupid configuration problem in t/bad-cache-test.t. If you got 1.28 installed OK, you don't need 1.30."
+            }
+          ],
+          "line" => 68,
+          "style" => "[]",
+          "text" => "FIXED"
+        }
+      ],
+      "line" => 64,
+      "raw_date" => "Sun Mar 14 02:51:19 CST 2004",
+      "version" => "1.30"
     },
     {
       "date" => "2004-03-13T22:05:26Z",
@@ -106,256 +298,64 @@
       "version" => "1.28"
     },
     {
-      "date" => "2004-03-14T02:51:19Z",
-      "entries" => [
-        {
-          "line" => 66,
-          "style" => "",
-          "text" => "No new features."
-        },
-        {
-          "entries" => [
-            {
-              "line" => 69,
-              "style" => "*",
-              "text" => "Fixed stupid configuration problem in t/bad-cache-test.t. If you got 1.28 installed OK, you don't need 1.30."
-            }
-          ],
-          "line" => 68,
-          "style" => "[]",
-          "text" => "FIXED"
-        }
-      ],
-      "line" => 64,
-      "raw_date" => "Sun Mar 14 02:51:19 CST 2004",
-      "version" => "1.30"
-    },
-    {
-      "date" => "2004-04-11T22:19:49Z",
+      "date" => "2004-02-29T23:59:48Z",
       "entries" => [
         {
           "entries" => [
             {
-              "line" => 55,
+              "line" => 97,
               "style" => "*",
-              "text" => "Added the \$mech->is_cached() method."
+              "text" => "Removed a duplicate \$key.  Cleaned up some of the internal code, and made the variable names more explicit."
             },
             {
-              "line" => 57,
+              "line" => 100,
               "style" => "*",
-              "text" => "Verified that reusing an existing cache gives you the pages back."
-            }
-          ],
-          "line" => 54,
-          "style" => "[]",
-          "text" => "ENHANCEMENTS"
-        },
-        {
-          "entries" => [
+              "text" => "Added an autocheck=>1 to the t/cached.t test.  Also hits time.gov instead of Iain's now-gone website."
+            },
             {
-              "line" => 60,
+              "line" => 103,
               "style" => "*",
-              "text" => "Now requires WWW::Mechanize 1.00, because previous versions goofed up the HTTP headers on some requests."
+              "text" => "Removed the SIGNATURE, which I don't intend to maintain."
             }
           ],
-          "line" => 59,
+          "line" => 96,
           "style" => "[]",
-          "text" => "INTERNAL"
+          "text" => "FIXES"
         }
       ],
-      "line" => 52,
-      "raw_date" => "Sun Apr 11 22:19:49 CDT 2004",
-      "version" => "1.32"
+      "line" => 94,
+      "raw_date" => "Sun Feb 29 23:59:48 CST 2004",
+      "version" => "1.26"
     },
     {
-      "date" => "2009-07-13",
+      "date" => "2004-01-18T23:10:40Z",
       "entries" => [
         {
-          "line" => 44,
-          "style" => "-",
-          "text" => "Now maintained by Olaf Alders.  Thanks to Andy Lester for offering to let me take this on."
+          "line" => 107,
+          "style" => "",
+          "text" => "NO NEW FUNCTIONALITY."
         },
         {
-          "line" => 46,
-          "style" => "-",
-          "text" => "Applied patch from RT http://rt.cpan.org/Public/Bug/Display.html?id=42693 This fixes the \"Can't store CODE items\" errors"
-        },
-        {
-          "line" => 48,
-          "style" => "-",
-          "text" => "Now requires Test::Warn 0.11 (fixes errors in t/002-bad-custom-cache.t)"
-        },
-        {
-          "line" => 49,
-          "style" => "-",
-          "text" => "Moved development to GitHub: http://github.com/oalders/www-mechanize-cached/tree/master"
-        },
-        {
-          "line" => 50,
-          "style" => "-",
-          "text" => "Added Perl::Critic author tests"
+          "line" => 109,
+          "style" => "",
+          "text" => "On December 29th, 2003, Iain Truskett, the original author of WWW::Mechanize::Cached passed away.  I've taken over maintenance of the module.  If you're interested in carrying on Iain's work, let me know."
         }
       ],
-      "line" => 43,
-      "raw_date" => "2009-07-13",
-      "version" => "1.33"
+      "line" => 105,
+      "raw_date" => "Sun Jan 18 23:10:40 CST 2004",
+      "version" => "1.24"
     },
     {
-      "date" => "2009-11-20",
       "entries" => [
         {
-          "line" => 39,
-          "style" => "-",
-          "text" => "Added first example script"
-        },
-        {
-          "line" => 40,
-          "style" => "-",
-          "text" => "Expanded documentation re: custom caches"
-        },
-        {
-          "line" => 41,
-          "style" => "-",
-          "text" => "Removed some outdated files from distro"
+          "line" => 116,
+          "style" => "",
+          "text" => "Initial version, released by Iain Truskett."
         }
       ],
-      "line" => 38,
-      "raw_date" => "2009-11-20",
-      "version" => "1.34"
-    },
-    {
-      "date" => "2009-11-20",
-      "entries" => [
-        {
-          "line" => 33,
-          "style" => "-",
-          "text" => "Changed test URL, which was causing a small percentage of installs to fail"
-        },
-        {
-          "line" => 35,
-          "style" => "-",
-          "text" => "Added latest HTTP::Headers to prerequisites in order to prevent some failed installs"
-        }
-      ],
-      "line" => 32,
-      "raw_date" => "2009-11-20",
-      "version" => "1.35"
-    },
-    {
-      "date" => "2010-08-30",
-      "entries" => [
-        {
-          "line" => 27,
-          "style" => "-",
-          "text" => "Caching is now positive by default (was negative up to this point)"
-        },
-        {
-          "line" => 28,
-          "style" => "-",
-          "text" => "Referring URLs are now, by defaut, not used when creating cache keys. This reverses the behaviour of previous versions.  RT #56757"
-        },
-        {
-          "line" => 30,
-          "style" => "-",
-          "text" => "Now using Moose and Dist::Zilla"
-        }
-      ],
-      "line" => 26,
-      "raw_date" => "2010-08-30",
-      "version" => "1.36"
-    },
-    {
-      "date" => "2010-08-30",
-      "entries" => [
-        {
-          "line" => 23,
-          "style" => "-",
-          "text" => "Removed TestCache from Makefile.  Had been automatically added by Dist::Zilla"
-        }
-      ],
-      "line" => 22,
-      "raw_date" => "2010-08-30",
-      "version" => "1.37"
-    },
-    {
-      "date" => "2010-10-07",
-      "entries" => [
-        {
-          "line" => 18,
-          "style" => "-",
-          "text" => "cache_key test should now be portable to Windows"
-        },
-        {
-          "line" => 19,
-          "style" => "-",
-          "text" => "Critic test removed as Dist::Zilla runs this test automatically"
-        },
-        {
-          "line" => 20,
-          "style" => "-",
-          "text" => "POD tests should now only be run by author"
-        }
-      ],
-      "line" => 17,
-      "raw_date" => "2010-10-07",
-      "version" => "1.38"
-    },
-    {
-      "date" => "2010-10-09",
-      "entries" => [
-        {
-          "line" => 14,
-          "style" => "-",
-          "text" => "live tests now skip if we can't connect to the live URL"
-        },
-        {
-          "line" => 15,
-          "style" => "-",
-          "text" => "Storable now has a specific version prerequisite"
-        }
-      ],
-      "line" => 13,
-      "raw_date" => "2010-10-09",
-      "version" => "1.39"
-    },
-    {
-      "date" => "2010-10-18",
-      "entries" => [
-        {
-          "line" => 11,
-          "style" => "-",
-          "text" => "Fixed file prefix in cache_key.t when run under Windows"
-        }
-      ],
-      "line" => 10,
-      "raw_date" => "2010-10-18",
-      "version" => "1.40"
-    },
-    {
-      "date" => "2012-06-27",
-      "entries" => [
-        {
-          "line" => 8,
-          "style" => "-",
-          "text" => "Account for content length when deciding whether to cache (Kent Fredric)"
-        }
-      ],
-      "line" => 7,
-      "raw_date" => "2012-06-27",
-      "version" => "1.41"
-    },
-    {
-      "date" => "2013-06-29",
-      "entries" => [
-        {
-          "line" => 4,
-          "style" => "-",
-          "text" => "Allow caching w/ Content-Encoding == chunked + no size header (Kent Fredric)"
-        }
-      ],
-      "line" => 3,
-      "raw_date" => "2013-06-29",
-      "version" => "1.42"
+      "line" => 115,
+      "note" => "December 1, 2003",
+      "version" => "1.23"
     }
   ]
 }

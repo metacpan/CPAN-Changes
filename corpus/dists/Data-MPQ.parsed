@@ -4,26 +4,19 @@
     {
       "entries" => [
         {
-          "line" => 11,
+          "line" => 2,
           "style" => "-",
-          "text" => "First version"
-        }
-      ],
-      "line" => 10,
-      "note" => "23 Oct 2011",
-      "version" => "0.01"
-    },
-    {
-      "entries" => [
+          "text" => "Add full covered tests for Data::MPQ"
+        },
         {
-          "line" => 9,
+          "line" => 3,
           "style" => "-",
-          "text" => "Fix bugs at 32bit platform"
+          "text" => "Change repository name in META"
         }
       ],
-      "line" => 8,
-      "note" => "26 Oct 2011",
-      "version" => "0.02"
+      "line" => 1,
+      "note" => "30 Oct 2011",
+      "version" => "0.04"
     },
     {
       "entries" => [
@@ -50,19 +43,26 @@
     {
       "entries" => [
         {
-          "line" => 2,
+          "line" => 9,
           "style" => "-",
-          "text" => "Add full covered tests for Data::MPQ"
-        },
-        {
-          "line" => 3,
-          "style" => "-",
-          "text" => "Change repository name in META"
+          "text" => "Fix bugs at 32bit platform"
         }
       ],
-      "line" => 1,
-      "note" => "30 Oct 2011",
-      "version" => "0.04"
+      "line" => 8,
+      "note" => "26 Oct 2011",
+      "version" => "0.02"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 11,
+          "style" => "-",
+          "text" => "First version"
+        }
+      ],
+      "line" => 10,
+      "note" => "23 Oct 2011",
+      "version" => "0.01"
     }
   ]
 }

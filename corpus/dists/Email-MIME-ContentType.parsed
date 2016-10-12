@@ -2,17 +2,109 @@
   "preamble" => "Revision history for Perl extension Email::MIME::ContentType\n\n{{\$NEXT}}",
   "releases" => [
     {
-      "date" => "2004-01-07T17:38:23Z",
+      "date" => "2013-08-10T23:19:14Z",
       "entries" => [
         {
-          "line" => 38,
+          "entries" => [
+            {
+              "line" => 7,
+              "style" => "[]",
+              "text" => "rt.cpan.org #87460"
+            }
+          ],
+          "line" => 6,
           "style" => "-",
-          "text" => "original version; created by h2xs 1.22 with options -AX -b 5.6.0 -n Email::MIME::ContentType"
+          "text" => "make \$STRICT_PARAMS actually work! (thanks, Matthew Green!)"
         }
       ],
-      "line" => 37,
-      "raw_date" => "Wed Jan  7 17:38:23 2004",
-      "version" => "0.01"
+      "line" => 5,
+      "note" => "America/New_York",
+      "raw_date" => "2013-08-10 23:19:14 America/New_York",
+      "version" => "1.017"
+    },
+    {
+      "date" => "2013-08-10T23:14:42Z",
+      "entries" => [
+        {
+          "line" => 10,
+          "style" => "-",
+          "text" => "correct the longstanding and embarrassing misuse of \"discrete\" and \"composite\" to mean \"type\" and \"subtype\"; the returned data still contains the wrong old names so your code shouldn't break"
+        },
+        {
+          "line" => 14,
+          "style" => "-",
+          "text" => "repackage to update bugtracker, repo, etc."
+        }
+      ],
+      "line" => 9,
+      "note" => "America/New_York",
+      "raw_date" => "2013-08-10 23:14:42 America/New_York",
+      "version" => "1.016"
+    },
+    {
+      "date" => "2009-01-22",
+      "entries" => [
+        {
+          "line" => 17,
+          "style" => "-",
+          "text" => "add repo metadata"
+        }
+      ],
+      "line" => 16,
+      "raw_date" => "2009-01-22",
+      "version" => "1.015"
+    },
+    {
+      "date" => "2007-03-22",
+      "entries" => [
+        {
+          "line" => 20,
+          "style" => "-",
+          "text" => "packaging improvements"
+        }
+      ],
+      "line" => 19,
+      "raw_date" => "2007-03-22",
+      "version" => "1.014"
+    },
+    {
+      "date" => "2007-03-20",
+      "entries" => [
+        {
+          "line" => 23,
+          "style" => "-",
+          "text" => "fix significantly broken SYNOPSIS"
+        }
+      ],
+      "line" => 22,
+      "raw_date" => "2007-03-20",
+      "version" => "1.013"
+    },
+    {
+      "date" => "2006-11-25",
+      "entries" => [
+        {
+          "line" => 26,
+          "style" => "-",
+          "text" => "allow carp-avoidance through (ugh) package variable; bug 14076"
+        }
+      ],
+      "line" => 25,
+      "raw_date" => "2006-11-25",
+      "version" => "1.012"
+    },
+    {
+      "date" => "2006-10-12",
+      "entries" => [
+        {
+          "line" => 29,
+          "style" => "-",
+          "text" => "clearer special case for undef/empty content-type (thanks, JESSE!)"
+        }
+      ],
+      "line" => 28,
+      "raw_date" => "2006-10-12",
+      "version" => "1.011"
     },
     {
       "entries" => [
@@ -36,109 +128,17 @@
       "version" => "1.01"
     },
     {
-      "date" => "2006-10-12",
+      "date" => "2004-01-07T17:38:23Z",
       "entries" => [
         {
-          "line" => 29,
+          "line" => 38,
           "style" => "-",
-          "text" => "clearer special case for undef/empty content-type (thanks, JESSE!)"
+          "text" => "original version; created by h2xs 1.22 with options -AX -b 5.6.0 -n Email::MIME::ContentType"
         }
       ],
-      "line" => 28,
-      "raw_date" => "2006-10-12",
-      "version" => "1.011"
-    },
-    {
-      "date" => "2006-11-25",
-      "entries" => [
-        {
-          "line" => 26,
-          "style" => "-",
-          "text" => "allow carp-avoidance through (ugh) package variable; bug 14076"
-        }
-      ],
-      "line" => 25,
-      "raw_date" => "2006-11-25",
-      "version" => "1.012"
-    },
-    {
-      "date" => "2007-03-20",
-      "entries" => [
-        {
-          "line" => 23,
-          "style" => "-",
-          "text" => "fix significantly broken SYNOPSIS"
-        }
-      ],
-      "line" => 22,
-      "raw_date" => "2007-03-20",
-      "version" => "1.013"
-    },
-    {
-      "date" => "2007-03-22",
-      "entries" => [
-        {
-          "line" => 20,
-          "style" => "-",
-          "text" => "packaging improvements"
-        }
-      ],
-      "line" => 19,
-      "raw_date" => "2007-03-22",
-      "version" => "1.014"
-    },
-    {
-      "date" => "2009-01-22",
-      "entries" => [
-        {
-          "line" => 17,
-          "style" => "-",
-          "text" => "add repo metadata"
-        }
-      ],
-      "line" => 16,
-      "raw_date" => "2009-01-22",
-      "version" => "1.015"
-    },
-    {
-      "date" => "2013-08-10T23:14:42Z",
-      "entries" => [
-        {
-          "line" => 10,
-          "style" => "-",
-          "text" => "correct the longstanding and embarrassing misuse of \"discrete\" and \"composite\" to mean \"type\" and \"subtype\"; the returned data still contains the wrong old names so your code shouldn't break"
-        },
-        {
-          "line" => 14,
-          "style" => "-",
-          "text" => "repackage to update bugtracker, repo, etc."
-        }
-      ],
-      "line" => 9,
-      "note" => "America/New_York",
-      "raw_date" => "2013-08-10 23:14:42 America/New_York",
-      "version" => "1.016"
-    },
-    {
-      "date" => "2013-08-10T23:19:14Z",
-      "entries" => [
-        {
-          "entries" => [
-            {
-              "line" => 7,
-              "style" => "[]",
-              "text" => "rt.cpan.org #87460"
-            }
-          ],
-          "line" => 6,
-          "style" => "-",
-          "text" => "make \$STRICT_PARAMS actually work! (thanks, Matthew Green!)"
-        }
-      ],
-      "line" => 5,
-      "note" => "America/New_York",
-      "raw_date" => "2013-08-10 23:19:14 America/New_York",
-      "version" => "1.017"
+      "line" => 37,
+      "raw_date" => "Wed Jan  7 17:38:23 2004",
+      "version" => "0.01"
     }
   ]
 }

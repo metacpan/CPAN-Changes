@@ -2,12 +2,6 @@
   "preamble" => "Revision history for Params-Dry-Declare",
   "releases" => [
     {
-      "entries" => [],
-      "line" => 5,
-      "note" => "Fix example (Param -> Param::Dry",
-      "version" => "0.9901"
-    },
-    {
       "entries" => [
         {
           "line" => 4,
@@ -18,6 +12,12 @@
       "line" => 3,
       "note" => "Date/time",
       "version" => "0.99"
+    },
+    {
+      "entries" => [],
+      "line" => 5,
+      "note" => "Fix example (Param -> Param::Dry",
+      "version" => "0.9901"
     }
   ]
 }

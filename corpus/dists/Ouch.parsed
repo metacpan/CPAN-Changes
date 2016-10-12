@@ -4,82 +4,62 @@
     {
       "entries" => [
         {
-          "line" => 40,
+          "line" => 2,
           "style" => "-",
-          "text" => "Initial public release."
+          "text" => "Catch subclasses of Ouch as well Thanks to Graham Knop."
         }
       ],
-      "line" => 39,
-      "note" => "April 13, 2011",
-      "version" => "0.0100"
+      "line" => 1,
+      "note" => "September 23, 2013",
+      "version" => "0.0407"
     },
     {
       "entries" => [
         {
-          "line" => 37,
+          "line" => 5,
           "style" => "-",
-          "text" => "Added 'bleep'."
+          "text" => "Ouch doesn't need 5.12 afterall. Just needed to include the correct prereqs for the pragmas. Thanks to MidLifeXis and Ether."
         }
       ],
-      "line" => 36,
-      "note" => "April 14, 2011",
-      "version" => "0.0200"
+      "line" => 4,
+      "note" => "September 13, 2013",
+      "version" => "0.0406"
     },
     {
       "entries" => [
         {
-          "line" => 30,
+          "line" => 8,
           "style" => "-",
-          "text" => "Added hug() as a catch all."
-        },
-        {
-          "line" => 32,
-          "style" => "",
-          "text" => "By popular demand: http://blogs.perl.org/users/jt_smith/2011/04/ouch---exceptions-that-dont-hurt.html#comments"
-        },
-        {
-          "line" => 33,
-          "style" => "-",
-          "text" => "Codes can now be strings."
-        },
-        {
-          "line" => 34,
-          "style" => "-",
-          "text" => "Added an export called 'traditional' which gives you more traditional names like try(), catch(), throw(), and catch_all()."
+          "text" => "worr submitted a patch fixing some a POD error"
         }
       ],
-      "line" => 29,
-      "note" => "April 14, 2011",
-      "version" => "0.0300"
+      "line" => 7,
+      "note" => "August 19, 2013",
+      "version" => "0.0405"
     },
     {
       "entries" => [
         {
-          "line" => 26,
+          "line" => 11,
           "style" => "-",
-          "text" => "Merged barf() from William Orr."
-        },
-        {
-          "line" => 27,
-          "style" => "-",
-          "text" => "Added an export called \":trytiny\" which exports throw(), caught(), and caught_all()."
+          "text" => "Made Ouch explicitly require Perl 5.12 due to use of \"use overload\" and \"use parent\"."
         }
       ],
-      "line" => 25,
-      "note" => "April 30, 2011",
-      "version" => "0.0400"
+      "line" => 10,
+      "note" => "August 19, 2013",
+      "version" => "0.0404"
     },
     {
       "entries" => [
         {
-          "line" => 23,
+          "line" => 14,
           "style" => "-",
-          "text" => "beppu pointed out there was no \$VERSION. Told Dist::Zilla to add that."
+          "text" => "Fixed documentation misspellings. \@richdouglasevans"
         }
       ],
-      "line" => 22,
-      "note" => "April 30, 2011",
-      "version" => "0.0401"
+      "line" => 13,
+      "note" => "July 11, 2013",
+      "version" => "0.0403"
     },
     {
       "entries" => [
@@ -111,62 +91,82 @@
     {
       "entries" => [
         {
-          "line" => 14,
+          "line" => 23,
           "style" => "-",
-          "text" => "Fixed documentation misspellings. \@richdouglasevans"
+          "text" => "beppu pointed out there was no \$VERSION. Told Dist::Zilla to add that."
         }
       ],
-      "line" => 13,
-      "note" => "July 11, 2013",
-      "version" => "0.0403"
+      "line" => 22,
+      "note" => "April 30, 2011",
+      "version" => "0.0401"
     },
     {
       "entries" => [
         {
-          "line" => 11,
+          "line" => 26,
           "style" => "-",
-          "text" => "Made Ouch explicitly require Perl 5.12 due to use of \"use overload\" and \"use parent\"."
+          "text" => "Merged barf() from William Orr."
+        },
+        {
+          "line" => 27,
+          "style" => "-",
+          "text" => "Added an export called \":trytiny\" which exports throw(), caught(), and caught_all()."
         }
       ],
-      "line" => 10,
-      "note" => "August 19, 2013",
-      "version" => "0.0404"
+      "line" => 25,
+      "note" => "April 30, 2011",
+      "version" => "0.0400"
     },
     {
       "entries" => [
         {
-          "line" => 8,
+          "line" => 30,
           "style" => "-",
-          "text" => "worr submitted a patch fixing some a POD error"
+          "text" => "Added hug() as a catch all."
+        },
+        {
+          "line" => 32,
+          "style" => "",
+          "text" => "By popular demand: http://blogs.perl.org/users/jt_smith/2011/04/ouch---exceptions-that-dont-hurt.html#comments"
+        },
+        {
+          "line" => 33,
+          "style" => "-",
+          "text" => "Codes can now be strings."
+        },
+        {
+          "line" => 34,
+          "style" => "-",
+          "text" => "Added an export called 'traditional' which gives you more traditional names like try(), catch(), throw(), and catch_all()."
         }
       ],
-      "line" => 7,
-      "note" => "August 19, 2013",
-      "version" => "0.0405"
+      "line" => 29,
+      "note" => "April 14, 2011",
+      "version" => "0.0300"
     },
     {
       "entries" => [
         {
-          "line" => 5,
+          "line" => 37,
           "style" => "-",
-          "text" => "Ouch doesn't need 5.12 afterall. Just needed to include the correct prereqs for the pragmas. Thanks to MidLifeXis and Ether."
+          "text" => "Added 'bleep'."
         }
       ],
-      "line" => 4,
-      "note" => "September 13, 2013",
-      "version" => "0.0406"
+      "line" => 36,
+      "note" => "April 14, 2011",
+      "version" => "0.0200"
     },
     {
       "entries" => [
         {
-          "line" => 2,
+          "line" => 40,
           "style" => "-",
-          "text" => "Catch subclasses of Ouch as well Thanks to Graham Knop."
+          "text" => "Initial public release."
         }
       ],
-      "line" => 1,
-      "note" => "September 23, 2013",
-      "version" => "0.0407"
+      "line" => 39,
+      "note" => "April 13, 2011",
+      "version" => "0.0100"
     }
   ]
 }

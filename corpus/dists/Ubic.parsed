@@ -2,387 +2,1179 @@
   "preamble" => "Revision history for Ubic\n\n{{\$NEXT}}",
   "releases" => [
     {
+      "date" => "2013-07-26",
       "entries" => [
         {
-          "line" => 377,
-          "style" => "",
-          "text" => "First opensource release."
+          "line" => 6,
+          "style" => "*",
+          "text" => "support PERLBREW_ROOT (thanks to github:spacebat for the patch, see https://github.com/berekuk/Ubic/pull/54)"
         }
       ],
-      "line" => 376,
-      "note" => "Wed Apr 28, 2010",
-      "version" => "1.00"
+      "line" => 5,
+      "raw_date" => "2013-07-26",
+      "version" => "1.55"
     },
     {
+      "date" => "2013-05-28",
       "entries" => [
         {
-          "line" => 374,
-          "style" => "",
-          "text" => "Just fixing debian dependency issues."
+          "line" => 10,
+          "style" => "*",
+          "text" => "'auto_start' option in Ubic::Service and SimpleDaemon"
         }
       ],
-      "line" => 373,
-      "note" => "Thu Apr 29, 2010",
-      "version" => "1.01"
+      "line" => 9,
+      "raw_date" => "2013-05-28",
+      "version" => "1.54"
     },
     {
+      "date" => "2013-05-18",
       "entries" => [
         {
-          "line" => 371,
-          "style" => "",
-          "text" => "Remove old configs from old yandex-ubic package."
+          "line" => 13,
+          "style" => "*",
+          "text" => "fix crontab generation on setup!"
         }
       ],
-      "line" => 370,
-      "note" => "Tue May 4, 2010",
-      "version" => "1.02"
+      "line" => 12,
+      "raw_date" => "2013-05-18",
+      "version" => "1.53"
     },
     {
+      "date" => "2013-05-12",
       "entries" => [
         {
-          "line" => 366,
-          "style" => "-",
-          "text" => "important bugfix: service locks fixed!"
+          "line" => 16,
+          "style" => "*",
+          "text" => "always add /usr/local/bin to \$PATH"
+        }
+      ],
+      "line" => 15,
+      "raw_date" => "2013-05-12",
+      "version" => "1.52"
+    },
+    {
+      "date" => "2013-04-14",
+      "entries" => [
+        {
+          "line" => 19,
+          "style" => "*",
+          "text" => "autoflush stdout and stdin in ubic-guardian (especially when we're proxying daemon's logs)"
+        }
+      ],
+      "line" => 18,
+      "raw_date" => "2013-04-14",
+      "version" => "1.51"
+    },
+    {
+      "date" => "2013-04-03",
+      "entries" => [
+        {
+          "line" => 23,
+          "style" => "*",
+          "text" => "support 'term_timeout' option in SimpleDaemon"
+        }
+      ],
+      "line" => 22,
+      "raw_date" => "2013-04-03",
+      "version" => "1.50_01"
+    },
+    {
+      "date" => "2013-03-13",
+      "entries" => [
+        {
+          "line" => 26,
+          "style" => "*",
+          "text" => "stable release, no code changes"
+        }
+      ],
+      "line" => 25,
+      "raw_date" => "2013-03-13",
+      "version" => "1.49"
+    },
+    {
+      "date" => "2013-02-26",
+      "entries" => [
+        {
+          "line" => 29,
+          "style" => "*",
+          "text" => "'ubic status' exits with status code 0 if there're disabled services"
+        }
+      ],
+      "line" => 28,
+      "raw_date" => "2013-02-26",
+      "version" => "1.48_02"
+    },
+    {
+      "date" => "2013-01-31",
+      "entries" => [
+        {
+          "line" => 32,
+          "style" => "*",
+          "text" => "guardian supports logs proxying and reopening them on SIGHUP (see https://github.com/berekuk/Ubic/pull/47)"
         },
         {
-          "line" => 367,
-          "style" => "-",
-          "text" => "Ubic::Daemon: join all bin args if bin is arrayref."
+          "line" => 34,
+          "style" => "*",
+          "text" => "hint about 'ubic help' on unknown command"
+        }
+      ],
+      "line" => 31,
+      "raw_date" => "2013-01-31",
+      "version" => "1.48_01"
+    },
+    {
+      "date" => "2012-12-07",
+      "entries" => [
+        {
+          "line" => 37,
+          "style" => "*",
+          "text" => "detect ubic-watchdog location and put its full path to the crontab on setup"
         },
         {
-          "line" => 368,
-          "style" => "-",
-          "text" => "Remove old configs from old yandex-ubic package."
-        }
-      ],
-      "line" => 365,
-      "note" => "Tue May 25, 2010",
-      "version" => "1.04"
-    },
-    {
-      "entries" => [
-        {
-          "line" => 362,
-          "style" => "",
-          "text" => "MANIFEST up-to-date. Small POD improvements."
-        }
-      ],
-      "line" => 361,
-      "note" => "Sun Jun 13, 2010",
-      "version" => "1.05"
-    },
-    {
-      "entries" => [
-        {
-          "line" => 358,
+          "line" => 38,
           "style" => "*",
-          "text" => "using \$Config{perlpath} in tests - should fix CPAN tests"
+          "text" => "'ubic help' command (see https://github.com/berekuk/Ubic/issues/31)"
+        }
+      ],
+      "line" => 36,
+      "raw_date" => "2012-12-07",
+      "version" => "1.48"
+    },
+    {
+      "date" => "2012-12-03",
+      "entries" => [
+        {
+          "line" => 41,
+          "style" => "*",
+          "text" => "compatibility with perl 5.17 hash randomization (see https://github.com/berekuk/Ubic/issues/45)"
         },
         {
-          "line" => 359,
+          "line" => 43,
           "style" => "*",
-          "text" => "Dist::Zilla"
+          "text" => "append watchdog logs in crontab (instead of rewriting)"
         }
       ],
-      "line" => 357,
-      "note" => "Fri Jun 18, 2010",
-      "version" => "1.06"
+      "line" => 40,
+      "raw_date" => "2012-12-03",
+      "version" => "1.47"
     },
     {
+      "date" => "2012-11-08",
       "entries" => [
         {
-          "line" => 354,
+          "line" => 46,
           "style" => "*",
-          "text" => "localize \$\@ in destructors"
+          "text" => "require modern BSD::Resource version (see https://github.com/berekuk/Ubic/issues/43)"
         },
         {
-          "line" => 355,
+          "line" => 48,
           "style" => "*",
-          "text" => "Ubic::Cmd refactoring, more consistent console results printing"
+          "text" => "relax timing conditions in t/watchdog.t"
         }
       ],
-      "line" => 353,
-      "note" => "Fri Jul 30, 2010",
-      "version" => "1.07"
+      "line" => 45,
+      "raw_date" => "2012-11-08",
+      "version" => "1.46"
     },
     {
+      "date" => "2012-11-01",
       "entries" => [
         {
-          "line" => 350,
+          "line" => 51,
           "style" => "*",
-          "text" => "bugfix: has_service for nested unexistent services"
+          "text" => "more robust t/simple-daemon.t"
+        }
+      ],
+      "line" => 50,
+      "raw_date" => "2012-11-01",
+      "version" => "1.45"
+    },
+    {
+      "date" => "2012-10-30",
+      "entries" => [
+        {
+          "line" => 54,
+          "style" => "*",
+          "text" => "setup process now offers auto-configuration"
         },
         {
-          "line" => 351,
+          "line" => 55,
           "style" => "*",
-          "text" => "debian/ dir in distribution too"
+          "text" => "typo fix in crontab code (thanks to Anton Ukolov)"
         }
       ],
-      "line" => 349,
-      "note" => "Tue Aug 03, 2010",
-      "version" => "1.08"
+      "line" => 53,
+      "raw_date" => "2012-10-30",
+      "version" => "1.44_03"
     },
     {
+      "date" => "2012-10-30",
       "entries" => [
         {
-          "line" => 346,
+          "line" => 58,
           "style" => "*",
-          "text" => "bugfix: custom commands print 'ok' using green color and exit with zero code when there are not errors"
+          "text" => "Solaris compatibility (thanks to Martin Schultheis!)"
         }
       ],
-      "line" => 345,
-      "note" => "Thu Aug 12, 2010",
-      "version" => "1.09"
+      "line" => 57,
+      "raw_date" => "2012-10-30",
+      "version" => "1.44_02"
     },
     {
+      "date" => "2012-08-02",
       "entries" => [
         {
-          "line" => 343,
+          "line" => 61,
           "style" => "*",
-          "text" => "security bugfix: store all statuses in JSON format"
+          "text" => "support perlbrew, custom PATH and custom PELR5LIB"
         }
       ],
-      "line" => 342,
-      "note" => "Wed Aug 18, 2010",
-      "version" => "1.10"
+      "line" => 60,
+      "raw_date" => "2012-08-02",
+      "version" => "1.44_01"
     },
     {
+      "date" => "2012-06-21",
       "entries" => [
         {
-          "line" => 340,
+          "line" => 64,
           "style" => "*",
-          "text" => "ubic-watchdog prints errors to stdout only"
+          "text" => "stable release, no code changes"
         }
       ],
-      "line" => 339,
-      "note" => "Thu Aug 26, 2010",
-      "version" => "1.11"
+      "line" => 63,
+      "raw_date" => "2012-06-21",
+      "version" => "1.44"
     },
     {
+      "date" => "2012-06-20",
       "entries" => [
         {
-          "line" => 336,
+          "line" => 67,
           "style" => "*",
-          "text" => "Ubic::Manual::FAQ with first 2 questions"
+          "text" => "fix SimpleDaemon to work on perl <5.14"
+        }
+      ],
+      "line" => 66,
+      "raw_date" => "2012-06-20",
+      "version" => "1.43_04"
+    },
+    {
+      "date" => "2012-06-20",
+      "entries" => [
+        {
+          "line" => 70,
+          "style" => "*",
+          "text" => "fix tests for systems which don't set LOGNAME or USERNAME"
+        }
+      ],
+      "line" => 69,
+      "raw_date" => "2012-06-20",
+      "version" => "1.43_03"
+    },
+    {
+      "date" => "2012-06-19",
+      "entries" => [
+        {
+          "line" => 73,
+          "style" => "*",
+          "text" => "dependency on BSD::Resource is optional in code and tests"
+        }
+      ],
+      "line" => 72,
+      "raw_date" => "2012-06-19",
+      "version" => "1.43_02"
+    },
+    {
+      "date" => "2012-06-19",
+      "entries" => [
+        {
+          "line" => 76,
+          "style" => "*",
+          "text" => "ulimit support in SimpleDaemon"
         },
         {
-          "line" => 337,
+          "line" => 77,
           "style" => "*",
-          "text" => "Ubic::Log documentation updated according to 1.11 changes"
-        }
-      ],
-      "line" => 335,
-      "note" => "Thu Aug 26, 2010",
-      "version" => "1.12"
-    },
-    {
-      "entries" => [
-        {
-          "line" => 328,
-          "style" => "*",
-          "text" => "Perl6::Slurp removed from dependencies"
+          "text" => "json-style configs"
         },
         {
-          "line" => 329,
+          "line" => 78,
           "style" => "*",
-          "text" => "Ubic::Manual::FAQ now is actually added"
+          "text" => "'start_hook' option in start_daemon()"
+        }
+      ],
+      "line" => 75,
+      "raw_date" => "2012-06-19",
+      "version" => "1.43_01"
+    },
+    {
+      "date" => "2012-06-16",
+      "entries" => [
+        {
+          "line" => 81,
+          "style" => "*",
+          "text" => "actually merge the fix"
+        }
+      ],
+      "line" => 80,
+      "raw_date" => "2012-06-16",
+      "version" => "1.43"
+    },
+    {
+      "date" => "2012-06-15",
+      "entries" => [
+        {
+          "line" => 84,
+          "style" => "*",
+          "text" => "critical bugfix: fix credentials application order (all non-root services were broken when operated from root, 1.39-1.41 releases were affected)"
+        }
+      ],
+      "line" => 83,
+      "raw_date" => "2012-06-15",
+      "version" => "1.42"
+    },
+    {
+      "date" => "2012-06-11",
+      "entries" => [
+        {
+          "line" => 88,
+          "style" => "*",
+          "text" => "pid2cmd doesn't die on errors"
+        },
+        {
+          "line" => 89,
+          "style" => "*",
+          "text" => "Ubic::Run supports the explicit service names"
+        },
+        {
+          "line" => 90,
+          "style" => "*",
+          "text" => "lots of minor POD spelling fixes and improvements"
+        }
+      ],
+      "line" => 87,
+      "raw_date" => "2012-06-11",
+      "version" => "1.41"
+    },
+    {
+      "date" => "2012-05-27",
+      "entries" => [
+        {
+          "line" => 93,
+          "style" => "*",
+          "text" => "improve tests stability"
+        }
+      ],
+      "line" => 92,
+      "raw_date" => "2012-05-27",
+      "version" => "1.40"
+    },
+    {
+      "date" => "2012-05-23",
+      "entries" => [
+        {
+          "entries" => [
+            {
+              "line" => 97,
+              "style" => "-",
+              "text" => "reload_signal"
+            },
+            {
+              "line" => 98,
+              "style" => "-",
+              "text" => "daemon_user/daemon_group"
+            }
+          ],
+          "line" => 96,
+          "style" => "*",
+          "text" => "new SimpleDaemon options:"
+        },
+        {
+          "line" => 99,
+          "style" => "*",
+          "text" => "'credentials' option in start_daemon()"
+        },
+        {
+          "line" => 100,
+          "style" => "*",
+          "text" => "various doc improvements"
+        }
+      ],
+      "line" => 95,
+      "raw_date" => "2012-05-23",
+      "version" => "1.39"
+    },
+    {
+      "date" => "2012-04-23",
+      "entries" => [
+        {
+          "line" => 103,
+          "style" => "*",
+          "text" => "freebsd credentials fix - set real uid first and effective uid after that"
+        }
+      ],
+      "line" => 102,
+      "raw_date" => "2012-04-23",
+      "version" => "1.38_01"
+    },
+    {
+      "date" => "2012-04-14",
+      "entries" => [
+        {
+          "line" => 106,
+          "style" => "*",
+          "text" => "stable release"
+        }
+      ],
+      "line" => 105,
+      "raw_date" => "2012-04-14",
+      "version" => "1.38"
+    },
+    {
+      "date" => "2012-04-13",
+      "entries" => [
+        {
+          "line" => 109,
+          "style" => "*",
+          "text" => "log early exiting daemons correctly; fix tests"
+        }
+      ],
+      "line" => 108,
+      "raw_date" => "2012-04-13",
+      "version" => "1.37_03"
+    },
+    {
+      "date" => "2012-03-28",
+      "entries" => [
+        {
+          "line" => 112,
+          "style" => "*",
+          "text" => "non-root dir multiservices allow operations without --force"
+        },
+        {
+          "line" => 113,
+          "style" => "*",
+          "text" => "minor docs improvements, including replacing \"flexible perl-based\" with \"polymorphic\" everywhere"
+        }
+      ],
+      "line" => 111,
+      "raw_date" => "2012-03-28",
+      "version" => "1.37_02"
+    },
+    {
+      "date" => "2012-03-27",
+      "entries" => [
+        {
+          "line" => 116,
+          "style" => "*",
+          "text" => "Ubic::Daemon::OS::Linux: fix guid calculating code"
         },
         {
           "entries" => [
             {
-              "line" => 331,
+              "line" => 118,
               "style" => "-",
-              "text" => "services can specify group(s) from which service should run, analogous to user() method"
+              "text" => "better logging"
             },
             {
-              "line" => 332,
+              "line" => 119,
               "style" => "-",
-              "text" => "ubic will call setgid() before invoking any service methods"
-            },
-            {
-              "line" => 333,
-              "style" => "-",
-              "text" => "default group list consists only of main user's group, as returned by getpwnam; supplementary groups are not supported yet"
+              "text" => "die if can't calculate guid"
             }
           ],
-          "line" => 330,
-          "style" => "*",
-          "text" => "group() method in services:"
-        }
-      ],
-      "line" => 327,
-      "note" => "Wed Sep 01, 2010",
-      "version" => "1.13"
-    },
-    {
-      "entries" => [
-        {
-          "line" => 321,
-          "style" => "*",
-          "text" => "handle supplementary groups correctly"
-        },
-        {
-          "line" => 322,
-          "style" => "*",
-          "text" => "ubic-watchdog doesn't require root privileges anymore (unless service requires them, of course)"
-        },
-        {
-          "line" => 323,
-          "style" => "*",
-          "text" => "repo and bugtracker resources in META.yml"
-        },
-        {
-          "line" => 324,
-          "style" => "*",
-          "text" => "PodWeaver in dist.ini config, so all modules now have proper AUTHOR and COPYRIGHT sections"
-        },
-        {
-          "line" => 325,
-          "style" => "*",
-          "text" => "SimpleDaemon and Common services accept arrayref as 'group' value"
-        }
-      ],
-      "line" => 320,
-      "note" => "Thu Sep 02, 2010",
-      "version" => "1.14"
-    },
-    {
-      "entries" => [
-        {
-          "line" => 318,
-          "style" => "*",
-          "text" => "tests fixed to work under root user (http://github.com/berekuk/Ubic/issues#issue/4)"
-        }
-      ],
-      "line" => 317,
-      "note" => "Mon Sep 06, 2010",
-      "version" => "1.15"
-    },
-    {
-      "entries" => [
-        {
-          "entries" => [
-            {
-              "line" => 308,
-              "style" => "-",
-              "text" => "check_daemon() now returns proper Ubic::Daemon::Status object"
-            },
-            {
-              "line" => 309,
-              "style" => "-",
-              "text" => "don't log warning if daemon exited by sigterm"
-            },
-            {
-              "line" => 310,
-              "style" => "-",
-              "text" => "minor logging cleanup"
-            }
-          ],
-          "line" => 307,
+          "line" => 117,
           "style" => "*",
           "text" => "Ubic::Daemon:"
+        }
+      ],
+      "line" => 115,
+      "raw_date" => "2012-03-27",
+      "version" => "1.37_01"
+    },
+    {
+      "date" => "2012-03-15",
+      "entries" => [
+        {
+          "line" => 122,
+          "style" => "*",
+          "text" => "Ubic::UA pod"
         },
         {
-          "line" => 311,
+          "line" => 123,
           "style" => "*",
-          "text" => "Ubic::Service::SimpleDaemon returns daemon pid in status msg"
+          "text" => "prohibit building on Solaris"
+        }
+      ],
+      "line" => 121,
+      "raw_date" => "2012-03-15",
+      "version" => "1.37"
+    },
+    {
+      "date" => "2012-02-15",
+      "entries" => [
+        {
+          "entries" => [
+            {
+              "line" => 127,
+              "style" => "-",
+              "text" => "use Ubic::UA instead of LWP::UserAgent to reduce the number of dependencies"
+            },
+            {
+              "line" => 128,
+              "style" => "-",
+              "text" => "increase timeout options to avoid start failures on slow systems"
+            }
+          ],
+          "line" => 126,
+          "style" => "*",
+          "text" => "ubic.ping improvements:"
+        }
+      ],
+      "line" => 125,
+      "raw_date" => "2012-02-15",
+      "version" => "1.36_02"
+    },
+    {
+      "date" => "2011-12-09",
+      "entries" => [
+        {
+          "line" => 131,
+          "style" => "*",
+          "text" => "Ubic::Multiservice::Dir: don't warn about configs with taboo extensions"
+        }
+      ],
+      "line" => 130,
+      "raw_date" => "2011-12-09",
+      "version" => "1.36"
+    },
+    {
+      "date" => "2011-11-17",
+      "entries" => [
+        {
+          "entries" => [
+            {
+              "line" => 135,
+              "style" => "-",
+              "text" => "ini-style syntax for configs with .ini extension"
+            },
+            {
+              "line" => 136,
+              "style" => "-",
+              "text" => "extension-based polimorphism which will let us implement more config syntaxes in the future"
+            }
+          ],
+          "line" => 134,
+          "style" => "*",
+          "text" => "custom service loaders:"
+        },
+        {
+          "line" => 137,
+          "style" => "*",
+          "text" => "always sync pidfiles and status files to disk"
+        },
+        {
+          "line" => 138,
+          "style" => "*",
+          "text" => "small doc and output message improvements"
+        }
+      ],
+      "line" => 133,
+      "raw_date" => "2011-11-17",
+      "version" => "1.35_02"
+    },
+    {
+      "date" => "2011-11-04",
+      "entries" => [
+        {
+          "entries" => [
+            {
+              "line" => 142,
+              "style" => "-",
+              "text" => "fix local installation mode"
+            },
+            {
+              "line" => 143,
+              "style" => "-",
+              "text" => "document all command-line options"
+            }
+          ],
+          "line" => 141,
+          "style" => "*",
+          "text" => "ubic-admin:"
+        }
+      ],
+      "line" => 140,
+      "raw_date" => "2011-11-04",
+      "version" => "1.35_01"
+    },
+    {
+      "date" => "2011-10-07",
+      "entries" => [
+        {
+          "line" => 146,
+          "style" => "*",
+          "text" => "fix build - ubic-daemon doesn't fail compile test if ubic is not installed"
+        }
+      ],
+      "line" => 145,
+      "raw_date" => "2011-10-07",
+      "version" => "1.35"
+    },
+    {
+      "date" => "2011-09-25",
+      "entries" => [
+        {
+          "line" => 149,
+          "style" => "*",
+          "text" => "example system paths in setup depend on os"
+        },
+        {
+          "line" => 150,
+          "style" => "*",
+          "text" => "contrubitors section in Ubic.pm"
+        }
+      ],
+      "line" => 148,
+      "raw_date" => "2011-09-25",
+      "version" => "1.34"
+    },
+    {
+      "date" => "2011-09-20",
+      "entries" => [
+        {
+          "line" => 153,
+          "style" => "*",
+          "text" => "use pure perl for mkdir and chmod operations"
+        }
+      ],
+      "line" => 152,
+      "raw_date" => "2011-09-20",
+      "version" => "1.33_04"
+    },
+    {
+      "date" => "2011-09-20",
+      "entries" => [
+        {
+          "line" => 156,
+          "style" => "*",
+          "text" => "fix typo in the path to freebsd ubic.cfg"
+        }
+      ],
+      "line" => 155,
+      "raw_date" => "2011-09-20",
+      "version" => "1.33_03"
+    },
+    {
+      "date" => "2011-09-20",
+      "entries" => [
+        {
+          "line" => 159,
+          "style" => "*",
+          "text" => "comply to hier(7) on freebsd"
         },
         {
           "entries" => [
             {
-              "line" => 313,
+              "line" => 161,
               "style" => "-",
-              "text" => "using Test::TCP when testing ubic-ping"
+              "text" => "pod advicing not to use this script"
             },
             {
-              "line" => 314,
+              "line" => 162,
               "style" => "-",
-              "text" => "watchdog.t skips all tests if 'fakeroot' is not present"
+              "text" => "--stop and --list features"
+            },
+            {
+              "line" => 163,
+              "style" => "-",
+              "text" => "use Ubic::Settings instead of hard-coded pid_dir path"
             }
           ],
-          "line" => 312,
+          "line" => 160,
           "style" => "*",
-          "text" => "test improvements:"
-        },
-        {
-          "line" => 315,
-          "style" => "*",
-          "text" => "Ubic::Cmd: print 'running' result as good when it contains extended message"
+          "text" => "ubic-daemon improvements:"
         }
       ],
-      "line" => 306,
-      "note" => "Tue Sep 07, 2010",
-      "version" => "1.16"
+      "line" => 158,
+      "raw_date" => "2011-09-20",
+      "version" => "1.33_02"
     },
     {
+      "date" => "2011-09-02",
       "entries" => [
         {
-          "line" => 300,
+          "line" => 166,
           "style" => "*",
-          "text" => "Ubic::Run: recognize RedHat init script names (thanks to Sawyer X for the patch, see http://github.com/berekuk/Ubic/issues/#issue/5)"
+          "text" => "fix setup.t - don't fail if ubic is already installed"
+        },
+        {
+          "line" => 167,
+          "style" => "*",
+          "text" => "more questions in Ubic::Manual::FAQ, other various doc improvements"
+        },
+        {
+          "line" => 168,
+          "style" => "*",
+          "text" => "partially align status column on 'ubic status' command"
+        },
+        {
+          "line" => 169,
+          "style" => "*",
+          "text" => "silently skip configs with taboo extensions, complain about others to stderr (see https://github.com/berekuk/Ubic/issues/15)"
+        },
+        {
+          "line" => 171,
+          "style" => "*",
+          "text" => "Ubic::Daemon on linux doesn't fail if can't read from /proc cmdline file: there are cases when it is a possible state (usually after reboot)"
+        }
+      ],
+      "line" => 165,
+      "raw_date" => "2011-09-02",
+      "version" => "1.33_01"
+    },
+    {
+      "date" => "2011-07-22",
+      "entries" => [
+        {
+          "line" => 175,
+          "style" => "*",
+          "text" => "stable release"
+        }
+      ],
+      "line" => 174,
+      "raw_date" => "2011-07-22",
+      "version" => "1.33"
+    },
+    {
+      "date" => "2011-07-18",
+      "entries" => [
+        {
+          "line" => 178,
+          "style" => "*",
+          "text" => "don't mess with crontab on setup tests (see https://github.com/berekuk/Ubic/issues/17)"
+        }
+      ],
+      "line" => 177,
+      "raw_date" => "2011-07-18",
+      "version" => "1.32_04"
+    },
+    {
+      "date" => "2011-07-17",
+      "entries" => [
+        {
+          "line" => 182,
+          "style" => "*",
+          "text" => "fix daemon tests"
+        }
+      ],
+      "line" => 181,
+      "raw_date" => "2011-07-17",
+      "version" => "1.32_03"
+    },
+    {
+      "date" => "2011-07-13",
+      "entries" => [
+        {
+          "entries" => [
+            {
+              "line" => 186,
+              "style" => "-",
+              "text" => "'cwd' and 'env' options (SimpleDaemon now just passes them to start_daemon())"
+            },
+            {
+              "line" => 187,
+              "style" => "-",
+              "text" => "log signal name, exit code and other events to ubic_log prettier and more consistently"
+            }
+          ],
+          "line" => 185,
+          "style" => "*",
+          "text" => "Ubic::Daemon improvements:"
+        },
+        {
+          "line" => 188,
+          "style" => "*",
+          "text" => "document 'cwd' and 'env' options in Ubic::Service::SimpleDaemon"
+        }
+      ],
+      "line" => 184,
+      "raw_date" => "2011-07-13",
+      "version" => "1.32_02"
+    },
+    {
+      "date" => "2011-07-13",
+      "entries" => [
+        {
+          "entries" => [
+            {
+              "line" => 192,
+              "style" => "-",
+              "text" => "cwd - set daemon working dir"
+            },
+            {
+              "line" => 193,
+              "style" => "-",
+              "text" => "env - set daemon environment"
+            }
+          ],
+          "line" => 191,
+          "style" => "*",
+          "text" => "new options in Ubic::Service::SimpleDaemon:"
+        },
+        {
+          "line" => 194,
+          "style" => "*",
+          "text" => "minimal setup test"
+        }
+      ],
+      "line" => 190,
+      "raw_date" => "2011-07-13",
+      "version" => "1.32_01"
+    },
+    {
+      "date" => "2011-07-07",
+      "entries" => [
+        {
+          "line" => 197,
+          "style" => "*",
+          "text" => "Fix ubic-admin setup again. Sorry."
+        }
+      ],
+      "line" => 196,
+      "raw_date" => "2011-07-07",
+      "version" => "1.32"
+    },
+    {
+      "date" => "2011-06-30",
+      "entries" => [
+        {
+          "line" => 200,
+          "style" => "*",
+          "text" => "fix ubic-admin setup - forgot to import IO::Handle (https://github.com/berekuk/Ubic/issues/13)"
+        }
+      ],
+      "line" => 199,
+      "raw_date" => "2011-06-30",
+      "version" => "1.31"
+    },
+    {
+      "date" => "2011-06-28",
+      "entries" => [
+        {
+          "line" => 204,
+          "style" => "*",
+          "text" => "Ubic::AtomicFile for storing any file safely"
         },
         {
           "entries" => [
             {
-              "line" => 303,
+              "line" => 206,
               "style" => "-",
-              "text" => "ubic-ping uses Config.pm to determine full perl binary path"
+              "text" => "Ubic::Manual::Overview"
             },
             {
-              "line" => 304,
+              "line" => 207,
               "style" => "-",
-              "text" => "memory-leak.t is more robust"
+              "text" => "Ubic::Service::SimpleDaemon now makes sense"
             }
           ],
-          "line" => 302,
+          "line" => 205,
           "style" => "*",
-          "text" => "test improvements:"
+          "text" => "POD improvements:"
         }
       ],
-      "line" => 299,
-      "note" => "Mon Sep 13, 2010",
-      "version" => "1.17"
+      "line" => 203,
+      "raw_date" => "2011-06-28",
+      "version" => "1.30"
     },
     {
+      "date" => "2011-06-07",
       "entries" => [
         {
-          "line" => 295,
+          "line" => 210,
           "style" => "*",
-          "text" => "critical bugfix: ubic-watchdog correctly interpret extended statuses (thanks to Sawyer X for noticing this, see http://github.com/berekuk/Ubic/issues#issue/7)"
+          "text" => "ubic-admin script: fix crontab install when user doesn't have previous crontab"
         },
         {
-          "line" => 297,
+          "line" => 211,
           "style" => "*",
-          "text" => "Ubic::Lockf::Alarm moved to separate file, so PODs are now correct"
+          "text" => "ubic script: fix 'ubic unknown-cmd' error reporting"
+        },
+        {
+          "entries" => [
+            {
+              "line" => 213,
+              "style" => "-",
+              "text" => "don't ask for status twice if service works"
+            },
+            {
+              "line" => 214,
+              "style" => "-",
+              "text" => "permanently set credentials instead of using forks for non-root services"
+            },
+            {
+              "line" => 215,
+              "style" => "-",
+              "text" => "log status obtained by status check, instead of just logging 'service is broken'"
+            }
+          ],
+          "line" => 212,
+          "style" => "*",
+          "text" => "watchdog improvements:"
+        },
+        {
+          "entries" => [
+            {
+              "line" => 217,
+              "style" => "-",
+              "text" => "Ubic::Manual::Intro"
+            },
+            {
+              "line" => 218,
+              "style" => "-",
+              "text" => "Ubic::Manual::Multiservices"
+            },
+            {
+              "line" => 219,
+              "style" => "-",
+              "text" => "various POD fixes"
+            }
+          ],
+          "line" => 216,
+          "style" => "*",
+          "text" => "POD improvements:"
         }
       ],
-      "line" => 294,
-      "note" => "Tue Sep 14, 2010",
-      "version" => "1.18"
+      "line" => 209,
+      "raw_date" => "2011-06-07",
+      "version" => "1.29"
+    },
+    {
+      "date" => "2011-04-21",
+      "entries" => [
+        {
+          "line" => 222,
+          "style" => "*",
+          "text" => "'ubic status' always shows non-cached statuses if called by root"
+        },
+        {
+          "line" => 223,
+          "style" => "*",
+          "text" => "ubic.ping status now uses sane timeout when it checks service via http"
+        }
+      ],
+      "line" => 221,
+      "raw_date" => "2011-04-21",
+      "version" => "1.28"
+    },
+    {
+      "date" => "2011-04-17",
+      "entries" => [
+        {
+          "entries" => [
+            {
+              "line" => 227,
+              "style" => "-",
+              "text" => "system-wide setup with one command 'ubic-admin setup'"
+            },
+            {
+              "line" => 228,
+              "style" => "-",
+              "text" => "home directory setup with the same 'ubic-admin setup' command"
+            },
+            {
+              "line" => 229,
+              "style" => "-",
+              "text" => "batch-mode with flag \"--batch-mode\""
+            }
+          ],
+          "line" => 226,
+          "style" => "*",
+          "text" => "ubic-admin script:"
+        },
+        {
+          "line" => 230,
+          "style" => "*",
+          "text" => "configurable default_user (very helpful for home directory setup)"
+        },
+        {
+          "entries" => [
+            {
+              "line" => 232,
+              "style" => "-",
+              "text" => "real status will be checked and printed if current user is equal to service user"
+            },
+            {
+              "line" => 234,
+              "style" => "-",
+              "text" => "\"Not a root, printing cached statuses\" message removed; instead, 'ubic status' will print \"[cached]\" note for every cached status"
+            }
+          ],
+          "line" => 231,
+          "style" => "*",
+          "text" => "'ubic status' changes:"
+        },
+        {
+          "line" => 236,
+          "style" => "*",
+          "text" => "ubic-ping service renamed to ubic.ping"
+        },
+        {
+          "line" => 237,
+          "style" => "*",
+          "text" => "ubic-watchdog and ubic-update now run as ubic.watchdog and ubic.update services instead of cron jobs; \"ubic-watchdog ubic.watchdog\" cron job is still recommended."
+        },
+        {
+          "line" => 239,
+          "style" => "*",
+          "text" => "ubic-periodic script for recurrent job running"
+        }
+      ],
+      "line" => 225,
+      "raw_date" => "2011-04-17",
+      "version" => "1.27"
+    },
+    {
+      "date" => "2011-04-10",
+      "entries" => [
+        {
+          "line" => 242,
+          "style" => "",
+          "text" => "Hotfix release (https://github.com/berekuk/Ubic/issues/12):"
+        },
+        {
+          "line" => 243,
+          "style" => "*",
+          "text" => "don't depend on Win32 modules"
+        },
+        {
+          "line" => 244,
+          "style" => "*",
+          "text" => "stale Win32 code removed (it didn't work anyway, so there is no point in packaging it in CPAN releases)."
+        }
+      ],
+      "line" => 241,
+      "raw_date" => "2011-04-10",
+      "version" => "1.26"
+    },
+    {
+      "date" => "2011-03-31",
+      "entries" => [
+        {
+          "line" => 248,
+          "style" => "*",
+          "text" => "MacOSX support (and probably other POSIX systems too, including FreeBSD)"
+        },
+        {
+          "entries" => [
+            {
+              "line" => 250,
+              "style" => "-",
+              "text" => "Ubic::Daemon::OS modules family for OS-specific daemonization tasks"
+            },
+            {
+              "line" => 251,
+              "style" => "-",
+              "text" => "Ubic::Credentials::OS modules family for OS-specific user/group tasks"
+            }
+          ],
+          "line" => 249,
+          "style" => "*",
+          "text" => "lots of refactoring:"
+        }
+      ],
+      "line" => 247,
+      "raw_date" => "2011-03-31",
+      "version" => "1.25"
     },
     {
       "entries" => [
         {
-          "line" => 292,
+          "line" => 254,
           "style" => "*",
-          "text" => "ubic-watchdog always uses Ubic->status interface to check service status"
+          "text" => "ubic-watchdog: change process name while checking specific service"
+        },
+        {
+          "line" => 255,
+          "style" => "*",
+          "text" => "check that uid change was successful before calling service action methods"
+        },
+        {
+          "line" => 256,
+          "style" => "*",
+          "text" => "default check_timeout() lowered from 10 minutes to 1 minute"
         }
       ],
-      "line" => 291,
-      "note" => "Tue Sep 14, 2010",
-      "version" => "1.19"
+      "line" => 253,
+      "note" => "Wed Feb 23, 2011",
+      "version" => "1.24"
     },
     {
       "entries" => [
         {
-          "line" => 289,
+          "line" => 259,
           "style" => "*",
-          "text" => "documentation improvements"
+          "text" => "ubic-ping: 404 message content fixed"
+        },
+        {
+          "entries" => [
+            {
+              "line" => 261,
+              "style" => "-",
+              "text" => "set check_timeout alarm a bit earlier"
+            },
+            {
+              "line" => 262,
+              "style" => "-",
+              "text" => "another alarm before compiling services"
+            }
+          ],
+          "line" => 260,
+          "style" => "*",
+          "text" => "ubic-watchdog:"
         }
       ],
-      "line" => 288,
-      "note" => "Wed Oct 13, 2010",
-      "version" => "1.20"
+      "line" => 258,
+      "note" => "Thu Dec 02, 2010",
+      "version" => "1.23"
+    },
+    {
+      "entries" => [
+        {
+          "entries" => [
+            {
+              "line" => 266,
+              "style" => "-",
+              "text" => "default implementation of 'has_simple_service' method"
+            },
+            {
+              "line" => 267,
+              "style" => "-",
+              "text" => "POD improvements"
+            }
+          ],
+          "line" => 265,
+          "style" => "*",
+          "text" => "Ubic::Multiservice:"
+        }
+      ],
+      "line" => 264,
+      "note" => "Sun Nov 07, 2010",
+      "version" => "1.22"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 270,
+          "style" => "*",
+          "text" => "fixed races in t/daemon.t"
+        }
+      ],
+      "line" => 269,
+      "note" => "Thu Oct 21, 2010",
+      "version" => "1.21_01"
     },
     {
       "entries" => [
@@ -453,1177 +1245,385 @@
     {
       "entries" => [
         {
-          "line" => 270,
+          "line" => 289,
           "style" => "*",
-          "text" => "fixed races in t/daemon.t"
+          "text" => "documentation improvements"
         }
       ],
-      "line" => 269,
-      "note" => "Thu Oct 21, 2010",
-      "version" => "1.21_01"
+      "line" => 288,
+      "note" => "Wed Oct 13, 2010",
+      "version" => "1.20"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 292,
+          "style" => "*",
+          "text" => "ubic-watchdog always uses Ubic->status interface to check service status"
+        }
+      ],
+      "line" => 291,
+      "note" => "Tue Sep 14, 2010",
+      "version" => "1.19"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 295,
+          "style" => "*",
+          "text" => "critical bugfix: ubic-watchdog correctly interpret extended statuses (thanks to Sawyer X for noticing this, see http://github.com/berekuk/Ubic/issues#issue/7)"
+        },
+        {
+          "line" => 297,
+          "style" => "*",
+          "text" => "Ubic::Lockf::Alarm moved to separate file, so PODs are now correct"
+        }
+      ],
+      "line" => 294,
+      "note" => "Tue Sep 14, 2010",
+      "version" => "1.18"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 300,
+          "style" => "*",
+          "text" => "Ubic::Run: recognize RedHat init script names (thanks to Sawyer X for the patch, see http://github.com/berekuk/Ubic/issues/#issue/5)"
+        },
+        {
+          "entries" => [
+            {
+              "line" => 303,
+              "style" => "-",
+              "text" => "ubic-ping uses Config.pm to determine full perl binary path"
+            },
+            {
+              "line" => 304,
+              "style" => "-",
+              "text" => "memory-leak.t is more robust"
+            }
+          ],
+          "line" => 302,
+          "style" => "*",
+          "text" => "test improvements:"
+        }
+      ],
+      "line" => 299,
+      "note" => "Mon Sep 13, 2010",
+      "version" => "1.17"
     },
     {
       "entries" => [
         {
           "entries" => [
             {
-              "line" => 266,
+              "line" => 308,
               "style" => "-",
-              "text" => "default implementation of 'has_simple_service' method"
+              "text" => "check_daemon() now returns proper Ubic::Daemon::Status object"
             },
             {
-              "line" => 267,
+              "line" => 309,
               "style" => "-",
-              "text" => "POD improvements"
+              "text" => "don't log warning if daemon exited by sigterm"
+            },
+            {
+              "line" => 310,
+              "style" => "-",
+              "text" => "minor logging cleanup"
             }
           ],
-          "line" => 265,
-          "style" => "*",
-          "text" => "Ubic::Multiservice:"
-        }
-      ],
-      "line" => 264,
-      "note" => "Sun Nov 07, 2010",
-      "version" => "1.22"
-    },
-    {
-      "entries" => [
-        {
-          "line" => 259,
-          "style" => "*",
-          "text" => "ubic-ping: 404 message content fixed"
-        },
-        {
-          "entries" => [
-            {
-              "line" => 261,
-              "style" => "-",
-              "text" => "set check_timeout alarm a bit earlier"
-            },
-            {
-              "line" => 262,
-              "style" => "-",
-              "text" => "another alarm before compiling services"
-            }
-          ],
-          "line" => 260,
-          "style" => "*",
-          "text" => "ubic-watchdog:"
-        }
-      ],
-      "line" => 258,
-      "note" => "Thu Dec 02, 2010",
-      "version" => "1.23"
-    },
-    {
-      "entries" => [
-        {
-          "line" => 254,
-          "style" => "*",
-          "text" => "ubic-watchdog: change process name while checking specific service"
-        },
-        {
-          "line" => 255,
-          "style" => "*",
-          "text" => "check that uid change was successful before calling service action methods"
-        },
-        {
-          "line" => 256,
-          "style" => "*",
-          "text" => "default check_timeout() lowered from 10 minutes to 1 minute"
-        }
-      ],
-      "line" => 253,
-      "note" => "Wed Feb 23, 2011",
-      "version" => "1.24"
-    },
-    {
-      "date" => "2011-03-31",
-      "entries" => [
-        {
-          "line" => 248,
-          "style" => "*",
-          "text" => "MacOSX support (and probably other POSIX systems too, including FreeBSD)"
-        },
-        {
-          "entries" => [
-            {
-              "line" => 250,
-              "style" => "-",
-              "text" => "Ubic::Daemon::OS modules family for OS-specific daemonization tasks"
-            },
-            {
-              "line" => 251,
-              "style" => "-",
-              "text" => "Ubic::Credentials::OS modules family for OS-specific user/group tasks"
-            }
-          ],
-          "line" => 249,
-          "style" => "*",
-          "text" => "lots of refactoring:"
-        }
-      ],
-      "line" => 247,
-      "raw_date" => "2011-03-31",
-      "version" => "1.25"
-    },
-    {
-      "date" => "2011-04-10",
-      "entries" => [
-        {
-          "line" => 242,
-          "style" => "",
-          "text" => "Hotfix release (https://github.com/berekuk/Ubic/issues/12):"
-        },
-        {
-          "line" => 243,
-          "style" => "*",
-          "text" => "don't depend on Win32 modules"
-        },
-        {
-          "line" => 244,
-          "style" => "*",
-          "text" => "stale Win32 code removed (it didn't work anyway, so there is no point in packaging it in CPAN releases)."
-        }
-      ],
-      "line" => 241,
-      "raw_date" => "2011-04-10",
-      "version" => "1.26"
-    },
-    {
-      "date" => "2011-04-17",
-      "entries" => [
-        {
-          "entries" => [
-            {
-              "line" => 227,
-              "style" => "-",
-              "text" => "system-wide setup with one command 'ubic-admin setup'"
-            },
-            {
-              "line" => 228,
-              "style" => "-",
-              "text" => "home directory setup with the same 'ubic-admin setup' command"
-            },
-            {
-              "line" => 229,
-              "style" => "-",
-              "text" => "batch-mode with flag \"--batch-mode\""
-            }
-          ],
-          "line" => 226,
-          "style" => "*",
-          "text" => "ubic-admin script:"
-        },
-        {
-          "line" => 230,
-          "style" => "*",
-          "text" => "configurable default_user (very helpful for home directory setup)"
-        },
-        {
-          "entries" => [
-            {
-              "line" => 232,
-              "style" => "-",
-              "text" => "real status will be checked and printed if current user is equal to service user"
-            },
-            {
-              "line" => 234,
-              "style" => "-",
-              "text" => "\"Not a root, printing cached statuses\" message removed; instead, 'ubic status' will print \"[cached]\" note for every cached status"
-            }
-          ],
-          "line" => 231,
-          "style" => "*",
-          "text" => "'ubic status' changes:"
-        },
-        {
-          "line" => 236,
-          "style" => "*",
-          "text" => "ubic-ping service renamed to ubic.ping"
-        },
-        {
-          "line" => 237,
-          "style" => "*",
-          "text" => "ubic-watchdog and ubic-update now run as ubic.watchdog and ubic.update services instead of cron jobs; \"ubic-watchdog ubic.watchdog\" cron job is still recommended."
-        },
-        {
-          "line" => 239,
-          "style" => "*",
-          "text" => "ubic-periodic script for recurrent job running"
-        }
-      ],
-      "line" => 225,
-      "raw_date" => "2011-04-17",
-      "version" => "1.27"
-    },
-    {
-      "date" => "2011-04-21",
-      "entries" => [
-        {
-          "line" => 222,
-          "style" => "*",
-          "text" => "'ubic status' always shows non-cached statuses if called by root"
-        },
-        {
-          "line" => 223,
-          "style" => "*",
-          "text" => "ubic.ping status now uses sane timeout when it checks service via http"
-        }
-      ],
-      "line" => 221,
-      "raw_date" => "2011-04-21",
-      "version" => "1.28"
-    },
-    {
-      "date" => "2011-06-07",
-      "entries" => [
-        {
-          "line" => 210,
-          "style" => "*",
-          "text" => "ubic-admin script: fix crontab install when user doesn't have previous crontab"
-        },
-        {
-          "line" => 211,
-          "style" => "*",
-          "text" => "ubic script: fix 'ubic unknown-cmd' error reporting"
-        },
-        {
-          "entries" => [
-            {
-              "line" => 213,
-              "style" => "-",
-              "text" => "don't ask for status twice if service works"
-            },
-            {
-              "line" => 214,
-              "style" => "-",
-              "text" => "permanently set credentials instead of using forks for non-root services"
-            },
-            {
-              "line" => 215,
-              "style" => "-",
-              "text" => "log status obtained by status check, instead of just logging 'service is broken'"
-            }
-          ],
-          "line" => 212,
-          "style" => "*",
-          "text" => "watchdog improvements:"
-        },
-        {
-          "entries" => [
-            {
-              "line" => 217,
-              "style" => "-",
-              "text" => "Ubic::Manual::Intro"
-            },
-            {
-              "line" => 218,
-              "style" => "-",
-              "text" => "Ubic::Manual::Multiservices"
-            },
-            {
-              "line" => 219,
-              "style" => "-",
-              "text" => "various POD fixes"
-            }
-          ],
-          "line" => 216,
-          "style" => "*",
-          "text" => "POD improvements:"
-        }
-      ],
-      "line" => 209,
-      "raw_date" => "2011-06-07",
-      "version" => "1.29"
-    },
-    {
-      "date" => "2011-06-28",
-      "entries" => [
-        {
-          "line" => 204,
-          "style" => "*",
-          "text" => "Ubic::AtomicFile for storing any file safely"
-        },
-        {
-          "entries" => [
-            {
-              "line" => 206,
-              "style" => "-",
-              "text" => "Ubic::Manual::Overview"
-            },
-            {
-              "line" => 207,
-              "style" => "-",
-              "text" => "Ubic::Service::SimpleDaemon now makes sense"
-            }
-          ],
-          "line" => 205,
-          "style" => "*",
-          "text" => "POD improvements:"
-        }
-      ],
-      "line" => 203,
-      "raw_date" => "2011-06-28",
-      "version" => "1.30"
-    },
-    {
-      "date" => "2011-06-30",
-      "entries" => [
-        {
-          "line" => 200,
-          "style" => "*",
-          "text" => "fix ubic-admin setup - forgot to import IO::Handle (https://github.com/berekuk/Ubic/issues/13)"
-        }
-      ],
-      "line" => 199,
-      "raw_date" => "2011-06-30",
-      "version" => "1.31"
-    },
-    {
-      "date" => "2011-07-07",
-      "entries" => [
-        {
-          "line" => 197,
-          "style" => "*",
-          "text" => "Fix ubic-admin setup again. Sorry."
-        }
-      ],
-      "line" => 196,
-      "raw_date" => "2011-07-07",
-      "version" => "1.32"
-    },
-    {
-      "date" => "2011-07-13",
-      "entries" => [
-        {
-          "entries" => [
-            {
-              "line" => 192,
-              "style" => "-",
-              "text" => "cwd - set daemon working dir"
-            },
-            {
-              "line" => 193,
-              "style" => "-",
-              "text" => "env - set daemon environment"
-            }
-          ],
-          "line" => 191,
-          "style" => "*",
-          "text" => "new options in Ubic::Service::SimpleDaemon:"
-        },
-        {
-          "line" => 194,
-          "style" => "*",
-          "text" => "minimal setup test"
-        }
-      ],
-      "line" => 190,
-      "raw_date" => "2011-07-13",
-      "version" => "1.32_01"
-    },
-    {
-      "date" => "2011-07-13",
-      "entries" => [
-        {
-          "entries" => [
-            {
-              "line" => 186,
-              "style" => "-",
-              "text" => "'cwd' and 'env' options (SimpleDaemon now just passes them to start_daemon())"
-            },
-            {
-              "line" => 187,
-              "style" => "-",
-              "text" => "log signal name, exit code and other events to ubic_log prettier and more consistently"
-            }
-          ],
-          "line" => 185,
-          "style" => "*",
-          "text" => "Ubic::Daemon improvements:"
-        },
-        {
-          "line" => 188,
-          "style" => "*",
-          "text" => "document 'cwd' and 'env' options in Ubic::Service::SimpleDaemon"
-        }
-      ],
-      "line" => 184,
-      "raw_date" => "2011-07-13",
-      "version" => "1.32_02"
-    },
-    {
-      "date" => "2011-07-17",
-      "entries" => [
-        {
-          "line" => 182,
-          "style" => "*",
-          "text" => "fix daemon tests"
-        }
-      ],
-      "line" => 181,
-      "raw_date" => "2011-07-17",
-      "version" => "1.32_03"
-    },
-    {
-      "date" => "2011-07-18",
-      "entries" => [
-        {
-          "line" => 178,
-          "style" => "*",
-          "text" => "don't mess with crontab on setup tests (see https://github.com/berekuk/Ubic/issues/17)"
-        }
-      ],
-      "line" => 177,
-      "raw_date" => "2011-07-18",
-      "version" => "1.32_04"
-    },
-    {
-      "date" => "2011-07-22",
-      "entries" => [
-        {
-          "line" => 175,
-          "style" => "*",
-          "text" => "stable release"
-        }
-      ],
-      "line" => 174,
-      "raw_date" => "2011-07-22",
-      "version" => "1.33"
-    },
-    {
-      "date" => "2011-09-02",
-      "entries" => [
-        {
-          "line" => 166,
-          "style" => "*",
-          "text" => "fix setup.t - don't fail if ubic is already installed"
-        },
-        {
-          "line" => 167,
-          "style" => "*",
-          "text" => "more questions in Ubic::Manual::FAQ, other various doc improvements"
-        },
-        {
-          "line" => 168,
-          "style" => "*",
-          "text" => "partially align status column on 'ubic status' command"
-        },
-        {
-          "line" => 169,
-          "style" => "*",
-          "text" => "silently skip configs with taboo extensions, complain about others to stderr (see https://github.com/berekuk/Ubic/issues/15)"
-        },
-        {
-          "line" => 171,
-          "style" => "*",
-          "text" => "Ubic::Daemon on linux doesn't fail if can't read from /proc cmdline file: there are cases when it is a possible state (usually after reboot)"
-        }
-      ],
-      "line" => 165,
-      "raw_date" => "2011-09-02",
-      "version" => "1.33_01"
-    },
-    {
-      "date" => "2011-09-20",
-      "entries" => [
-        {
-          "line" => 159,
-          "style" => "*",
-          "text" => "comply to hier(7) on freebsd"
-        },
-        {
-          "entries" => [
-            {
-              "line" => 161,
-              "style" => "-",
-              "text" => "pod advicing not to use this script"
-            },
-            {
-              "line" => 162,
-              "style" => "-",
-              "text" => "--stop and --list features"
-            },
-            {
-              "line" => 163,
-              "style" => "-",
-              "text" => "use Ubic::Settings instead of hard-coded pid_dir path"
-            }
-          ],
-          "line" => 160,
-          "style" => "*",
-          "text" => "ubic-daemon improvements:"
-        }
-      ],
-      "line" => 158,
-      "raw_date" => "2011-09-20",
-      "version" => "1.33_02"
-    },
-    {
-      "date" => "2011-09-20",
-      "entries" => [
-        {
-          "line" => 156,
-          "style" => "*",
-          "text" => "fix typo in the path to freebsd ubic.cfg"
-        }
-      ],
-      "line" => 155,
-      "raw_date" => "2011-09-20",
-      "version" => "1.33_03"
-    },
-    {
-      "date" => "2011-09-20",
-      "entries" => [
-        {
-          "line" => 153,
-          "style" => "*",
-          "text" => "use pure perl for mkdir and chmod operations"
-        }
-      ],
-      "line" => 152,
-      "raw_date" => "2011-09-20",
-      "version" => "1.33_04"
-    },
-    {
-      "date" => "2011-09-25",
-      "entries" => [
-        {
-          "line" => 149,
-          "style" => "*",
-          "text" => "example system paths in setup depend on os"
-        },
-        {
-          "line" => 150,
-          "style" => "*",
-          "text" => "contrubitors section in Ubic.pm"
-        }
-      ],
-      "line" => 148,
-      "raw_date" => "2011-09-25",
-      "version" => "1.34"
-    },
-    {
-      "date" => "2011-10-07",
-      "entries" => [
-        {
-          "line" => 146,
-          "style" => "*",
-          "text" => "fix build - ubic-daemon doesn't fail compile test if ubic is not installed"
-        }
-      ],
-      "line" => 145,
-      "raw_date" => "2011-10-07",
-      "version" => "1.35"
-    },
-    {
-      "date" => "2011-11-04",
-      "entries" => [
-        {
-          "entries" => [
-            {
-              "line" => 142,
-              "style" => "-",
-              "text" => "fix local installation mode"
-            },
-            {
-              "line" => 143,
-              "style" => "-",
-              "text" => "document all command-line options"
-            }
-          ],
-          "line" => 141,
-          "style" => "*",
-          "text" => "ubic-admin:"
-        }
-      ],
-      "line" => 140,
-      "raw_date" => "2011-11-04",
-      "version" => "1.35_01"
-    },
-    {
-      "date" => "2011-11-17",
-      "entries" => [
-        {
-          "entries" => [
-            {
-              "line" => 135,
-              "style" => "-",
-              "text" => "ini-style syntax for configs with .ini extension"
-            },
-            {
-              "line" => 136,
-              "style" => "-",
-              "text" => "extension-based polimorphism which will let us implement more config syntaxes in the future"
-            }
-          ],
-          "line" => 134,
-          "style" => "*",
-          "text" => "custom service loaders:"
-        },
-        {
-          "line" => 137,
-          "style" => "*",
-          "text" => "always sync pidfiles and status files to disk"
-        },
-        {
-          "line" => 138,
-          "style" => "*",
-          "text" => "small doc and output message improvements"
-        }
-      ],
-      "line" => 133,
-      "raw_date" => "2011-11-17",
-      "version" => "1.35_02"
-    },
-    {
-      "date" => "2011-12-09",
-      "entries" => [
-        {
-          "line" => 131,
-          "style" => "*",
-          "text" => "Ubic::Multiservice::Dir: don't warn about configs with taboo extensions"
-        }
-      ],
-      "line" => 130,
-      "raw_date" => "2011-12-09",
-      "version" => "1.36"
-    },
-    {
-      "date" => "2012-02-15",
-      "entries" => [
-        {
-          "entries" => [
-            {
-              "line" => 127,
-              "style" => "-",
-              "text" => "use Ubic::UA instead of LWP::UserAgent to reduce the number of dependencies"
-            },
-            {
-              "line" => 128,
-              "style" => "-",
-              "text" => "increase timeout options to avoid start failures on slow systems"
-            }
-          ],
-          "line" => 126,
-          "style" => "*",
-          "text" => "ubic.ping improvements:"
-        }
-      ],
-      "line" => 125,
-      "raw_date" => "2012-02-15",
-      "version" => "1.36_02"
-    },
-    {
-      "date" => "2012-03-15",
-      "entries" => [
-        {
-          "line" => 122,
-          "style" => "*",
-          "text" => "Ubic::UA pod"
-        },
-        {
-          "line" => 123,
-          "style" => "*",
-          "text" => "prohibit building on Solaris"
-        }
-      ],
-      "line" => 121,
-      "raw_date" => "2012-03-15",
-      "version" => "1.37"
-    },
-    {
-      "date" => "2012-03-27",
-      "entries" => [
-        {
-          "line" => 116,
-          "style" => "*",
-          "text" => "Ubic::Daemon::OS::Linux: fix guid calculating code"
-        },
-        {
-          "entries" => [
-            {
-              "line" => 118,
-              "style" => "-",
-              "text" => "better logging"
-            },
-            {
-              "line" => 119,
-              "style" => "-",
-              "text" => "die if can't calculate guid"
-            }
-          ],
-          "line" => 117,
+          "line" => 307,
           "style" => "*",
           "text" => "Ubic::Daemon:"
-        }
-      ],
-      "line" => 115,
-      "raw_date" => "2012-03-27",
-      "version" => "1.37_01"
-    },
-    {
-      "date" => "2012-03-28",
-      "entries" => [
-        {
-          "line" => 112,
-          "style" => "*",
-          "text" => "non-root dir multiservices allow operations without --force"
         },
         {
-          "line" => 113,
+          "line" => 311,
           "style" => "*",
-          "text" => "minor docs improvements, including replacing \"flexible perl-based\" with \"polymorphic\" everywhere"
-        }
-      ],
-      "line" => 111,
-      "raw_date" => "2012-03-28",
-      "version" => "1.37_02"
-    },
-    {
-      "date" => "2012-04-13",
-      "entries" => [
-        {
-          "line" => 109,
-          "style" => "*",
-          "text" => "log early exiting daemons correctly; fix tests"
-        }
-      ],
-      "line" => 108,
-      "raw_date" => "2012-04-13",
-      "version" => "1.37_03"
-    },
-    {
-      "date" => "2012-04-14",
-      "entries" => [
-        {
-          "line" => 106,
-          "style" => "*",
-          "text" => "stable release"
-        }
-      ],
-      "line" => 105,
-      "raw_date" => "2012-04-14",
-      "version" => "1.38"
-    },
-    {
-      "date" => "2012-04-23",
-      "entries" => [
-        {
-          "line" => 103,
-          "style" => "*",
-          "text" => "freebsd credentials fix - set real uid first and effective uid after that"
-        }
-      ],
-      "line" => 102,
-      "raw_date" => "2012-04-23",
-      "version" => "1.38_01"
-    },
-    {
-      "date" => "2012-05-23",
-      "entries" => [
+          "text" => "Ubic::Service::SimpleDaemon returns daemon pid in status msg"
+        },
         {
           "entries" => [
             {
-              "line" => 97,
+              "line" => 313,
               "style" => "-",
-              "text" => "reload_signal"
+              "text" => "using Test::TCP when testing ubic-ping"
             },
             {
-              "line" => 98,
+              "line" => 314,
               "style" => "-",
-              "text" => "daemon_user/daemon_group"
+              "text" => "watchdog.t skips all tests if 'fakeroot' is not present"
             }
           ],
-          "line" => 96,
+          "line" => 312,
           "style" => "*",
-          "text" => "new SimpleDaemon options:"
+          "text" => "test improvements:"
         },
         {
-          "line" => 99,
+          "line" => 315,
           "style" => "*",
-          "text" => "'credentials' option in start_daemon()"
+          "text" => "Ubic::Cmd: print 'running' result as good when it contains extended message"
+        }
+      ],
+      "line" => 306,
+      "note" => "Tue Sep 07, 2010",
+      "version" => "1.16"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 318,
+          "style" => "*",
+          "text" => "tests fixed to work under root user (http://github.com/berekuk/Ubic/issues#issue/4)"
+        }
+      ],
+      "line" => 317,
+      "note" => "Mon Sep 06, 2010",
+      "version" => "1.15"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 321,
+          "style" => "*",
+          "text" => "handle supplementary groups correctly"
         },
         {
-          "line" => 100,
+          "line" => 322,
           "style" => "*",
-          "text" => "various doc improvements"
-        }
-      ],
-      "line" => 95,
-      "raw_date" => "2012-05-23",
-      "version" => "1.39"
-    },
-    {
-      "date" => "2012-05-27",
-      "entries" => [
-        {
-          "line" => 93,
-          "style" => "*",
-          "text" => "improve tests stability"
-        }
-      ],
-      "line" => 92,
-      "raw_date" => "2012-05-27",
-      "version" => "1.40"
-    },
-    {
-      "date" => "2012-06-11",
-      "entries" => [
-        {
-          "line" => 88,
-          "style" => "*",
-          "text" => "pid2cmd doesn't die on errors"
+          "text" => "ubic-watchdog doesn't require root privileges anymore (unless service requires them, of course)"
         },
         {
-          "line" => 89,
+          "line" => 323,
           "style" => "*",
-          "text" => "Ubic::Run supports the explicit service names"
+          "text" => "repo and bugtracker resources in META.yml"
         },
         {
-          "line" => 90,
+          "line" => 324,
           "style" => "*",
-          "text" => "lots of minor POD spelling fixes and improvements"
-        }
-      ],
-      "line" => 87,
-      "raw_date" => "2012-06-11",
-      "version" => "1.41"
-    },
-    {
-      "date" => "2012-06-15",
-      "entries" => [
-        {
-          "line" => 84,
-          "style" => "*",
-          "text" => "critical bugfix: fix credentials application order (all non-root services were broken when operated from root, 1.39-1.41 releases were affected)"
-        }
-      ],
-      "line" => 83,
-      "raw_date" => "2012-06-15",
-      "version" => "1.42"
-    },
-    {
-      "date" => "2012-06-16",
-      "entries" => [
-        {
-          "line" => 81,
-          "style" => "*",
-          "text" => "actually merge the fix"
-        }
-      ],
-      "line" => 80,
-      "raw_date" => "2012-06-16",
-      "version" => "1.43"
-    },
-    {
-      "date" => "2012-06-19",
-      "entries" => [
-        {
-          "line" => 76,
-          "style" => "*",
-          "text" => "ulimit support in SimpleDaemon"
+          "text" => "PodWeaver in dist.ini config, so all modules now have proper AUTHOR and COPYRIGHT sections"
         },
         {
-          "line" => 77,
+          "line" => 325,
           "style" => "*",
-          "text" => "json-style configs"
+          "text" => "SimpleDaemon and Common services accept arrayref as 'group' value"
+        }
+      ],
+      "line" => 320,
+      "note" => "Thu Sep 02, 2010",
+      "version" => "1.14"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 328,
+          "style" => "*",
+          "text" => "Perl6::Slurp removed from dependencies"
         },
         {
-          "line" => 78,
+          "line" => 329,
           "style" => "*",
-          "text" => "'start_hook' option in start_daemon()"
-        }
-      ],
-      "line" => 75,
-      "raw_date" => "2012-06-19",
-      "version" => "1.43_01"
-    },
-    {
-      "date" => "2012-06-19",
-      "entries" => [
-        {
-          "line" => 73,
-          "style" => "*",
-          "text" => "dependency on BSD::Resource is optional in code and tests"
-        }
-      ],
-      "line" => 72,
-      "raw_date" => "2012-06-19",
-      "version" => "1.43_02"
-    },
-    {
-      "date" => "2012-06-20",
-      "entries" => [
-        {
-          "line" => 70,
-          "style" => "*",
-          "text" => "fix tests for systems which don't set LOGNAME or USERNAME"
-        }
-      ],
-      "line" => 69,
-      "raw_date" => "2012-06-20",
-      "version" => "1.43_03"
-    },
-    {
-      "date" => "2012-06-20",
-      "entries" => [
-        {
-          "line" => 67,
-          "style" => "*",
-          "text" => "fix SimpleDaemon to work on perl <5.14"
-        }
-      ],
-      "line" => 66,
-      "raw_date" => "2012-06-20",
-      "version" => "1.43_04"
-    },
-    {
-      "date" => "2012-06-21",
-      "entries" => [
-        {
-          "line" => 64,
-          "style" => "*",
-          "text" => "stable release, no code changes"
-        }
-      ],
-      "line" => 63,
-      "raw_date" => "2012-06-21",
-      "version" => "1.44"
-    },
-    {
-      "date" => "2012-08-02",
-      "entries" => [
-        {
-          "line" => 61,
-          "style" => "*",
-          "text" => "support perlbrew, custom PATH and custom PELR5LIB"
-        }
-      ],
-      "line" => 60,
-      "raw_date" => "2012-08-02",
-      "version" => "1.44_01"
-    },
-    {
-      "date" => "2012-10-30",
-      "entries" => [
-        {
-          "line" => 58,
-          "style" => "*",
-          "text" => "Solaris compatibility (thanks to Martin Schultheis!)"
-        }
-      ],
-      "line" => 57,
-      "raw_date" => "2012-10-30",
-      "version" => "1.44_02"
-    },
-    {
-      "date" => "2012-10-30",
-      "entries" => [
-        {
-          "line" => 54,
-          "style" => "*",
-          "text" => "setup process now offers auto-configuration"
+          "text" => "Ubic::Manual::FAQ now is actually added"
         },
         {
-          "line" => 55,
+          "entries" => [
+            {
+              "line" => 331,
+              "style" => "-",
+              "text" => "services can specify group(s) from which service should run, analogous to user() method"
+            },
+            {
+              "line" => 332,
+              "style" => "-",
+              "text" => "ubic will call setgid() before invoking any service methods"
+            },
+            {
+              "line" => 333,
+              "style" => "-",
+              "text" => "default group list consists only of main user's group, as returned by getpwnam; supplementary groups are not supported yet"
+            }
+          ],
+          "line" => 330,
           "style" => "*",
-          "text" => "typo fix in crontab code (thanks to Anton Ukolov)"
+          "text" => "group() method in services:"
         }
       ],
-      "line" => 53,
-      "raw_date" => "2012-10-30",
-      "version" => "1.44_03"
+      "line" => 327,
+      "note" => "Wed Sep 01, 2010",
+      "version" => "1.13"
     },
     {
-      "date" => "2012-11-01",
       "entries" => [
         {
-          "line" => 51,
+          "line" => 336,
           "style" => "*",
-          "text" => "more robust t/simple-daemon.t"
-        }
-      ],
-      "line" => 50,
-      "raw_date" => "2012-11-01",
-      "version" => "1.45"
-    },
-    {
-      "date" => "2012-11-08",
-      "entries" => [
-        {
-          "line" => 46,
-          "style" => "*",
-          "text" => "require modern BSD::Resource version (see https://github.com/berekuk/Ubic/issues/43)"
+          "text" => "Ubic::Manual::FAQ with first 2 questions"
         },
         {
-          "line" => 48,
+          "line" => 337,
           "style" => "*",
-          "text" => "relax timing conditions in t/watchdog.t"
+          "text" => "Ubic::Log documentation updated according to 1.11 changes"
         }
       ],
-      "line" => 45,
-      "raw_date" => "2012-11-08",
-      "version" => "1.46"
+      "line" => 335,
+      "note" => "Thu Aug 26, 2010",
+      "version" => "1.12"
     },
     {
-      "date" => "2012-12-03",
       "entries" => [
         {
-          "line" => 41,
+          "line" => 340,
           "style" => "*",
-          "text" => "compatibility with perl 5.17 hash randomization (see https://github.com/berekuk/Ubic/issues/45)"
+          "text" => "ubic-watchdog prints errors to stdout only"
+        }
+      ],
+      "line" => 339,
+      "note" => "Thu Aug 26, 2010",
+      "version" => "1.11"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 343,
+          "style" => "*",
+          "text" => "security bugfix: store all statuses in JSON format"
+        }
+      ],
+      "line" => 342,
+      "note" => "Wed Aug 18, 2010",
+      "version" => "1.10"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 346,
+          "style" => "*",
+          "text" => "bugfix: custom commands print 'ok' using green color and exit with zero code when there are not errors"
+        }
+      ],
+      "line" => 345,
+      "note" => "Thu Aug 12, 2010",
+      "version" => "1.09"
+    },
+    {
+      "entries" => [
+        {
+          "line" => 350,
+          "style" => "*",
+          "text" => "bugfix: has_service for nested unexistent services"
         },
         {
-          "line" => 43,
+          "line" => 351,
           "style" => "*",
-          "text" => "append watchdog logs in crontab (instead of rewriting)"
+          "text" => "debian/ dir in distribution too"
         }
       ],
-      "line" => 40,
-      "raw_date" => "2012-12-03",
-      "version" => "1.47"
+      "line" => 349,
+      "note" => "Tue Aug 03, 2010",
+      "version" => "1.08"
     },
     {
-      "date" => "2012-12-07",
       "entries" => [
         {
-          "line" => 37,
+          "line" => 354,
           "style" => "*",
-          "text" => "detect ubic-watchdog location and put its full path to the crontab on setup"
+          "text" => "localize \$\@ in destructors"
         },
         {
-          "line" => 38,
+          "line" => 355,
           "style" => "*",
-          "text" => "'ubic help' command (see https://github.com/berekuk/Ubic/issues/31)"
+          "text" => "Ubic::Cmd refactoring, more consistent console results printing"
         }
       ],
-      "line" => 36,
-      "raw_date" => "2012-12-07",
-      "version" => "1.48"
+      "line" => 353,
+      "note" => "Fri Jul 30, 2010",
+      "version" => "1.07"
     },
     {
-      "date" => "2013-01-31",
       "entries" => [
         {
-          "line" => 32,
+          "line" => 358,
           "style" => "*",
-          "text" => "guardian supports logs proxying and reopening them on SIGHUP (see https://github.com/berekuk/Ubic/pull/47)"
+          "text" => "using \$Config{perlpath} in tests - should fix CPAN tests"
         },
         {
-          "line" => 34,
+          "line" => 359,
           "style" => "*",
-          "text" => "hint about 'ubic help' on unknown command"
+          "text" => "Dist::Zilla"
         }
       ],
-      "line" => 31,
-      "raw_date" => "2013-01-31",
-      "version" => "1.48_01"
+      "line" => 357,
+      "note" => "Fri Jun 18, 2010",
+      "version" => "1.06"
     },
     {
-      "date" => "2013-02-26",
       "entries" => [
         {
-          "line" => 29,
-          "style" => "*",
-          "text" => "'ubic status' exits with status code 0 if there're disabled services"
+          "line" => 362,
+          "style" => "",
+          "text" => "MANIFEST up-to-date. Small POD improvements."
         }
       ],
-      "line" => 28,
-      "raw_date" => "2013-02-26",
-      "version" => "1.48_02"
+      "line" => 361,
+      "note" => "Sun Jun 13, 2010",
+      "version" => "1.05"
     },
     {
-      "date" => "2013-03-13",
       "entries" => [
         {
-          "line" => 26,
-          "style" => "*",
-          "text" => "stable release, no code changes"
+          "line" => 366,
+          "style" => "-",
+          "text" => "important bugfix: service locks fixed!"
+        },
+        {
+          "line" => 367,
+          "style" => "-",
+          "text" => "Ubic::Daemon: join all bin args if bin is arrayref."
+        },
+        {
+          "line" => 368,
+          "style" => "-",
+          "text" => "Remove old configs from old yandex-ubic package."
         }
       ],
-      "line" => 25,
-      "raw_date" => "2013-03-13",
-      "version" => "1.49"
+      "line" => 365,
+      "note" => "Tue May 25, 2010",
+      "version" => "1.04"
     },
     {
-      "date" => "2013-04-03",
       "entries" => [
         {
-          "line" => 23,
-          "style" => "*",
-          "text" => "support 'term_timeout' option in SimpleDaemon"
+          "line" => 371,
+          "style" => "",
+          "text" => "Remove old configs from old yandex-ubic package."
         }
       ],
-      "line" => 22,
-      "raw_date" => "2013-04-03",
-      "version" => "1.50_01"
+      "line" => 370,
+      "note" => "Tue May 4, 2010",
+      "version" => "1.02"
     },
     {
-      "date" => "2013-04-14",
       "entries" => [
         {
-          "line" => 19,
-          "style" => "*",
-          "text" => "autoflush stdout and stdin in ubic-guardian (especially when we're proxying daemon's logs)"
+          "line" => 374,
+          "style" => "",
+          "text" => "Just fixing debian dependency issues."
         }
       ],
-      "line" => 18,
-      "raw_date" => "2013-04-14",
-      "version" => "1.51"
+      "line" => 373,
+      "note" => "Thu Apr 29, 2010",
+      "version" => "1.01"
     },
     {
-      "date" => "2013-05-12",
       "entries" => [
         {
-          "line" => 16,
-          "style" => "*",
-          "text" => "always add /usr/local/bin to \$PATH"
+          "line" => 377,
+          "style" => "",
+          "text" => "First opensource release."
         }
       ],
-      "line" => 15,
-      "raw_date" => "2013-05-12",
-      "version" => "1.52"
-    },
-    {
-      "date" => "2013-05-18",
-      "entries" => [
-        {
-          "line" => 13,
-          "style" => "*",
-          "text" => "fix crontab generation on setup!"
-        }
-      ],
-      "line" => 12,
-      "raw_date" => "2013-05-18",
-      "version" => "1.53"
-    },
-    {
-      "date" => "2013-05-28",
-      "entries" => [
-        {
-          "line" => 10,
-          "style" => "*",
-          "text" => "'auto_start' option in Ubic::Service and SimpleDaemon"
-        }
-      ],
-      "line" => 9,
-      "raw_date" => "2013-05-28",
-      "version" => "1.54"
-    },
-    {
-      "date" => "2013-07-26",
-      "entries" => [
-        {
-          "line" => 6,
-          "style" => "*",
-          "text" => "support PERLBREW_ROOT (thanks to github:spacebat for the patch, see https://github.com/berekuk/Ubic/pull/54)"
-        }
-      ],
-      "line" => 5,
-      "raw_date" => "2013-07-26",
-      "version" => "1.55"
+      "line" => 376,
+      "note" => "Wed Apr 28, 2010",
+      "version" => "1.00"
     }
   ]
 }
