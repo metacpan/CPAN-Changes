@@ -1821,9 +1821,15 @@
       "entries" => [
         {
           "line" => 362,
-          "raw" => "        MANIFEST up-to-date.\n        Small POD improvements.\n\n",
+          "raw" => "        MANIFEST up-to-date.\n",
           "style" => "",
-          "text" => "MANIFEST up-to-date. Small POD improvements."
+          "text" => "MANIFEST up-to-date."
+        },
+        {
+          "line" => 363,
+          "raw" => "        Small POD improvements.\n\n",
+          "style" => "",
+          "text" => "Small POD improvements."
         }
       ],
       "line" => 361,

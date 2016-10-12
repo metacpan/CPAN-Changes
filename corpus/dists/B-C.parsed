@@ -28,6 +28,18 @@
       "date" => "2014-02-10",
       "entries" => [
         {
+          "line" => 11,
+          "raw" => "        added adjusted CORE testsuite for 5.14. passes for 5.14.4-nt, not for 5.18.2-nt\n",
+          "style" => "",
+          "text" => "added adjusted CORE testsuite for 5.14. passes for 5.14.4-nt, not for 5.18.2-nt"
+        },
+        {
+          "line" => 12,
+          "raw" => "\t(cPanel code_monkeys)\n",
+          "style" => "",
+          "text" => "(cPanel code_monkeys)"
+        },
+        {
           "entries" => [
             {
               "line" => 14,
@@ -48,10 +60,10 @@
               "text" => "compile-time perlio layers"
             }
           ],
-          "line" => 11,
-          "raw" => "        added adjusted CORE testsuite for 5.14. passes for 5.14.4-nt, not for 5.18.2-nt\n\t(cPanel code_monkeys)\n\tstill missing in general are:\n",
+          "line" => 13,
+          "raw" => "\tstill missing in general are:\n",
           "style" => "",
-          "text" => "added adjusted CORE testsuite for 5.14. passes for 5.14.4-nt, not for 5.18.2-nt (cPanel code_monkeys) still missing in general are:"
+          "text" => "still missing in general are:"
         },
         {
           "line" => 18,
@@ -89,9 +101,21 @@
       "entries" => [
         {
           "line" => 34,
-          "raw" => "\tnew 5.16, and partial 5.18, 5.20 and windows support.\n        Many more fixes and testcases.\n        Bytecode is still broken on 5.18, esp non-threaded. 5.20 looks pretty good though.\n\n",
+          "raw" => "\tnew 5.16, and partial 5.18, 5.20 and windows support.\n",
           "style" => "",
-          "text" => "new 5.16, and partial 5.18, 5.20 and windows support. Many more fixes and testcases. Bytecode is still broken on 5.18, esp non-threaded. 5.20 looks pretty good though."
+          "text" => "new 5.16, and partial 5.18, 5.20 and windows support."
+        },
+        {
+          "line" => 35,
+          "raw" => "        Many more fixes and testcases.\n",
+          "style" => "",
+          "text" => "Many more fixes and testcases."
+        },
+        {
+          "line" => 36,
+          "raw" => "        Bytecode is still broken on 5.18, esp non-threaded. 5.20 looks pretty good though.\n\n",
+          "style" => "",
+          "text" => "Bytecode is still broken on 5.18, esp non-threaded. 5.20 looks pretty good though."
         },
         {
           "line" => 38,
@@ -329,15 +353,45 @@
       "entries" => [
         {
           "line" => 187,
-          "raw" => "\tEnabled copy-on-grow strings >= 5.10.\n\tSave %main:: stashes w/o -fno-stash. Switched to git, added github mirror\n\tFixed hashes and share_hek, when mixed compiled and load-time for >5.8.\n\n",
+          "raw" => "\tEnabled copy-on-grow strings >= 5.10.\n",
           "style" => "",
-          "text" => "Enabled copy-on-grow strings >= 5.10. Save %main:: stashes w/o -fno-stash. Switched to git, added github mirror Fixed hashes and share_hek, when mixed compiled and load-time for >5.8."
+          "text" => "Enabled copy-on-grow strings >= 5.10."
+        },
+        {
+          "line" => 188,
+          "raw" => "\tSave %main:: stashes w/o -fno-stash. Switched to git, added github mirror\n",
+          "style" => "",
+          "text" => "Save %main:: stashes w/o -fno-stash. Switched to git, added github mirror"
+        },
+        {
+          "line" => 189,
+          "raw" => "\tFixed hashes and share_hek, when mixed compiled and load-time for >5.8.\n\n",
+          "style" => "",
+          "text" => "Fixed hashes and share_hek, when mixed compiled and load-time for >5.8."
         },
         {
           "line" => 191,
-          "raw" => "\tStability: This release is the first which passes almost all tests and\n\tis used in production with --staticxs -O3, but copy-on-grow hek's and\n\tfurther logical improvements (deferred %INC cleanup) fail so far, so it's\n\tstill considered unstable.\n\n",
+          "raw" => "\tStability: This release is the first which passes almost all tests and\n",
           "style" => "",
-          "text" => "Stability: This release is the first which passes almost all tests and is used in production with --staticxs -O3, but copy-on-grow hek's and further logical improvements (deferred %INC cleanup) fail so far, so it's still considered unstable."
+          "text" => "Stability: This release is the first which passes almost all tests and"
+        },
+        {
+          "line" => 192,
+          "raw" => "\tis used in production with --staticxs -O3, but copy-on-grow hek's and\n",
+          "style" => "",
+          "text" => "is used in production with --staticxs -O3, but copy-on-grow hek's and"
+        },
+        {
+          "line" => 193,
+          "raw" => "\tfurther logical improvements (deferred %INC cleanup) fail so far, so it's\n",
+          "style" => "",
+          "text" => "further logical improvements (deferred %INC cleanup) fail so far, so it's"
+        },
+        {
+          "line" => 194,
+          "raw" => "\tstill considered unstable.\n\n",
+          "style" => "",
+          "text" => "still considered unstable."
         },
         {
           "line" => 196,
@@ -595,9 +649,15 @@
       "entries" => [
         {
           "line" => 353,
-          "raw" => "        more darwin and package scan fixes, Bytecode -i includeall.\n\tall top100 modules can be now be compiled on most perls\n\n",
+          "raw" => "        more darwin and package scan fixes, Bytecode -i includeall.\n",
           "style" => "",
-          "text" => "more darwin and package scan fixes, Bytecode -i includeall. all top100 modules can be now be compiled on most perls"
+          "text" => "more darwin and package scan fixes, Bytecode -i includeall."
+        },
+        {
+          "line" => 354,
+          "raw" => "\tall top100 modules can be now be compiled on most perls\n\n",
+          "style" => "",
+          "text" => "all top100 modules can be now be compiled on most perls"
         },
         {
           "line" => 356,
@@ -1307,9 +1367,15 @@
         },
         {
           "line" => 683,
-          "raw" => "\tFixed aelemfast padsv access crash (Text::Tabs on freebsd7)\n\tFixed wrong stash names in gv_stashpv analog to gv_fetchpv\n\t  (Text-Tabs+Wrap t/dandv.t)\n",
+          "raw" => "\tFixed aelemfast padsv access crash (Text::Tabs on freebsd7)\n",
           "style" => "",
-          "text" => "Fixed aelemfast padsv access crash (Text::Tabs on freebsd7) Fixed wrong stash names in gv_stashpv analog to gv_fetchpv (Text-Tabs+Wrap t/dandv.t)"
+          "text" => "Fixed aelemfast padsv access crash (Text::Tabs on freebsd7)"
+        },
+        {
+          "line" => 684,
+          "raw" => "\tFixed wrong stash names in gv_stashpv analog to gv_fetchpv\n\t  (Text-Tabs+Wrap t/dandv.t)\n",
+          "style" => "",
+          "text" => "Fixed wrong stash names in gv_stashpv analog to gv_fetchpv (Text-Tabs+Wrap t/dandv.t)"
         },
         {
           "line" => 686,
@@ -1435,9 +1501,15 @@
       "entries" => [
         {
           "line" => 712,
-          "raw" => "\tAlmost fixed evaltry (12) with proper cop_seq setup, just solaris and debian\n\tfail sometimes. Tested ok with strawberry 5.10.1\n\n",
+          "raw" => "\tAlmost fixed evaltry (12) with proper cop_seq setup, just solaris and debian\n",
           "style" => "",
-          "text" => "Almost fixed evaltry (12) with proper cop_seq setup, just solaris and debian fail sometimes. Tested ok with strawberry 5.10.1"
+          "text" => "Almost fixed evaltry (12) with proper cop_seq setup, just solaris and debian"
+        },
+        {
+          "line" => 713,
+          "raw" => "\tfail sometimes. Tested ok with strawberry 5.10.1\n\n",
+          "style" => "",
+          "text" => "fail sometimes. Tested ok with strawberry 5.10.1"
         },
         {
           "line" => 715,
@@ -1557,9 +1629,15 @@
       "entries" => [
         {
           "line" => 761,
-          "raw" => "\tFixed now most module failures, non-threaded at least: bootstrap was in\n\tthe way. strawberry perl fixes. Fixed test 29, broke evaltry test 12\n\n",
+          "raw" => "\tFixed now most module failures, non-threaded at least: bootstrap was in\n",
           "style" => "",
-          "text" => "Fixed now most module failures, non-threaded at least: bootstrap was in the way. strawberry perl fixes. Fixed test 29, broke evaltry test 12"
+          "text" => "Fixed now most module failures, non-threaded at least: bootstrap was in"
+        },
+        {
+          "line" => 762,
+          "raw" => "\tthe way. strawberry perl fixes. Fixed test 29, broke evaltry test 12\n\n",
+          "style" => "",
+          "text" => "the way. strawberry perl fixes. Fixed test 29, broke evaltry test 12"
         },
         {
           "line" => 764,
@@ -1729,9 +1807,15 @@
       "entries" => [
         {
           "line" => 843,
-          "raw" => "\tTested with MSVC (MSVC compiles test29 and bigger examples awfully slow!\n\t7:30min, 30MB mem, 98% CPU, 2GHz)\n\n",
+          "raw" => "\tTested with MSVC (MSVC compiles test29 and bigger examples awfully slow!\n",
           "style" => "",
-          "text" => "Tested with MSVC (MSVC compiles test29 and bigger examples awfully slow! 7:30min, 30MB mem, 98% CPU, 2GHz)"
+          "text" => "Tested with MSVC (MSVC compiles test29 and bigger examples awfully slow!"
+        },
+        {
+          "line" => 844,
+          "raw" => "\t7:30min, 30MB mem, 98% CPU, 2GHz)\n\n",
+          "style" => "",
+          "text" => "7:30min, 30MB mem, 98% CPU, 2GHz)"
         },
         {
           "line" => 846,
@@ -2063,9 +2147,15 @@
       "entries" => [
         {
           "line" => 959,
-          "raw" => "\tGoing public on the Perl birthday\n\tThe first public compiler re-release since it was removed from CORE.\n\n",
+          "raw" => "\tGoing public on the Perl birthday\n",
           "style" => "",
-          "text" => "Going public on the Perl birthday The first public compiler re-release since it was removed from CORE."
+          "text" => "Going public on the Perl birthday"
+        },
+        {
+          "line" => 960,
+          "raw" => "\tThe first public compiler re-release since it was removed from CORE.\n\n",
+          "style" => "",
+          "text" => "The first public compiler re-release since it was removed from CORE."
         },
         {
           "line" => 962,
@@ -2193,9 +2283,21 @@
       "entries" => [
         {
           "line" => 1008,
-          "raw" => "\tBetter 5.6 support, but Bytecode compiler still disabled.\n\tNot even the Byteloader works for 5.6 assembled code. The Disassembler\n\tdoes not stop at ret. Fixed several C tests.\n\n",
+          "raw" => "\tBetter 5.6 support, but Bytecode compiler still disabled.\n",
           "style" => "",
-          "text" => "Better 5.6 support, but Bytecode compiler still disabled. Not even the Byteloader works for 5.6 assembled code. The Disassembler does not stop at ret. Fixed several C tests."
+          "text" => "Better 5.6 support, but Bytecode compiler still disabled."
+        },
+        {
+          "line" => 1009,
+          "raw" => "\tNot even the Byteloader works for 5.6 assembled code. The Disassembler\n",
+          "style" => "",
+          "text" => "Not even the Byteloader works for 5.6 assembled code. The Disassembler"
+        },
+        {
+          "line" => 1010,
+          "raw" => "\tdoes not stop at ret. Fixed several C tests.\n\n",
+          "style" => "",
+          "text" => "does not stop at ret. Fixed several C tests."
         },
         {
           "line" => 1012,
@@ -2205,15 +2307,45 @@
         },
         {
           "line" => 1016,
-          "raw" => "\tAdd perlversion to header.\n\tAdd byteorder check logic.\n\n",
+          "raw" => "\tAdd perlversion to header.\n",
           "style" => "",
-          "text" => "Add perlversion to header. Add byteorder check logic."
+          "text" => "Add perlversion to header."
+        },
+        {
+          "line" => 1017,
+          "raw" => "\tAdd byteorder check logic.\n\n",
+          "style" => "",
+          "text" => "Add byteorder check logic."
         },
         {
           "line" => 1019,
-          "raw" => "\tAdded logic to include all possible unsupported ops, all holes.\n\tbytecode table checked for 5.6.1, 5.6.2, 5.8.0, 5.8.1-5.11\n\tNote, that I found official and contradicting 5.6.1 releases.\n\tActiveState 5.6.1.626 had no op_children, the unix release tarball\n\twith 5.6.1 (called Trial 1) still has it.\n\n",
+          "raw" => "\tAdded logic to include all possible unsupported ops, all holes.\n",
           "style" => "",
-          "text" => "Added logic to include all possible unsupported ops, all holes. bytecode table checked for 5.6.1, 5.6.2, 5.8.0, 5.8.1-5.11 Note, that I found official and contradicting 5.6.1 releases. ActiveState 5.6.1.626 had no op_children, the unix release tarball with 5.6.1 (called Trial 1) still has it."
+          "text" => "Added logic to include all possible unsupported ops, all holes."
+        },
+        {
+          "line" => 1020,
+          "raw" => "\tbytecode table checked for 5.6.1, 5.6.2, 5.8.0, 5.8.1-5.11\n",
+          "style" => "",
+          "text" => "bytecode table checked for 5.6.1, 5.6.2, 5.8.0, 5.8.1-5.11"
+        },
+        {
+          "line" => 1021,
+          "raw" => "\tNote, that I found official and contradicting 5.6.1 releases.\n",
+          "style" => "",
+          "text" => "Note, that I found official and contradicting 5.6.1 releases."
+        },
+        {
+          "line" => 1022,
+          "raw" => "\tActiveState 5.6.1.626 had no op_children, the unix release tarball\n",
+          "style" => "",
+          "text" => "ActiveState 5.6.1.626 had no op_children, the unix release tarball"
+        },
+        {
+          "line" => 1023,
+          "raw" => "\twith 5.6.1 (called Trial 1) still has it.\n\n",
+          "style" => "",
+          "text" => "with 5.6.1 (called Trial 1) still has it."
         },
         {
           "line" => 1025,
@@ -2963,9 +3095,21 @@
       "entries" => [
         {
           "line" => 1219,
-          "raw" => "\tHighlights: bytecode and ByteLoader portability preparation and\n\tcommented disassembler output. PVGV and new REGEX still broken.\n\tFixes for no ithreads.\n\n",
+          "raw" => "\tHighlights: bytecode and ByteLoader portability preparation and\n",
           "style" => "",
-          "text" => "Highlights: bytecode and ByteLoader portability preparation and commented disassembler output. PVGV and new REGEX still broken. Fixes for no ithreads."
+          "text" => "Highlights: bytecode and ByteLoader portability preparation and"
+        },
+        {
+          "line" => 1220,
+          "raw" => "\tcommented disassembler output. PVGV and new REGEX still broken.\n",
+          "style" => "",
+          "text" => "commented disassembler output. PVGV and new REGEX still broken."
+        },
+        {
+          "line" => 1221,
+          "raw" => "\tFixes for no ithreads.\n\n",
+          "style" => "",
+          "text" => "Fixes for no ithreads."
         },
         {
           "line" => 1223,
@@ -3803,9 +3947,15 @@
             },
             {
               "line" => 1476,
-              "raw" => "    Subject: [PATCH #3 \@8436] Re: Eliminate op_children\n    Replace #8444 and #8445.\n\n",
+              "raw" => "    Subject: [PATCH #3 \@8436] Re: Eliminate op_children\n",
               "style" => "",
-              "text" => "Subject: [PATCH #3 \@8436] Re: Eliminate op_children Replace #8444 and #8445."
+              "text" => "Subject: [PATCH #3 \@8436] Re: Eliminate op_children"
+            },
+            {
+              "line" => 1477,
+              "raw" => "    Replace #8444 and #8445.\n\n",
+              "style" => "",
+              "text" => "Replace #8444 and #8445."
             }
           ],
           "line" => 1469,
@@ -3829,9 +3979,21 @@
           "entries" => [
             {
               "line" => 1491,
-              "raw" => "    Fix of sorts for bug id 20000901.092.  There seems to be no trace\n    of a 'pmshort' anywhere in the B, so the offending line was simply\n    removed.\n\n",
+              "raw" => "    Fix of sorts for bug id 20000901.092.  There seems to be no trace\n",
               "style" => "",
-              "text" => "Fix of sorts for bug id 20000901.092.  There seems to be no trace of a 'pmshort' anywhere in the B, so the offending line was simply removed."
+              "text" => "Fix of sorts for bug id 20000901.092.  There seems to be no trace"
+            },
+            {
+              "line" => 1492,
+              "raw" => "    of a 'pmshort' anywhere in the B, so the offending line was simply\n",
+              "style" => "",
+              "text" => "of a 'pmshort' anywhere in the B, so the offending line was simply"
+            },
+            {
+              "line" => 1493,
+              "raw" => "    removed.\n\n",
+              "style" => "",
+              "text" => "removed."
             }
           ],
           "line" => 1488,
@@ -3849,9 +4011,15 @@
             },
             {
               "line" => 1501,
-              "raw" => "    Test harness update to sync with the new perlcc,\n    from Simon Cozens.\n\n",
+              "raw" => "    Test harness update to sync with the new perlcc,\n",
               "style" => "",
-              "text" => "Test harness update to sync with the new perlcc, from Simon Cozens."
+              "text" => "Test harness update to sync with the new perlcc,"
+            },
+            {
+              "line" => 1502,
+              "raw" => "    from Simon Cozens.\n\n",
+              "style" => "",
+              "text" => "from Simon Cozens."
             }
           ],
           "line" => 1495,
@@ -4165,15 +4333,27 @@
           "entries" => [
             {
               "line" => 1689,
-              "raw" => "    To: perl5-porters\@perl.org\n    Message-ID: <bf337a0849.tom\@compton.compton.nu>\n\n",
+              "raw" => "    To: perl5-porters\@perl.org\n",
               "style" => "",
-              "text" => "To: perl5-porters\@perl.org Message-ID: <bf337a0849.tom\@compton.compton.nu>"
+              "text" => "To: perl5-porters\@perl.org"
+            },
+            {
+              "line" => 1690,
+              "raw" => "    Message-ID: <bf337a0849.tom\@compton.compton.nu>\n\n",
+              "style" => "",
+              "text" => "Message-ID: <bf337a0849.tom\@compton.compton.nu>"
             },
             {
               "line" => 1692,
-              "raw" => "    plus resolve tiny conflict with #3479\n    plus regen_headers.\n\n",
+              "raw" => "    plus resolve tiny conflict with #3479\n",
               "style" => "",
-              "text" => "plus resolve tiny conflict with #3479 plus regen_headers."
+              "text" => "plus resolve tiny conflict with #3479"
+            },
+            {
+              "line" => 1693,
+              "raw" => "    plus regen_headers.\n\n",
+              "style" => "",
+              "text" => "plus regen_headers."
             }
           ],
           "line" => 1686,
@@ -4191,21 +4371,57 @@
           "entries" => [
             {
               "line" => 1710,
-              "raw" => "    \tDate: Thu, 29 Apr 1999 18:21:06 -0700\n    \tMessage-ID: <GEFPBFDJADFJBAAA\@my-dejanews.com>\n    \tSubject: [PATCH 5.005_56] double constants ( C.pm)\n    \t--\n",
+              "raw" => "    \tDate: Thu, 29 Apr 1999 18:21:06 -0700\n",
               "style" => "",
-              "text" => "Date: Thu, 29 Apr 1999 18:21:06 -0700 Message-ID: <GEFPBFDJADFJBAAA\@my-dejanews.com> Subject: [PATCH 5.005_56] double constants ( C.pm)"
+              "text" => "Date: Thu, 29 Apr 1999 18:21:06 -0700"
+            },
+            {
+              "line" => 1711,
+              "raw" => "    \tMessage-ID: <GEFPBFDJADFJBAAA\@my-dejanews.com>\n",
+              "style" => "",
+              "text" => "Message-ID: <GEFPBFDJADFJBAAA\@my-dejanews.com>"
+            },
+            {
+              "line" => 1712,
+              "raw" => "    \tSubject: [PATCH 5.005_56] double constants ( C.pm)\n    \t--\n",
+              "style" => "",
+              "text" => "Subject: [PATCH 5.005_56] double constants ( C.pm)"
             },
             {
               "line" => 1714,
-              "raw" => "    \tDate: Mon, 03 May 1999 20:21:31 PDT\n    \tMessage-ID: <19990504032131.81113.qmail\@hotmail.com>\n    \tSubject: [PATCH 5.005_56] Overloading implementation ( Compiler)\n    \t--\n",
+              "raw" => "    \tDate: Mon, 03 May 1999 20:21:31 PDT\n",
               "style" => "",
-              "text" => "Date: Mon, 03 May 1999 20:21:31 PDT Message-ID: <19990504032131.81113.qmail\@hotmail.com> Subject: [PATCH 5.005_56] Overloading implementation ( Compiler)"
+              "text" => "Date: Mon, 03 May 1999 20:21:31 PDT"
+            },
+            {
+              "line" => 1715,
+              "raw" => "    \tMessage-ID: <19990504032131.81113.qmail\@hotmail.com>\n",
+              "style" => "",
+              "text" => "Message-ID: <19990504032131.81113.qmail\@hotmail.com>"
+            },
+            {
+              "line" => 1716,
+              "raw" => "    \tSubject: [PATCH 5.005_56] Overloading implementation ( Compiler)\n    \t--\n",
+              "style" => "",
+              "text" => "Subject: [PATCH 5.005_56] Overloading implementation ( Compiler)"
             },
             {
               "line" => 1718,
-              "raw" => "    \tDate: Thu, 06 May 1999 17:57:09 -0700\n    \tMessage-ID: <FCJELBLAJBOBAAAA\@my-dejanews.com>\n    \tSubject: Stash.pm\n\n",
+              "raw" => "    \tDate: Thu, 06 May 1999 17:57:09 -0700\n",
               "style" => "",
-              "text" => "Date: Thu, 06 May 1999 17:57:09 -0700 Message-ID: <FCJELBLAJBOBAAAA\@my-dejanews.com> Subject: Stash.pm"
+              "text" => "Date: Thu, 06 May 1999 17:57:09 -0700"
+            },
+            {
+              "line" => 1719,
+              "raw" => "    \tMessage-ID: <FCJELBLAJBOBAAAA\@my-dejanews.com>\n",
+              "style" => "",
+              "text" => "Message-ID: <FCJELBLAJBOBAAAA\@my-dejanews.com>"
+            },
+            {
+              "line" => 1720,
+              "raw" => "    \tSubject: Stash.pm\n\n",
+              "style" => "",
+              "text" => "Subject: Stash.pm"
             }
           ],
           "line" => 1704,
@@ -4223,21 +4439,57 @@
           "entries" => [
             {
               "line" => 1733,
-              "raw" => "    \tDate: Wed, 07 Apr 1999 00:28:23 -0800\n    \tMessage-ID: <FGBNLNPOEELFAAAA\@my-dejanews.com>\n    \tSubject: [PATCH 5.005_56] function prototypes(B.pm)\n    \t--\n",
+              "raw" => "    \tDate: Wed, 07 Apr 1999 00:28:23 -0800\n",
               "style" => "",
-              "text" => "Date: Wed, 07 Apr 1999 00:28:23 -0800 Message-ID: <FGBNLNPOEELFAAAA\@my-dejanews.com> Subject: [PATCH 5.005_56] function prototypes(B.pm)"
+              "text" => "Date: Wed, 07 Apr 1999 00:28:23 -0800"
+            },
+            {
+              "line" => 1734,
+              "raw" => "    \tMessage-ID: <FGBNLNPOEELFAAAA\@my-dejanews.com>\n",
+              "style" => "",
+              "text" => "Message-ID: <FGBNLNPOEELFAAAA\@my-dejanews.com>"
+            },
+            {
+              "line" => 1735,
+              "raw" => "    \tSubject: [PATCH 5.005_56] function prototypes(B.pm)\n    \t--\n",
+              "style" => "",
+              "text" => "Subject: [PATCH 5.005_56] function prototypes(B.pm)"
             },
             {
               "line" => 1737,
-              "raw" => "    \tDate: Thu, 22 Apr 1999 23:40:52 -0700\n    \tMessage-ID: <OEAOMKBMLDADCAAA\@my-dejanews.com>\n    \tSubject: [PATCH 5.005_56 ] discarding worthless padsvs\n    \t--\n",
+              "raw" => "    \tDate: Thu, 22 Apr 1999 23:40:52 -0700\n",
               "style" => "",
-              "text" => "Date: Thu, 22 Apr 1999 23:40:52 -0700 Message-ID: <OEAOMKBMLDADCAAA\@my-dejanews.com> Subject: [PATCH 5.005_56 ] discarding worthless padsvs"
+              "text" => "Date: Thu, 22 Apr 1999 23:40:52 -0700"
+            },
+            {
+              "line" => 1738,
+              "raw" => "    \tMessage-ID: <OEAOMKBMLDADCAAA\@my-dejanews.com>\n",
+              "style" => "",
+              "text" => "Message-ID: <OEAOMKBMLDADCAAA\@my-dejanews.com>"
+            },
+            {
+              "line" => 1739,
+              "raw" => "    \tSubject: [PATCH 5.005_56 ] discarding worthless padsvs\n    \t--\n",
+              "style" => "",
+              "text" => "Subject: [PATCH 5.005_56 ] discarding worthless padsvs"
             },
             {
               "line" => 1741,
-              "raw" => "    \tDate: Tue, 27 Apr 1999 01:14:49 PDT\n    \tMessage-ID: <19990427081449.28615.qmail\@hotmail.com>\n    \tSubject: [PATCH 5.005_56] pp_ncmp implementation ( CC.pm)\n\n",
+              "raw" => "    \tDate: Tue, 27 Apr 1999 01:14:49 PDT\n",
               "style" => "",
-              "text" => "Date: Tue, 27 Apr 1999 01:14:49 PDT Message-ID: <19990427081449.28615.qmail\@hotmail.com> Subject: [PATCH 5.005_56] pp_ncmp implementation ( CC.pm)"
+              "text" => "Date: Tue, 27 Apr 1999 01:14:49 PDT"
+            },
+            {
+              "line" => 1742,
+              "raw" => "    \tMessage-ID: <19990427081449.28615.qmail\@hotmail.com>\n",
+              "style" => "",
+              "text" => "Message-ID: <19990427081449.28615.qmail\@hotmail.com>"
+            },
+            {
+              "line" => 1743,
+              "raw" => "    \tSubject: [PATCH 5.005_56] pp_ncmp implementation ( CC.pm)\n\n",
+              "style" => "",
+              "text" => "Subject: [PATCH 5.005_56] pp_ncmp implementation ( CC.pm)"
             }
           ],
           "line" => 1727,
@@ -4369,9 +4621,15 @@
           "entries" => [
             {
               "line" => 1845,
-              "raw" => "    Vishal would appreciate comments about B::Stackobj changes from\n    someone knowing that module well.\n\n",
+              "raw" => "    Vishal would appreciate comments about B::Stackobj changes from\n",
               "style" => "",
-              "text" => "Vishal would appreciate comments about B::Stackobj changes from someone knowing that module well."
+              "text" => "Vishal would appreciate comments about B::Stackobj changes from"
+            },
+            {
+              "line" => 1846,
+              "raw" => "    someone knowing that module well.\n\n",
+              "style" => "",
+              "text" => "someone knowing that module well."
             }
           ],
           "line" => 1838,
@@ -4407,15 +4665,51 @@
           "entries" => [
             {
               "line" => 1869,
-              "raw" => "      While we don't save \"bootstrap\" CV we need to provide a stub,\n      so that if we require it later we don't fall through and attempt\n      to DynaLoad module again.\n\n",
+              "raw" => "      While we don't save \"bootstrap\" CV we need to provide a stub,\n",
               "style" => "",
-              "text" => "While we don't save \"bootstrap\" CV we need to provide a stub, so that if we require it later we don't fall through and attempt to DynaLoad module again."
+              "text" => "While we don't save \"bootstrap\" CV we need to provide a stub,"
+            },
+            {
+              "line" => 1870,
+              "raw" => "      so that if we require it later we don't fall through and attempt\n",
+              "style" => "",
+              "text" => "so that if we require it later we don't fall through and attempt"
+            },
+            {
+              "line" => 1871,
+              "raw" => "      to DynaLoad module again.\n\n",
+              "style" => "",
+              "text" => "to DynaLoad module again."
             },
             {
               "line" => 1873,
-              "raw" => "      Attempt to save %INC so that \"require\" does not reload things\n      we have compiled-in (does not work right yet - seems to be due\n      to PL_incgv being created in perl_parse() current scheme setting\n      GvHV() is \"better\" than saving the glob, but still does not\n      work as I expect).\n\n",
+              "raw" => "      Attempt to save %INC so that \"require\" does not reload things\n",
               "style" => "",
-              "text" => "Attempt to save %INC so that \"require\" does not reload things we have compiled-in (does not work right yet - seems to be due to PL_incgv being created in perl_parse() current scheme setting GvHV() is \"better\" than saving the glob, but still does not work as I expect)."
+              "text" => "Attempt to save %INC so that \"require\" does not reload things"
+            },
+            {
+              "line" => 1874,
+              "raw" => "      we have compiled-in (does not work right yet - seems to be due\n",
+              "style" => "",
+              "text" => "we have compiled-in (does not work right yet - seems to be due"
+            },
+            {
+              "line" => 1875,
+              "raw" => "      to PL_incgv being created in perl_parse() current scheme setting\n",
+              "style" => "",
+              "text" => "to PL_incgv being created in perl_parse() current scheme setting"
+            },
+            {
+              "line" => 1876,
+              "raw" => "      GvHV() is \"better\" than saving the glob, but still does not\n",
+              "style" => "",
+              "text" => "GvHV() is \"better\" than saving the glob, but still does not"
+            },
+            {
+              "line" => 1877,
+              "raw" => "      work as I expect).\n\n",
+              "style" => "",
+              "text" => "work as I expect)."
             }
           ],
           "line" => 1865,
@@ -4701,9 +4995,21 @@
             },
             {
               "line" => 2034,
-              "raw" => "    ext/B/..., some to lib/B/..., O.pm and B.pm go in lib and some\n    move to the base perl directory (e.g. headers). Will need some\n    cleaning up before it builds properly, I would guess.\n\n",
+              "raw" => "    ext/B/..., some to lib/B/..., O.pm and B.pm go in lib and some\n",
               "style" => "",
-              "text" => "ext/B/..., some to lib/B/..., O.pm and B.pm go in lib and some move to the base perl directory (e.g. headers). Will need some cleaning up before it builds properly, I would guess."
+              "text" => "ext/B/..., some to lib/B/..., O.pm and B.pm go in lib and some"
+            },
+            {
+              "line" => 2035,
+              "raw" => "    move to the base perl directory (e.g. headers). Will need some\n",
+              "style" => "",
+              "text" => "move to the base perl directory (e.g. headers). Will need some"
+            },
+            {
+              "line" => 2036,
+              "raw" => "    cleaning up before it builds properly, I would guess.\n\n",
+              "style" => "",
+              "text" => "cleaning up before it builds properly, I would guess."
             }
           ],
           "line" => 2031,
@@ -4763,9 +5069,21 @@
             },
             {
               "line" => 2050,
-              "raw" => "    right up until the final tweak of B.xs to add threadsv_names\n    at which point building it provokes a seg fault in perl while\n    doing the xsubpp :-(.\n\n",
+              "raw" => "    right up until the final tweak of B.xs to add threadsv_names\n",
               "style" => "",
-              "text" => "right up until the final tweak of B.xs to add threadsv_names at which point building it provokes a seg fault in perl while doing the xsubpp :-(."
+              "text" => "right up until the final tweak of B.xs to add threadsv_names"
+            },
+            {
+              "line" => 2051,
+              "raw" => "    at which point building it provokes a seg fault in perl while\n",
+              "style" => "",
+              "text" => "at which point building it provokes a seg fault in perl while"
+            },
+            {
+              "line" => 2052,
+              "raw" => "    doing the xsubpp :-(.\n\n",
+              "style" => "",
+              "text" => "doing the xsubpp :-(."
             }
           ],
           "line" => 2047,
@@ -4797,9 +5115,21 @@
             },
             {
               "line" => 2059,
-              "raw" => "    fields becoming 0 in the init section. Add missing\n    write_back in B::Stackobj::Padsv::load_double to fix\n    test 22 of op/my.t.\n\n",
+              "raw" => "    fields becoming 0 in the init section. Add missing\n",
               "style" => "",
-              "text" => "fields becoming 0 in the init section. Add missing write_back in B::Stackobj::Padsv::load_double to fix test 22 of op/my.t."
+              "text" => "fields becoming 0 in the init section. Add missing"
+            },
+            {
+              "line" => 2060,
+              "raw" => "    write_back in B::Stackobj::Padsv::load_double to fix\n",
+              "style" => "",
+              "text" => "write_back in B::Stackobj::Padsv::load_double to fix"
+            },
+            {
+              "line" => 2061,
+              "raw" => "    test 22 of op/my.t.\n\n",
+              "style" => "",
+              "text" => "test 22 of op/my.t."
             }
           ],
           "line" => 2057,

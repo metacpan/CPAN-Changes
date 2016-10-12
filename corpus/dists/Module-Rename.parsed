@@ -34,9 +34,15 @@
       "entries" => [
         {
           "line" => 13,
-          "raw" => "   (ms) Replace \"Foo/Bar\" in files just like \"Foo::Bar\".\n   (ms) Replace pm files outside the regular dir structure.\n\n",
+          "raw" => "   (ms) Replace \"Foo/Bar\" in files just like \"Foo::Bar\".\n",
           "style" => "",
-          "text" => "(ms) Replace \"Foo/Bar\" in files just like \"Foo::Bar\". (ms) Replace pm files outside the regular dir structure."
+          "text" => "(ms) Replace \"Foo/Bar\" in files just like \"Foo::Bar\"."
+        },
+        {
+          "line" => 14,
+          "raw" => "   (ms) Replace pm files outside the regular dir structure.\n\n",
+          "style" => "",
+          "text" => "(ms) Replace pm files outside the regular dir structure."
         }
       ],
       "line" => 12,

@@ -22,9 +22,27 @@
       "entries" => [
         {
           "line" => 7,
-          "raw" => "        accessors for translations, synonyms, hyponyms, hypernyms, antonyms, pronunciations, word senses, parts of speech\n        stubbed out accessors for etymologies, derived words, alternative forms\n        added methods for accessing and traversing document sections\n        utilize MediaWiki::API package\n\n\n",
+          "raw" => "        accessors for translations, synonyms, hyponyms, hypernyms, antonyms, pronunciations, word senses, parts of speech\n",
           "style" => "",
-          "text" => "accessors for translations, synonyms, hyponyms, hypernyms, antonyms, pronunciations, word senses, parts of speech stubbed out accessors for etymologies, derived words, alternative forms added methods for accessing and traversing document sections utilize MediaWiki::API package"
+          "text" => "accessors for translations, synonyms, hyponyms, hypernyms, antonyms, pronunciations, word senses, parts of speech"
+        },
+        {
+          "line" => 8,
+          "raw" => "        stubbed out accessors for etymologies, derived words, alternative forms\n",
+          "style" => "",
+          "text" => "stubbed out accessors for etymologies, derived words, alternative forms"
+        },
+        {
+          "line" => 9,
+          "raw" => "        added methods for accessing and traversing document sections\n",
+          "style" => "",
+          "text" => "added methods for accessing and traversing document sections"
+        },
+        {
+          "line" => 10,
+          "raw" => "        utilize MediaWiki::API package\n\n\n",
+          "style" => "",
+          "text" => "utilize MediaWiki::API package"
         }
       ],
       "line" => 6,
@@ -37,9 +55,27 @@
       "entries" => [
         {
           "line" => 14,
-          "raw" => "        Added subdocuments to provide more functionality when retrieving child sections of the document.\n        Follow Wikisaurus links for synonyms, hyponyms, hypernyms, etc and include content from those pages.\n        Provided method for downloading audio files for pronunciations\n        Normalize language codes and provide consistent language names\n\n\n",
+          "raw" => "        Added subdocuments to provide more functionality when retrieving child sections of the document.\n",
           "style" => "",
-          "text" => "Added subdocuments to provide more functionality when retrieving child sections of the document. Follow Wikisaurus links for synonyms, hyponyms, hypernyms, etc and include content from those pages. Provided method for downloading audio files for pronunciations Normalize language codes and provide consistent language names"
+          "text" => "Added subdocuments to provide more functionality when retrieving child sections of the document."
+        },
+        {
+          "line" => 15,
+          "raw" => "        Follow Wikisaurus links for synonyms, hyponyms, hypernyms, etc and include content from those pages.\n",
+          "style" => "",
+          "text" => "Follow Wikisaurus links for synonyms, hyponyms, hypernyms, etc and include content from those pages."
+        },
+        {
+          "line" => 16,
+          "raw" => "        Provided method for downloading audio files for pronunciations\n",
+          "style" => "",
+          "text" => "Provided method for downloading audio files for pronunciations"
+        },
+        {
+          "line" => 17,
+          "raw" => "        Normalize language codes and provide consistent language names\n\n\n",
+          "style" => "",
+          "text" => "Normalize language codes and provide consistent language names"
         }
       ],
       "line" => 13,
@@ -52,9 +88,21 @@
       "entries" => [
         {
           "line" => 21,
-          "raw" => "        Added unit test for parsing a document\n        Added unit test for parsing translations\n        Refactored translation parser\n\n\n",
+          "raw" => "        Added unit test for parsing a document\n",
           "style" => "",
-          "text" => "Added unit test for parsing a document Added unit test for parsing translations Refactored translation parser"
+          "text" => "Added unit test for parsing a document"
+        },
+        {
+          "line" => 22,
+          "raw" => "        Added unit test for parsing translations\n",
+          "style" => "",
+          "text" => "Added unit test for parsing translations"
+        },
+        {
+          "line" => 23,
+          "raw" => "        Refactored translation parser\n\n\n",
+          "style" => "",
+          "text" => "Refactored translation parser"
         }
       ],
       "line" => 20,
@@ -67,9 +115,21 @@
       "entries" => [
         {
           "line" => 27,
-          "raw" => "        updated documentation\n        Added example scripts in /bin       \n        Various bugfixes\n\n\n",
+          "raw" => "        updated documentation\n",
           "style" => "",
-          "text" => "updated documentation Added example scripts in /bin Various bugfixes"
+          "text" => "updated documentation"
+        },
+        {
+          "line" => 28,
+          "raw" => "        Added example scripts in /bin       \n",
+          "style" => "",
+          "text" => "Added example scripts in /bin"
+        },
+        {
+          "line" => 29,
+          "raw" => "        Various bugfixes\n\n\n",
+          "style" => "",
+          "text" => "Various bugfixes"
         }
       ],
       "line" => 26,
@@ -82,9 +142,15 @@
       "entries" => [
         {
           "line" => 33,
-          "raw" => "        Added part of speech info to output of get_translations()\n        Included translations from other wiktionary pages linked to the original one\n\t   \n\n",
+          "raw" => "        Added part of speech info to output of get_translations()\n",
           "style" => "",
-          "text" => "Added part of speech info to output of get_translations() Included translations from other wiktionary pages linked to the original one"
+          "text" => "Added part of speech info to output of get_translations()"
+        },
+        {
+          "line" => 34,
+          "raw" => "        Included translations from other wiktionary pages linked to the original one\n\t   \n\n",
+          "style" => "",
+          "text" => "Included translations from other wiktionary pages linked to the original one"
         }
       ],
       "line" => 32,
@@ -112,9 +178,15 @@
       "entries" => [
         {
           "line" => 41,
-          "raw" => "        Various bugfixes for data sanitizing\n        Fixed issue with unit tests\n",
+          "raw" => "        Various bugfixes for data sanitizing\n",
           "style" => "",
-          "text" => "Various bugfixes for data sanitizing Fixed issue with unit tests"
+          "text" => "Various bugfixes for data sanitizing"
+        },
+        {
+          "line" => 42,
+          "raw" => "        Fixed issue with unit tests\n",
+          "style" => "",
+          "text" => "Fixed issue with unit tests"
         }
       ],
       "line" => 40,

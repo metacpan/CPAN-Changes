@@ -206,9 +206,21 @@
       "entries" => [
         {
           "line" => 48,
-          "raw" => "    commit 239829c5d2fd0a15abdbecbe593146c466905c3c\n    Author: Masayuki Matsuki <y.songmu\@gmail.com>\n    Date:   Wed Dec 14 19:13:15 2011 +0900\n\n",
+          "raw" => "    commit 239829c5d2fd0a15abdbecbe593146c466905c3c\n",
           "style" => "",
-          "text" => "commit 239829c5d2fd0a15abdbecbe593146c466905c3c Author: Masayuki Matsuki <y.songmu\@gmail.com> Date:   Wed Dec 14 19:13:15 2011 +0900"
+          "text" => "commit 239829c5d2fd0a15abdbecbe593146c466905c3c"
+        },
+        {
+          "line" => 49,
+          "raw" => "    Author: Masayuki Matsuki <y.songmu\@gmail.com>\n",
+          "style" => "",
+          "text" => "Author: Masayuki Matsuki <y.songmu\@gmail.com>"
+        },
+        {
+          "line" => 50,
+          "raw" => "    Date:   Wed Dec 14 19:13:15 2011 +0900\n\n",
+          "style" => "",
+          "text" => "Date:   Wed Dec 14 19:13:15 2011 +0900"
         },
         {
           "line" => 52,
@@ -218,15 +230,27 @@
         },
         {
           "line" => 54,
-          "raw" => "    File::Rsync::out and File::Rsync::err retruns array in array context,\n    and retruns array ref in scalar context.\n\n",
+          "raw" => "    File::Rsync::out and File::Rsync::err retruns array in array context,\n",
           "style" => "",
-          "text" => "File::Rsync::out and File::Rsync::err retruns array in array context, and retruns array ref in scalar context."
+          "text" => "File::Rsync::out and File::Rsync::err retruns array in array context,"
+        },
+        {
+          "line" => 55,
+          "raw" => "    and retruns array ref in scalar context.\n\n",
+          "style" => "",
+          "text" => "and retruns array ref in scalar context."
         },
         {
           "line" => 57,
-          "raw" => "    lib/Archer/Plugin/Rsync.pm |    4 ++--\n    1 files changed, 2 insertions(+), 2 deletions(-)\n\n",
+          "raw" => "    lib/Archer/Plugin/Rsync.pm |    4 ++--\n",
           "style" => "",
-          "text" => "lib/Archer/Plugin/Rsync.pm |    4 ++-- 1 files changed, 2 insertions(+), 2 deletions(-)"
+          "text" => "lib/Archer/Plugin/Rsync.pm |    4 ++--"
+        },
+        {
+          "line" => 58,
+          "raw" => "    1 files changed, 2 insertions(+), 2 deletions(-)\n\n",
+          "style" => "",
+          "text" => "1 files changed, 2 insertions(+), 2 deletions(-)"
         }
       ],
       "line" => 46,

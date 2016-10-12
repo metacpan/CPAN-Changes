@@ -1131,6 +1131,12 @@
       "date" => "2009-07-29",
       "entries" => [
         {
+          "line" => 292,
+          "raw" => "    Add cloning support for containers and services\n",
+          "style" => "",
+          "text" => "Add cloning support for containers and services"
+        },
+        {
           "entries" => [
             {
               "line" => 294,
@@ -1139,10 +1145,10 @@
               "text" => "adding tests for this"
             }
           ],
-          "line" => 292,
-          "raw" => "    Add cloning support for containers and services\n    (thanks to jrockway for this)\n",
+          "line" => 293,
+          "raw" => "    (thanks to jrockway for this)\n",
           "style" => "",
-          "text" => "Add cloning support for containers and services (thanks to jrockway for this)"
+          "text" => "(thanks to jrockway for this)"
         },
         {
           "entries" => [

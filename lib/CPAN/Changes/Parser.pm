@@ -162,9 +162,18 @@ sub _parse {
     else {
       $change = $line;
       if (
-        $indent >= $#indents
-        && defined $indents[-1]{text}
+        defined $indents[-1]{text}
         && !$indents[-1]{done}
+        && (
+          $indent > $#indents
+          || (
+            $indent == $#indents
+            && (
+              length $indents[-1]{style}
+              || $indent == 1
+            )
+          )
+        )
       ) {
         $indents[-1]{raw}  .= $full_line;
         $indents[-1]{text} .= " $change";

@@ -311,9 +311,21 @@
               "entries" => [
                 {
                   "line" => 86,
-                  "raw" => "          However, if you want to create your own cache object that\n          writes to /tmp/FileCache/WWW::Mechanize::Cached, for\n          compatibility, you can create it and pass it in.\n\n",
+                  "raw" => "          However, if you want to create your own cache object that\n",
                   "style" => "",
-                  "text" => "However, if you want to create your own cache object that writes to /tmp/FileCache/WWW::Mechanize::Cached, for compatibility, you can create it and pass it in."
+                  "text" => "However, if you want to create your own cache object that"
+                },
+                {
+                  "line" => 87,
+                  "raw" => "          writes to /tmp/FileCache/WWW::Mechanize::Cached, for\n",
+                  "style" => "",
+                  "text" => "writes to /tmp/FileCache/WWW::Mechanize::Cached, for"
+                },
+                {
+                  "line" => 88,
+                  "raw" => "          compatibility, you can create it and pass it in.\n\n",
+                  "style" => "",
+                  "text" => "compatibility, you can create it and pass it in."
                 }
               ],
               "line" => 80,
@@ -393,9 +405,27 @@
         },
         {
           "line" => 109,
-          "raw" => "        On December 29th, 2003, Iain Truskett, the original author of\n        WWW::Mechanize::Cached passed away.  I've taken over maintenance\n        of the module.  If you're interested in carrying on Iain's work,\n        let me know.\n\n\n",
+          "raw" => "        On December 29th, 2003, Iain Truskett, the original author of\n",
           "style" => "",
-          "text" => "On December 29th, 2003, Iain Truskett, the original author of WWW::Mechanize::Cached passed away.  I've taken over maintenance of the module.  If you're interested in carrying on Iain's work, let me know."
+          "text" => "On December 29th, 2003, Iain Truskett, the original author of"
+        },
+        {
+          "line" => 110,
+          "raw" => "        WWW::Mechanize::Cached passed away.  I've taken over maintenance\n",
+          "style" => "",
+          "text" => "WWW::Mechanize::Cached passed away.  I've taken over maintenance"
+        },
+        {
+          "line" => 111,
+          "raw" => "        of the module.  If you're interested in carrying on Iain's work,\n",
+          "style" => "",
+          "text" => "of the module.  If you're interested in carrying on Iain's work,"
+        },
+        {
+          "line" => 112,
+          "raw" => "        let me know.\n\n\n",
+          "style" => "",
+          "text" => "let me know."
         }
       ],
       "line" => 105,

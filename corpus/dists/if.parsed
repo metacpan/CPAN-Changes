@@ -55,9 +55,15 @@
       "entries" => [
         {
           "line" => 15,
-          "raw" => "\t\t  Better error handling.\n\t\t  Suggest significance of => in the docs.\n\n",
+          "raw" => "\t\t  Better error handling.\n",
           "style" => "",
-          "text" => "Better error handling. Suggest significance of => in the docs."
+          "text" => "Better error handling."
+        },
+        {
+          "line" => 16,
+          "raw" => "\t\t  Suggest significance of => in the docs.\n\n",
+          "style" => "",
+          "text" => "Suggest significance of => in the docs."
         }
       ],
       "line" => 14,
