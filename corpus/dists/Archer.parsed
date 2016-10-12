@@ -1,7 +1,13 @@
 {
-  "preamble" => "Revision history for Archer\n\n{{\$NEXT}}",
-  "raw_preamble" => "Revision history for Archer\n\n{{\$NEXT}}\n\n",
+  "preamble" => "Revision history for Archer",
+  "raw_preamble" => "Revision history for Archer\n\n",
   "releases" => [
+    {
+      "entries" => [],
+      "line" => 3,
+      "raw" => "{{\$NEXT}}\n\n",
+      "version" => "{{\$NEXT}}"
+    },
     {
       "date" => "2013-07-25T06:32:29Z",
       "entries" => [

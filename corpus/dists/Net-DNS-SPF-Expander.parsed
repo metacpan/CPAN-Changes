@@ -1,7 +1,13 @@
 {
-  "preamble" => "Revision history for {{\$dist->name}}\n\n{{\$NEXT}}",
-  "raw_preamble" => "Revision history for {{\$dist->name}}\n\n{{\$NEXT}}\n\n",
+  "preamble" => "Revision history for {{\$dist->name}}",
+  "raw_preamble" => "Revision history for {{\$dist->name}}\n\n",
   "releases" => [
+    {
+      "entries" => [],
+      "line" => 3,
+      "raw" => "{{\$NEXT}}\n\n",
+      "version" => "{{\$NEXT}}"
+    },
     {
       "date" => "2013-07-29",
       "entries" => [

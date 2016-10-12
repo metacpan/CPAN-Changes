@@ -1,7 +1,20 @@
 {
-  "preamble" => "Revision history for Perl module Convert::BinHex\n\n{{\$NEXT}}\n\t- Fixed pod error in debinhex and added pod tests",
-  "raw_preamble" => "Revision history for Perl module Convert::BinHex\n\n{{\$NEXT}}\n\t- Fixed pod error in debinhex and added pod tests\n\n",
+  "preamble" => "Revision history for Perl module Convert::BinHex",
+  "raw_preamble" => "Revision history for Perl module Convert::BinHex\n\n",
   "releases" => [
+    {
+      "entries" => [
+        {
+          "line" => 4,
+          "raw" => "\t- Fixed pod error in debinhex and added pod tests\n\n",
+          "style" => "-",
+          "text" => "Fixed pod error in debinhex and added pod tests"
+        }
+      ],
+      "line" => 3,
+      "raw" => "{{\$NEXT}}\n",
+      "version" => "{{\$NEXT}}"
+    },
     {
       "date" => "2013-08-25",
       "entries" => [

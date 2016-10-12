@@ -1,7 +1,13 @@
 {
-  "preamble" => "Revision history for Bread-Board\n\n{{\$NEXT}}",
-  "raw_preamble" => "Revision history for Bread-Board\n\n{{\$NEXT}}\n\n",
+  "preamble" => "Revision history for Bread-Board",
+  "raw_preamble" => "Revision history for Bread-Board\n\n",
   "releases" => [
+    {
+      "entries" => [],
+      "line" => 3,
+      "raw" => "{{\$NEXT}}\n\n",
+      "version" => "{{\$NEXT}}"
+    },
     {
       "date" => "2014-02-02",
       "entries" => [

@@ -1,7 +1,13 @@
 {
-  "preamble" => "Revision history for Ubic-Service-Plack\n\n{{\$NEXT}}",
-  "raw_preamble" => "Revision history for Ubic-Service-Plack\n\n{{\$NEXT}}\n\n",
+  "preamble" => "Revision history for Ubic-Service-Plack",
+  "raw_preamble" => "Revision history for Ubic-Service-Plack\n\n",
   "releases" => [
+    {
+      "entries" => [],
+      "line" => 3,
+      "raw" => "{{\$NEXT}}\n\n",
+      "version" => "{{\$NEXT}}"
+    },
     {
       "entries" => [
         {

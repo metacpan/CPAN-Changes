@@ -18,7 +18,7 @@ sub _eq {
   }
 }
 
-my $parser = CPAN::Changes::Parser->new;
+my $parser = CPAN::Changes::Parser->new(version_like => qr/\{\{\s*\$NEXT\s*\}\}/);
 
 for my $log (@ARGV ? @ARGV : glob('corpus/dists/*.changes')) {
   my $content = do {

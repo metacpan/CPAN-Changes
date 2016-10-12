@@ -1,7 +1,13 @@
 {
-  "preamble" => "Revision history for Ubic\n\n{{\$NEXT}}",
-  "raw_preamble" => "Revision history for Ubic\n\n{{\$NEXT}}\n\n",
+  "preamble" => "Revision history for Ubic",
+  "raw_preamble" => "Revision history for Ubic\n\n",
   "releases" => [
+    {
+      "entries" => [],
+      "line" => 3,
+      "raw" => "{{\$NEXT}}\n\n",
+      "version" => "{{\$NEXT}}"
+    },
     {
       "date" => "2013-07-26",
       "entries" => [
