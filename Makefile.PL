@@ -16,8 +16,11 @@ my %META = (
     },
     runtime => {
       requires => {
-        'Text::Wrap' => 0.003,
-        'version'    => 0.9906,
+        'Moo' => '1.006000',
+        'Module::Runtime' => 0,
+        'Test::Builder' => 0,
+        'Sub::Quote' => '1.005000',
+        'Types::Standard' => 0,
       },
     },
     develop => {
