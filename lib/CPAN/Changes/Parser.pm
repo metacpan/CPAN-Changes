@@ -23,10 +23,13 @@ has _entry_class => (
 has version_like => (
   is => 'ro',
 );
+has version_prefix => (
+  is => 'ro',
+);
 
 sub parse_string {
   my ($self, $string) = @_;
-  $self->_transform(_parse($string, version_like => $self->version_like));
+  $self->_transform($self->_parse($string));
 }
 
 sub parse_file {
@@ -81,14 +84,16 @@ sub _trans_entry {
 }
 
 sub _parse {
-  my ($string, %opts) = @_;
+  my ($self, $string) = @_;
 
   my $version_prefix = qr/version|revision/i;
-  $version_prefix = qr/$version_prefix|$opts{version_prefix}/
-    if $opts{version_prefix};
+  if (defined(my $vp = $self->version_prefix)) {
+    $version_prefix = qr/$version_prefix|$vp/
+  }
   my $version_token = qr/$version::LAX(?:-TRIAL)?/;
-  $version_token = qr/$version_token|$opts{version_like}/
-    if $opts{version_like};
+  if (defined(my $vt = $self->version_like)) {
+    $version_token = qr/$version_token|$vt/
+  }
 
   my $raw_preamble = '';
   my @releases;

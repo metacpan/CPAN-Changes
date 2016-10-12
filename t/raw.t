@@ -18,6 +18,8 @@ sub _eq {
   }
 }
 
+my $parser = CPAN::Changes::Parser->new;
+
 for my $log (@ARGV ? @ARGV : glob('corpus/dists/*.changes')) {
   my $content = do {
     open my $fh, '<', $log
@@ -25,7 +27,7 @@ for my $log (@ARGV ? @ARGV : glob('corpus/dists/*.changes')) {
     local $/;
     <$fh>;
   };
-  my $parsed = CPAN::Changes::Parser::_parse($content);
+  my $parsed = $parser->_parse($content);
   my $raw = $parsed->{raw_preamble};
 
   my @entries = @{ $parsed->{releases} || [] };
