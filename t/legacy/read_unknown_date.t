@@ -5,7 +5,7 @@ use Test::More;
 
 use CPAN::Changes;
 
-my $changes = CPAN::Changes->load( 't/corpus/unknown_date.changes' );
+my $changes = CPAN::Changes->load( 'corpus/test/legacy/unknown_date.changes' );
 
 isa_ok( $changes, 'CPAN::Changes' );
 is( $changes->preamble, '', 'no preamble' );

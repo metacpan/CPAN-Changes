@@ -5,7 +5,7 @@ use Test::More;
 
 use CPAN::Changes;
 
-for my $file ( 't/corpus/utf8.changes', 't/corpus/latin1.changes' ) {
+for my $file ( 'corpus/test/legacy/utf8.changes', 'corpus/test/legacy/latin1.changes' ) {
     my $changes = CPAN::Changes->load( $file );
 
     isa_ok( $changes, 'CPAN::Changes' );

@@ -5,7 +5,7 @@ use Test::More;
 
 use CPAN::Changes;
 
-my $changes = CPAN::Changes->load( 't/corpus/dist-zilla_format.changes' );
+my $changes = CPAN::Changes->load( 'corpus/test/legacy/dist-zilla_format.changes' );
 
 isa_ok( $changes, 'CPAN::Changes' );
 

@@ -5,7 +5,7 @@ use Test::More;
 
 use CPAN::Changes;
 
-my $changes = CPAN::Changes->load( 't/corpus/multiple_releases.changes' );
+my $changes = CPAN::Changes->load( 'corpus/test/legacy/multiple_releases.changes' );
 
 isa_ok( $changes, 'CPAN::Changes' );
 is( $changes->preamble, '', 'no preamble' );

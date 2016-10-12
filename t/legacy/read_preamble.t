@@ -6,7 +6,7 @@ use Test::More;
 use CPAN::Changes;
 
 {
-    my $changes = CPAN::Changes->load( 't/corpus/preamble.changes' );
+    my $changes = CPAN::Changes->load( 'corpus/test/legacy/preamble.changes' );
 
     isa_ok( $changes, 'CPAN::Changes' );
     is( $changes->preamble, 'Revision history for perl module Foo::Bar',
@@ -16,7 +16,7 @@ use CPAN::Changes;
 }
 
 {
-    my $changes = CPAN::Changes->load( 't/corpus/long_preamble.changes' );
+    my $changes = CPAN::Changes->load( 'corpus/test/legacy/long_preamble.changes' );
 
     isa_ok( $changes, 'CPAN::Changes' );
     is( $changes->preamble, 'Revision history for perl module Foo::Bar

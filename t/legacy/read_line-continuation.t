@@ -5,7 +5,7 @@ use Test::More;
 
 use CPAN::Changes;
 
-my $changes = CPAN::Changes->load( 't/corpus/line-continuation.changes' );
+my $changes = CPAN::Changes->load( 'corpus/test/legacy/line-continuation.changes' );
 
 isa_ok( $changes, 'CPAN::Changes' );
 is( $changes->preamble, '', 'no preamble' );

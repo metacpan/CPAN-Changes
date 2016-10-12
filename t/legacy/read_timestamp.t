@@ -5,7 +5,7 @@ use Test::More;
 
 use CPAN::Changes;
 
-my $changes = CPAN::Changes->load( 't/corpus/timestamp.changes' );
+my $changes = CPAN::Changes->load( 'corpus/test/legacy/timestamp.changes' );
 
 isa_ok( $changes, 'CPAN::Changes' );
 

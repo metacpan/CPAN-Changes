@@ -5,7 +5,7 @@ use Test::More;
 
 use CPAN::Changes;
 
-my $changes = CPAN::Changes->load( 't/corpus/no-leading-space-for-change.changes' );
+my $changes = CPAN::Changes->load( 'corpus/test/legacy/no-leading-space-for-change.changes' );
 
 isa_ok( $changes, 'CPAN::Changes' );
 is( $changes->preamble, '', 'no preamble' );
