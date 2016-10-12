@@ -359,3 +359,59 @@ sub _expand_tab {
 }
 
 1;
+__END__
+
+=head1 NAME
+
+CPAN::Changes::Parser - Parse a CPAN Changelog file
+
+=head1 SYNOPSIS
+
+  my $parser = CPAN::Changes::Parser->new(
+    version_like => qr/\{\{\$NEXT\}\}/,
+    version_prefix => qr/=head\d\s+/,
+  );
+
+  my $changelog = $parser->parse_file('Changes', ':utf8');
+  my $changelog = $parser->parse_string($content);
+
+=head1 DESCRIPTION
+
+Parses a file or string into a L<CPAN::Changes> object.  Many forms of change
+log are accepted.
+
+=head1 ATTRIBUTES
+
+=head2 version_like
+
+A regular expression for a token that will be accepted in place of a version
+number.  For example, this could be set to C<qr/\{\{\$NEXT\}\}/> if the
+L<Dist::Zilla> plugin L<[NextRelease]|Dist::Zilla::Plugin::NextRelease> is
+managing the file.
+
+=head2 version_prefix
+
+A regular expression for a prefix that will be matched before a version number.
+C<qr/=head\d\s+/> could be used if the change log is using Pod headings for the
+release headings.
+
+=head1 METHODS
+
+=head2 parse_file
+
+Parses a file into a L<CPAN::Changes> object.  Optionally accepts a string of
+layers to be used when reading the file.
+
+=head2 parse_string
+
+Parses a string into a L<CPAN::Changes> object.
+
+=head1 AUTHORS
+
+See L<CPAN::Changes> for authors.
+
+=head1 COPYRIGHT AND LICENSE
+
+See L<CPAN::Changes> for the copyright and license.
+
+=cut
