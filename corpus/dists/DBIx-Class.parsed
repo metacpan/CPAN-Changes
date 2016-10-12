@@ -5076,6 +5076,27 @@
       "version" => "0.08127"
     },
     {
+      "date" => "2011-01-24T15:35Z",
+      "entries" => [
+        {
+          "entries" => [
+            {
+              "line" => 503,
+              "style" => "-",
+              "text" => "Support for completely arbitrary SQL::Abstract-based conditions in all types of relationships"
+            }
+          ],
+          "line" => 502,
+          "style" => "*",
+          "text" => "New Features / Changes"
+        }
+      ],
+      "line" => 500,
+      "note" => "(UTC)",
+      "raw_date" => "2011-01-24 15:35",
+      "version" => "0.08190-TRIAL"
+    },
+    {
       "date" => "2011-05-02T00:45Z",
       "entries" => [
         {
@@ -5323,25 +5344,6 @@
           "line" => 490,
           "style" => "*",
           "text" => "Misc"
-        },
-        {
-          "entries" => [
-            {
-              "entries" => [
-                {
-                  "line" => 503,
-                  "style" => "-",
-                  "text" => "Support for completely arbitrary SQL::Abstract-based conditions in all types of relationships"
-                }
-              ],
-              "line" => 502,
-              "style" => "*",
-              "text" => "New Features / Changes"
-            }
-          ],
-          "line" => 500,
-          "style" => "",
-          "text" => "0.08190-TRIAL 2011-01-24 15:35 (UTC)"
         }
       ],
       "line" => 414,

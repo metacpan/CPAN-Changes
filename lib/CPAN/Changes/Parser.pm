@@ -87,7 +87,7 @@ sub _parse {
   my $version_prefix = qr/version|revision/i;
   $version_prefix = qr/$version_prefix|$opts{version_prefix}/
     if $opts{version_prefix};
-  my $version_token = $version::LAX;
+  my $version_token = qr/$version::LAX(?:-TRIAL)?/;
   $version_token = qr/$version_token|$opts{version_like}/
     if $opts{version_like};
 

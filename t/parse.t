@@ -9,7 +9,7 @@ my $parser = CPAN::Changes::Parser->new;
 my $changes = $parser->parse_file('corpus/dists/DBIx-Class.changes');
 
 is $changes->preamble, 'Revision history for DBIx::Class';
-is scalar @{[ $changes->releases ]}, 113;
+is scalar @{[ $changes->releases ]}, 114;
 
 my $release = $changes->find_release(0.08260);
 
