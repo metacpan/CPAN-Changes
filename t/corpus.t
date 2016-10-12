@@ -36,7 +36,7 @@ GetOptions(
   'update' => \(my $update),
 ) or die "Bad command line arguments.\n";
 
-for my $log (glob('corpus/dists/*.changes')) {
+for my $log (@ARGV ? @ARGV : glob('corpus/dists/*.changes')) {
   my $content = do {
     open my $fh, '<', $log
       or die "can't read $log: $!";
