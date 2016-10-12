@@ -10,6 +10,7 @@ use constant HAVE_DIFF => eval {
 use CPAN::Changes::Parser;
 use Getopt::Long qw(:config gnu_getopt no_auto_abbrev no_ignore_case);
 use Data::Dumper ();
+use File::Spec;
 
 sub _dump {
   local $Data::Dumper::Indent = 1;
@@ -54,7 +55,7 @@ for my $log (glob('corpus/dists/*.changes')) {
     pass "updated $parsed_file";
   }
   else {
-    my $wanted = do $parsed_file;
+    my $wanted = do File::Spec->rel2abs($parsed_file) or die $@;
     _eq $parsed, $wanted, "$log parsed into expected form";
   }
 }
