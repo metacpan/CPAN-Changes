@@ -98,7 +98,7 @@ sub _parse {
   my @indents;
   for my $line_number ( 0 .. $#lines ) {
     my $line = $lines[$line_number];
-    if ( $line =~ /^(?:$version_prefix\s+)?($version_token)(?:\s+(.*))?$/i ) {
+    if ( $line =~ /^(?:$version_prefix\s+)?($version_token)(?:[:;.-]?\s+(.*))?$/i ) {
       my $version = $1;
       my $note    = $2;
       my $date;
