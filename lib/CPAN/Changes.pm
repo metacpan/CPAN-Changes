@@ -127,12 +127,16 @@ our $W3CDTF_REGEX = $CPAN::Changes::Parser::_ISO_8601_DATE;
 
 sub load {
   my ($class, $filename, %args) = @_;
+  $args{version_like} = $args{next_token}
+    if exists $args{next_token};
   require CPAN::Changes::Parser;
   CPAN::Changes::Parser->new(%args)->parse_file($filename);
 }
 
 sub load_string {
   my ($class, $string, %args) = @_;
+  $args{version_like} = $args{next_token}
+    if exists $args{next_token};
   require CPAN::Changes::Parser;
   CPAN::Changes::Parser->new(%args)->parse_string($string);
 }

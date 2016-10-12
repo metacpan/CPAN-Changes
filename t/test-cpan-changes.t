@@ -24,7 +24,7 @@ sub called {
   my $tester = local $Test::CPAN::Changes::Test = FakeBuilder->new;
   local $Test::CPAN::Changes::Parser = CPAN::Changes::Parser->new(
     _release_class => 'Test::CPAN::Changes::Release',
-    next_token => qr/\{\{ \$NEXT \}\}/
+    version_like => qr/\{\{ \$NEXT \}\}/
   );
   changes_file_ok(@_);
   return $tester->{called};
