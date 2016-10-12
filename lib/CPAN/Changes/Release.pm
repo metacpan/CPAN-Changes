@@ -183,7 +183,7 @@ __END__
 
 =head1 NAME
 
-CPAN::Changes::Release - A release in a CPAN Changs file
+CPAN::Changes::Release - A release in a CPAN Changes file
 
 =head1 SYNOPSIS
 
@@ -218,9 +218,27 @@ The note attached to the release.
 
 An array ref of L<entries|CPAN::Changes::Entry> in the release.
 
+=head2 line
+
+The line number that the release starts at.
+
 =head1 METHODS
 
 =head2 serialize
+
+=head2 entries
+
+=head2 clone
+
+=head2 has_entries
+
+=head2 find_entry
+
+=head2 add_entry
+
+=head2 remove_entry
+
+=head1 LEGACY METHODS
 
 =head2 changes
 
@@ -247,8 +265,6 @@ An array ref of L<entries|CPAN::Changes::Entry> in the release.
 =head1 SEE ALSO
 
 =over 4
-
-=item * L<CPAN::Changes::Spec>
 
 =item * L<CPAN::Changes>
 

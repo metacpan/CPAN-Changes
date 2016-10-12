@@ -68,3 +68,64 @@ sub serialize {
 }
 
 1;
+__END__
+
+=head1 NAME
+
+CPAN::Changes::Group - An entry group in a CPAN Changes file
+
+=head1 SYNOPSIS
+
+  my $group = CPAN::Changes::Group->new(
+    name    => 'A change group',
+    changes => [
+      'A change entry',
+      'Another change entry',
+    ],
+  );
+
+=head1 DESCRIPTION
+
+Represents a group of change entries on a changelog release.  This is a legacy
+interface for the and its use is discouraged.
+
+Behind the scenes, this works as a proxy for the real L<CPAN::Changes::Entry>
+objects.
+
+=head1 ATTRIBUTES
+
+=head2 name
+
+The name of the change group.
+
+=head1 METHODS
+
+=head2 is_empty
+
+=head2 add_changes
+
+=head2 changes
+
+=head2 set_changes
+
+=head2 clear_changes
+
+=head2 serialize
+
+=head1 SEE ALSO
+
+=over 4
+
+=item * L<CPAN::Changes>
+
+=back
+
+=head1 AUTHORS
+
+See L<CPAN::Changes> for authors.
+
+=head1 COPYRIGHT AND LICENSE
+
+See L<CPAN::Changes> for the copyright and license.
+
+=cut

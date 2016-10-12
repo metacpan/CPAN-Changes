@@ -35,3 +35,72 @@ sub serialize {
 }
 
 1;
+__END__
+
+=head1 NAME
+
+CPAN::Changes::Entry - A change entry in a CPAN Changes file
+
+=head1 SYNOPSIS
+
+  my $entry = CPAN::Changes::Entry->new(
+    text    => 'A change entry'
+    entries => [
+      'A sub-entry',
+      'Another sub-entry',
+    ],
+  );
+
+=head1 DESCRIPTION
+
+A changelog is made up of one or more releases. This object provides access to
+all of the key data that embodies a release including the version number, date
+of release, and all of the changelog information lines.
+
+=head1 ATTRIBUTES
+
+=head2 text
+
+The text of the change entry.
+
+=head2 entries
+
+An array ref of sub-entries under this change entry.
+
+=head2 line
+
+The line number that the change entry starts at.
+
+=head1 METHODS
+
+=head2 serialize
+
+=head2 entries
+
+=head2 clone
+
+=head2 has_entries
+
+=head2 find_entry
+
+=head2 add_entry
+
+=head2 remove_entry
+
+=head1 SEE ALSO
+
+=over 4
+
+=item * L<CPAN::Changes>
+
+=back
+
+=head1 AUTHORS
+
+See L<CPAN::Changes> for authors.
+
+=head1 COPYRIGHT AND LICENSE
+
+See L<CPAN::Changes> for the copyright and license.
+
+=cut

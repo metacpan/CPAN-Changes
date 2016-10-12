@@ -253,9 +253,17 @@ exists, it will be overwritten.
 
 Removes the given versions from change log.
 
+=head2 find_release ( $version )
+
+Finds a release with the given version.
+
 =head2 reversed
 
 Returns a new B<CPAN::Changes> object with the releases in the opposite order.
+
+=head2 clone ( %attrs )
+
+Returns a new C<CPAN::Changes> object with the given attributes changed.
 
 =head2 serialize
 
@@ -263,7 +271,9 @@ Returns the change log as a string suitable for saving as a F<Changes> file.
 
 =head1 LEGACY METHODS
 
-=head1 delete_empty_groups
+=head2 delete_empty_groups
+
+=head2 release
 
 =head1 AUTHOR
 
