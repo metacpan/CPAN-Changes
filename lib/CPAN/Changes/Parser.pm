@@ -91,13 +91,16 @@ sub _parse {
   $version_token = qr/$version_token|$opts{version_like}/
     if $opts{version_like};
 
-  my @lines = split /\r\n?|\n/, $string;
-
-  my $preamble = '';
+  my $raw_preamble = '';
   my @releases;
   my @indents;
-  for my $line_number ( 0 .. $#lines ) {
-    my $line = $lines[$line_number];
+  my $line_number = -1;
+  while ($string =~ /((.*?)(?:\r\n?|\n|\z))/g) {
+    my ($full_line, $line) = ($1, $2);
+    last
+      if !length $full_line;
+    $line_number++;
+
     if ( $line =~ /^(?:$version_prefix\s+)?($version_token)(?:[:;.-]?\s+(.*))?$/i ) {
       my $version = $1;
       my $note    = $2;
@@ -112,6 +115,7 @@ sub _parse {
         (defined $date ? (date => $date) : ()),
         (defined $raw_date ? (raw_date => $raw_date) : ()),
         (defined $note ? (note => $note) : ()),
+        raw     => $full_line,
         entries => [],
         line    => $line_number+1,
       };
@@ -120,13 +124,20 @@ sub _parse {
       next;
     }
     elsif (!@indents) {
-      $preamble .= (length $preamble ? "\n" : '') . $line;
+      $raw_preamble .= $full_line,
       next;
     }
 
     if ( $line =~ /^[-_*+~#=\s]*$/ ) {
       $indents[-1]{done}++
         if @indents > 1;
+
+      if (@indents) {
+        $indents[-1]{raw} .= $full_line;
+      }
+      else {
+        $releases[-1]{raw} .= $full_line;
+      }
       next;
     }
 
@@ -152,9 +163,10 @@ sub _parse {
       $change = $line;
       if (
         $indent >= $#indents
-        && $indents[-1]{text}
+        && defined $indents[-1]{text}
         && !$indents[-1]{done}
       ) {
+        $indents[-1]{raw}  .= $full_line;
         $indents[-1]{text} .= " $change";
         next;
       }
@@ -180,6 +192,7 @@ sub _parse {
       nest   => $nest,
       nested => $nested,
       style  => $style,
+      raw    => $full_line,
     };
     push @{ $group->{entries} ||= [] }, $entry;
 
@@ -189,16 +202,22 @@ sub _parse {
 
     $indents[$indent] = $entry;
   }
-  $preamble =~ s/^\s*\n//;
-  $preamble =~ s/\s+$//;
-  undef $preamble if !length $preamble;
+  my $preamble;
+  if (length $raw_preamble) {
+    $preamble = $raw_preamble;
+    $preamble =~ s/\A\s*\n//;
+    $preamble =~ s/\s+\z//;
+    $preamble =~ s/\r\n?/\n/g;
+  }
+
   my @entries = @releases;
   while ( my $entry = shift @entries ) {
     push @entries, @{ $entry->{entries} } if $entry->{entries};
     delete @{$entry}{qw(done nest nested)};
   }
   return {
-    preamble => $preamble,
+    ( defined $preamble ? (preamble => $preamble) : () ),
+    raw_preamble => $raw_preamble,
     releases => \@releases,
   };
 }

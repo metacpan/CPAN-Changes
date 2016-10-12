@@ -1,16 +1,19 @@
 {
   "preamble" => "Revision history for Wiktionary::Parser",
+  "raw_preamble" => "Revision history for Wiktionary::Parser\n\n",
   "releases" => [
     {
       "date" => "2012-07-05",
       "entries" => [
         {
           "line" => 4,
+          "raw" => "        First version\n\n",
           "style" => "",
           "text" => "First version"
         }
       ],
       "line" => 3,
+      "raw" => "0.01    2012-07-05\n",
       "raw_date" => "2012-07-05",
       "version" => "0.01"
     },
@@ -19,11 +22,13 @@
       "entries" => [
         {
           "line" => 7,
+          "raw" => "        accessors for translations, synonyms, hyponyms, hypernyms, antonyms, pronunciations, word senses, parts of speech\n        stubbed out accessors for etymologies, derived words, alternative forms\n        added methods for accessing and traversing document sections\n        utilize MediaWiki::API package\n\n\n",
           "style" => "",
           "text" => "accessors for translations, synonyms, hyponyms, hypernyms, antonyms, pronunciations, word senses, parts of speech stubbed out accessors for etymologies, derived words, alternative forms added methods for accessing and traversing document sections utilize MediaWiki::API package"
         }
       ],
       "line" => 6,
+      "raw" => "0.02    2012-07-07\n",
       "raw_date" => "2012-07-07",
       "version" => "0.02"
     },
@@ -32,11 +37,13 @@
       "entries" => [
         {
           "line" => 14,
+          "raw" => "        Added subdocuments to provide more functionality when retrieving child sections of the document.\n        Follow Wikisaurus links for synonyms, hyponyms, hypernyms, etc and include content from those pages.\n        Provided method for downloading audio files for pronunciations\n        Normalize language codes and provide consistent language names\n\n\n",
           "style" => "",
           "text" => "Added subdocuments to provide more functionality when retrieving child sections of the document. Follow Wikisaurus links for synonyms, hyponyms, hypernyms, etc and include content from those pages. Provided method for downloading audio files for pronunciations Normalize language codes and provide consistent language names"
         }
       ],
       "line" => 13,
+      "raw" => "0.03    2012-07-08\n",
       "raw_date" => "2012-07-08",
       "version" => "0.03"
     },
@@ -45,11 +52,13 @@
       "entries" => [
         {
           "line" => 21,
+          "raw" => "        Added unit test for parsing a document\n        Added unit test for parsing translations\n        Refactored translation parser\n\n\n",
           "style" => "",
           "text" => "Added unit test for parsing a document Added unit test for parsing translations Refactored translation parser"
         }
       ],
       "line" => 20,
+      "raw" => "0.04    2012-07-11\n",
       "raw_date" => "2012-07-11",
       "version" => "0.04"
     },
@@ -58,11 +67,13 @@
       "entries" => [
         {
           "line" => 27,
+          "raw" => "        updated documentation\n        Added example scripts in /bin       \n        Various bugfixes\n\n\n",
           "style" => "",
           "text" => "updated documentation Added example scripts in /bin Various bugfixes"
         }
       ],
       "line" => 26,
+      "raw" => "0.05    2012-07-14\n",
       "raw_date" => "2012-07-14",
       "version" => "0.05"
     },
@@ -71,11 +82,13 @@
       "entries" => [
         {
           "line" => 33,
+          "raw" => "        Added part of speech info to output of get_translations()\n        Included translations from other wiktionary pages linked to the original one\n\t   \n\n",
           "style" => "",
           "text" => "Added part of speech info to output of get_translations() Included translations from other wiktionary pages linked to the original one"
         }
       ],
       "line" => 32,
+      "raw" => "0.06    2012-07-14\n",
       "raw_date" => "2012-07-14",
       "version" => "0.06"
     },
@@ -84,11 +97,13 @@
       "entries" => [
         {
           "line" => 38,
+          "raw" => "        Updates to documentation and example scripts\n\n",
           "style" => "",
           "text" => "Updates to documentation and example scripts"
         }
       ],
       "line" => 37,
+      "raw" => "0.07    2012-07-15\n",
       "raw_date" => "2012-07-15",
       "version" => "0.07"
     },
@@ -97,11 +112,13 @@
       "entries" => [
         {
           "line" => 41,
+          "raw" => "        Various bugfixes for data sanitizing\n        Fixed issue with unit tests\n",
           "style" => "",
           "text" => "Various bugfixes for data sanitizing Fixed issue with unit tests"
         }
       ],
       "line" => 40,
+      "raw" => "0.08    2012-07-18\n",
       "raw_date" => "2012-07-18",
       "version" => "0.08"
     }
