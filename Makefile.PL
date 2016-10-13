@@ -47,6 +47,40 @@ my %META = (
     directory => [ 't', 'xt' ]
   },
   x_authority => 'cpan:BRICAS',
+  provides => {
+    'CPAN::Changes' => {
+      file => 'lib/CPAN/Changes.pm',
+      version => '0.500_001',
+    },
+    'CPAN::Changes::Entry' => {
+      file => 'lib/CPAN/Changes/Entry.pm',
+      version => '0.500_001',
+    },
+    'CPAN::Changes::Group' => {
+      file => 'lib/CPAN/Changes/Group.pm',
+      version => '0.500_001',
+    },
+    'CPAN::Changes::HasEntries' => {
+      file => 'lib/CPAN/Changes/HasEntries.pm',
+      version => '0.500_001',
+    },
+    'CPAN::Changes::Parser' => {
+      file => 'lib/CPAN/Changes/Parser.pm',
+      version => '0.500_001',
+    },
+    'CPAN::Changes::Release' => {
+      file => 'lib/CPAN/Changes/Release.pm',
+      version => '0.500_001',
+    },
+    'CPAN::Changes::Spec' => {
+      file => 'lib/CPAN/Changes/Spec.pod',
+      version => '0.500_001',
+    },
+    'Test::CPAN::Changes' => {
+      file => 'lib/Test/CPAN/Changes.pm',
+      version => '0.500_001',
+    },
+  },
 );
 
 my %MM_ARGS = (
