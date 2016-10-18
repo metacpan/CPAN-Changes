@@ -25,7 +25,9 @@ has preamble => (
 
 sub clone {
   my $self = shift;
-  return (ref $self)->new(%$self, @_);
+  my %attrs = %$self;
+  $attrs{releases} = [ map $_->clone, @{delete $self->{_releases}} ];
+  return (ref $self)->new(%attrs, @_);
 }
 
 # backcompat

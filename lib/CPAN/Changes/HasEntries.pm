@@ -16,8 +16,9 @@ has entries => (
 
 sub clone {
   my $self = shift;
-  my %args = @_;
-  (ref $self)->new(%$self, %args);
+  my %attrs = %$self;
+  $attrs{entries} = [ map $_->clone, @{$self->entries} ];
+  (ref $self)->new(%attrs, @_);
 }
 
 sub has_entries {
