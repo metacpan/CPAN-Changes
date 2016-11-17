@@ -112,13 +112,12 @@ sub serialize {
     }
     $out .= "\n"
       unless $out eq '' || $out =~ /\n\n\z/;
-    my $sub = $release->serialize(
+    $out .= $release->serialize(
       %opts,
       indents => $indents,
       styles => $styles,
       width => $width - length $indents->[0],
     );
-    $out .= $sub;
   }
   return $out;
 }
