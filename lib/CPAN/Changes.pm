@@ -267,15 +267,45 @@ Returns a new B<CPAN::Changes> object with the releases in the opposite order.
 
 Returns a new C<CPAN::Changes> object with the given attributes changed.
 
-=head2 serialize
+=head2 serialize ( %options )
 
 Returns the change log as a string suitable for saving as a F<Changes> file.
+
+=over 4
+
+=item width
+
+The width to wrap lines at.  By default, lines will be wrapped at 75 characters.
+
+=item styles
+
+An array reference of styles to use when outputting the entries.
+
+The styles can be
+
+=item indents
+
+An array reference of indents to use when outputting the entries.
+
+=item reverse (legacy)
+
+If true, releases will be output in reversed order.
+
+=item group_sort (legacy)
+
+A code reference used to sort the groups in the releases.
+
+=back
 
 =head1 LEGACY METHODS
 
 =head2 delete_empty_groups
 
+Removes empty groups.
+
 =head2 release
+
+An alias for find_release.
 
 =head1 AUTHOR
 
