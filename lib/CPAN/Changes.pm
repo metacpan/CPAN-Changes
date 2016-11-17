@@ -100,7 +100,8 @@ sub serialize {
     my $indents = \@indents;
     if (
       grep {
-        length($_->text) + length($indents->[0]) + length($styles->[1]) > $width
+        length($styles->[1]) > 1
+        && length($indents->[0] . $styles->[1] . $_->text) > $width
       }
         @{ $release->entries }
       or
