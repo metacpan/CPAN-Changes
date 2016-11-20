@@ -281,11 +281,12 @@ The width to wrap lines at.  By default, lines will be wrapped at 75 characters.
 
 An array reference of styles to use when outputting the entries.
 
-The styles can be
+The styles can be either a single character to prefix change lines or two
+characters to use as a prefix and suffix.
 
 =item indents
 
-An array reference of indents to use when outputting the entries.
+An array reference of indent strings to use when outputting the entries.
 
 =item reverse (legacy)
 
