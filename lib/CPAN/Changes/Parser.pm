@@ -249,8 +249,13 @@ our $_UNKNOWN_DATE = qr{
 }xi;
 
 our $_LOCALTIME_DATE = qr{
-  (?:$_SHORT_DAY\s+)?
-  ($_SHORT_MONTH)\s+
+  (?:
+    (?:$_SHORT_DAY\s+)?
+    ($_SHORT_MONTH)\s+
+    |
+    ($_SHORT_MONTH)\s+
+    (?:$_SHORT_DAY\s+)
+  )
   (\d{1,2})\s+  # date
   (?: ([\d:]+)\s+ )?  # time
   (?: ([A-Z]+)\s+ )?  # timezone
@@ -311,10 +316,10 @@ sub _split_date {
     # handle localtime-like timestamps
     elsif ( $note =~ s{^($_LOCALTIME_DATE)}{} ) {
       $date = $1;
-      $parsed_date = sprintf( '%d-%02d-%02d', $6, 1+$months{lc $2}, $3 );
-      if ($4) {
-        # unfortunately ignores TZ data ($5)
-        $parsed_date .= sprintf( 'T%sZ', $4 );
+      $parsed_date = sprintf( '%d-%02d-%02d', $7, 1+$months{lc($2 || $3)}, $4 );
+      if ($5) {
+        # unfortunately ignores TZ data ($6)
+        $parsed_date .= sprintf( 'T%sZ', $5 );
       }
     }
 
