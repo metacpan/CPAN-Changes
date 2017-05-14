@@ -57,7 +57,7 @@ for my $log (@ARGV ? @ARGV : glob('corpus/dists/*.changes')) {
     pass "updated $parsed_file";
   }
   else {
-    my $wanted = do File::Spec->rel2abs($parsed_file) or die $@;
+    my $wanted = do File::Spec->rel2abs($parsed_file) or die $@||$!;
     _eq $parsed, $wanted, "$log parsed into expected form";
   }
 }
