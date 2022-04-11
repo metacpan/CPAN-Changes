@@ -73,7 +73,7 @@ optional.
     (whitespace)<Change>
 
 B<NOTE:> The characters between a C<Version> and a C<Date> must start with 
-whitespace, but may subsquently contain any combination of whitespace and 
+whitespace, but may subsequently contain any combination of whitespace and 
 non-"word" characters. Example:
 
     0.01 - 2013-12-11 

@@ -360,14 +360,14 @@ See L</"DEALING WITH "NEXT VERSION" PLACEHOLDERS"> for an example of its usage.
 
 Parses C<$filename> as per L<CPAN::Changes::Spec>. 
 If present, 
-the optional C<%args> are passed to the underlaying call to
+the optional C<%args> are passed to the underlying call to
 C<new()>.
 
 =head2 load_string( $string, %args )
 
 Parses C<$string> as per L<CPAN::Changes::Spec>.
 If present, 
-the optional C<%args> are passed to the underlaying call to
+the optional C<%args> are passed to the underlying call to
 C<new()>.
 
 =head2 preamble( [ $preamble ] )
