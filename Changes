@@ -1,5 +1,8 @@
 Revision history for perl module CPAN::Changes
 
+0.400003 - 2023-01-12
+  - Pass given ChangeLog filename for --check (Tux)
+
 0.400002 - 2015-06-21
   - revert whitespace changes that were inadvertently included in previous
     release.

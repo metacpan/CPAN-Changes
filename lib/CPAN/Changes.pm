@@ -8,7 +8,7 @@ use Scalar::Util ();
 use version      ();
 use Encode qw(decode FB_CROAK LEAVE_SRC);
 
-our $VERSION = '0.400002';
+our $VERSION = '0.400003';
 
 # From DateTime::Format::W3CDTF
 our $W3CDTF_REGEX = qr{(\d\d\d\d) # Year
