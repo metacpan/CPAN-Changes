@@ -3,7 +3,6 @@ use Moo;
 use Module::Runtime qw(use_module);
 use Carp qw(croak);
 use Encode qw(decode FB_CROAK LEAVE_SRC);
-use version ();
 
 has _changelog_class => (
   is => 'ro',
@@ -83,6 +82,19 @@ sub _trans_entry {
   );
 }
 
+our $VERSION_REGEX = qr{
+  (?:
+    v [0-9]+ (?: (?:\.[0-9]+ )+ (?:_[0-9]+)? )?
+    |
+    (?:[0-9]+)? (?:\.[0-9]+){2,} (?:_[0-9]+)?
+    |
+    [0-9]* \.[0-9]+ (?: _[0-9]+ )?
+    |
+    [0-9]+ (?: _[0-9]+ )?
+  )
+  (?: -TRIAL )?
+}x;
+
 sub _parse {
   my ($self, $string) = @_;
 
@@ -90,7 +102,7 @@ sub _parse {
   if (defined(my $vp = $self->version_prefix)) {
     $version_prefix = qr/$version_prefix|$vp/
   }
-  my $version_token = qr/$version::LAX(?:-TRIAL)?/;
+  my $version_token = qr/$VERSION_REGEX(?:-TRIAL)?/;
   if (defined(my $vt = $self->version_like)) {
     $version_token = qr/$version_token|$vt/
   }
