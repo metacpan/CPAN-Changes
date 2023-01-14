@@ -32,8 +32,8 @@ my %META = (
   },
   resources => {
     repository => {
-      url => 'https://github.com/CPAN-API/CPAN-Changes.git',
-      web => 'https://github.com/CPAN-API/CPAN-Changes',
+      url => 'https://github.com/metacpan/CPAN-Changes.git',
+      web => 'https://github.com/metacpan/CPAN-Changes',
       type => 'git',
     },
     x_IRC => 'irc://irc.perl.org/#metacpan',
