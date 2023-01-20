@@ -291,20 +291,21 @@ our $_DZIL_DATE = qr{
 our $_ISO_8601_DATE = qr{
   \d\d\d\d # Year
   (?:
-    -\d\d # -Month
+    [-/]\d\d # -Month
     (?:
-      -\d\d # -Day
+      [-/]\d\d # -Day
       (?:
         [T\s]
         \d\d:\d\d # Hour:Minute
         (?:
-          :\d\d     # :Second
-          (?: \.\d+ )?    # .Fractional_Second
+          :\d\d         # :Second
+          (?: \.\d+ )?  # .Fractional_Second
         )?
         (?:
-          Z          # UTC
-          | [+-]\d\d:\d\d    # Hour:Minute TZ offset
-            (?: :\d\d )?       # :Second TZ offset
+          Z             # UTC
+          |
+          [+-]\d\d:\d\d # Hour:Minute TZ offset
+          (?: :\d\d )?  # :Second TZ offset
         )?
       )?
     )?
@@ -353,6 +354,7 @@ sub _split_date {
     elsif ( $note =~ s{^($_ISO_8601_DATE)}{} ) {
       $parsed_date = $date = $1;
       $parsed_date =~ s{ }{T};
+      $parsed_date =~ s{/}{-}g;
 
       # Add UTC TZ if date ends at H:M, H:M:S or H:M:S.FS
       $parsed_date .= 'Z'
