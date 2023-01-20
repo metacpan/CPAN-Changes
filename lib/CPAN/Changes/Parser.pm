@@ -249,16 +249,16 @@ sub _parse {
 
 my @months = qw( Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec );
 my %months = map {; lc $months[$_] => $_ } 0 .. $#months;
+our ($_SHORT_MONTH) = map qr{$_}i, join '|', @months;
 our $_SHORT_DAY = qr{Sun|Mon|Tue|Wed|Thu|Fri|Sat}i;
-our ($_SHORT_MONTH) = map qr{$_}i, join('|', @months);
-our $_UNKNOWN_DATE = qr{
-  Unknown\ Release\ Date
-  |Unknown
-  |Not\ Released
-  |Development\ Release
-  |Development
-  |Developer\ Release
-}xi;
+our ($_UNKNOWN_DATE) = map qr{$_}i, join '|', (
+  'Unknown Release Date',
+  'Unknown',
+  'Not Released',
+  'Development Release',
+  'Development',
+  'Developer Release',
+);
 
 our $_LOCALTIME_DATE = qr{
   (?:
