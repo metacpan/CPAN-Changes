@@ -247,11 +247,15 @@ sub _parse {
   };
 }
 
-my @months = qw( Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec );
+my @months = qw(
+  Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec
+);
 my %months = map {; lc $months[$_] => $_ } 0 .. $#months;
-our ($_SHORT_MONTH) = map qr{$_}i, join '|', @months;
-our $_SHORT_DAY = qr{Sun|Mon|Tue|Wed|Thu|Fri|Sat}i;
-our ($_UNKNOWN_DATE) = map qr{$_}i, join '|', (
+our ($_SHORT_MONTH) = map qr{$_}i, join '|', map quotemeta, @months;
+our ($_SHORT_DAY) = map qr{$_}i, join '|', map quotemeta, qw(
+  Sun Mon Tue Wed Thu Fri Sat
+);
+our ($_UNKNOWN_DATE) = map qr{$_}i, join '|', map quotemeta, (
   'Unknown Release Date',
   'Unknown',
   'Not Released',
