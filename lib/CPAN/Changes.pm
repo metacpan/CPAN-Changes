@@ -46,7 +46,14 @@ sub new {
 sub load {
     my ( $class, $file, @args ) = @_;
 
-    open( my $fh, '<:raw', $file ) or die $!;
+    my $fh;
+    if ( $file eq '-' ) {
+        open( $fh, '<-' ) or die $!;
+        binmode($fh)
+    }
+    else {
+        open( $fh, '<:raw', $file ) or die $!;
+    }
 
     my $content = do { local $/; <$fh> };
 
