@@ -68,10 +68,11 @@ sub load_string {
     $string =~ s/(?:\015{1,2}\012|\015|\012)/\n/gs;
     my @lines = split( "\n", $string );
 
+    my $prefix_re = qr/=head\d\s+/;
     my $version_line_re
         = $changes->{ next_token }
-        ? qr/^(?:$version::LAX|$changes->{next_token})/
-        : qr/^$version::LAX/;
+        ? qr/^(?:$prefix_re)?(?:$version::LAX|$changes->{next_token})/
+        : qr/^(?:$prefix_re)?$version::LAX/;
 
     $preamble .= shift( @lines ) . "\n" while @lines && $lines[ 0 ] !~ $version_line_re;
 
@@ -79,6 +80,7 @@ sub load_string {
 
         # Version & Date
         if ( $l =~ $version_line_re ) {
+            $l =~ s/^$prefix_re//;
             my ( $v, $n ) = split m{\s[\W\s]*}, $l, 2;
             my $match = '';
             my $d;
@@ -156,6 +158,9 @@ sub load_string {
                 );
             $ingroup = undef;
             $indent  = undef;
+            next;
+        }
+        elsif ($l =~ /^=cut/) {
             next;
         }
 
