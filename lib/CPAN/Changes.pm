@@ -144,8 +144,8 @@ sub load_string {
                 $n =~ s{^\Q$match\E\s*}{};
             }
 
-            undef $d unless length $d;
-            undef $n unless length $n;
+            undef $d unless (defined $d && length $d);
+            undef $n unless (defined $n && length $n);
 
             push @releases,
                 CPAN::Changes::Release->new(
