@@ -1,7 +1,14 @@
 package CPAN::Changes::HasEntries;
-use Moo::Role;
+use strict;
+use warnings;
+
+our $VERSION = '0.500_001';
+$VERSION =~ tr/_//d;
+
 use Sub::Quote qw(qsub);
 use Types::Standard qw(ArrayRef InstanceOf Str);
+
+use Moo::Role;
 
 my $entry_type = (InstanceOf['CPAN::Changes::Entry'])->plus_coercions(
   Str ,=> qsub q{ CPAN::Changes::Entry->new(text => $_[0]) },

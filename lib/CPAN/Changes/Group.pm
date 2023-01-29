@@ -1,7 +1,14 @@
 package CPAN::Changes::Group;
-use Moo;
+use strict;
+use warnings;
+
+our $VERSION = '0.500_001';
+$VERSION =~ tr/_//d;
+
 use Sub::Quote qw(qsub);
 use CPAN::Changes::Entry;
+
+use Moo;
 
 has _entry => (
   is => 'rw',

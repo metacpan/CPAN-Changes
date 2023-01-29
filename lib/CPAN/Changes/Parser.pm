@@ -1,8 +1,15 @@
 package CPAN::Changes::Parser;
-use Moo;
+use strict;
+use warnings;
+
+our $VERSION = '0.500_001';
+$VERSION =~ tr/_//d;
+
 use Module::Runtime qw(use_module);
 use Carp qw(croak);
 use Encode qw(decode FB_CROAK LEAVE_SRC);
+
+use Moo;
 
 has _changelog_class => (
   is => 'ro',

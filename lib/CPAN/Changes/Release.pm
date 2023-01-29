@@ -1,4 +1,10 @@
 package CPAN::Changes::Release;
+use strict;
+use warnings;
+
+our $VERSION = '0.500_001';
+$VERSION =~ tr/_//d;
+
 use Moo;
 
 with 'CPAN::Changes::HasEntries';

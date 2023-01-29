@@ -1,11 +1,15 @@
 package CPAN::Changes;
-use Moo;
+use strict;
+use warnings;
+
+our $VERSION = '0.500_001';
+$VERSION =~ tr/_//d;
+
 use Sub::Quote qw(qsub);
 use Types::Standard qw(ArrayRef HashRef InstanceOf);
 use CPAN::Changes::Release;
 
-our $VERSION = '0.500_001';
-$VERSION =~ tr/_//d;
+use Moo;
 
 my $release_type = (InstanceOf['CPAN::Changes::Release'])->plus_coercions(
   HashRef ,=> qsub q{ CPAN::Changes::Release->new($_[0]) },
