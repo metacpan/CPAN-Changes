@@ -128,8 +128,9 @@ sub serialize {
 
 require CPAN::Changes::Parser;
 
-# :( i know people use this
+# :( i know people use these
 our $W3CDTF_REGEX = $CPAN::Changes::Parser::_ISO_8601_DATE;
+our $UNKNOWN_VALS = $CPAN::Changes::Parser::_UNKNOWN_DATE;
 
 sub load {
   my ($class, $filename, %args) = @_;
