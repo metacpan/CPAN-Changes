@@ -181,7 +181,7 @@ sub _sorted_groups {
   $entries{''} = \@bare
     if @bare;
   my @sorted = $sort_function->(keys %entries);
-  return [ map { @{ $entries{$_} } } @sorted ];
+  return [ map { @{ $entries{$_} || [] } } @sorted ];
 }
 
 1;
