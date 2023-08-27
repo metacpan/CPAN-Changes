@@ -78,7 +78,9 @@ sub add_entry {
 
 sub remove_entry {
   my ($self, $entry) = @_;
-  $entry = ref $entry ? $entry : $self->find_entry($entry);
+  $entry
+    = ref $entry && $entry->isa('CPAN::Changes::Entry') ? $entry
+    : $self->find_entry($entry);
   return unless $entry;
   my @entries = grep { $_ != $entry } @{ $self->entries };
   $self->entries(\@entries);
