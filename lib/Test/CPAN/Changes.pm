@@ -6,7 +6,8 @@ use CPAN::Changes::Parser;
 use Test::Builder;
 use version ();
 
-our $VERSION = '0.400002';
+our $VERSION = '0.500_001';
+$VERSION =~ tr/_//d;
 
 use Exporter; BEGIN { *import = \&Exporter::import };
 
