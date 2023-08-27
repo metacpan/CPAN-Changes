@@ -81,17 +81,28 @@ The line number that the change entry starts at.
 
 =head2 serialize
 
-=head2 entries
+Returns the changes entry in string form.
 
 =head2 clone
 
+Returns a new release object with the same data. Can be given any attributes to
+set them differently in the new object.
+
 =head2 has_entries
+
+Returns true if there are sub-entries for this entry.
 
 =head2 find_entry
 
+Accepts a string or a regex, returns a matching sub-entry object.
+
 =head2 add_entry
 
+Adds a changes sub-entry. Accepts a changes sub-entry object or a string.
+
 =head2 remove_entry
+
+Given a string or a changes entry object, removes the entry from the release.
 
 =head1 SEE ALSO
 
