@@ -25,8 +25,8 @@ my ($release) = reverse $changes->releases;
 like $release->serialize => expected_order(qw/ A B / );
 like $release->serialize( group_sort => \&reverse_order ) => expected_order(qw/ B A / );
 
-is_deeply [ $release->groups ], [qw/ A B /]; 
-is_deeply [ $release->groups( sort => \&reverse_order ) ], [qw/ B A /]; 
+is_deeply [ $release->groups ], [qw/ A B /];
+is_deeply [ $release->groups( sort => \&reverse_order ) ], [qw/ B A /];
 
 sub reverse_order {
     return reverse sort @_;

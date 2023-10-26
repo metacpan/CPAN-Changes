@@ -45,7 +45,7 @@ END_CHANGES
 
     $changes->delete_empty_groups;
 
-    is_deeply( [ sort( ($changes->releases)[0]->changes ) ], [ { 
+    is_deeply( [ sort( ($changes->releases)[0]->changes ) ], [ {
         '' => [ 'C' ],
     } ] );
 
