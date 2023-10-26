@@ -2,7 +2,7 @@ package CPAN::Changes::Entry;
 use strict;
 use warnings;
 
-our $VERSION = '0.500_001';
+our $VERSION = '0.500002';
 $VERSION =~ tr/_//d;
 
 use Moo;
