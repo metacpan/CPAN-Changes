@@ -88,3 +88,6 @@ sub remove_entry {
 
 require CPAN::Changes::Entry;
 1;
+__END__
+
+=for Pod::Coverage .*
