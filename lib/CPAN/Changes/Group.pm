@@ -15,12 +15,17 @@ has _entry => (
   handles => {
     is_empty => 'has_entries',
     add_changes => 'add_entry',
-    name => 'text',
   },
   lazy => 1,
   default => qsub q{ CPAN::Changes::Entry->new(text => '') },
   predicate => 1,
 );
+
+sub name {
+  my $self = shift;
+  my $entry = $self->_entry;
+  return $entry->can('text') ? $entry->text : '';
+}
 
 sub _maybe_entry {
   my $self = shift;
