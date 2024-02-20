@@ -1,5 +1,8 @@
 Revision history for perl module CPAN::Changes
 
+  - fix calling ->name on an unnamed group
+  - fix ->set_changes call on groups
+
 0.500002 - 2023-10-26
   - releasing as stable
 
