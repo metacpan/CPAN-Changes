@@ -61,8 +61,12 @@ sub changes {
 
 sub set_changes {
   my ($self, @changes) = @_;
-  my $entry = $self->_entry->clone(entries => \@changes);
-  $self->_entry($entry);
+  $self->clear_changes;
+  my $entry = $self->_entry;
+  for my $change (@changes) {
+    $entry->add_entry($change);
+  }
+  return;
 }
 
 sub clear_changes {
