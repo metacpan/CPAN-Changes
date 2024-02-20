@@ -103,14 +103,17 @@ sub serialize {
     my $styles = \@styles;
     my $indents = \@indents;
     if (
-      grep {
-        length($styles->[1]) > 1
-        && length($indents->[0] . $styles->[1] . $_->text) > $width
-      }
-        @{ $release->entries }
-      or
-      !grep { $_->has_entries }
-        @{ $release->entries }
+      !$opts{styles}
+      and (
+        grep {
+          length($styles->[1]) > 1
+          && length($indents->[0] . $styles->[1] . $_->text) > $width
+        }
+          @{ $release->entries }
+        or
+        !grep { $_->has_entries }
+          @{ $release->entries }
+      )
     ) {
       $styles = [ '', '-', '*' ];
     }
