@@ -4,7 +4,7 @@ use warnings;
 
 use CPAN::Changes::Parser;
 use Test::Builder;
-use version ();
+use version 0.80 ();
 
 our $VERSION = '0.500004';
 $VERSION =~ tr/_//d;

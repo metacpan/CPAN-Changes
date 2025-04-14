@@ -21,6 +21,7 @@ my %META = (
         'Test::Builder' => 0,
         'Sub::Quote' => '1.005000',
         'Types::Standard' => 0,
+        'version' => '0.80',
       },
     },
     develop => {
