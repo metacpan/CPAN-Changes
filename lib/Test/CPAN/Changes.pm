@@ -84,7 +84,11 @@ sub changes_file_ok {
   for my $release ( @releases ) {
     # strip off -TRIAL before testing
     (my $version = $release->version) =~ s/-TRIAL$//;
-    if ( not version::is_lax($version) ) {
+    my $parsed = eval {
+      use warnings FATAL => 'all';
+      version->new($version);
+    };
+    if ( !defined $parsed ) {
       $version_err = $release->version . ' (line '.$release->line.')';
       last;
     }
